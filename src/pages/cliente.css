@@ -1,0 +1,452 @@
+/* As páginas do cliente (reserva, comprovante, conta, links): a janela como calendário de semanas,
+   os avisos com o próximo passo, as ações do comprovante e as listas da conta. Cores e
+   medidas só dos tokens; cantos retos, sem sombras. */
+@layer pages {
+  /* ---- o calendário: sete colunas, linhas de semanas, nunca um carrossel ---- */
+  .calendario {
+    display: grid;
+    gap: 0;
+    min-width: 0;
+  }
+
+  .calendario__semana {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    padding: 0 var(--fio) 4px;
+    font-family: var(--f-mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--cor-texto-suave);
+  }
+
+  .days.calendario__grade {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+  }
+
+  .calendario__grade .day {
+    min-height: 68px;
+    padding: 4px 2px;
+    gap: 1px;
+  }
+
+  .calendario__grade .day small {
+    font-size: 9.5px;
+  }
+
+  .calendario__grade .day b {
+    font-size: 24px;
+  }
+
+  .calendario__grade .day span {
+    font-size: 10.5px;
+    overflow-wrap: anywhere;
+  }
+
+  .calendario__vazio {
+    background: var(--cor-fundo);
+    pointer-events: none;
+  }
+
+  .day__evento {
+    display: block;
+    max-width: 100%;
+    padding: 0 2px;
+    overflow: hidden;
+    font-family: var(--f-mono);
+    font-style: normal;
+    font-size: 9.5px;
+    line-height: 1.15;
+    letter-spacing: 0.02em;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: var(--cor-selecao);
+  }
+
+  .day[aria-checked="true"] .day__evento {
+    color: var(--cor-acao-texto);
+  }
+
+  .day.has-event {
+    box-shadow: inset 0 3px 0 var(--cor-selecao);
+  }
+
+  /* um dia lotado continua sendo uma porta para a lista de espera: número riscado, nunca hachurado */
+  .calendario__grade .day.is-full b {
+    text-decoration: line-through;
+  }
+
+  .zona {
+    font-size: 13.5px;
+    color: var(--cor-texto-suave);
+  }
+
+  /* ---- pessoas: "9 ou mais" ---- */
+  .tile--mais {
+    font-size: 17px;
+  }
+
+  .reserva__grupo-n {
+    max-width: 320px;
+  }
+
+  .reserva__grupo {
+    padding-top: 6px;
+  }
+
+  .reserva__grupo-campos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px 16px;
+  }
+
+  /* ---- avisos com o próximo passo ---- */
+  .aviso {
+    display: grid;
+    gap: 6px;
+  }
+
+  .aviso:focus {
+    outline: none;
+  }
+
+  .aviso__titulo {
+    font-family: var(--f-grotesca);
+    font-weight: 800;
+    font-size: 17px;
+  }
+
+  .aviso__acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 4px;
+  }
+
+  .aviso__acoes .btn {
+    min-height: 44px;
+  }
+
+  .reserva__evento {
+    margin: 0;
+    font-size: 15px;
+  }
+
+  .reserva__alternativas {
+    display: grid;
+    gap: 6px;
+  }
+
+  .reserva__modo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .reserva__modo .tile {
+    font-size: 16px;
+    padding-inline: 16px;
+  }
+
+  /* ---- detalhes ---- */
+  .reserva__flag-dieta {
+    display: grid;
+    gap: 6px;
+  }
+
+  .reserva__sensivel {
+    margin: 0 0 0 34px;
+    padding: 8px 10px;
+    border-left: var(--fio) solid var(--cor-atencao);
+    background: var(--cor-superficie-2);
+    font-size: 14px;
+    line-height: 1.45;
+  }
+
+  .reserva__contador {
+    font-family: var(--f-mono);
+    font-variant-numeric: tabular-nums;
+    text-align: right;
+  }
+
+  .reserva__contador.is-over {
+    color: var(--cor-erro);
+    font-weight: 700;
+  }
+
+  .phone__confere {
+    display: grid;
+    gap: 8px;
+    margin-top: 8px;
+    padding: 10px 12px;
+    border: var(--fio) solid var(--cor-atencao);
+    background: var(--cor-superficie-2);
+    font-size: 15px;
+  }
+
+  .phone__confere p {
+    margin: 0;
+  }
+
+  .phone__confere-acoes,
+  .phone__fora {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 6px 0 0;
+  }
+
+  .phone__confere .btn,
+  .phone__fora .btn {
+    min-height: 44px;
+  }
+
+  /* ---- o comprovante e suas ações ---- */
+  .recibo {
+    display: grid;
+    gap: 14px;
+  }
+
+  .recibo .receipt {
+    max-width: 420px;
+  }
+
+  .recibo__codigo-ajuda,
+  .recibo__quando {
+    margin: 0;
+    font-size: 15px;
+  }
+
+  .recibo__quando {
+    font-family: var(--f-grotesca);
+    font-weight: 700;
+    font-size: 18px;
+  }
+
+  .recibo__inapp {
+    display: grid;
+    gap: 6px;
+  }
+
+  .recibo__demo {
+    margin: 0;
+    padding: 8px 10px;
+    border: var(--fio) dashed var(--cor-borda);
+    font-size: 13.5px;
+    color: var(--cor-texto-suave);
+  }
+
+  .recibo__demo a {
+    color: var(--cor-texto);
+  }
+
+  /* ---- conta e links: entrar, minhas-reservas, confirmar, espera ---- */
+  .conta {
+    display: grid;
+    gap: clamp(18px, 3vw, 28px);
+    max-width: 760px;
+  }
+
+  .conta__corpo {
+    display: grid;
+    gap: 18px;
+  }
+
+  .conta__barra {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .conta__abas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .conta__abas .tile {
+    font-size: 16px;
+    padding-inline: 16px;
+  }
+
+  .conta__secao {
+    display: grid;
+    gap: 14px;
+  }
+
+  .conta__secao h2 {
+    margin: 0;
+    font-family: var(--f-letreiro);
+    font-weight: 800;
+    font-size: clamp(22px, 3vw, 28px);
+    text-transform: uppercase;
+  }
+
+  .conta__form {
+    display: grid;
+    gap: 16px;
+    max-width: 520px;
+  }
+
+  .conta__divisa {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--cor-texto-suave);
+    font-size: 14px;
+  }
+
+  .conta__divisa::before,
+  .conta__divisa::after {
+    content: "";
+    flex: 1;
+    border-top: var(--fio) dashed var(--cor-borda);
+  }
+
+  .lista-reservas {
+    display: grid;
+    gap: var(--fio);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background: var(--cor-borda);
+    border: var(--fio) solid var(--cor-borda);
+  }
+
+  .lista-reservas > li {
+    display: grid;
+    gap: 10px;
+    padding: 14px 16px;
+    background: var(--grao), var(--cor-superficie);
+  }
+
+  .lista-reservas__topo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 14px;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+
+  .lista-reservas__quando {
+    font-family: var(--f-grotesca);
+    font-weight: 800;
+    font-size: 19px;
+  }
+
+  .lista-reservas__codigo {
+    font-family: var(--f-mono);
+    font-size: 13px;
+    color: var(--cor-texto-suave);
+  }
+
+  .lista-reservas__linha {
+    margin: 0;
+    font-size: 15px;
+  }
+
+  .status-texto {
+    display: inline-block;
+    padding: 2px 8px;
+    border: var(--fio) solid currentcolor;
+    font-family: var(--f-mono);
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .status-texto--ativo {
+    color: var(--cor-texto);
+  }
+
+  .status-texto--fim {
+    color: var(--cor-texto-suave);
+  }
+
+  .mudar {
+    display: grid;
+    gap: 16px;
+    padding-top: 8px;
+    border-top: var(--fio) dashed var(--cor-borda);
+  }
+
+  .contagem {
+    font-family: var(--f-grotesca);
+    font-weight: 900;
+    font-size: clamp(28px, 6vw, 44px);
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .resposta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .resposta .btn[aria-pressed="true"] {
+    background: var(--cor-selecao);
+    border-color: var(--cor-selecao);
+    color: var(--cor-acao-texto);
+  }
+
+  .google-demo {
+    display: grid;
+    gap: 10px;
+    padding: 14px;
+    border: var(--fio) dashed var(--cor-borda);
+  }
+
+  @media (max-width: 760px) {
+    .reserva__grupo-campos {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+
+  @media (max-width: 480px) {
+    /* o calendário usa a largura toda do painel no celular, para sete dias caberem em 360 px */
+    .calendario {
+      margin-inline: calc(-1 * clamp(16px, 2.2vw, 26px));
+    }
+
+    .days.calendario__grade {
+      grid-template-columns: repeat(7, minmax(0, 1fr));
+    }
+
+    .calendario__grade .day {
+      min-height: 58px;
+    }
+
+    .calendario__grade .day small {
+      display: none;
+    }
+
+    .calendario__grade .day b {
+      font-size: 20px;
+    }
+
+    .calendario__grade .day span {
+      font-size: 9.5px;
+    }
+
+    .day__evento {
+      font-size: 8.5px;
+    }
+
+    .reserva__sensivel {
+      margin-left: 0;
+    }
+  }
+
+  /* dentro do Instagram: como abrir no navegador, com o link para copiar (7.9) */
+  .reserva__inapp {
+    display: grid;
+    gap: 8px;
+    justify-items: start;
+    margin-top: 8px;
+  }
+}
