@@ -1,0 +1,818 @@
+/* Salão: a planta ao vivo (computador e tablet em pé), a lista por área (celular), a gaveta
+   lateral e a folha da noite com as suas próprias regras de impressão. Compartilhado com Espera: o contador de pessoas,
+   o seletor de mesa e as palavras de estado. */
+@layer pages {
+  .salao,
+  .salao-folha,
+  .espera {
+    display: flex;
+    flex-direction: column;
+    gap: var(--e-4);
+    padding-top: var(--e-4);
+  }
+
+  :is(.salao, .salao-folha, .espera, .salao__gaveta, .espera__gaveta) .btn--sm {
+    min-height: var(--alvo-toque);
+  }
+
+  .salao__topo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--e-3);
+  }
+
+  .salao__noite small {
+    color: var(--cor-texto-suave);
+  }
+
+  .salao__atalhos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--e-2);
+  }
+
+  .salao__busca {
+    max-width: 640px;
+  }
+
+  .salao__busca .field__input {
+    font-size: 16px;
+  }
+
+  .salao__achados {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .salao__achados li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--e-2);
+    padding: var(--e-2) 0;
+    border-bottom: var(--fio) solid var(--cor-fio);
+  }
+
+  .salao__nada {
+    color: var(--cor-texto-suave);
+  }
+
+  .salao__resumo {
+    font-family: var(--f-mono);
+    font-size: 13px;
+    letter-spacing: 0.04em;
+  }
+
+  /* a planta: nós maiores que os do catálogo, para a palavra de estado sempre caber */
+  .salao .table-node {
+    width: 96px;
+    height: auto;
+    min-height: 96px;
+    cursor: pointer;
+  }
+
+  .salao .table-node--stool {
+    width: 80px;
+    min-height: 80px;
+    border-radius: 50%;
+  }
+
+  .salao .table-node:focus-visible {
+    outline: 3px solid var(--cor-foco);
+    outline-offset: 3px;
+  }
+
+  .table-node__estado {
+    font-family: var(--f-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .salao .table-node .table-node__nota {
+    font-weight: 500;
+  }
+
+  .salao__contagem {
+    padding: var(--e-3);
+    border: var(--fio) solid var(--cor-borda);
+    background: var(--cor-superficie);
+  }
+
+  .salao__lista {
+    display: none;
+  }
+
+  .salao__area-nome {
+    padding: 4px 10px 6px;
+    background: var(--cor-escuro);
+    color: var(--cor-escuro-texto);
+    font-family: var(--f-mono);
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .salao__linhas {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .linha-mesa {
+    display: grid;
+    grid-template-columns: 3.2em auto minmax(0, 1fr);
+    align-items: center;
+    gap: var(--e-2);
+    width: 100%;
+    min-height: var(--alvo-toque);
+    padding: var(--e-2) var(--e-3);
+    border: 0;
+    border-bottom: var(--fio) solid var(--cor-fio);
+    background: var(--cor-superficie);
+    color: var(--cor-texto);
+    text-align: left;
+    font: inherit;
+  }
+
+  .linha-mesa__codigo {
+    font-family: var(--f-grotesca);
+    font-size: 20px;
+    font-weight: 900;
+  }
+
+  .linha-mesa__nota {
+    overflow-wrap: anywhere;
+  }
+
+  /* a planta desenhada como o layout coloca: uma área embaixo da outra, cada uma rolando para o lado
+     dentro de si quando a tela é mais estreita que a área */
+  .salao__planta--desenho {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .salao__planta--desenho .floor-area {
+    display: block;
+  }
+
+  .mapa {
+    max-width: 100%;
+    overflow: auto;
+  }
+
+  .mapa:focus-visible {
+    outline: 3px solid var(--cor-foco);
+    outline-offset: -3px;
+  }
+
+  .mapa__quadro {
+    position: relative;
+  }
+
+  .mapa__quadro > .table-node {
+    position: absolute;
+  }
+
+  .salao .table-node--long {
+    min-height: 80px;
+  }
+
+  /* um ponto fixo da casa (bar, cozinha, entrada…): hachurado, neutro, sem ação */
+  .ponto-fixo {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 2px;
+    overflow: hidden;
+    border: var(--fio) dashed var(--cor-texto-suave);
+    background:
+      repeating-linear-gradient(135deg, var(--cor-hachura) 0 1.5px, transparent 1.5px 8px),
+      var(--cor-superficie-2);
+    color: var(--cor-texto-suave);
+  }
+
+  .ponto-fixo .ponto-icone {
+    flex: none;
+  }
+
+  .ponto-fixo__nome {
+    overflow: hidden;
+    padding: 1px 4px;
+    background: var(--cor-superficie);
+    color: var(--cor-texto);
+    font-family: var(--f-mono);
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    text-align: center;
+    overflow-wrap: anywhere;
+  }
+
+  /* os pontos como referência em cima de uma área (lista do celular, área no modo lista) */
+  .pontos-ref {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--e-1) var(--e-2);
+    margin: 0;
+    padding: var(--e-2) var(--e-3);
+    list-style: none;
+    border-bottom: var(--fio) solid var(--cor-fio);
+    background: var(--cor-superficie-2);
+    color: var(--cor-texto-suave);
+    font-family: var(--f-mono);
+    font-size: 12px;
+  }
+
+  .pontos-ref li {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--cor-texto);
+  }
+
+  .pontos-ref .ponto-icone {
+    color: var(--cor-texto-suave);
+  }
+
+  /* a planta na folha da noite: pequena, mesas pelo código, os pontos hachurados */
+  .folha__planta {
+    display: flex;
+    flex-direction: column;
+    gap: var(--e-3);
+    margin-top: var(--e-4);
+  }
+
+  .folha__legenda {
+    margin: 0;
+    font-size: 13px;
+  }
+
+  .folha__area {
+    break-inside: avoid;
+  }
+
+  .folha__area h4 {
+    margin: 0 0 var(--e-1);
+    font-family: var(--f-mono);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .folha__area .mapa__quadro {
+    border: var(--fio) solid var(--cor-borda);
+  }
+
+  .folha-mesa {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    border: 1.5px solid var(--cor-borda);
+    background: var(--cor-superficie);
+    color: var(--cor-texto);
+    font-family: var(--f-grotesca);
+    font-size: 11px;
+    line-height: 1;
+  }
+
+  .folha-mesa--redonda {
+    border-radius: 50%;
+  }
+
+  .folha__area .ponto-fixo__nome {
+    font-size: 9.5px;
+  }
+
+  @media print {
+    .folha__area .mapa {
+      overflow: visible;
+    }
+  }
+
+  /* o estado como uma palavra com o seu próprio carimbo, nunca só a cor */
+  .estado-mesa {
+    display: inline-block;
+    padding: 1px 7px;
+    border: 1.5px solid var(--cor-borda);
+    font-family: var(--f-mono);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .estado-mesa--reserved {
+    border-color: var(--cor-atencao);
+    border-width: 2px;
+    color: var(--cor-atencao-texto);
+  }
+
+  .estado-mesa--seated {
+    background: var(--cor-acao);
+    border-color: var(--cor-acao);
+    color: var(--cor-acao-texto);
+  }
+
+  .estado-mesa--late {
+    border-style: dashed;
+    border-color: var(--cor-atencao);
+    color: var(--cor-atencao-texto);
+  }
+
+  .estado-mesa--release {
+    background: var(--cor-atencao);
+    border-color: var(--cor-atencao);
+    color: var(--cor-acao-texto);
+  }
+
+  @media (max-width: 599px) {
+    .salao__planta {
+      display: none;
+    }
+
+    .salao__lista {
+      display: flex;
+      flex-direction: column;
+      gap: var(--e-4);
+    }
+  }
+
+  /* ---- a gaveta ---- */
+  .gaveta__foco:focus {
+    outline: none;
+  }
+
+  .gaveta__titulo {
+    font-family: var(--f-grotesca);
+    font-size: 22px;
+    font-weight: 900;
+  }
+
+  .gaveta__fraco {
+    color: var(--cor-texto-suave);
+  }
+
+  .gaveta__marcas {
+    --gap: var(--e-1);
+  }
+
+  .gaveta__dados {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: var(--e-2);
+    margin: 0;
+  }
+
+  .gaveta__dados div {
+    padding: var(--e-2);
+    border: var(--fio) solid var(--cor-fio);
+  }
+
+  .gaveta__dados dt {
+    font-family: var(--f-mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--cor-texto-suave);
+  }
+
+  .gaveta__dados dd {
+    margin: 0;
+    font-weight: 700;
+  }
+
+  .gaveta__acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--e-2);
+  }
+
+  .gaveta__tolerancia .badge {
+    margin-left: var(--e-1);
+  }
+
+  .gaveta .link-button {
+    align-self: flex-start;
+    min-height: var(--alvo-toque);
+  }
+
+  /* − 2 + */
+  .contador__rotulo {
+    display: block;
+    margin-bottom: var(--e-1);
+    font-weight: 700;
+  }
+
+  .contador__linha {
+    display: inline-flex;
+    align-items: stretch;
+    border: var(--fio) solid var(--cor-borda);
+  }
+
+  .contador__botao {
+    width: var(--alvo-toque);
+    min-height: var(--alvo-toque);
+    border: 0;
+    background: var(--cor-superficie);
+    color: var(--cor-texto);
+    font-size: 24px;
+    line-height: 1;
+  }
+
+  .contador__botao:disabled {
+    color: var(--cor-texto-fraco);
+  }
+
+  .contador__valor {
+    display: grid;
+    place-items: center;
+    min-width: 3em;
+    border-inline: var(--fio) solid var(--cor-borda);
+    font-family: var(--f-grotesca);
+    font-size: 22px;
+    font-weight: 900;
+  }
+
+  /* seletor de mesa */
+  .escolha-mesas {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  .escolha-mesas legend {
+    margin-bottom: var(--e-2);
+    font-weight: 700;
+  }
+
+  .escolha-mesas__lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--e-2);
+  }
+
+  .escolha-mesa {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 88px;
+    min-height: var(--alvo-toque);
+    padding: var(--e-2);
+    border: var(--fio) solid var(--cor-borda);
+    background: var(--cor-superficie);
+    color: var(--cor-texto);
+    font: inherit;
+    text-align: left;
+  }
+
+  .escolha-mesa b {
+    font-family: var(--f-grotesca);
+    font-size: 18px;
+  }
+
+  .escolha-mesa span {
+    font-size: 13px;
+  }
+
+  .escolha-mesa[aria-pressed="true"] {
+    background: var(--cor-acao);
+    border-color: var(--cor-acao);
+    color: var(--cor-acao-texto);
+  }
+
+  .escolha-mesa[aria-pressed="true"] b::after {
+    content: " ✓";
+  }
+
+  .escolha-vazia {
+    color: var(--cor-texto-suave);
+  }
+
+  /* linha do tempo */
+  .linha-tempo {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .linha-tempo li {
+    display: grid;
+    grid-template-columns: 4em minmax(0, 1fr);
+    gap: var(--e-2);
+    padding: var(--e-2) 0;
+    border-bottom: var(--fio) solid var(--cor-fio);
+  }
+
+  .linha-tempo time {
+    font-family: var(--f-mono);
+  }
+
+  .linha-tempo small {
+    display: block;
+    color: var(--cor-texto-suave);
+  }
+
+  /* ---- a folha da noite ---- */
+  .salao-folha__acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--e-2);
+  }
+
+  .folha {
+    display: flex;
+    flex-direction: column;
+    gap: var(--e-3);
+    padding: var(--e-4);
+    border: var(--fio) solid var(--cor-borda);
+    background: var(--cor-superficie);
+  }
+
+  .folha h2 {
+    font-family: var(--f-grotesca);
+    font-size: 24px;
+    font-weight: 900;
+  }
+
+  .folha h3 {
+    font-family: var(--f-mono);
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .folha__chegada {
+    min-width: 7em;
+  }
+
+  .folha__branco td {
+    height: 2.2em;
+  }
+
+  .folha__espera {
+    margin: 0;
+    padding-left: 1.2em;
+  }
+
+  .folha__rodape {
+    font-size: 12px;
+    color: var(--cor-texto-suave);
+  }
+
+  @media print {
+    @page {
+      size: a4;
+      margin: 12mm;
+    }
+
+    body:has(.folha) :is(.trilho, .barra, .topo, .area__cabeca, .skip-link, .salao-folha__acoes, .toasts, .demo-bar) {
+      display: none;
+    }
+
+    body:has(.folha) .painel {
+      display: block;
+    }
+
+    .folha {
+      padding: 0;
+      border: 0;
+      background: none;
+      color: var(--cor-texto);
+    }
+
+    .folha .data-table th,
+    .folha .data-table td {
+      border: 1px solid var(--cor-borda);
+      color: var(--cor-texto);
+      background: none;
+    }
+  }
+
+  /* ---- compartilhado pelas telas da noite: as mensagens prontas e a faixa do retrato ---- */
+  .prontas {
+    display: flex;
+    flex-direction: column;
+    gap: var(--e-2);
+  }
+
+  .prontas .action {
+    min-height: var(--alvo-toque);
+  }
+
+  .prontas__motivo {
+    margin: 0;
+  }
+
+  .retrato-faixa {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--e-2) var(--e-3);
+  }
+
+  .retrato-faixa p {
+    margin: 0;
+  }
+
+  /* ---- os extras do salão: a linha das regras, o contador no modo lista, as mensagens prontas ---- */
+  .salao__regra {
+    margin: 0;
+    color: var(--cor-texto-suave);
+    font-size: 13px;
+  }
+
+  .salao__regra summary {
+    display: flex;
+    align-items: center;
+    min-height: var(--alvo-toque);
+    cursor: pointer;
+  }
+
+  .tolerancia {
+    margin-top: var(--e-2);
+    color: var(--cor-texto);
+    font-size: 14px;
+  }
+
+  .tolerancia__titulo {
+    padding-bottom: var(--e-2);
+    font-weight: 600;
+    text-align: left;
+  }
+
+  .salao__contagem-area {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--e-2) var(--e-3);
+  }
+
+  .salao__contagem-area .btn {
+    min-height: var(--alvo-toque);
+  }
+
+  .gaveta__prontas > summary {
+    min-height: var(--alvo-toque);
+    cursor: pointer;
+  }
+
+  .gaveta__prontas .prontas {
+    margin-top: var(--e-2);
+  }
+
+  /* ---- a porta do evento, feita para o celular ---- */
+  .porta {
+    display: flex;
+    flex-direction: column;
+    gap: var(--e-4);
+    padding-top: var(--e-4);
+  }
+
+  .porta__titulo {
+    margin: 0;
+    font-family: var(--f-grotesca);
+    font-weight: 900;
+    font-size: 22px;
+    text-transform: uppercase;
+  }
+
+  .porta__numeros {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .porta__lista {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .porta__linha {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--e-2) var(--e-3);
+    min-height: var(--alvo-toque);
+    padding: var(--e-2) 0;
+    border-bottom: 1px solid var(--cor-fio);
+  }
+
+  .porta__linha .btn,
+  .porta__linha .action,
+  .porta__pra-dentro {
+    min-height: var(--alvo-toque);
+  }
+
+  .porta__linha.is-chegando {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .porta__entrar {
+    padding: var(--e-3);
+    border: var(--fio) solid var(--cor-borda);
+    background: var(--grao), var(--cor-superficie);
+  }
+
+  .porta__folha {
+    display: none;
+  }
+
+  /* ---- lançar o que foi anotado no papel ---- */
+  .papel {
+    padding-top: var(--e-4);
+  }
+
+  .papel__titulo {
+    margin: 0 0 var(--e-2);
+    font-family: var(--f-grotesca);
+    font-weight: 900;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+
+  .papel__bloco {
+    display: flex;
+    flex-direction: column;
+    gap: var(--e-3);
+  }
+
+  .papel__lista {
+    display: flex;
+    flex-direction: column;
+    gap: var(--e-2);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .papel__linha {
+    display: flex;
+    flex-direction: column;
+    gap: var(--e-2);
+    padding: var(--e-3);
+    border: var(--fio) solid var(--cor-borda);
+    background: var(--grao), var(--cor-superficie);
+  }
+
+  .papel__linha p {
+    margin: 0;
+  }
+
+  .papel__campos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: var(--e-3);
+  }
+
+  .papel__campos .btn {
+    min-height: var(--alvo-toque);
+  }
+
+  .papel__hora .field__input {
+    min-height: var(--alvo-toque);
+  }
+
+  .papel__vazio,
+  .papel__intro {
+    margin: 0;
+    color: var(--cor-texto-suave);
+  }
+
+  .papel__lado-a-lado {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: var(--e-2);
+  }
+
+  .papel__lado-a-lado p {
+    margin: 0;
+  }
+
+  @media print {
+    body:has(.porta) :is(.trilho, .barra, .topo, .area__cabeca, .skip-link, .toasts, .demo-bar) {
+      display: none;
+    }
+
+    .porta > :not(.porta__folha) {
+      display: none;
+    }
+
+    .porta .porta__folha {
+      display: block;
+    }
+  }
+}

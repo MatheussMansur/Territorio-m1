@@ -1,0 +1,107 @@
+/* Espera: a fila por horário. A gaveta e as peças comuns ficam em salao.css. */
+@layer pages {
+  .espera__horario {
+    display: flex;
+    flex-direction: column;
+    gap: var(--e-2);
+  }
+
+  .espera__hora {
+    padding: 4px 10px 6px;
+    background: var(--cor-escuro);
+    color: var(--cor-escuro-texto);
+    font-family: var(--f-mono);
+    font-size: 14px;
+    letter-spacing: 0.1em;
+  }
+
+  .espera__hora small {
+    margin-left: var(--e-2);
+    color: var(--cor-escuro-texto-suave);
+    font-size: 12px;
+  }
+
+  .espera__fila {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .espera__linha {
+    display: grid;
+    grid-template-columns: 3em minmax(0, 1fr) auto;
+    align-items: center;
+    gap: var(--e-3);
+    padding: var(--e-3);
+    border-bottom: var(--fio) solid var(--cor-fio);
+    background: var(--cor-superficie);
+  }
+
+  .espera__linha.is-oferta {
+    border-left: 4px solid var(--cor-atencao);
+  }
+
+  .espera__posicao {
+    font-family: var(--f-grotesca);
+    font-size: 24px;
+    font-weight: 900;
+  }
+
+  .espera__quem {
+    display: flex;
+    flex-direction: column;
+    gap: var(--e-1);
+    min-width: 0;
+  }
+
+  .espera__tempo,
+  .espera__conta {
+    color: var(--cor-texto-suave);
+  }
+
+  .espera__marcas {
+    --gap: var(--e-1);
+  }
+
+  .espera__acoes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: var(--e-2);
+  }
+
+  .espera__motivos {
+    display: flex;
+    flex-direction: column;
+    gap: var(--e-2);
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  .espera__motivos legend {
+    margin-bottom: var(--e-2);
+    font-weight: 700;
+  }
+
+  .espera__motivos .check {
+    min-height: var(--alvo-toque);
+  }
+
+  @media (max-width: 860px) {
+    .espera__linha {
+      grid-template-columns: 2.4em minmax(0, 1fr);
+    }
+
+    .espera__acoes {
+      grid-column: 1 / -1;
+      justify-content: flex-start;
+    }
+  }
+
+  .espera__dica {
+    margin: var(--e-1) 0 0;
+    color: var(--cor-atencao-texto);
+    font-size: 13px;
+  }
+}
