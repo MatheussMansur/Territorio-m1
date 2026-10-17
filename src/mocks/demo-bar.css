@@ -1,0 +1,80 @@
+.demo-bar {
+  position: fixed;
+  left: 12px;
+  bottom: 12px;
+  z-index: var(--z-demo);
+  font-family: var(--f-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.demo-bar__panel {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 12px;
+  max-width: calc(100vw - 24px);
+  padding: 8px 10px;
+  border-left: 4px solid var(--lampada);
+  background: var(--cor-escuro);
+  color: var(--cor-escuro-texto-suave);
+}
+
+.demo-bar__panel b {
+  color: var(--lampada);
+  font-weight: 600;
+}
+
+.demo-bar select,
+.demo-bar button {
+  min-height: 30px;
+  padding: 2px 8px;
+  border: 1px solid var(--cor-escuro-borda);
+  background: var(--cor-escuro-2);
+  color: var(--cor-escuro-texto);
+  font: inherit;
+  text-transform: uppercase;
+}
+
+.demo-bar button:hover {
+  border-color: var(--lampada);
+}
+
+.demo-bar__clock {
+  color: var(--cor-escuro-texto);
+}
+
+.demo-bar .demo-bar__tab {
+  border-left: 4px solid var(--lampada);
+  background: var(--cor-escuro);
+}
+
+/* "Entrada": a senha da demonstração, os atalhos ?papel= e os links que iriam por e-mail */
+.demo-bar__entrada {
+  display: grid;
+  flex-basis: 100%;
+  gap: 6px;
+  max-width: 560px;
+  max-height: 50dvh;
+  overflow-y: auto;
+  padding-top: 8px;
+  border-top: 1px solid var(--cor-escuro-borda);
+  text-transform: none;
+  letter-spacing: 0.02em;
+}
+
+.demo-bar__entrada ul {
+  display: grid;
+  gap: 2px;
+  margin: 0;
+  padding-left: 16px;
+}
+
+.demo-bar__entrada a {
+  color: var(--cor-escuro-texto);
+}
+
+.demo-bar__entrada b {
+  color: var(--cor-escuro-texto);
+}
