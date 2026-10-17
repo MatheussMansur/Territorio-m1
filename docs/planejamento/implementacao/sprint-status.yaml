@@ -1,0 +1,284 @@
+# SIGNIFICADO DE CADA SITUAÇÃO:
+# ==================
+# Situação do épico:
+#   - backlog: épico ainda não começou
+#   - in-progress: épico em andamento
+#   - done: todas as histórias do épico prontas
+
+# Situação da história:
+#   - backlog: a história só existe no arquivo de épicos
+#   - ready-for-dev: arquivo da história criado, pronta para fazer
+#   - in-progress: alguém está fazendo
+#   - review: feita, esperando revisão
+#   - done: história pronta
+
+# Situação da retrospectiva:
+#   - optional: pode ser feita, mas não é obrigatória
+#   - done: retrospectiva feita
+
+# Situação dos itens de ação:
+#   - open: combinado numa retrospectiva, ainda não resolvido
+#   - in-progress: em andamento
+#   - done: resolvido
+
+# COMO FUNCIONA:
+# ===============
+# - O épico passa para 'in-progress' sozinho quando a primeira história começa
+# - Histórias podem andar em paralelo se houver gente para isso
+# - Em geral, a próxima história é criada depois que a anterior fica 'done', para levar o que se aprendeu
+# - Quem faz passa a história para 'review' e depois ela passa por uma revisão de código separada
+# - A retrospectiva acrescenta seus itens de ação em action_items; a visão de situação mostra os abertos
+generated: 10-15-2026 04:40
+last_updated: 10-16-2026 22:00
+project: Território
+project_key: NOKEY
+tracking_system: file-system
+story_location: 
+  C:/Users/matnew/Projects/territorio-app/docs/planejamento/implementacao
+# 16/10: "review" nos Épicos 1 a 7 = feita na demonstração e conferida na terceira checagem (checagem-2026-10-15.md); a parte do servidor fica nos Épicos 8 a 11
+development_status:
+  epic-1: in-progress
+  1-1-casca-do-painel-e-menu-por-papel: review
+  1-2-modulo-que-falha-sozinho: review
+  1-3-permissoes-numa-fonte-unica-e-o-teste: review
+  1-4-testes-simulacao-contrato-e-de-contraste: review
+  1-5-mensagens-de-erro-da-casa-para-qualquer-falha: review
+  1-6-primeiro-acesso-do-dono-e-entrada-com-senha-e-verificacao-em: review
+  1-7-confirmar-identidade-para-acoes-sensiveis-e-sair: review
+  1-8-recuperar-a-senha-e-ver-minhas-sessoes: review
+  1-9-equipe-convidar-cadastrar-quem-entra-so-com-pin-desativar-e: review
+  1-10-aparelhos-da-casa-parear-aprovar-e-revogar: review
+  1-11-aparelho-que-perde-a-chave-ou-esta-com-o-relogio-errado: review
+  1-12-entrar-pelo-pin-no-aparelho-da-casa: review
+  1-13-registro-de-acoes: review
+  1-14-sistema: review
+  1-15-permissoes-por-area-escolhidas-pelo-dono: review
+  1-16-central-de-avisos-com-sino-faixa-critica-e-meus-avisos: review # nova em 16/10 (FR-87), feita na demonstração
+  epic-1-retrospective: optional
+
+  epic-2: in-progress
+  2-1-indice-e-busca-das-configuracoes: review
+  2-2-grupo-reservas-linhas-e-limites-vindos-do-meta: review
+  2-3-marca-mudou-barra-de-impacto-e-previa-do-cliente: review
+  2-4-dialogo-o-que-muda-e-gravacao-com-versao: review
+  2-5-conflitos-erros-e-sem-conexao: review
+  2-6-papeis-e-telas-de-tablet-e-celular: review
+  2-7-grupo-acesso-e-seguranca: review
+  2-8-horarios-e-semana-padrao: review
+  2-9-combinados-com-versao-e-previa-do-cliente: review
+  2-10-aprovacao-e-faltas: review
+  2-11-lista-de-espera: review
+  2-12-salao-e-recepcao: review
+  2-13-eventos: review
+  2-14-mensagens-ao-cliente-e-revisoes-de-modelo: review
+  2-15-avisos-a-equipe-e-horario-de-silencio: review
+  2-16-casa: review
+  2-17-site-e-cardapio: review
+  2-18-privacidade: review
+  2-19-cookies: review
+  2-20-aparencia-e-integracoes: review
+  2-21-historico-de-cada-grupo-e-voltar-a-versao-anterior: review
+  2-22-conta-google-da-casa-agenda-e-drive: review
+  epic-2-retrospective: optional
+
+  epic-3: in-progress
+  3-1-plantas-lista-criar-duplicar-e-arquivar-com-as-areas: review
+  3-2-editor-de-planta-arrastando-mesas: review
+  3-3-juntar-mesas-e-mudar-uma-planta-em-uso-vendo-quem-perde-mesa: review
+  3-4-agenda-do-mes-e-da-semana: review
+  3-5-plano-de-um-dia-com-a-previa-de-quem-perde-mesa: review
+  3-6-varias-datas-de-uma-vez-e-voltar-a-semana-padrao: review
+  3-7-galeria-enviar-fotos-em-lote: review
+  3-8-galeria-usos-substituir-e-apagar: review
+  3-9-eventos-criar-duplicar-publicar-e-despublicar: review
+  3-10-modo-de-reserva-e-capacidade-na-ficha-do-evento: review
+  3-11-lista-montada-pela-casa-no-evento-privado: review
+  3-12-assistente-de-primeiro-acesso: review
+  3-13-pontos-fixos-na-planta: review # nova em 15/10, feita na demonstração
+  epic-3-retrospective: optional
+
+  epic-4: in-progress
+  4-1-o-site-funciona-com-a-api-desligada: review
+  4-2-o-site-sugere-a-lingua-do-navegador: review
+  4-3-aberto-agora-nas-tres-linguas: review
+  4-4-hoje-na-casa-vindo-das-configuracoes: review
+  4-5-mapa-estatico-em-onde-fica: review
+  4-6-reservar-mesa-abre-numa-janela: review
+  4-7-pagina-404-nas-tres-linguas: review
+  4-8-a-raiz-como-icone-do-site-e-do-painel: review
+  4-9-fontes-de-titulo-em-subconjunto-e-plano-b: in-progress # bloqueada: autorização do autor da fonte e escolha do "C" (Marcus e Irina)
+  4-10-agenda-de-eventos-e-pagina-de-cada-evento: review
+  4-11-cardapio-no-painel-categorias-e-itens-em-rascunho: review
+  4-12-previa-e-publicacao-do-cardapio: review
+  4-13-acabou-pelo-painel-e-ao-vivo-no-site: review
+  4-14-blocos-do-site-editar-com-previa-nas-tres-linguas: review
+  4-15-publicar-o-site-historico-e-voltar-a-versao-anterior: review
+  epic-4-retrospective: optional
+
+  epic-5: in-progress
+  5-1-hoje-os-numeros-e-os-horarios-da-noite: review
+  5-2-hoje-alertas-evento-da-noite-semana-e-pendencias-do-primeiro: review
+  5-3-hoje-ao-vivo-e-sem-conexao: review
+  5-4-reservas-lista-com-filtros-e-busca: review
+  5-5-gaveta-da-reserva-com-a-linha-do-tempo: review
+  5-6-nova-reserva-por-telefone-whatsapp-ou-balcao: review
+  5-7-passar-do-limite-e-grupo-grande-com-mesa-escolhida-a-mao: review
+  5-8-aprovar-e-recusar-reservas-pendentes: review
+  5-9-remarcar-e-trocar-a-mesa: review
+  5-10-cancelar-reenviar-a-confirmacao-e-marcar-nao-veio: review
+  5-11-exportar-as-reservas: review
+  5-12-espera-fila-por-horario-e-oferecer-mesa-a-mao: review
+  5-13-espera-virar-reserva-tirar-da-fila-e-espera-de-quem-chega-se: review
+  5-14-clientes-busca-e-lista: review
+  5-15-ficha-do-cliente-notas-marcadores-bloquear-e-perdoar-falta: review
+  5-16-ver-o-telefone-completo-com-confirmacao-de-identidade: review
+  5-17-exportar-e-anonimizar-um-cliente: review
+  5-18-pedidos-de-dados-do-site-com-prazo-de-15-dias: review
+  5-19-cliente-sem-whatsapp-reserva-por-telefone-e-confirmacao-por: review
+  5-20-reservas-em-grade-o-dia-por-horario-e-mesas-horarios: review
+  5-21-reservas-por-semana-e-por-mes: review
+  5-22-hoje-e-a-central-de-avisos-lendo-a-mesma-lista: review # nova em 16/10 (FR-87), feita na demonstração
+  epic-5-retrospective: optional
+
+  epic-6: in-progress
+  6-1-salao-ao-vivo-com-a-planta-da-noite: review
+  6-2-chegou-abre-a-mesa: review
+  6-3-sentar-quem-chegou-sem-reserva: review
+  6-4-mesa-atrasada-tolerancia-e-perda-de-prioridade: review
+  6-5-liberar-a-mesa-e-para-liberar: review
+  6-6-trocar-juntar-e-separar-mesas: review
+  6-7-linha-do-tempo-da-sessao-de-mesa: review
+  6-8-chegada-na-lista-do-evento-pelo-celular: review
+  6-9-mensagens-prontas-da-recepcao: review
+  6-10-folha-da-noite-impressa-ou-em-pdf: review
+  6-11-retrato-da-noite-sem-conexao: review
+  6-12-sistema-da-casa-fora-com-a-internet-no-ar: review
+  6-13-lancar-o-que-foi-anotado-no-papel: review
+  6-14-fechamento-da-noite-e-nao-veio: review
+  epic-6-retrospective: optional
+
+  epic-7: in-progress
+  7-1-grupo-grande-pelo-whatsapp-da-casa: review
+  7-2-calendario-de-30-dias: review
+  7-3-reservar-no-modo-do-evento-lista-misto-privado-entrada-livre: review
+  7-4-anti-robo-limites-do-codigo-telefone-de-outros-paises-e-avis: review
+  7-5-horario-que-lotou-ou-fechou-sem-perder-o-que-foi-digitado: review
+  7-6-comprovante-completo: review
+  7-7-dia-lotado-janela-lotada-e-casa-fora-do-ar: review
+  7-8-entrar-em-minhas-reservas-pelo-codigo-do-whatsapp: review
+  7-9-entrar-com-o-google: review
+  7-10-meu-perfil: review
+  7-11-minhas-reservas-ver-e-cancelar: review
+  7-12-remarcar-e-mudar-o-numero-de-pessoas: review
+  7-13-baixar-e-apagar-meus-dados: review
+  7-14-responder-pelo-link-da-mensagem-confirmar: review
+  7-15-entrar-na-lista-de-espera-e-acompanhar-a-vez: review
+  7-16-aceitar-ou-passar-a-vez-na-mesa-oferecida: review
+  7-17-suite-ponta-a-ponta-dos-14-estados-de-borda: review
+  epic-7-retrospective: optional
+
+  epic-8: backlog
+  8-1-esqueleto-em-camadas-com-o-teste-de-imports: backlog
+  8-2-erros-em-problem-json-e-log-json: backlog
+  8-3-saude-e-verificacao-de-contrato-do-servidor: backlog
+  8-4-executor-de-migracoes: backlog
+  8-5-papeis-rls-e-teste-de-duas-casas: backlog
+  8-6-registro-de-acoes-que-ninguem-apaga: backlog
+  8-7-primeiro-acesso-do-dono-pelo-comando-de-instalacao: backlog
+  8-8-entrada-com-senha-totp-e-csrf: backlog
+  8-9-limite-de-tentativas-na-entrada: backlog
+  8-10-permissoes-lidas-de-um-arquivo-so-no-servidor: backlog
+  8-11-laco-de-tarefas-e-fila-de-envio-no-banco: backlog
+  8-12-e-mails-da-casa-enviados-de-verdade: backlog
+  8-13-confirmar-identidade-recuperar-a-senha-e-ver-minhas-sessoes: backlog
+  8-14-equipe-de-verdade-convite-pessoa-so-de-pin-desativar-e-mudar: backlog
+  8-15-aparelhos-da-casa-com-assinatura-conferida-pelo-servidor: backlog
+  8-16-entrar-pelo-pin-no-aparelho-da-casa-de-verdade: backlog
+  8-17-registro-de-acoes-na-tela-com-dados-reais: backlog
+  8-18-configuracoes-gravadas-de-verdade-com-versao-e-previa: backlog
+  8-19-plantas-e-mesas-no-servidor: backlog
+  8-20-semana-padrao-horarios-e-get-house: backlog
+  8-21-plano-do-dia-e-varias-datas-com-simulation_hash: backlog
+  8-22-progresso-do-primeiro-acesso-no-servidor: backlog
+  8-23-galeria-com-fotos-guardadas-e-tratadas-no-servidor: backlog
+  8-24-eventos-no-servidor: backlog
+  8-25-blocos-do-site-publicados-pelo-servidor: backlog
+  8-26-cardapio-e-acabou-no-servidor: backlog
+  8-27-escolha-de-cookies-gravada: backlog
+  8-28-sistema-com-dados-reais: backlog
+  8-29-permissoes-por-area-no-servidor: backlog
+  8-30-avisos-da-equipe-guardados-por-pessoa: backlog # nova em 16/10 (FR-87)
+  epic-8-retrospective: optional
+
+  epic-9: backlog
+  9-1-protecao-contra-robos-e-limites-de-uso-no-servidor: backlog
+  9-2-codigo-no-whatsapp-e-sessao-do-cliente: backlog
+  9-3-disponibilidade-calculada-no-servidor: backlog
+  9-4-criar-a-reserva-uma-vez-so-com-a-mesa-presa-pelo-banco: backlog
+  9-5-aprovacao-pendentes-e-limites-por-cliente: backlog
+  9-6-comprovante-e-links-da-reserva: backlog
+  9-7-minhas-reservas-cancelar-remarcar-mudar-pessoas-e-avisar-atr: backlog
+  9-8-entrar-com-o-google-pelo-servidor: backlog
+  9-9-meu-perfil-e-meus-dados-no-servidor: backlog
+  9-10-lista-de-espera-e-ofertas-com-prazo-na-fila: backlog
+  9-11-o-painel-ao-vivo-por-sse: backlog
+  9-12-hoje-e-reservas-da-equipe-com-dados-reais: backlog
+  9-13-reserva-criada-pela-equipe: backlog
+  9-14-acoes-sobre-a-reserva-pela-tabela-de-transicoes: backlog
+  9-15-exportar-as-reservas: backlog
+  9-16-espera-na-recepcao: backlog
+  9-17-busca-e-ficha-do-cliente: backlog
+  9-18-ver-telefone-exportar-e-anonimizar: backlog
+  9-19-pedidos-de-privacidade-com-prazo: backlog
+  9-20-chegou-quem-chega-sem-reserva-e-a-sessao-de-mesa: backlog
+  9-21-atraso-liberar-trocar-e-juntar-mesas: backlog
+  9-22-reservas-de-evento-e-lista-da-porta: backlog
+  9-23-mudar-planta-agenda-e-configuracoes-com-reservas-de-verdade: backlog
+  9-24-fechamento-da-noite-pela-tarefa: backlog
+  9-25-retrato-da-noite-para-a-recepcao: backlog
+  9-26-rotina-de-privacidade: backlog
+  9-27-reservas-na-agenda-do-google-de-verdade: backlog
+  9-28-arquivos-da-noite-no-drive-da-casa: backlog
+  9-29-avisos-que-nascem-dos-fatos-reais-e-chegam-ao-vivo: backlog # nova em 16/10 (FR-87)
+  epic-9-retrospective: optional
+
+  epic-10: backlog
+  10-1-maquina-da-casa-na-oracle-criada-e-protegida: backlog
+  10-2-dominio-e-https: backlog
+  10-3-nginx-rotas-cache-e-tempo-real: backlog
+  10-4-cabecalhos-de-seguranca-com-teste-no-ar: backlog
+  10-5-bancos-de-producao-e-homologacao: backlog
+  10-6-homologacao-com-senha-e-relogio-adiantavel: backlog
+  10-7-demonstracao-com-a-simulacao: backlog
+  10-8-verificacao-automatica-a-cada-mudanca-no-github: backlog
+  10-9-orcamentos-de-desempenho-e-de-peso-no-ci: backlog
+  10-10-varredura-de-seguranca-antes-de-ir-ao-ar: backlog
+  10-11-publicar-com-um-comando-e-voltar-atras: backlog
+  10-12-copia-diaria-cifrada-fotos-e-segredos: backlog
+  10-13-restauracao-testada-todo-domingo: backlog
+  10-14-saude-do-sistema-e-alertas-24-h: backlog
+  10-15-erros-registrados-no-sentry-sem-dado-de-cliente: backlog
+  10-16-visitas-do-site-e-numeros-da-casa-tela-simulada: backlog
+  10-17-umami-na-maquina-e-repasse-pelo-post-measure: backlog
+  10-18-tela-visitas-do-site-com-dados-reais: backlog
+  10-19-procedencia-gravada-na-reserva-e-numeros-da-casa: backlog
+  10-20-desempenho-real-de-quem-visita: backlog
+  10-21-site-publicado-no-dominio-aberto-ao-google: backlog
+  10-22-conferencia-final-da-lgpd-antes-de-abrir: backlog
+  10-23-reconstruir-a-casa-numa-maquina-nova: backlog
+  10-24-aplicativo-da-casa-aprovado-no-google: backlog
+  epic-10-retrospective: optional
+
+  epic-11: backlog
+  11-1-ligar-o-numero-da-casa-a-api-em-coexistencia: backlog
+  11-2-uma-porta-so-para-o-whatsapp-com-o-catalogo-de-modelos-no-co: backlog
+  11-3-webhook-do-whatsapp-entrega-e-respostas: backlog
+  11-4-pedir-os-modelos-a-meta-e-acompanhar-a-aprovacao: backlog
+  11-5-mensagens-da-reserva-ao-cliente: backlog
+  11-6-lembrete-da-noite-com-confirmo-nao-vou-mais-vou-atrasar-um-p: backlog
+  11-7-oferta-da-espera-pelo-whatsapp: backlog
+  11-8-avisos-ao-dono-e-a-gerente-nos-numeros-pessoais: done # removida em 16/10: avisos à equipe só no painel (8.30, 9.29); nada a fazer
+  11-9-mensagens-prontas-da-recepcao-sem-ver-o-telefone: backlog
+  11-10-falhas-do-whatsapp-visiveis-em-sistema-nunca-em-silencio: backlog
+  11-11-noite-simulada-e-a-reserva-aberta-ao-publico: backlog
+  epic-11-retrospective: optional
