@@ -1,0 +1,1240 @@
+/* Reservas: os filtros, a lista, a gaveta e suas janelas pequenas, e a nova reserva.
+   O Hoje também usa a gaveta e as janelas. Só os papéis --cor-* e as medidas do tokens.css. */
+@layer pages {
+  /* ---- o alto: período, ações ---- */
+  .res {
+    display: flex;
+    flex-direction: column;
+    gap: var(--e-4);
+    padding-top: var(--e-5);
+  }
+
+  .res-topo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--e-3);
+  }
+
+  .res-topo__acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--e-2);
+  }
+
+  .res-dia {
+    color: var(--cor-texto-suave);
+  }
+
+  .res-dia b {
+    color: var(--cor-texto);
+  }
+
+  .res .btn--sm,
+  .res-janela .btn--sm,
+  .res-gaveta .btn--sm {
+    min-height: var(--alvo-toque);
+  }
+
+  /* chips: uma escolha de uma lista curta; apertado = ferro, nunca só a cor (a borda e o peso mudam também) */
+  .res-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--e-2);
+  }
+
+  .res-chip {
+    min-height: var(--alvo-toque);
+    padding: var(--e-2) var(--e-3);
+    border: var(--fio) solid var(--cor-borda);
+    background: var(--cor-superficie);
+    font-family: var(--f-grotesca);
+    font-weight: 800;
+    font-size: 15px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    touch-action: manipulation;
+  }
+
+  .res-chip:hover {
+    background: var(--cor-fundo);
+  }
+
+  .res-chip[aria-pressed="true"] {
+    background: var(--cor-acao);
+    border-color: var(--cor-acao);
+    color: var(--cor-acao-texto);
+    box-shadow: inset 0 calc(-1 * var(--e-1)) 0 var(--cor-selecao);
+  }
+
+  .res-periodo,
+  .res-filtros {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 220px));
+    gap: var(--e-3);
+  }
+
+  .res-filtros {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 240px);
+    align-items: end;
+  }
+
+  .res-contagem {
+    font-family: var(--f-mono);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--cor-texto-suave);
+  }
+
+  /* ---- a lista ---- */
+  .res-tabela tbody tr {
+    cursor: pointer;
+  }
+
+  .res-tabela .res-linha--pendente {
+    box-shadow: inset 4px 0 0 var(--cor-atencao);
+  }
+
+  .res-nome {
+    display: inline-block;
+    color: inherit;
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+
+  .res-sub {
+    display: block;
+    font-weight: 400;
+    font-size: var(--t-pequeno);
+    color: var(--cor-texto-suave);
+  }
+
+  .res-selos {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: var(--e-1);
+  }
+
+  .res-acao-linha {
+    text-align: right;
+  }
+
+  .res-tabela .action {
+    min-height: var(--alvo-toque);
+    white-space: nowrap;
+  }
+
+  .res .empty .raiz {
+    width: var(--e-7);
+    color: var(--cor-texto-fraco);
+  }
+
+  .res .error-state .raiz {
+    color: var(--cor-atencao);
+  }
+
+  /* ---- a gaveta ---- */
+  .res-gaveta__corpo {
+    display: flex;
+    flex-direction: column;
+    gap: var(--e-4);
+  }
+
+  .res-gaveta__nome {
+    font-family: var(--f-letreiro);
+    font-weight: 900;
+    font-size: 34px;
+    line-height: 0.95;
+    text-transform: uppercase;
+  }
+
+  .res-gaveta__quando {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--e-1) var(--e-3);
+    color: var(--cor-texto-suave);
+  }
+
+  .res-gaveta__quando b {
+    color: var(--cor-texto);
+  }
+
+  .res-acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--e-2);
+    padding-block: var(--e-3);
+    border-block: 1px solid var(--cor-fio);
+  }
+
+  .res-dados {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--e-3) var(--e-4);
+    margin: 0;
+  }
+
+  .res-dados .is-wide {
+    grid-column: 1 / -1;
+  }
+
+  .res-dados dt {
+    font-family: var(--f-mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--cor-texto-fraco);
+  }
+
+  .res-dados dd {
+    margin: 2px 0 0;
+  }
+
+  .res-dados small {
+    color: var(--cor-texto-suave);
+  }
+
+  .res-marcador {
+    display: inline-block;
+    margin: 0 var(--e-1) var(--e-1) 0;
+    padding: 1px 7px;
+    border: 1.5px dashed var(--cor-atencao);
+    color: var(--cor-atencao-texto);
+    font-family: var(--f-mono);
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .res-prontas,
+  .res-linha {
+    display: flex;
+    flex-direction: column;
+    gap: var(--e-2);
+  }
+
+  .res-prontas .action {
+    min-height: var(--alvo-toque);
+  }
+
+  .res-msg-nota {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--e-2);
+  }
+
+  .res-msg-nota .action {
+    min-height: var(--alvo-toque);
+  }
+
+  .res-vazio-linha {
+    color: var(--cor-texto-suave);
+  }
+
+  /* ---- as janelas pequenas ---- */
+  .res-janela--larga {
+    width: min(640px, calc(100vw - 32px));
+  }
+
+  .res-janela h2 {
+    font-size: 26px;
+  }
+
+  .res-janela .dialog__body {
+    gap: var(--e-4);
+  }
+
+  .res-janela__erro:empty {
+    display: none;
+  }
+
+  .res-janela__erro:focus {
+    outline: none;
+  }
+
+  .res-motivos,
+  .res-mesas,
+  .res-marcadores,
+  .res-segmento {
+    display: flex;
+    flex-direction: column;
+    gap: var(--e-2);
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  .res-motivos legend,
+  .res-mesas legend,
+  .res-marcadores legend,
+  .res-segmento legend {
+    margin-bottom: var(--e-2);
+    padding: 0;
+  }
+
+  .res-opcao,
+  .res-mesa {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--e-1) var(--e-3);
+    min-height: var(--alvo-toque);
+    cursor: pointer;
+  }
+
+  .res-opcao input,
+  .res-mesa input,
+  .res-hora input {
+    width: 22px;
+    height: 22px;
+    margin: 0;
+    flex: none;
+    accent-color: var(--cor-acao);
+  }
+
+  .res-mesa {
+    padding: var(--e-2) var(--e-3);
+    border: var(--fio) solid var(--cor-borda);
+    background: var(--cor-superficie);
+  }
+
+  .res-mesa b {
+    font-family: var(--f-grotesca);
+    font-weight: 900;
+    font-size: 20px;
+  }
+
+  .res-mesa small {
+    color: var(--cor-texto-suave);
+  }
+
+  .res-mesa:has(input:checked) {
+    box-shadow: inset 5px 0 0 var(--cor-selecao);
+  }
+
+  .res-marcadores {
+    flex-flow: row wrap;
+    column-gap: var(--e-4);
+  }
+
+  .res-marcadores legend {
+    width: 100%;
+  }
+
+  /* horários como abas de papel: a hora, e o que sobra em palavras */
+  .res-horas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
+    gap: var(--e-2);
+  }
+
+  .res-hora {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 0 var(--e-2);
+    min-height: var(--alvo-toque);
+    padding: var(--e-2);
+    border: var(--fio) solid var(--cor-borda);
+    background: var(--cor-superficie);
+    font-family: var(--f-grotesca);
+    font-weight: 900;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  .res-hora small {
+    grid-column: 2;
+    font-family: var(--f-mono);
+    font-weight: 400;
+    font-size: 11px;
+    color: var(--cor-texto-suave);
+  }
+
+  .res-hora.is-cheio {
+    border-style: dashed;
+    background: repeating-linear-gradient(135deg, var(--cor-hachura) 0 1.5px, transparent 1.5px 8px), var(--cor-fundo);
+  }
+
+  .res-hora:has(input:checked) {
+    box-shadow: inset 0 calc(-1 * var(--e-1)) 0 var(--cor-selecao);
+  }
+
+  /* ---- a nova reserva ---- */
+  .res-nova {
+    display: flex;
+    flex-direction: column;
+    gap: var(--e-4);
+  }
+
+  .res-nova__linha {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--e-3);
+  }
+
+  .res-segmento {
+    flex-flow: row wrap;
+    gap: 0;
+  }
+
+  .res-segmento legend {
+    width: 100%;
+  }
+
+  .res-segmento__opcao {
+    position: relative;
+    flex: 1 1 0;
+    min-width: 96px;
+    cursor: pointer;
+  }
+
+  .res-segmento__opcao input {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .res-segmento__opcao span {
+    display: grid;
+    place-items: center;
+    min-height: var(--alvo-toque);
+    padding: var(--e-2);
+    border: var(--fio) solid var(--cor-borda);
+    background: var(--cor-superficie);
+    font-family: var(--f-grotesca);
+    font-weight: 800;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+
+  .res-segmento__opcao + .res-segmento__opcao span {
+    border-left-width: 0;
+  }
+
+  .res-segmento__opcao input:checked + span {
+    background: var(--cor-acao);
+    color: var(--cor-acao-texto);
+    box-shadow: inset 0 calc(-1 * var(--e-1)) 0 var(--cor-selecao);
+  }
+
+  .res-segmento__opcao input:focus-visible + span {
+    outline: 3px solid var(--cor-foco);
+    outline-offset: 2px;
+  }
+
+  .res-passo {
+    display: grid;
+    grid-template-columns: var(--alvo-toque) minmax(0, 1fr) var(--alvo-toque);
+    gap: var(--e-1);
+  }
+
+  .res-passo .action {
+    min-height: var(--alvo-toque);
+    padding: 0;
+    font-size: 22px;
+  }
+
+  .res-passo input {
+    text-align: center;
+  }
+
+  /* ---- as visões: Lista, Dia, Mesas, Semana, Mês (FR-83) ---- */
+  .rv-visoes {
+    display: inline-flex;
+    flex-wrap: wrap;
+  }
+
+  .rv-visao {
+    min-width: 72px;
+    min-height: var(--alvo-toque);
+    padding: var(--e-2) var(--e-3);
+    border: var(--fio) solid var(--cor-borda);
+    background: var(--cor-superficie);
+    font-family: var(--f-grotesca);
+    font-weight: 800;
+    font-size: 15px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    touch-action: manipulation;
+  }
+
+  .rv-visao + .rv-visao {
+    border-left-width: 0;
+  }
+
+  .rv-visao:hover {
+    background: var(--cor-fundo);
+  }
+
+  .rv-visao[aria-pressed="true"] {
+    background: var(--cor-acao);
+    border-color: var(--cor-acao);
+    color: var(--cor-acao-texto);
+    box-shadow: inset 0 calc(-1 * var(--e-1)) 0 var(--cor-selecao);
+  }
+
+  .rv-visao:focus-visible {
+    position: relative;
+    outline: 3px solid var(--cor-foco);
+    outline-offset: 2px;
+  }
+
+  .rv-nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--e-2);
+  }
+
+  .rv-nav .action {
+    min-width: var(--alvo-toque);
+    min-height: var(--alvo-toque);
+  }
+
+  .rv-nav__titulo {
+    min-width: 0;
+    font-family: var(--f-grotesca);
+    font-weight: 800;
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+
+  .rv-carregando {
+    display: grid;
+    gap: var(--e-3);
+  }
+
+  .rv-legenda {
+    color: var(--cor-texto-suave);
+    font-size: var(--t-pequeno);
+  }
+
+  .rv-fechado-aviso,
+  .rv-semana__noite.is-fechado,
+  .rv-mes__dia.is-fechado {
+    background:
+      repeating-linear-gradient(135deg, var(--cor-hachura) 0 1.5px, transparent 1.5px 9px),
+      var(--cor-fundo);
+  }
+
+  .rv-vazio .raiz {
+    width: var(--e-7);
+    color: var(--cor-texto-fraco);
+  }
+
+  .rv-evento {
+    font-size: var(--t-pequeno);
+    font-weight: 700;
+  }
+
+  /* a faixa dos que ainda estão sem lugar */
+  .rv-faixa {
+    display: grid;
+    gap: var(--e-2);
+    padding: var(--e-3);
+    border: var(--fio) dashed var(--cor-atencao);
+  }
+
+  .rv-faixa__titulo {
+    font-family: var(--f-mono);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--cor-atencao-texto);
+  }
+
+  .rv-faixa__lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: var(--e-2);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .rv-cartao {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    width: 100%;
+    min-height: var(--alvo-toque);
+    padding: var(--e-2);
+    border: 1.5px solid var(--cor-borda);
+    background: var(--cor-superficie);
+    text-align: left;
+    font-size: var(--t-pequeno);
+  }
+
+  .rv-cartao span:not(.badge) {
+    color: var(--cor-texto-suave);
+  }
+
+  .rv-cartao .badge {
+    margin-top: 2px;
+  }
+
+  .rv-cartao:hover,
+  .rv-bloco:hover,
+  .rv-barra:hover {
+    box-shadow: inset 0 0 0 var(--fio) var(--cor-selecao);
+  }
+
+  .rv-cartao--no_show,
+  .rv-bloco--no_show,
+  .rv-barra--no_show {
+    border-style: dashed;
+  }
+
+  /* rolagens: as grades mantêm o tamanho e a página nunca rola para o lado */
+  .rv-rolagem {
+    max-width: 100%;
+    overflow-x: auto;
+    border: var(--fio) solid var(--cor-borda);
+    background: var(--cor-superficie);
+  }
+
+  .rv-rolagem:focus-visible {
+    outline: 3px solid var(--cor-foco);
+    outline-offset: 2px;
+  }
+
+  /* a linha do agora */
+  .rv-agora {
+    position: absolute;
+    z-index: 4;
+    left: 0;
+    right: 0;
+    top: calc(var(--ini) * var(--rv-min));
+    height: 0;
+    border-top: 2px solid var(--cor-atencao);
+    pointer-events: none;
+  }
+
+  .rv-agora span {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    padding: 0 4px;
+    background: var(--cor-atencao);
+    color: var(--cor-acao-texto);
+    font-family: var(--f-mono);
+    font-size: 11px;
+    font-weight: 700;
+  }
+
+  /* ---- Dia: horas para baixo, blocos lado a lado ---- */
+  .rv-dia {
+    --rv-min: 1.6px;
+    --rv-col: 128px;
+    display: grid;
+    gap: var(--e-3);
+  }
+
+  .rv-dia__grade {
+    display: grid;
+    grid-template-columns: 52px minmax(calc(var(--rv-cols) * var(--rv-col)), 1fr);
+    min-height: calc(var(--rv-span) * var(--rv-min));
+  }
+
+  .rv-dia__horas {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-right: 1px solid var(--cor-fio);
+  }
+
+  .rv-dia__horas li {
+    position: absolute;
+    top: calc(var(--ini) * var(--rv-min));
+    right: var(--e-2);
+    font-family: var(--f-mono);
+    font-size: 12px;
+    color: var(--cor-texto-suave);
+  }
+
+  .rv-dia__trilho {
+    position: relative;
+    height: calc(var(--rv-span) * var(--rv-min));
+  }
+
+  .rv-dia__linha-hora {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc(var(--ini) * var(--rv-min));
+    border-top: 1px solid var(--cor-fio);
+  }
+
+  .rv-dia__antes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: calc(var(--dur) * var(--rv-min));
+    background: repeating-linear-gradient(135deg, var(--cor-hachura) 0 1.5px, transparent 1.5px 9px);
+  }
+
+  .rv-dia__blocos {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .rv-dia__item {
+    position: absolute;
+    z-index: 1;
+    top: calc(var(--ini) * var(--rv-min));
+    left: calc(var(--col) * 100% / var(--cols));
+    width: calc(100% / var(--cols));
+    height: calc(var(--dur) * var(--rv-min));
+    padding: 1px 2px;
+  }
+
+  .rv-bloco {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    width: 100%;
+    height: 100%;
+    min-height: var(--alvo-toque);
+    padding: var(--e-1) var(--e-2);
+    overflow: hidden;
+    border: 1.5px solid var(--cor-borda);
+    border-left-width: var(--barra);
+    background: var(--cor-superficie);
+    text-align: left;
+    font-size: var(--t-pequeno);
+  }
+
+  .rv-bloco--completed {
+    background: var(--cor-fundo);
+  }
+
+  .rv-bloco__hora {
+    font-family: var(--f-mono);
+    font-size: 11px;
+    color: var(--cor-texto-suave);
+  }
+
+  .rv-bloco__nome {
+    font-size: 15px;
+  }
+
+  .rv-bloco__info {
+    color: var(--cor-texto-suave);
+  }
+
+  /* ---- Mesas: uma linha por mesa, o tempo atravessando ---- */
+  .rv-mesas {
+    --rv-min-h: 2px;
+    --rv-mesa: 84px;
+    --rv-linha: 52px;
+    display: grid;
+    gap: var(--e-3);
+  }
+
+  .rv-mesas__grade {
+    position: relative;
+    width: calc(var(--rv-mesa) + var(--rv-span) * var(--rv-min-h));
+    min-width: 100%;
+  }
+
+  .rv-mesas__regua,
+  .rv-mesas__linha {
+    display: grid;
+    grid-template-columns: var(--rv-mesa) calc(var(--rv-span) * var(--rv-min-h));
+  }
+
+  .rv-mesas__regua {
+    border-bottom: 1px solid var(--cor-borda);
+  }
+
+  .rv-mesas__mesa {
+    position: sticky;
+    z-index: 3;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 var(--e-2);
+    border-right: 1px solid var(--cor-borda);
+    background: var(--cor-superficie);
+  }
+
+  .rv-mesas__mesa small {
+    color: var(--cor-texto-suave);
+    font-size: 12px;
+  }
+
+  .rv-mesas__canto {
+    font-family: var(--f-mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--cor-texto-suave);
+  }
+
+  .rv-mesas__tempo {
+    position: relative;
+    min-height: 28px;
+  }
+
+  .rv-mesas__hora {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: calc(var(--ini) * var(--rv-min-h));
+    display: flex;
+    align-items: center;
+    padding-left: var(--e-1);
+    border-left: 1px solid var(--cor-fio);
+    font-family: var(--f-mono);
+    font-size: 12px;
+    color: var(--cor-texto-suave);
+  }
+
+  .rv-mesas__area-nome {
+    position: sticky;
+    left: 0;
+    width: max-content;
+    padding: var(--e-2);
+    font-family: var(--f-mono);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .rv-mesas__linhas {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid var(--cor-fio);
+  }
+
+  .rv-mesas__linha {
+    min-height: calc(var(--lanes) * var(--rv-linha));
+    border-bottom: 1px solid var(--cor-fio);
+  }
+
+  .rv-mesas__linha .rv-mesas__tempo {
+    background: repeating-linear-gradient(90deg, var(--cor-fio) 0 1px, transparent 1px calc(60 * var(--rv-min-h)));
+  }
+
+  .rv-mesas__livre {
+    position: absolute;
+    top: 6px;
+    bottom: 6px;
+    left: calc(var(--ini) * var(--rv-min-h));
+    width: calc(var(--dur) * var(--rv-min-h));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px dashed var(--cor-texto-fraco);
+    color: var(--cor-texto-suave);
+    font-family: var(--f-mono);
+    font-size: 11px;
+    text-transform: uppercase;
+  }
+
+  .rv-barra {
+    position: absolute;
+    z-index: 1;
+    top: calc(var(--col) * 100% / var(--cols));
+    left: calc(var(--ini) * var(--rv-min-h));
+    width: calc(var(--dur) * var(--rv-min-h));
+    height: calc(100% / var(--cols));
+    min-height: var(--alvo-toque);
+    display: flex;
+    align-items: center;
+    gap: var(--e-2);
+    padding: 2px var(--e-2);
+    overflow: hidden;
+    border: 1.5px solid var(--cor-borda);
+    border-left-width: var(--barra);
+    background: var(--cor-superficie);
+    text-align: left;
+    white-space: nowrap;
+    font-size: var(--t-pequeno);
+  }
+
+  .rv-barra__texto {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .rv-barra .badge,
+  .rv-barra__junta {
+    flex: none;
+  }
+
+  .rv-bloco .badge {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .rv-barra.is-junta {
+    border-top: 4px double var(--cor-borda);
+  }
+
+  .rv-barra__junta {
+    margin-left: var(--e-1);
+    font-family: var(--f-mono);
+    font-size: 11px;
+  }
+
+  .rv-barra.is-sentada {
+    background: var(--cor-acao);
+    border-color: var(--cor-acao);
+    color: var(--cor-acao-texto);
+  }
+
+  .rv-barra.is-sentada .badge {
+    border-color: currentColor;
+    color: inherit;
+  }
+
+  .rv-agora--deitada {
+    z-index: 2;
+    top: 0;
+    bottom: 0;
+    left: calc(var(--rv-mesa) + var(--ini) * var(--rv-min-h));
+    right: auto;
+    width: 0;
+    height: auto;
+    border-top: 0;
+    border-left: 2px solid var(--cor-atencao);
+  }
+
+  .rv-agora--deitada span {
+    top: 0;
+  }
+
+  /* ---- Semana: sete noites lado a lado ---- */
+  .rv-semana {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: var(--fio);
+    margin: 0;
+    padding: var(--fio);
+    list-style: none;
+    background: var(--cor-borda);
+  }
+
+  .rv-semana__noite {
+    display: flex;
+    flex-direction: column;
+    gap: var(--e-2);
+    min-width: 0;
+    padding: var(--e-2);
+    background: var(--cor-fundo);
+  }
+
+  .rv-semana__noite.is-hoje {
+    box-shadow: inset 0 0 0 3px var(--cor-borda);
+  }
+
+  .rv-semana__cab {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: var(--e-1) var(--e-2);
+    min-height: var(--alvo-toque);
+    padding: var(--e-1) var(--e-2);
+    border: 1.5px solid var(--cor-borda);
+    background: var(--cor-superficie);
+    text-align: left;
+  }
+
+  .rv-semana__cab:hover {
+    box-shadow: inset 0 0 0 var(--fio) var(--cor-selecao);
+  }
+
+  .rv-semana__dia {
+    font-family: var(--f-mono);
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+
+  .rv-semana__num {
+    font-family: var(--f-grotesca);
+    font-size: 20px;
+  }
+
+  .rv-semana__soma,
+  .rv-semana__nada {
+    font-size: var(--t-pequeno);
+    color: var(--cor-texto-suave);
+  }
+
+  .rv-semana__soma b {
+    color: var(--cor-texto);
+  }
+
+  .rv-semana__lista {
+    display: grid;
+    gap: var(--e-1);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .rv-ocupa {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--e-1);
+  }
+
+  .rv-ocupa__barra {
+    width: 48px;
+    height: 6px;
+    border: 1px solid var(--cor-borda);
+    background: linear-gradient(90deg, var(--cor-acao) var(--pct), transparent var(--pct));
+  }
+
+  .rv-ocupa__num {
+    font-family: var(--f-mono);
+    font-size: 11px;
+  }
+
+  /* ---- Mês: o calendário, como na Agenda ---- */
+  .rv-mes__semana,
+  .rv-mes__dias {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+  }
+
+  .rv-mes__semana span {
+    padding: var(--e-1) var(--e-2);
+    font-family: var(--f-mono);
+    font-size: var(--t-rotulo);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--cor-texto-fraco);
+  }
+
+  .rv-mes__dias {
+    gap: var(--fio);
+    margin: 0;
+    padding: var(--fio);
+    list-style: none;
+    background: var(--cor-borda);
+  }
+
+  .rv-mes__dias > li {
+    display: flex;
+    min-width: 0;
+    background: var(--cor-fundo);
+  }
+
+  .rv-mes__dia {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 3px;
+    min-width: 0;
+    min-height: 104px;
+    padding: var(--e-2);
+    border: 0;
+    background: transparent;
+    text-align: left;
+    font-size: var(--t-pequeno);
+  }
+
+  .rv-mes__dia:hover {
+    box-shadow: inset 0 0 0 var(--fio) var(--cor-selecao);
+  }
+
+  .rv-mes__dia:focus-visible {
+    outline: 3px solid var(--cor-foco);
+    outline-offset: -3px;
+  }
+
+  .rv-mes__dia.is-passado {
+    color: var(--cor-texto-suave);
+  }
+
+  .rv-mes__dia.is-hoje {
+    box-shadow: inset 0 0 0 3px var(--cor-borda);
+  }
+
+  .rv-mes__topo {
+    display: flex;
+    align-items: baseline;
+    gap: var(--e-1);
+  }
+
+  .rv-mes__num {
+    font-family: var(--f-grotesca);
+    font-weight: 800;
+    font-size: 20px;
+  }
+
+  .rv-mes__semana-dia {
+    display: none;
+    font-family: var(--f-mono);
+    font-size: 11px;
+    text-transform: uppercase;
+  }
+
+  .rv-mes__linha {
+    overflow-wrap: anywhere;
+  }
+
+  @media (width < 1100px) {
+    .rv-semana {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+
+  @media (width < 768px) {
+    .rv-dia {
+      --rv-col: 112px;
+    }
+
+    .rv-mesas {
+      --rv-min-h: 1.6px;
+      --rv-mesa: 64px;
+    }
+
+    .rv-nav__titulo {
+      flex: 1 1 100%;
+      order: -1;
+      font-size: 18px;
+    }
+
+    .rv-visoes {
+      width: 100%;
+    }
+
+    .rv-visao {
+      flex: 1;
+      min-width: 0;
+      padding-inline: var(--e-1);
+      font-size: 14px;
+    }
+
+    .rv-mes__semana,
+    .rv-mes__vago {
+      display: none;
+    }
+
+    .rv-mes__dias {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .rv-mes__dia {
+      min-height: 0;
+    }
+
+    .rv-mes__semana-dia {
+      display: inline;
+    }
+  }
+
+  /* ---- o celular ---- */
+  @media (width < 768px) {
+    .res-filtros,
+    .res-periodo,
+    .res-nova__linha,
+    .res-dados {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .res-topo__acoes {
+      width: 100%;
+    }
+
+    .res-topo__acoes .btn {
+      flex: 1;
+    }
+
+    .res-acao-linha {
+      text-align: left;
+    }
+
+    .res-gaveta__nome {
+      font-size: 28px;
+    }
+  }
+
+  /* ---- comum às telas da noite: as mensagens prontas e a faixa do retrato ---- */
+  .prontas {
+    display: flex;
+    flex-direction: column;
+    gap: var(--e-2);
+  }
+
+  .prontas .action {
+    min-height: var(--alvo-toque);
+  }
+
+  .prontas__motivo {
+    margin: 0;
+  }
+
+  .retrato-faixa {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--e-2) var(--e-3);
+  }
+
+  .retrato-faixa p {
+    margin: 0;
+  }
+
+  /* ---- o "Confere?" da nova reserva, a ligação e as frases para ler ---- */
+  .res-nova .phone__confere {
+    display: none;
+  }
+
+  .res-confere,
+  .res-ligacao {
+    display: flex;
+    flex-direction: column;
+    gap: var(--e-2);
+  }
+
+  .res-confere p {
+    margin: 0;
+  }
+
+  .res-ler__frases {
+    display: flex;
+    flex-direction: column;
+    gap: var(--e-1);
+    margin: 0;
+    padding-left: var(--e-5);
+    font-size: 18px;
+  }
+
+  .res-ver-telefone {
+    margin-left: var(--e-2);
+  }
+
+  .res-telefone {
+    font-size: 18px;
+  }
+
+  .res-prazo {
+    flex-basis: 100%;
+    margin: 0;
+  }
+}
