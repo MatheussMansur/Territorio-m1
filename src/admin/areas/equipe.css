@@ -1,0 +1,215 @@
+/* Equipe: as pessoas, a gaveta da pessoa e as chaves de permissão. */
+@layer pages {
+  .ferramentas__texto {
+    flex: 1 1 260px;
+    max-width: 60ch;
+  }
+
+  .tabela-equipe td {
+    vertical-align: middle;
+  }
+
+  .pessoa__sub {
+    font-size: var(--t-pequeno);
+  }
+
+  .tabela-equipe tr.is-desativada .link-linha {
+    color: var(--cor-texto-fraco);
+    text-decoration-style: dashed;
+  }
+
+  /* a gaveta da pessoa */
+  .pessoa__corpo {
+    display: flex;
+    flex-direction: column;
+    gap: var(--e-3);
+  }
+
+  .pessoa__linha {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--e-2);
+    font-weight: 650;
+  }
+
+  .perfis {
+    min-width: 0;
+    margin-inline: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  .perfis legend {
+    width: 100%;
+    margin-bottom: var(--e-3);
+  }
+
+  .perfil {
+    min-height: var(--alvo-toque);
+    padding: var(--e-2) 0;
+    border-bottom: 1px solid var(--cor-fio);
+  }
+
+  .pin-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--e-3);
+  }
+
+  .pin-form .field {
+    width: 100%;
+  }
+
+  .pessoa__acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--e-2);
+  }
+
+  /* permissões: uma chave é uma palavra e uma posição, nunca só cor */
+  .permissoes__aviso {
+    margin-bottom: var(--e-4);
+  }
+
+  .permissoes th,
+  .permissoes td {
+    vertical-align: middle;
+  }
+
+  .permissoes__grupo th {
+    padding-top: var(--e-4);
+    background: var(--cor-fundo);
+    color: var(--cor-texto-fraco);
+    font-family: var(--f-mono);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .permissoes__area {
+    font-weight: 650;
+  }
+
+  .permissoes td.is-mudou {
+    box-shadow: inset 4px 0 0 var(--cor-selecao);
+  }
+
+  .chave {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--e-2);
+    min-height: var(--alvo-toque);
+    padding: 0;
+    border: 0;
+    background: none;
+    color: var(--cor-texto);
+    font-family: var(--f-mono);
+    font-size: 11.5px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .chave:focus-visible {
+    outline: 3px solid var(--cor-foco);
+    outline-offset: 2px;
+  }
+
+  .chave__trilho {
+    position: relative;
+    flex: none;
+    width: 44px;
+    height: 24px;
+    border: var(--fio) solid var(--cor-borda);
+    background: var(--cor-superficie);
+  }
+
+  .chave__botao {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    border: var(--fio) solid var(--cor-borda);
+    background: var(--cor-superficie);
+    transition: transform var(--dur-rapida) var(--ease-out);
+  }
+
+  .chave[aria-checked="true"] .chave__trilho,
+  .chave--travada .chave__trilho {
+    background: var(--cor-acao);
+  }
+
+  .chave[aria-checked="true"] .chave__botao,
+  .chave--travada .chave__botao {
+    transform: translateX(20px);
+    border-color: var(--cor-acao-texto);
+    background: var(--cor-acao-texto);
+  }
+
+  .chave[aria-checked="false"] .chave__texto {
+    color: var(--cor-texto-fraco);
+  }
+
+  .chave--travada {
+    color: var(--cor-texto-fraco);
+  }
+
+  .chave--travada .chave__trilho {
+    border-style: dashed;
+    opacity: 0.7;
+  }
+
+  .chave:disabled {
+    cursor: progress;
+  }
+
+  .chave__padrao {
+    display: block;
+    color: var(--cor-texto-fraco);
+    font-family: var(--f-mono);
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .is-mudou .chave__padrao {
+    color: var(--cor-atencao-texto);
+    font-weight: 600;
+  }
+
+  .permissoes__barra {
+    position: sticky;
+    bottom: 0;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--e-3);
+    margin-top: var(--e-4);
+    padding: var(--e-3) 0;
+    border-top: var(--barra) solid var(--cor-borda);
+    background: var(--cor-fundo);
+  }
+
+  .permissoes__estado {
+    color: var(--cor-texto-suave);
+  }
+
+  @media (max-width: 720px) {
+    .chave__texto {
+      display: none;
+    }
+
+    .permissoes th,
+    .permissoes td {
+      padding: 8px 6px;
+    }
+
+    .permissoes__barra {
+      bottom: var(--barra-altura);
+    }
+  }
+}

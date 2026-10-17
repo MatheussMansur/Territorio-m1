@@ -1,0 +1,137 @@
+/* Sistema: um cartão por item com o estado escrito e uma marca, os erros e os aparelhos. */
+@layer pages {
+  .sistema__topo {
+    align-items: center;
+    margin-top: var(--e-4);
+  }
+
+  .sistema__conferido {
+    color: var(--cor-texto-suave);
+    font-weight: 600;
+  }
+
+  .sistema__falha {
+    margin-bottom: var(--e-2);
+  }
+
+  .sistema__itens {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: var(--e-3);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .sistema__item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--e-2);
+    padding: var(--e-3) var(--e-4);
+    border: var(--fio) solid var(--cor-borda);
+    background: var(--grao), var(--cor-superficie);
+  }
+
+  .sistema__nome {
+    font-family: var(--f-grotesca);
+    font-weight: 900;
+    font-size: 19px;
+    line-height: 1.1;
+    text-transform: uppercase;
+  }
+
+  .sistema__estado {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--e-2);
+    font-family: var(--f-mono);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  /* a marca: quadrado cheio quando em dia, um "!" quando não, um vazado tracejado quando desligado */
+  .sistema__marca {
+    display: inline-grid;
+    place-items: center;
+    width: 16px;
+    height: 16px;
+    border: var(--fio) solid currentColor;
+    font-size: 11px;
+    line-height: 1;
+  }
+
+  .is-ok .sistema__marca {
+    background: var(--cor-acao);
+    border-color: var(--cor-acao);
+  }
+
+  .is-problema {
+    border-color: var(--cor-atencao);
+    box-shadow: inset 5px 0 0 var(--cor-atencao);
+  }
+
+  .is-problema .sistema__estado {
+    color: var(--cor-atencao-texto);
+  }
+
+  .is-problema .sistema__marca::before {
+    content: "!";
+    font-weight: 800;
+  }
+
+  .is-desligado {
+    border-style: dashed;
+  }
+
+  .is-desligado .sistema__estado {
+    color: var(--cor-texto-fraco);
+  }
+
+  .is-desligado .sistema__marca {
+    border-style: dashed;
+  }
+
+  .sistema__detalhe {
+    color: var(--cor-texto-suave);
+  }
+
+  .sistema__hora {
+    margin-top: auto;
+    color: var(--cor-texto-fraco);
+    font-family: var(--f-mono);
+    font-size: 11.5px;
+  }
+
+  .sistema__erros {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .sistema__erros li {
+    display: grid;
+    grid-template-columns: 150px minmax(0, 1fr) auto;
+    gap: var(--e-3);
+    padding: var(--e-2) 0;
+    border-bottom: 1px solid var(--cor-fio);
+  }
+
+  .sistema__erro-hora,
+  .sistema__erro-id {
+    font-size: 12px;
+  }
+
+  .relogio.is-problema {
+    box-shadow: none;
+    border: 0;
+  }
+
+  @media (max-width: 720px) {
+    .sistema__erros li {
+      grid-template-columns: minmax(0, 1fr);
+      gap: var(--e-1);
+    }
+  }
+}

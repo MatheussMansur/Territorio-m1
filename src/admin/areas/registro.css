@@ -1,0 +1,160 @@
+/* Registro: os filtros, os dias e cada ação com o antes e o depois. */
+@layer pages {
+  .registro__filtros {
+    margin-top: var(--e-4);
+  }
+
+  .registro__filtros .registro__periodo {
+    flex: 0 1 170px;
+  }
+
+  .registro__nota {
+    margin-bottom: var(--e-4);
+  }
+
+  .registro__dia + .registro__dia {
+    margin-top: var(--e-5);
+  }
+
+  .registro__data {
+    padding-bottom: var(--e-2);
+    border-bottom: var(--fio) solid var(--cor-borda);
+    font-family: var(--f-grotesca);
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 1.1;
+    text-transform: uppercase;
+  }
+
+  .registro__lista {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .registro__item {
+    display: grid;
+    grid-template-columns: 56px minmax(0, 1fr);
+    gap: var(--e-3);
+    padding: var(--e-3) 0 var(--e-3) var(--e-3);
+    border-bottom: 1px solid var(--cor-fio);
+    box-shadow: inset 4px 0 0 var(--cor-acao);
+  }
+
+  /* quem agiu, também como padrão na borda: pessoa contínua, cliente tracejado, sistema pontilhado */
+  .registro__item--customer {
+    box-shadow: none;
+    border-left: 4px dashed var(--cor-texto-fraco);
+  }
+
+  .registro__item--system {
+    box-shadow: none;
+    border-left: 4px dotted var(--cor-texto-fraco);
+  }
+
+  .registro__hora {
+    font-family: var(--f-mono);
+    font-size: 14px;
+    font-variant-numeric: tabular-nums;
+    color: var(--cor-texto-suave);
+  }
+
+  .registro__corpo {
+    display: flex;
+    flex-direction: column;
+    gap: var(--e-1);
+    min-width: 0;
+  }
+
+  .registro__resumo {
+    font-weight: 600;
+    overflow-wrap: anywhere;
+  }
+
+  .registro__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--e-1) var(--e-3);
+    color: var(--cor-texto-suave);
+    font-size: var(--t-pequeno);
+  }
+
+  .registro__aparelho::before {
+    content: "· ";
+  }
+
+  .registro__tipo {
+    color: var(--cor-texto-fraco);
+    font-family: var(--f-mono);
+    font-size: 10.5px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .registro__mudancas summary {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--alvo-toque);
+    color: var(--cor-texto);
+    font-size: var(--t-pequeno);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    cursor: pointer;
+  }
+
+  .registro__mudancas summary:focus-visible {
+    outline: 3px solid var(--cor-foco);
+    outline-offset: 2px;
+  }
+
+  .registro__tabela {
+    width: 100%;
+    max-width: 640px;
+    border-collapse: collapse;
+    font-size: var(--t-pequeno);
+  }
+
+  .registro__tabela th,
+  .registro__tabela td {
+    padding: 6px 8px;
+    border: 1px solid var(--cor-fio);
+    text-align: left;
+    vertical-align: top;
+    overflow-wrap: anywhere;
+  }
+
+  .registro__tabela thead th {
+    color: var(--cor-texto-fraco);
+    font-family: var(--f-mono);
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .registro__tabela tbody th {
+    font-weight: 600;
+  }
+
+  .trocado {
+    padding: 1px 6px;
+    border: 1.5px dashed var(--cor-texto-fraco);
+    color: var(--cor-texto-suave);
+    font-family: var(--f-mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 720px) {
+    .registro__filtros .registro__periodo {
+      flex: 1 1 140px;
+    }
+
+    .registro__item {
+      grid-template-columns: 46px minmax(0, 1fr);
+      gap: var(--e-2);
+    }
+  }
+}
