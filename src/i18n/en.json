@@ -1,0 +1,844 @@
+{
+  "common": {
+    "loading": "Loading…",
+    "retry": "Try again",
+    "close": "Close",
+    "back": "Back",
+    "cancel": "Cancel",
+    "save": "Save",
+    "confirm": "Confirm",
+    "undo": "Undo",
+    "discard": "Discard",
+    "keepGoing": "Keep going",
+    "discardTitle": "Discard?",
+    "discardMessage": "What you filled in will be lost.",
+    "toConfirm": "to be confirmed",
+    "whatsappHouse": "The house's WhatsApp"
+  },
+  "errors": {
+    "network": "No connection. Check your internet and try again.",
+    "timeout": "The house took too long to answer. Try again in a moment.",
+    "server": "Something went wrong on our side. Try again in a moment.",
+    "rateLimited": "Too many tries in a row. Wait a little and try again.",
+    "session": "Your session ended. Sign in again to keep going.",
+    "forbidden": "That part belongs to another role on the team.",
+    "notFound": "We couldn't find what you were looking for.",
+    "screen": "Something went wrong on this screen.",
+    "formSummary": "{n} {campos} still need fixing:"
+  },
+  "validation": {
+    "required": "Fill in this field.",
+    "nameShort": "Write at least 2 letters.",
+    "nameLong": "Use up to 60 characters.",
+    "nameChars": "Use only letters, spaces, hyphens and apostrophes.",
+    "phone": "Check the number: it has to be a mobile with WhatsApp.",
+    "notesLong": "Use up to {max} characters.",
+    "noLinks": "Links can't be pasted here.",
+    "party": "Choose from 1 to {max} people.",
+    "otp": "The code has 6 digits.",
+    "email": "Check the e-mail.",
+    "password": "The password needs at least 12 characters.",
+    "agree": "Tick “Read and agreed” to go on."
+  },
+  "empty": {
+    "generic": "Nothing here yet.",
+    "reservationsToday": "No reservations for today yet.",
+    "waitlist": "No one on the waitlist.",
+    "customers": "Guests show up here after their first reservation.",
+    "filters": "No results with these filters."
+  },
+  "status": {
+    "pending": "Pending",
+    "confirmed": "Confirmed",
+    "waitlisted": "Waitlist",
+    "offered": "Table offered",
+    "declined": "Declined",
+    "expired": "Expired",
+    "canceled": "Canceled",
+    "completed": "Completed",
+    "no_show": "No-show"
+  },
+  "slot": {
+    "available": "tables free",
+    "few_left": "last tables",
+    "full": "full · waitlist",
+    "past": "already passed"
+  },
+  "day": {
+    "production": "prep day",
+    "closed": "closed",
+    "event": "private event",
+    "holiday": "holiday",
+    "outside_window": "not open yet",
+    "past": "already passed",
+    "full": "full"
+  },
+  "site": {
+    "skip": "Skip to content",
+    "navMenu": "Menu",
+    "navHouse": "The house",
+    "navWhere": "Where we are",
+    "book": "Book",
+    "bookTable": "Book a table",
+    "seeMenu": "See the menu",
+    "fullMenu": "Full menu",
+    "language": "Language",
+    "themeLight": "Light theme",
+    "themeDark": "Dark theme",
+    "themeAuto": "Device theme",
+    "openNow": "Open now · until {close}",
+    "opensToday": "Opens today at {open}",
+    "opensOn": "Opens {day} at {open}",
+    "closedToday": "Closed today",
+    "today": "Today at the house",
+    "openFrom": "Open from {open}.",
+    "bookHere": "Book right here.",
+    "week": "Opening days",
+    "weekdays": "Sun,Mon,Tue,Wed,Thu,Fri,Sat",
+    "weekdaysLong": "Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday",
+    "highlights": "Dishes",
+    "prev": "Previous",
+    "next": "Next",
+    "priceFrom": "R$ {price}",
+    "events": "Território Invites",
+    "where": "Where we are",
+    "maps": "Open in Google Maps",
+    "waze": "Open in Waze",
+    "whatsapp": "Message on WhatsApp",
+    "hours": "Hours",
+    "shop": "Shop",
+    "privacy": "Privacy",
+    "cookies": "Cookies",
+    "staffArea": "Staff area",
+    "photos": "Photos: {credits}",
+    "bookMessage": "Hi! I'd like to book a table at Território.",
+    "menuTitle": "Menu",
+    "menuLede": "Plates to share, raw dishes, ramen, onigiri and the house drinks.",
+    "menuJump": "Jump to",
+    "badge_vegetarian": "vegetarian",
+    "badge_gluten_free": "gluten-free",
+    "badge_spicy": "spicy",
+    "soldOut": "sold out",
+    "menuNoteLanguage": "Dish descriptions are still in Portuguese.",
+    "menuBook": "Shall we book a table?",
+    "privacyTitle": "Privacy",
+    "privacyLede": "How Território looks after the data of people who book and visit the site.",
+    "privacyUpdated": "Updated on {date}.",
+    "privacyCompany": "Company details and contact",
+    "privacyCnpj": "CNPJ (company number)",
+    "privacyContact": "Contact for data matters",
+    "privacyContactWhatsapp": "The house's WhatsApp",
+    "cookiesTitle": "Cookies",
+    "cookiesText": "We use what the site needs to work. With your permission, we also remember your details for the next booking and count how the site is used, without knowing who you are.",
+    "cookiesAccept": "Accept",
+    "cookiesReject": "Reject",
+    "cookiesChoose": "Choose",
+    "cookiesSave": "Save choice",
+    "cookiesNecessary": "Necessary",
+    "cookiesNecessaryText": "The theme, your cookie choice and the session after the code. Always on.",
+    "cookiesPolicy": "Privacy policy",
+    "cookiesSaved": "Choice saved.",
+    "plateMenu": "Menu",
+    "plateBook": "Book",
+    "plateHouse": "The house",
+    "plateWhere": "Where we are",
+    "menuHeadA": "House",
+    "menuHeadB": "plates",
+    "menuParts": "Menu sections",
+    "menuDishes": "{n} items",
+    "menuAll": "See the full menu",
+    "bookHeadA": "Book",
+    "bookHeadB": "your table",
+    "bookBandText": "Wednesday to Saturday, from 7 pm. Pick the day and time right here; the confirmation comes on your WhatsApp.",
+    "termsTitle": "House agreements",
+    "houseHeadA": "The",
+    "houseHeadB": "house",
+    "whereHeadA": "Where",
+    "whereHeadB": "we are",
+    "footerHouse": "The house",
+    "footerContact": "Contact",
+    "footerSite": "On the site",
+    "cookies_remember": "Remember me",
+    "cookies_rememberText": "Your name, WhatsApp and party size, so the next booking is already filled in. It stays on this device only.",
+    "cookies_measurement": "Measurement",
+    "cookies_measurementText": "Pages visited, where you came from and the booking steps, with no name or phone.",
+    "cookiesTable": "Cookies and data kept on your device",
+    "cookiesTableName": "Name",
+    "cookiesTableCategory": "Type",
+    "cookiesTablePurpose": "What for",
+    "cookiesTableWhere": "Where",
+    "cookiesWhereCookie": "cookie",
+    "cookiesWhereStorage": "this browser",
+    "cookiesNone": "We use no third-party cookies, ads or Google Analytics.",
+    "cookiesCategory": {
+      "necessary": "Necessary",
+      "remember": "Remember me",
+      "measurement": "Measurement"
+    },
+    "galleryOpen": "Enlarge: {area}",
+    "galleryPrev": "Previous photo",
+    "galleryNext": "Next photo",
+    "galleryClose": "Close",
+    "galleryCount": "{n} of {total}",
+    "quoteBy": "Marcus Norberto, on the house's Instagram",
+    "timeHour": "h:mm a",
+    "timeFull": "h:mm a",
+    "opensTomorrow": "Opens tomorrow at {open}",
+    "closedNow": "Closed",
+    "fozTime": "Foz do Iguaçu time",
+    "todayOpen": "We're open tonight from {open}.",
+    "todayEvent": "Tonight: {title}, from {open}.",
+    "todayDish": "Today we have {dish}.",
+    "todayClosed": "The house is closed today: {reason}.",
+    "todayShifts": "We are open today in two shifts: {shifts}.",
+    "opensAgain": "Closed now · opens again at {open}",
+    "shiftsJoin": " and ",
+    "langSuggest": "Would you rather read the site in English?",
+    "langSuggestGo": "See it in English",
+    "langSuggestStay": "Stay in Portuguese",
+    "langSuggestLabel": "Language suggestion",
+    "navEvents": "Events",
+    "mapAlt": "Map of the streets around the house, with the pin at {address}",
+    "mapCredit": "© OpenStreetMap contributors",
+    "bookDialog": "Book a table",
+    "bookClose": "Close the booking",
+    "bookLeaveTitle": "Leave the booking?",
+    "bookLeaveText": "What you've picked stays here if you come back.",
+    "bookLeaveStay": "Keep booking",
+    "bookLeaveGo": "Leave the booking",
+    "bookLoading": "Opening the booking…",
+    "notFound": {
+      "title": "This page doesn't exist",
+      "text": "The address may have changed or have a typo. Go back to the start or book your table.",
+      "home": "Back to the start"
+    },
+    "eventsTitle": "Events",
+    "eventsLede": "The house's special nights. Each one says if you book a table, join a list or if it's private.",
+    "eventsEmpty": "No events coming up right now. The house opens Wednesday to Saturday, and you can book a table right here.",
+    "eventsAll": "See all events",
+    "eventBook": "Book",
+    "eventTonight": "tonight",
+    "eventPhoto": "Photo: {credit}",
+    "eventBack": "All events",
+    "eventWhen": "{day} · from {time}",
+    "eventPrivate": "Private event",
+    "eventFree": "Free entry, no booking",
+    "eventMode": {
+      "tables": "Table booking",
+      "list": "List per person",
+      "mixed": "A table inside or the list in the yard"
+    },
+    "priceAsk": "ask us",
+    "galleryCredit": "photo: {credit}"
+  },
+  "book": {
+    "lede": "Pick how many people, the day and the time. The confirmation comes on your WhatsApp.",
+    "noScript": "To book here, your browser needs JavaScript turned on. Or message the house on WhatsApp.",
+    "offline": "We couldn't reach the house right now. Try again in a moment or message us on WhatsApp.",
+    "howMany": "How many people?",
+    "person": "{n} person",
+    "people": "{n} people",
+    "bigGroup": "For more than {max} people, the house sets it up with you.",
+    "bigGroupLink": "Message on WhatsApp",
+    "whichDay": "Which day?",
+    "whatTime": "What time?",
+    "noSlots": "That day has no time for this group. Pick another day.",
+    "waitlistNote": "That time is full. You join the waitlist and the house tells you on WhatsApp if a table opens.",
+    "slotTaken": "That time filled up while you were choosing. Here are the times now.",
+    "continue": "Continue",
+    "yourDetails": "Your details",
+    "name": "Name",
+    "whatsapp": "WhatsApp",
+    "country": "Country",
+    "whatsappHelp": "The confirmation and the code go to this number.",
+    "signedAs": "You're signed in with WhatsApp {phone}.",
+    "notes": "Anything we should know? (optional)",
+    "flagsTitle": "Need anything? Birthday, high chair, a note",
+    "flag": {
+      "birthday": "Birthday",
+      "high_chair": "High chair",
+      "accessibility": "Accessibility",
+      "dietary": "Dietary restriction"
+    },
+    "agreeLead": "I've read the house agreements and",
+    "agreeMark": "I'm good with them.",
+    "sendCode": "Get a code on WhatsApp",
+    "confirm": "Confirm booking",
+    "joinWaitlist": "Join the waitlist",
+    "codeTitle": "Code on WhatsApp",
+    "codeSent": "We sent a 6-digit code to your WhatsApp. It's good for 10 minutes.",
+    "codeLabel": "Code from WhatsApp",
+    "changeNumber": "Change number",
+    "resend": "Send again",
+    "resendIn": "Send again in {s}s",
+    "handOk": "Pode entrar, {name}! A casa é sua.",
+    "handPending": "Recebemos seu pedido, {name}.",
+    "handWaitlist": "Tá na lista, {name}.",
+    "toleranceUntil": "table held until {time}",
+    "houseConfirms": "the house confirms on WhatsApp",
+    "waitlistPosition": "#{n} on the waitlist",
+    "after": {
+      "ok": "The confirmation also went to your WhatsApp. To cancel or change, use the receipt link up to {prazo} hours before.",
+      "pending": "The house checks and replies on your WhatsApp. Until then, the table is held.",
+      "waitlist": "If a table opens at that time, the house tells you on WhatsApp and you have a while to accept."
+    },
+    "keepReceipt": "See the receipt",
+    "sumPeople": "People",
+    "sumDay": "Day",
+    "sumTime": "Time",
+    "sumTolerance": "Table held",
+    "minutes": "{n} min",
+    "progress": "Step {n} of {total}",
+    "keep": "Remember my name and WhatsApp on this device for next time.",
+    "toleranceRow": "{n} min (+{extra} if you tell us)",
+    "waitsUntil": "Your table is held until {time}",
+    "waitsOnTime": "Your table is held at {time} sharp",
+    "houseConfirmsUntil": "The house confirms by {time}",
+    "handOffered": "Abriu uma mesa, {name}!",
+    "placeList": "Spot on the list",
+    "placeTable": "Table",
+    "bigTile": "{n} or more",
+    "bigCount": "How many people in all?",
+    "bigWhatsappHelp": "For more than {max} people, the house puts tables together with you on WhatsApp.",
+    "bigRequestHelp": "A large group is a request: the house checks the tables and answers on your WhatsApp.",
+    "bigTitle": "Large group",
+    "bigLead": "For {n} people, the house sets up the table with you. If you like, add your name, the day and the time: the message is ready to send.",
+    "bigName": "Your name (optional)",
+    "bigDay": "Day (optional)",
+    "bigAnyDay": "Not sure yet",
+    "bigTime": "Time (optional)",
+    "bigAnyTime": "Any time",
+    "bigLink": "Message on WhatsApp",
+    "bigAfter": "The house answers there and sets up the table with you.",
+    "sendRequest": "Send the request",
+    "askedDayClosed": "{day}: the house is closed ({reason}). We picked the next day with tables.",
+    "notesOver": "Over the limit: {count}/{max}. Shorten it a little; nothing was cut.",
+    "sameNightKept": "All good: no new booking was made. To change the one you have, use My bookings.",
+    "joinWaitlistAt": "Join the waitlist for {time}",
+    "agreeAgain": "Read it, agreed",
+    "outsideWindow": "That day is outside the booking window. Pick one of the days on the calendar.",
+    "instagram": "The house's Instagram",
+    "zoneDays": "Days and times in Foz do Iguaçu time.",
+    "zoneTimes": "Foz do Iguaçu time.",
+    "freeEntryText": "{event} is free entry: no booking needed, just come.",
+    "freeEntryPlain": "No booking needed that day: just come.",
+    "dayClosed": "The house is closed that day: {reason}.",
+    "eventMode": {
+      "tables": "Event night: tables are booked as usual.",
+      "list": "Event night with a list: you book your spot, no table to choose ({n} spots).",
+      "mixed": "Event night: choose a table or a spot on the list, each with its own limit.",
+      "none": "Free entry: no booking needed.",
+      "private": "Private event."
+    },
+    "modeLabel": "Table or list",
+    "modeTable": "Table",
+    "modeList": "List ({n} spots)",
+    "listState": {
+      "available": "spot on the list",
+      "few_left": "last spots",
+      "full": "list full · waitlist",
+      "fullNoList": "list full"
+    },
+    "fullNoList": "full",
+    "alternatives": "Times with tables now:",
+    "dietaryNotice": "A dietary restriction is health data. Only the people serving your table see it, and we erase it 30 days after the visit.",
+    "dietaryPrivacy": "How we look after your data",
+    "codeSentTo": "We sent a 6-digit code to WhatsApp {phone}. It is good for 10 minutes and 5 tries."
+  },
+  "receipt": {
+    "title": "Your booking",
+    "noScript": "To see the receipt, your browser needs JavaScript turned on.",
+    "missing": "We couldn't find that booking. Check the link in the message or make a new one.",
+    "closed": "This booking is no longer active.",
+    "bookAgain": "Make a booking",
+    "cancel": "Cancel booking",
+    "cancelTitle": "Cancel the booking?",
+    "cancelMessage": "Booking {code} will be canceled and the table goes to someone else.",
+    "lateNote": "If you arrive after {ate}, the table is no longer held for you and may go to someone waiting.",
+    "lateNoteRelease": "If you arrive after {ate}, the table may be given away.",
+    "lateNoteExtra": "Running late? Let us know and the table waits until {extra}.",
+    "lateButton": "I'll be a little late",
+    "lateDone": "Got it. The table waits for you until {ate}.",
+    "cancelLate": "It's less than {prazo} hours before your booking: you can cancel, but it's recorded as last-minute.",
+    "cancelOnlyHouse": "The deadline to cancel here has passed. Message the house on WhatsApp."
+  },
+  "cliente": {
+    "weekdays": "Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday",
+    "weekdaysShort": "Sun,Mon,Tue,Wed,Thu,Fri,Sat",
+    "zone": "(Foz do Iguaçu time)",
+    "when": "{day}, at {time}",
+    "nightOf": "({night} night)",
+    "dayClosedBecause": "Reason: {reason}.",
+    "whatsappCall": "Message on WhatsApp",
+    "freeEntry": "Free entry",
+    "dayFullShort": "full",
+    "reload": "Reload",
+    "google": "Sign in with Google",
+    "wa": {
+      "hello": "Hi!",
+      "iAm": "I'm {name}.",
+      "table": "I'd like to book a table",
+      "tableFor": "I'd like a table for {n} people",
+      "onDay": " on {day}",
+      "atTime": ", at {time}",
+      "signin": "Hi! I can't sign in to My bookings on the site."
+    },
+    "phone": {
+      "confere": "Is this right? {phone}",
+      "confereHelp": "This is how WhatsApp reads your number. The code goes there.",
+      "yes": "Yes, that's it",
+      "fix": "Fix it",
+      "whatsappOther": "Book on the house's WhatsApp"
+    },
+    "receipt": {
+      "codeHelp": "Use the code {code} if you talk to the house.",
+      "calendar": "Add to calendar",
+      "calendarTry": "Download the calendar file",
+      "share": "Share",
+      "directions": "Directions",
+      "mine": "My bookings",
+      "inApp": "Inside Instagram the calendar file often won't download. Open it in the browser or copy the link.",
+      "openBrowser": "Open in the browser",
+      "copyLink": "Copy the link",
+      "shareTitle": "Booking at Território",
+      "shareText": "Booking at Território: {day}, at {time}.",
+      "copied": "Link copied.",
+      "copyFailed": "Couldn't copy here. Press and hold the receipt link to copy it."
+    },
+    "demo": {
+      "title": "Demo:",
+      "text": "in the real system, this link comes in the WhatsApp message.",
+      "confirm": "Open the confirm link",
+      "waitlist": "Open the waitlist link"
+    },
+    "noScript": "This page needs JavaScript turned on. If you prefer, message the house on WhatsApp.",
+    "page": {
+      "signin": "Sign in",
+      "mine": "My bookings",
+      "confirm": "Your booking",
+      "waitlist": "Waitlist"
+    },
+    "signin": {
+      "title": "Sign in with WhatsApp",
+      "lead": "No password: we send a 6-digit code to your WhatsApp and you sign in to see, change and cancel your bookings.",
+      "phoneTitle": "Confirm your WhatsApp",
+      "phoneLead": "That is where the house confirms and updates your booking. The code arrives there.",
+      "phoneHelp": "Numbers from Brazil, Paraguay and Argentina.",
+      "remember": "Remember this device for 90 days",
+      "or": "or",
+      "noAccount": "Haven't booked yet?",
+      "enter": "Sign in",
+      "sample": "here the site would go to Google and come back. Choose how it comes back:",
+      "sampleLinked": "Account with WhatsApp",
+      "sampleNew": "New account, no WhatsApp",
+      "sampleCancel": "Canceled at Google"
+    },
+    "mine": {
+      "tab": "Bookings",
+      "hello": "Hi, {name}.",
+      "logout": "Sign out",
+      "upcoming": "Coming up",
+      "past": "Past",
+      "empty": "No bookings yet.",
+      "freeUntil": "Cancel free of charge until {time}",
+      "freeUntilDay": "Cancel free of charge until {day}, at {time}",
+      "deadlinePassed": "The cancel deadline has passed: if you can't come, let the house know anyway.",
+      "cancelLate": "The deadline has passed: you can cancel, no fee, but it counts as last minute.",
+      "canceled": "Booking {code} canceled. The table is free for someone else.",
+      "canceledLate": "Canceled. As the deadline had passed, it counted as last minute, no fee.",
+      "leave": "Leave the queue",
+      "leaveTitle": "Leave the waitlist?",
+      "leaveText": "You leave the queue for that time and your place goes to the next person.",
+      "left": "You left the waitlist.",
+      "change": "Change",
+      "changeWhatsapp": "Change on WhatsApp",
+      "changeTitle": "Change people, day or time",
+      "saveChange": "Save the change",
+      "pickTime": "Pick a time.",
+      "changed": "Done: booking {code} is now {when}. The new confirmation goes to your WhatsApp.",
+      "offerUntil": "Table offered: answer by {time} through the message.",
+      "waCancel": "Hi! I need to cancel booking {code}.",
+      "waChange": "Hi! I'd like to change booking {code} to {n} people."
+    },
+    "data": {
+      "title": "My data",
+      "name": "Name",
+      "email": "Email",
+      "emailOptional": "Email (optional)",
+      "emailHelp": "Only for a copy of the receipt and, if you want, the news.",
+      "language": "Language",
+      "languageLabel": "Language of the messages",
+      "news": "News",
+      "newsLabel": "I want to get the house's news",
+      "newsHelp": "Separate from the booking: you can untick it any time.",
+      "yes": "yes",
+      "no": "no",
+      "saved": "Saved.",
+      "phoneNow": "Your WhatsApp: {phone}",
+      "phoneNone": "No WhatsApp confirmed yet.",
+      "changePhone": "Change the number",
+      "newPhone": "New number",
+      "phoneChanged": "Number changed: {phone}. Your bookings stay yours and the next messages go there.",
+      "yoursTitle": "What the house keeps",
+      "yoursLead": "Download everything the house keeps about you, or ask for it to be erased.",
+      "download": "Download my data",
+      "downloaded": "Done: two files, one to keep (JSON) and one to read.",
+      "waData": "Hi! I'd like a copy of my data.",
+      "fileTitle": "Your data at {house}",
+      "fileDate": "Made on {when}",
+      "fileBookings": "Bookings",
+      "fileConsents": "Consents",
+      "forget": "Erase my data",
+      "forgetTitle": "Erase your data?",
+      "forgetText": "The house erases your name, phone and email within 15 days and tells you on WhatsApp before erasing the number.",
+      "forgetBookings": "Your {n} coming bookings will be canceled now.",
+      "forgetQueue": "You also leave the waitlist, and an offered table goes to the next person.",
+      "forgetConfirm": "Erase my data",
+      "forgottenTitle": "Request received",
+      "forgottenText": "The house erases your data by {day}. The confirmation reaches your WhatsApp before the number is erased.",
+      "home": "Back to the start"
+    },
+    "link": {
+      "question": "Are you coming?",
+      "yes": "I'll be there",
+      "late": "I'll be a little late",
+      "no": "I can't make it",
+      "change": "Change",
+      "see": "See the booking",
+      "yourAnswer": "Your answer: {answer}.",
+      "canChange": "You can change it until the time.",
+      "doneYes": "Thanks! The house knows you're coming.",
+      "doneLate": "Noted. The table waits a little longer, as shown below.",
+      "doneNo": "Booking canceled. Thanks for letting us know: the table goes to someone else.",
+      "past": "This booking's time has passed. For something new, make another booking.",
+      "closed": {
+        "canceled": "This booking was canceled.",
+        "no_show": "This booking is closed.",
+        "completed": "You're already here: enjoy!",
+        "declined": "The house couldn't take this booking. Message on WhatsApp and we'll find another time.",
+        "expired": "This request expired."
+      }
+    },
+    "wait": {
+      "offerTitle": "A table opened for you",
+      "left": "{n} min",
+      "until": "Answer by {time}. After that, the table goes to the next person.",
+      "twoMinutes": "2 minutes left to answer: until {time}.",
+      "accept": "I want the table",
+      "decline": "Pass it on",
+      "declineTitle": "Pass it on?",
+      "declineText": "The table goes to the next person and you leave the queue for this time.",
+      "declined": "All set: the turn went to the next person.",
+      "accepted": "The table is yours! The confirmation goes to your WhatsApp.",
+      "swapTitle": "Swap your {time} booking for this one?",
+      "swapText": "You already have booking {code} that night (or reached the limit). Swapping keeps the same code with this table.",
+      "swap": "Swap",
+      "swapped": "Swapped: booking {code} is now at this table.",
+      "nightOver": "The waitlist for this time is over: the turn has closed.",
+      "otherTimes": "See times",
+      "leaveHow": "To leave the queue, use",
+      "out": "You left the queue for this time."
+    },
+    "err": {
+      "network": {
+        "title": "No connection",
+        "text": "The internet dropped along the way. Check your connection and try again. What you typed is still here.",
+        "action": "Try again"
+      },
+      "timeout": {
+        "title": "The house took too long to answer",
+        "text": "It may be the internet or a busy moment. Try again in a moment: nothing gets doubled.",
+        "action": "Try again"
+      },
+      "offline": {
+        "title": "You're offline",
+        "text": "As soon as the connection is back, the page picks up where it left off.",
+        "action": "Try again"
+      },
+      "server": {
+        "title": "Something went wrong on our side",
+        "text": "It wasn't anything you did. Try again in a moment or message the house on WhatsApp.",
+        "action": "Try again"
+      },
+      "bad_response": {
+        "title": "The answer came back incomplete",
+        "text": "Try again in a moment. If it keeps happening, message the house on WhatsApp.",
+        "action": "Try again"
+      },
+      "bad_request": {
+        "title": "We couldn't read that request",
+        "text": "Reload the page and try again. If it keeps happening, message the house on WhatsApp.",
+        "action": "Reload"
+      },
+      "unknown": {
+        "title": "Something didn't go as planned",
+        "text": "Try again. If it keeps happening, message the house on WhatsApp.",
+        "action": "Try again"
+      },
+      "screen_error": {
+        "title": "Something went wrong on this screen",
+        "text": "Reload the page. Anything already saved is still saved.",
+        "action": "Reload"
+      },
+      "static_mode": {
+        "title": "For now, bookings are on WhatsApp",
+        "text": "Booking here isn't switched on yet. Message the house on WhatsApp and we'll save you a table.",
+        "action": "Message us on WhatsApp"
+      },
+      "no_script": {
+        "title": "JavaScript needs to be on",
+        "text": "To book here, your browser needs JavaScript. Or message the house on WhatsApp.",
+        "action": "Message us on WhatsApp"
+      },
+      "storage_blocked": {
+        "title": "This browser isn't saving anything",
+        "text": "You can book as usual, we just won't remember your details next time.",
+        "action": "Try again"
+      },
+      "cookies_blocked": {
+        "title": "Your browser is blocking cookies",
+        "text": "Without them we can't keep you signed in. Allow cookies for this site and try again, or message the house on WhatsApp.",
+        "action": "Message us on WhatsApp"
+      },
+      "turnstile_failed": {
+        "title": "We need to check again",
+        "text": "The robot check didn't go through. Tap try again; if it repeats, reload the page or message the house on WhatsApp.",
+        "action": "Try again"
+      },
+      "rate_limited": {
+        "title": "Too many tries in a row",
+        "text": "To keep the house safe, we paused for a bit. Try again in {minutes} min.",
+        "action": "Try again",
+        "otp": {
+          "title": "We've sent too many codes",
+          "text": "Wait {minutes} min to ask for another, or sign in with Google. In a hurry? Message the house on WhatsApp.",
+          "action": "Message us on WhatsApp"
+        },
+        "otp_house": {
+          "title": "We can't send more codes today",
+          "text": "Message the house on WhatsApp and we'll book you in there.",
+          "action": "Message us on WhatsApp"
+        }
+      },
+      "csrf_failed": {
+        "title": "We need to reload the page",
+        "text": "The page was open for a long time. Reload and do it again; anything already saved is still there.",
+        "action": "Reload"
+      },
+      "validation": {
+        "title": "A few fields need fixing",
+        "text": "Check the marked fields and tap continue again.",
+        "action": "Try again",
+        "honeypot": {
+          "title": "That didn't go through",
+          "text": "Reload the page and try again, or message the house on WhatsApp.",
+          "action": "Message us on WhatsApp"
+        },
+        "otp": {
+          "title": "That code doesn't match",
+          "text": "Check the 6 digits we sent on WhatsApp. {left} tries left.",
+          "action": "Try again"
+        },
+        "idempotency": {
+          "title": "This was already sent",
+          "text": "Reload the page and check how it turned out before sending again.",
+          "action": "Reload"
+        }
+      },
+      "unauthorized": {
+        "title": "Sign in to continue",
+        "text": "Get a code on WhatsApp or sign in with Google.",
+        "action": "Sign in"
+      },
+      "session_expired": {
+        "title": "You've been signed out",
+        "text": "It's been a while. Get a code on WhatsApp or sign in with Google.",
+        "action": "Sign in"
+      },
+      "session_expired_draft": {
+        "title": "We need the code again",
+        "text": "Your details and chosen time are still here. Confirm the code we send on WhatsApp and the booking goes on.",
+        "action": "Get the code"
+      },
+      "gone": {
+        "otp": {
+          "title": "The code expired",
+          "text": "It lasts 10 minutes and 5 tries. Ask for a new one; what you filled in is still here.",
+          "action": "Send again"
+        },
+        "link": {
+          "title": "This link has expired",
+          "text": "Links last up to 30 days after the booking. For something new, make another booking or message the house on WhatsApp.",
+          "action": "Make a booking"
+        }
+      },
+      "otp_resend_wait": {
+        "title": "You can ask again in a moment",
+        "text": "Send again in {seconds} s. WhatsApp sometimes takes a little while.",
+        "action": "Try again"
+      },
+      "otp_not_arrived": {
+        "title": "Didn't get the code?",
+        "text": "Check the number and ask again. You can also sign in with Google or message the house on WhatsApp.",
+        "action": "Message us on WhatsApp"
+      },
+      "google_failed": {
+        "title": "Google sign-in didn't work",
+        "text": "Try again or get a code on WhatsApp.",
+        "action": "Try again"
+      },
+      "google_needs_phone": {
+        "title": "We just need your WhatsApp",
+        "text": "That's how the house confirms and updates your booking. Confirm your number with the code.",
+        "action": "Get the code"
+      },
+      "google_in_app_browser": {
+        "title": "To sign in with Google, open this in your browser",
+        "text": "Instagram doesn't allow Google sign-in here. Tap the three dots and choose open in browser, or get the code on WhatsApp.",
+        "action": "Get code"
+      },
+      "phone_country_unsupported": {
+        "title": "Online booking takes numbers from Brazil, Paraguay and Argentina",
+        "text": "With a number from another country, message the house on WhatsApp and we'll book your table there. What you filled in is still here.",
+        "action": "Book on WhatsApp"
+      },
+      "customer_blocked": {
+        "title": "Let's sort this out on WhatsApp",
+        "text": "For this request, the house would rather talk to you directly. Message us on WhatsApp and we'll sort it out.",
+        "action": "Message us on WhatsApp"
+      },
+      "slot_full": {
+        "title": "That time just filled up",
+        "text": "Someone confirmed first. Your details are still here: pick another time or join the waitlist.",
+        "action": "See times",
+        "cutoff": {
+          "title": "That time is closed for online booking",
+          "text": "It got too close to arrival time. Your details are still here: pick another time or message the house on WhatsApp.",
+          "action": "See times"
+        },
+        "day_closed": {
+          "title": "The house closed that day",
+          "text": "{reason} Your details are still here: pick another day or message the house on WhatsApp.",
+          "action": "See other days"
+        },
+        "event_mode": {
+          "title": "That day is now an event night",
+          "text": "The house published an event that day and booking now follows its way. Your details are still here: look at the day again or pick another.",
+          "action": "See the day"
+        },
+        "waitlist_full": {
+          "title": "The waitlist for that time is full",
+          "text": "Your details are still here: pick another time or message the house on WhatsApp.",
+          "action": "See times"
+        }
+      },
+      "day_full": {
+        "title": "That day is full",
+        "text": "See the next days with a table for your group just below.",
+        "action": "See next days"
+      },
+      "window_full": {
+        "title": "Every open day is full",
+        "text": "Message the house on WhatsApp or Instagram: sometimes a table opens up last minute.",
+        "action": "Message us on WhatsApp"
+      },
+      "same_day_reservation": {
+        "title": "You already have a booking that day, at {time}",
+        "text": "Want to make another one? If you just want a different time, it's better to change the one you have.",
+        "action": "Make another anyway"
+      },
+      "duplicate_reservation": {
+        "title": "You already have a booking at that time",
+        "text": "It's saved in My bookings. To change people or time, do it there.",
+        "action": "See my booking"
+      },
+      "active_limit": {
+        "title": "You already have {max} bookings",
+        "text": "That's the limit per number. Change or cancel one in My bookings, or message the house on WhatsApp.",
+        "action": "My bookings"
+      },
+      "terms_outdated": {
+        "title": "The house rules changed",
+        "text": "The house updated its rules while you were filling in. Read them again and tick \"Read and agreed\" to go on. Your details are still here.",
+        "action": "Read the rules"
+      },
+      "party_too_large": {
+        "title": "We set up big groups with you",
+        "text": "For more than {max} people, the house puts tables together with you on WhatsApp.",
+        "action": "Message us on WhatsApp"
+      },
+      "invalid_transition": {
+        "title": "This booking has already changed",
+        "text": "It's no longer active or was updated. See how it stands now; if needed, message the house on WhatsApp.",
+        "action": "See the booking",
+        "late": {
+          "title": "The table is no longer held",
+          "text": "The time your table was held for you has passed. You can still sit if there's room: message the house on WhatsApp.",
+          "action": "Message us on WhatsApp"
+        },
+        "late_off": {
+          "title": "To say you're running late, talk to the house",
+          "text": "This notice doesn't apply to this booking. Message us on WhatsApp and we'll work it out.",
+          "action": "Message us on WhatsApp"
+        }
+      },
+      "outside_cancel_window": {
+        "title": "It's too late to cancel here",
+        "text": "Message the house on WhatsApp and we'll sort it out.",
+        "action": "Message us on WhatsApp"
+      },
+      "conflict": {
+        "reschedule": {
+          "title": "This booking can't be changed here",
+          "text": "Either it's past the deadline or the house prefers to arrange it directly. Message us on WhatsApp.",
+          "action": "Message us on WhatsApp"
+        },
+        "link_used": {
+          "title": "That's already done",
+          "text": "This button was already used and the booking is up to date. See how it looks now.",
+          "action": "See the booking"
+        }
+      },
+      "not_found": {
+        "title": "We couldn't find that booking",
+        "text": "Check the link in the message or make a new one.",
+        "action": "Make a booking",
+        "page": {
+          "title": "This page doesn't exist",
+          "text": "It may have moved. Go back home or make a booking.",
+          "action": "Back home"
+        },
+        "link": {
+          "title": "This link didn't open",
+          "text": "It may have been cut off when copied. Open it again straight from the WhatsApp message, or message the house there.",
+          "action": "Message us on WhatsApp"
+        }
+      },
+      "receipt_render_failed": {
+        "title": "Your booking is done",
+        "text": "The receipt didn't open here, but the confirmation is on its way to your WhatsApp. It's also in My bookings.",
+        "action": "My bookings"
+      },
+      "read_only_link": {
+        "title": "This link is view-only",
+        "text": "To change the booking, use the button in the confirmation message or go to My bookings.",
+        "action": "My bookings"
+      },
+      "offer_expired": {
+        "title": "The time to accept has passed",
+        "text": "The {minutes} minutes ran out and the table went to the next person. You're back at the end of the list for this time, and we'll let you know again if a table opens up. Or pick another time, or message the house on WhatsApp.",
+        "action": "See times"
+      },
+      "phone_in_use": {
+        "title": "That number belongs to another account",
+        "text": "Sign in with it using the WhatsApp code, or message the house to merge the two accounts.",
+        "action": "Message us on WhatsApp"
+      },
+      "download_failed": {
+        "title": "The file didn't download",
+        "text": "Try again in a moment. If it keeps happening, ask on WhatsApp and the house will send it.",
+        "action": "Try again"
+      }
+    }
+  }
+}

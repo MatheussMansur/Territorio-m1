@@ -1,0 +1,844 @@
+{
+  "common": {
+    "loading": "Carregando…",
+    "retry": "Tentar de novo",
+    "close": "Fechar",
+    "back": "Voltar",
+    "cancel": "Cancelar",
+    "save": "Salvar",
+    "confirm": "Confirmar",
+    "undo": "Desfazer",
+    "discard": "Descartar",
+    "keepGoing": "Continuar",
+    "discardTitle": "Descartar?",
+    "discardMessage": "O que você preencheu vai se perder.",
+    "toConfirm": "a confirmar",
+    "whatsappHouse": "WhatsApp da casa"
+  },
+  "errors": {
+    "network": "Sem conexão. Confira a internet e tente de novo.",
+    "timeout": "A casa demorou a responder. Tente de novo em instantes.",
+    "server": "Algo deu errado do nosso lado. Tente de novo em instantes.",
+    "rateLimited": "Muitas tentativas seguidas. Espere um pouco e tente de novo.",
+    "session": "Sua sessão acabou. Entre de novo para continuar.",
+    "forbidden": "Essa parte é de outro papel da equipe.",
+    "notFound": "Não encontramos o que você procurou.",
+    "screen": "Algo deu errado nesta tela.",
+    "formSummary": "Falta ajeitar {n} {campos}:"
+  },
+  "validation": {
+    "required": "Preencha este campo.",
+    "nameShort": "Escreva pelo menos 2 letras.",
+    "nameLong": "Use até 60 caracteres.",
+    "nameChars": "Use só letras, espaço, hífen e apóstrofo.",
+    "phone": "Confira o número: tem que ser um celular com WhatsApp.",
+    "notesLong": "Use até {max} caracteres.",
+    "noLinks": "Aqui não dá para colar links.",
+    "party": "Escolha de 1 a {max} pessoas.",
+    "otp": "O código tem 6 números.",
+    "email": "Confira o e-mail.",
+    "password": "A senha precisa ter pelo menos 12 caracteres.",
+    "agree": "Marque “Li e tá combinado” para seguir."
+  },
+  "empty": {
+    "generic": "Nada por aqui ainda.",
+    "reservationsToday": "Nenhuma reserva para hoje ainda.",
+    "waitlist": "Ninguém na espera.",
+    "customers": "Os clientes aparecem aqui depois da primeira reserva.",
+    "filters": "Nenhum resultado com esses filtros."
+  },
+  "status": {
+    "pending": "Pendente",
+    "confirmed": "Confirmada",
+    "waitlisted": "Lista de espera",
+    "offered": "Mesa oferecida",
+    "declined": "Recusada",
+    "expired": "Expirada",
+    "canceled": "Cancelada",
+    "completed": "Concluída",
+    "no_show": "Não compareceu"
+  },
+  "slot": {
+    "available": "tem mesa",
+    "few_left": "últimas mesas",
+    "full": "lotado · lista de espera",
+    "past": "já passou"
+  },
+  "day": {
+    "production": "produção",
+    "closed": "fechado",
+    "event": "evento fechado",
+    "holiday": "feriado",
+    "outside_window": "ainda não abriu",
+    "past": "já passou",
+    "full": "lotado"
+  },
+  "site": {
+    "skip": "Pular para o conteúdo",
+    "navMenu": "Cardápio",
+    "navHouse": "A casa",
+    "navWhere": "Onde fica",
+    "book": "Reservar",
+    "bookTable": "Reservar mesa",
+    "seeMenu": "Ver o cardápio",
+    "fullMenu": "Cardápio completo",
+    "language": "Língua",
+    "themeLight": "Tema claro",
+    "themeDark": "Tema escuro",
+    "themeAuto": "Tema do aparelho",
+    "openNow": "Aberto agora · até {close}",
+    "opensToday": "Abre hoje às {open}",
+    "opensOn": "Abre {day} às {open}",
+    "closedToday": "Fechada hoje",
+    "today": "Hoje na casa",
+    "openFrom": "Casa aberta a partir das {open}.",
+    "bookHere": "Reserva aqui mesmo.",
+    "week": "Casa aberta",
+    "weekdays": "Dom,Seg,Ter,Qua,Qui,Sex,Sáb",
+    "weekdaysLong": "domingo,segunda,terça,quarta,quinta,sexta,sábado",
+    "highlights": "Rangos",
+    "prev": "Anterior",
+    "next": "Próximo",
+    "priceFrom": "R$ {price}",
+    "events": "Território Convida",
+    "where": "Onde fica",
+    "maps": "Abrir no Google Maps",
+    "waze": "Abrir no Waze",
+    "whatsapp": "Chamar no WhatsApp",
+    "hours": "Horário",
+    "shop": "Lojinha",
+    "privacy": "Privacidade",
+    "cookies": "Cookies",
+    "staffArea": "Área da casa",
+    "photos": "Fotos: {credits}",
+    "bookMessage": "Oi! Quero reservar uma mesa no Território.",
+    "menuTitle": "Cardápio",
+    "menuLede": "Pratos pra compartilhar, crus, ramen, oniguiri e as bebidas da casa.",
+    "menuJump": "Ir para",
+    "badge_vegetarian": "vegetariano",
+    "badge_gluten_free": "sem glúten",
+    "badge_spicy": "picante",
+    "soldOut": "acabou",
+    "menuNoteLanguage": "As descrições dos pratos estão em português.",
+    "menuBook": "Bora reservar uma mesa?",
+    "privacyTitle": "Privacidade",
+    "privacyLede": "Como o Território cuida dos dados de quem reserva e visita o site.",
+    "privacyUpdated": "Atualizada em {date}.",
+    "privacyCompany": "Dados da empresa e contato",
+    "privacyCnpj": "CNPJ",
+    "privacyContact": "Contato para assuntos de dados",
+    "privacyContactWhatsapp": "WhatsApp da casa",
+    "cookiesTitle": "Cookies",
+    "cookiesText": "Usamos o necessário para o site funcionar. Com a sua permissão, também lembramos seus dados para a próxima reserva e contamos como o site é usado, sem saber quem você é.",
+    "cookiesAccept": "Aceitar",
+    "cookiesReject": "Recusar",
+    "cookiesChoose": "Escolher",
+    "cookiesSave": "Salvar escolha",
+    "cookiesNecessary": "Necessários",
+    "cookiesNecessaryText": "Tema, a sua escolha de cookies e a sessão depois do código. Sempre ligados.",
+    "cookiesPolicy": "Política de privacidade",
+    "cookiesSaved": "Escolha salva.",
+    "plateMenu": "Cardápio",
+    "plateBook": "Reservar",
+    "plateHouse": "A casa",
+    "plateWhere": "Onde fica",
+    "menuHeadA": "Rangos",
+    "menuHeadB": "da casa",
+    "menuParts": "Partes do cardápio",
+    "menuDishes": "{n} itens",
+    "menuAll": "Ver o cardápio inteiro",
+    "bookHeadA": "Reserve",
+    "bookHeadB": "sua mesa",
+    "bookBandText": "De quarta a sábado, a partir das 19h. Escolha o dia e o horário aqui no site; a confirmação chega no seu WhatsApp.",
+    "termsTitle": "Combinados da casa",
+    "houseHeadA": "A",
+    "houseHeadB": "casa",
+    "whereHeadA": "Onde",
+    "whereHeadB": "fica",
+    "footerHouse": "A casa",
+    "footerContact": "Contato",
+    "footerSite": "No site",
+    "cookies_remember": "Lembrar de mim",
+    "cookies_rememberText": "Seu nome, WhatsApp e quantas pessoas, para a próxima reserva já vir preenchida. Fica só neste aparelho.",
+    "cookies_measurement": "Medição",
+    "cookies_measurementText": "Páginas visitadas, de onde você chegou e os passos da reserva, sem nome nem telefone.",
+    "cookiesTable": "Cookies e dados guardados no seu aparelho",
+    "cookiesTableName": "Nome",
+    "cookiesTableCategory": "Tipo",
+    "cookiesTablePurpose": "Para quê",
+    "cookiesTableWhere": "Onde fica",
+    "cookiesWhereCookie": "cookie",
+    "cookiesWhereStorage": "este navegador",
+    "cookiesNone": "Não usamos cookies de terceiros, anúncios nem Google Analytics.",
+    "cookiesCategory": {
+      "necessary": "Necessário",
+      "remember": "Lembrar de mim",
+      "measurement": "Medição"
+    },
+    "galleryOpen": "Ampliar: {area}",
+    "galleryPrev": "Foto anterior",
+    "galleryNext": "Próxima foto",
+    "galleryClose": "Fechar",
+    "galleryCount": "{n} de {total}",
+    "quoteBy": "Marcus Norberto, no Instagram da casa",
+    "timeHour": "H[h]",
+    "timeFull": "H[h]mm",
+    "opensTomorrow": "Abre amanhã às {open}",
+    "closedNow": "Fechado",
+    "fozTime": "horário de Foz do Iguaçu",
+    "todayOpen": "Hoje tem casa aberta a partir das {open}.",
+    "todayEvent": "Hoje tem {title}, a partir das {open}.",
+    "todayDish": "Hoje tem {dish}.",
+    "todayClosed": "Hoje a casa não abre: {reason}.",
+    "todayShifts": "Hoje tem casa aberta em dois turnos: {shifts}.",
+    "opensAgain": "Fechado agora · abre de novo às {open}",
+    "shiftsJoin": " e ",
+    "langSuggest": "Prefere ler o site em português?",
+    "langSuggestGo": "Ver em português",
+    "langSuggestStay": "Continuar aqui",
+    "langSuggestLabel": "Sugestão de língua",
+    "navEvents": "Eventos",
+    "mapAlt": "Mapa das ruas em volta da casa, com o pino em {address}",
+    "mapCredit": "© colaboradores do OpenStreetMap",
+    "bookDialog": "Reservar mesa",
+    "bookClose": "Fechar a reserva",
+    "bookLeaveTitle": "Sair da reserva?",
+    "bookLeaveText": "O que você já escolheu fica guardado se você voltar.",
+    "bookLeaveStay": "Continuar reservando",
+    "bookLeaveGo": "Sair da reserva",
+    "bookLoading": "Abrindo a reserva…",
+    "notFound": {
+      "title": "Essa página não existe",
+      "text": "O endereço pode ter mudado ou ter uma letra trocada. Volte ao início ou já reserve sua mesa.",
+      "home": "Voltar ao início"
+    },
+    "eventsTitle": "Eventos",
+    "eventsLede": "As noites especiais da casa. Cada uma diz se tem reserva de mesa, lista por pessoa ou se é fechada.",
+    "eventsEmpty": "Nenhum evento marcado agora. A casa abre de quarta a sábado, e a mesa se reserva aqui mesmo.",
+    "eventsAll": "Ver todos os eventos",
+    "eventBook": "Reservar",
+    "eventTonight": "hoje",
+    "eventPhoto": "Foto: {credit}",
+    "eventBack": "Todos os eventos",
+    "eventWhen": "{day} · a partir das {time}",
+    "eventPrivate": "Evento fechado",
+    "eventFree": "Entrada livre, sem reserva",
+    "eventMode": {
+      "tables": "Reserva de mesa",
+      "list": "Lista por pessoa",
+      "mixed": "Mesa no salão ou lista no quintal"
+    },
+    "priceAsk": "consulte",
+    "galleryCredit": "foto: {credit}"
+  },
+  "book": {
+    "lede": "Escolha quantas pessoas, o dia e o horário. A confirmação chega no seu WhatsApp.",
+    "noScript": "Para reservar por aqui, o navegador precisa do JavaScript ligado. Se preferir, chama a casa no WhatsApp.",
+    "offline": "Não deu para falar com a casa agora. Tente de novo em instantes ou chame no WhatsApp.",
+    "howMany": "Quantas pessoas?",
+    "person": "{n} pessoa",
+    "people": "{n} pessoas",
+    "bigGroup": "Mais de {max} pessoas a casa monta com você.",
+    "bigGroupLink": "Chamar no WhatsApp",
+    "whichDay": "Qual dia?",
+    "whatTime": "Que horas?",
+    "noSlots": "Esse dia não tem horário para esse grupo. Escolha outro dia.",
+    "waitlistNote": "Esse horário lotou. Você entra na lista de espera e a casa avisa no WhatsApp se abrir mesa.",
+    "slotTaken": "Esse horário lotou enquanto você escolhia. Veja os horários de agora.",
+    "continue": "Continuar",
+    "yourDetails": "Seus dados",
+    "name": "Nome",
+    "whatsapp": "WhatsApp",
+    "country": "País",
+    "whatsappHelp": "A confirmação e o código chegam nesse número.",
+    "signedAs": "Você entrou com o WhatsApp {phone}.",
+    "notes": "Alguma observação? (opcional)",
+    "flagsTitle": "Precisa de algo? Aniversário, cadeirinha, observação",
+    "flag": {
+      "birthday": "Aniversário",
+      "high_chair": "Cadeirinha de criança",
+      "accessibility": "Acessibilidade",
+      "dietary": "Restrição alimentar"
+    },
+    "agreeLead": "Li os combinados da casa e",
+    "agreeMark": "tá combinado.",
+    "sendCode": "Receber código no WhatsApp",
+    "confirm": "Confirmar reserva",
+    "joinWaitlist": "Entrar na lista de espera",
+    "codeTitle": "Código no WhatsApp",
+    "codeSent": "Mandamos um código de 6 números no seu WhatsApp. Ele vale por 10 minutos.",
+    "codeLabel": "Código que chegou no WhatsApp",
+    "changeNumber": "Mudar o número",
+    "resend": "Mandar de novo",
+    "resendIn": "Mandar de novo em {s}s",
+    "handOk": "Pode entrar, {name}! A casa é sua.",
+    "handPending": "Recebemos seu pedido, {name}.",
+    "handWaitlist": "Tá na lista, {name}.",
+    "toleranceUntil": "a mesa espera até {time}",
+    "houseConfirms": "a casa confirma no WhatsApp",
+    "waitlistPosition": "{n}º na lista de espera",
+    "after": {
+      "ok": "A confirmação também foi para o seu WhatsApp. Para cancelar ou mudar, use o link do comprovante até {prazo} h antes.",
+      "pending": "A casa confere e responde no seu WhatsApp. Até lá, a mesa fica separada.",
+      "waitlist": "Se abrir mesa nesse horário, a casa avisa no WhatsApp e você tem um tempo para aceitar."
+    },
+    "keepReceipt": "Ver o comprovante",
+    "sumPeople": "Pessoas",
+    "sumDay": "Dia",
+    "sumTime": "Horário",
+    "sumTolerance": "A mesa espera",
+    "minutes": "{n} min",
+    "progress": "Passo {n} de {total}",
+    "keep": "Lembrar meu nome e WhatsApp neste aparelho para a próxima reserva.",
+    "toleranceRow": "{n} min (+{extra} avisando)",
+    "waitsUntil": "A mesa te espera até {time}",
+    "waitsOnTime": "A mesa te espera às {time} em ponto",
+    "houseConfirmsUntil": "A casa confirma até {time}",
+    "handOffered": "Abriu uma mesa, {name}!",
+    "placeList": "Lugar na lista",
+    "placeTable": "Mesa",
+    "bigTile": "{n} ou mais",
+    "bigCount": "Quantas pessoas, ao todo?",
+    "bigWhatsappHelp": "Para mais de {max} pessoas, a casa junta as mesas com você pelo WhatsApp.",
+    "bigRequestHelp": "Grupo grande vira um pedido: a casa confere as mesas e responde no seu WhatsApp.",
+    "bigTitle": "Grupo grande",
+    "bigLead": "Para {n} pessoas, a casa monta a mesa com você. Se quiser, diga o nome, o dia e a hora: a mensagem já sai pronta.",
+    "bigName": "Seu nome (opcional)",
+    "bigDay": "Dia (opcional)",
+    "bigAnyDay": "Ainda não sei",
+    "bigTime": "Horário (opcional)",
+    "bigAnyTime": "Qualquer horário",
+    "bigLink": "Chamar no WhatsApp",
+    "bigAfter": "A casa responde por lá e monta a mesa com você.",
+    "sendRequest": "Enviar o pedido",
+    "askedDayClosed": "{day}: a casa não abre ({reason}). Escolhemos o próximo dia com mesa.",
+    "notesOver": "Passou do limite: {count}/{max}. Encurte um pouco; nada foi cortado.",
+    "sameNightKept": "Tudo certo: nenhuma reserva nova foi feita. Para mudar a que você já tem, use Minhas reservas.",
+    "joinWaitlistAt": "Entrar na lista de espera das {time}",
+    "agreeAgain": "Li e tá combinado",
+    "outsideWindow": "Esse dia está fora da janela de reserva. Escolha um dos dias do calendário.",
+    "instagram": "Instagram da casa",
+    "zoneDays": "Dias e horários de Foz do Iguaçu.",
+    "zoneTimes": "Horário de Foz do Iguaçu.",
+    "freeEntryText": "{event} é com entrada livre: não precisa reservar, é só chegar.",
+    "freeEntryPlain": "Nesse dia não precisa reservar: é só chegar.",
+    "dayClosed": "A casa não abre nesse dia: {reason}.",
+    "eventMode": {
+      "tables": "Noite de evento: reserva de mesa como sempre.",
+      "list": "Noite de evento com lista: você reserva o seu lugar, sem escolher mesa ({n} lugares).",
+      "mixed": "Noite de evento: escolha mesa ou lugar na lista, cada um com o seu limite.",
+      "none": "Entrada livre: não precisa reservar.",
+      "private": "Evento fechado."
+    },
+    "modeLabel": "Mesa ou lista",
+    "modeTable": "Mesa",
+    "modeList": "Lista ({n} lugares)",
+    "listState": {
+      "available": "lugar na lista",
+      "few_left": "últimos lugares",
+      "full": "lista cheia · espera",
+      "fullNoList": "lista cheia"
+    },
+    "fullNoList": "lotado",
+    "alternatives": "Horários com mesa agora:",
+    "dietaryNotice": "Restrição alimentar é um dado de saúde. Só quem atende a sua mesa vê, e apagamos 30 dias depois da visita.",
+    "dietaryPrivacy": "Como cuidamos dos seus dados",
+    "codeSentTo": "Mandamos um código de 6 números para o WhatsApp {phone}. Ele vale por 10 minutos e 5 tentativas."
+  },
+  "receipt": {
+    "title": "Sua reserva",
+    "noScript": "Para ver o comprovante, o navegador precisa do JavaScript ligado.",
+    "missing": "Não achamos essa reserva. Confira o link da mensagem ou faça uma nova.",
+    "closed": "Essa reserva não está mais ativa.",
+    "bookAgain": "Fazer uma reserva",
+    "cancel": "Cancelar reserva",
+    "cancelTitle": "Cancelar a reserva?",
+    "cancelMessage": "A reserva {code} será cancelada e a mesa fica livre para outra pessoa.",
+    "lateNote": "Chegando depois das {ate}, a mesa deixa de ser prioridade sua e pode ir para quem está esperando.",
+    "lateNoteRelease": "Chegando depois das {ate}, a mesa pode ser liberada.",
+    "lateNoteExtra": "Vai atrasar? Avise e a mesa espera até as {extra}.",
+    "lateButton": "Vou atrasar um pouco",
+    "lateDone": "Avisado. A mesa espera você até as {ate}.",
+    "cancelLate": "Faltam menos de {prazo} h para a reserva: dá para cancelar, mas fica registrado como em cima da hora.",
+    "cancelOnlyHouse": "Passou o prazo para cancelar por aqui. Fala com a casa pelo WhatsApp."
+  },
+  "cliente": {
+    "weekdays": "domingo,segunda,terça,quarta,quinta,sexta,sábado",
+    "weekdaysShort": "dom,seg,ter,qua,qui,sex,sáb",
+    "zone": "(horário de Foz do Iguaçu)",
+    "when": "{day}, às {time}",
+    "nightOf": "(noite de {night})",
+    "dayClosedBecause": "Motivo: {reason}.",
+    "whatsappCall": "Chamar no WhatsApp",
+    "freeEntry": "Entrada livre",
+    "dayFullShort": "lotado",
+    "reload": "Recarregar",
+    "google": "Entrar com o Google",
+    "wa": {
+      "hello": "Oi!",
+      "iAm": "Meu nome é {name}.",
+      "table": "Queria reservar uma mesa",
+      "tableFor": "Queria uma mesa para {n} pessoas",
+      "onDay": " em {day}",
+      "atTime": ", às {time}",
+      "signin": "Oi! Não estou conseguindo entrar em Minhas reservas pelo site."
+    },
+    "phone": {
+      "confere": "Confere? {phone}",
+      "confereHelp": "É assim que o WhatsApp entende o seu número. O código vai para ele.",
+      "yes": "Sim, é esse",
+      "fix": "Corrigir",
+      "whatsappOther": "Reservar pelo WhatsApp da casa"
+    },
+    "receipt": {
+      "codeHelp": "Use o código {code} se falar com a casa.",
+      "calendar": "Pôr na agenda",
+      "calendarTry": "Baixar o arquivo da agenda",
+      "share": "Compartilhar",
+      "directions": "Como chegar",
+      "mine": "Minhas reservas",
+      "inApp": "Dentro do Instagram o arquivo da agenda muitas vezes não baixa. Abra no navegador ou copie o link.",
+      "openBrowser": "Abrir no navegador",
+      "copyLink": "Copiar o link",
+      "shareTitle": "Reserva no Território",
+      "shareText": "Reserva no Território: {day}, às {time}.",
+      "copied": "Link copiado.",
+      "copyFailed": "Não deu para copiar aqui. Segure o link do comprovante para copiar."
+    },
+    "demo": {
+      "title": "Demonstração:",
+      "text": "no sistema real, este link chega na mensagem do WhatsApp.",
+      "confirm": "Abrir o link de confirmar",
+      "waitlist": "Abrir o link da espera"
+    },
+    "noScript": "Para usar esta página, o navegador precisa do JavaScript ligado. Se preferir, chama a casa no WhatsApp.",
+    "page": {
+      "signin": "Entrar",
+      "mine": "Minhas reservas",
+      "confirm": "Sua reserva",
+      "waitlist": "Lista de espera"
+    },
+    "signin": {
+      "title": "Entrar com o WhatsApp",
+      "lead": "Sem senha: mandamos um código de 6 números no seu WhatsApp e você entra para ver, mudar e cancelar suas reservas.",
+      "phoneTitle": "Confirme o seu WhatsApp",
+      "phoneLead": "É por ele que a casa confirma e avisa da reserva. O código chega lá.",
+      "phoneHelp": "Números do Brasil, Paraguai e Argentina.",
+      "remember": "Lembrar este aparelho por 90 dias",
+      "or": "ou",
+      "noAccount": "Ainda não reservou?",
+      "enter": "Entrar",
+      "sample": "aqui o site iria para o Google e voltaria. Escolha como a volta acontece:",
+      "sampleLinked": "Conta com WhatsApp",
+      "sampleNew": "Conta nova, sem WhatsApp",
+      "sampleCancel": "Cancelou no Google"
+    },
+    "mine": {
+      "tab": "Reservas",
+      "hello": "Oi, {name}.",
+      "logout": "Sair",
+      "upcoming": "Próximas",
+      "past": "Passadas",
+      "empty": "Nenhuma reserva por enquanto.",
+      "freeUntil": "Cancelar sem custo até {time}",
+      "freeUntilDay": "Cancelar sem custo até {day}, às {time}",
+      "deadlinePassed": "O prazo para cancelar passou: se não puder vir, avise mesmo assim.",
+      "cancelLate": "Já passou o prazo: dá para cancelar, sem multa, mas conta como em cima da hora.",
+      "canceled": "Reserva {code} cancelada. A mesa fica livre para outra pessoa.",
+      "canceledLate": "Cancelada. Como o prazo já tinha passado, contou como em cima da hora, sem multa.",
+      "leave": "Sair da fila",
+      "leaveTitle": "Sair da lista de espera?",
+      "leaveText": "Você sai da fila desse horário e o seu lugar passa para o próximo.",
+      "left": "Você saiu da lista de espera.",
+      "change": "Mudar",
+      "changeWhatsapp": "Mudar pelo WhatsApp",
+      "changeTitle": "Mudar pessoas, dia ou horário",
+      "saveChange": "Salvar a mudança",
+      "pickTime": "Escolha um horário.",
+      "changed": "Pronto: a reserva {code} agora é {when}. A confirmação nova vai para o seu WhatsApp.",
+      "offerUntil": "Mesa oferecida: responda até {time} pela mensagem.",
+      "waCancel": "Oi! Preciso cancelar a reserva {code}.",
+      "waChange": "Oi! Queria mudar a reserva {code} para {n} pessoas."
+    },
+    "data": {
+      "title": "Meus dados",
+      "name": "Nome",
+      "email": "E-mail",
+      "emailOptional": "E-mail (opcional)",
+      "emailHelp": "Só para a cópia do comprovante e, se você quiser, as novidades.",
+      "language": "Língua",
+      "languageLabel": "Língua das mensagens",
+      "news": "Novidades",
+      "newsLabel": "Quero receber as novidades da casa",
+      "newsHelp": "É à parte da reserva: dá para desmarcar quando quiser.",
+      "yes": "sim",
+      "no": "não",
+      "saved": "Dados salvos.",
+      "phoneNow": "Seu WhatsApp: {phone}",
+      "phoneNone": "Ainda sem WhatsApp confirmado.",
+      "changePhone": "Trocar o número",
+      "newPhone": "Número novo",
+      "phoneChanged": "Número trocado: {phone}. Suas reservas continuam suas e as próximas mensagens vão para ele.",
+      "yoursTitle": "O que a casa guarda",
+      "yoursLead": "Baixe tudo o que a casa guarda sobre você, ou peça para apagar.",
+      "download": "Baixar meus dados",
+      "downloaded": "Pronto: dois arquivos, um para guardar (JSON) e um para ler.",
+      "waData": "Oi! Queria receber uma cópia dos meus dados.",
+      "fileTitle": "Seus dados no {house}",
+      "fileDate": "Gerado em {when}",
+      "fileBookings": "Reservas",
+      "fileConsents": "Consentimentos",
+      "forget": "Apagar meus dados",
+      "forgetTitle": "Apagar seus dados?",
+      "forgetText": "A casa apaga seu nome, telefone e e-mail em até 15 dias e avisa no WhatsApp antes de apagar o número.",
+      "forgetBookings": "Suas {n} reservas futuras serão canceladas agora.",
+      "forgetQueue": "Você também sai da lista de espera, e a mesa oferecida passa ao próximo.",
+      "forgetConfirm": "Apagar meus dados",
+      "forgottenTitle": "Pedido recebido",
+      "forgottenText": "A casa apaga seus dados até {day}. A confirmação chega no seu WhatsApp antes de o número ser apagado.",
+      "home": "Voltar ao início"
+    },
+    "link": {
+      "question": "Você vem?",
+      "yes": "Confirmo",
+      "late": "Vou atrasar um pouco",
+      "no": "Não vou mais",
+      "change": "Mudar",
+      "see": "Ver a reserva",
+      "yourAnswer": "Sua resposta: {answer}.",
+      "canChange": "Dá para trocar até o horário.",
+      "doneYes": "Obrigado! A casa já sabe que você vem.",
+      "doneLate": "Avisado. A mesa espera um pouco mais, como mostra abaixo.",
+      "doneNo": "Reserva cancelada. Obrigado por avisar: a mesa vai para outra pessoa.",
+      "past": "O horário dessa reserva já passou. Para algo novo, faça outra reserva.",
+      "closed": {
+        "canceled": "Essa reserva foi cancelada.",
+        "no_show": "Essa reserva já foi encerrada.",
+        "completed": "Você já chegou: bom proveito!",
+        "declined": "A casa não conseguiu essa reserva. Chama no WhatsApp que a gente procura outro horário.",
+        "expired": "Esse pedido venceu."
+      }
+    },
+    "wait": {
+      "offerTitle": "Abriu uma mesa para você",
+      "left": "{n} min",
+      "until": "Responda até {time}. Depois disso, a mesa vai para a próxima pessoa.",
+      "twoMinutes": "Faltam 2 minutos para responder: até {time}.",
+      "accept": "Quero a mesa",
+      "decline": "Pode passar a vez",
+      "declineTitle": "Passar a vez?",
+      "declineText": "A mesa vai para a próxima pessoa e você sai da fila desse horário.",
+      "declined": "Tudo certo: a vez passou para a próxima pessoa.",
+      "accepted": "A mesa é sua! A confirmação vai para o seu WhatsApp.",
+      "swapTitle": "Trocar a reserva das {time} por esta?",
+      "swapText": "Você já tem a reserva {code} nessa noite (ou chegou ao limite). Trocando, ela fica com esta mesa e o mesmo código.",
+      "swap": "Trocar",
+      "swapped": "Trocado: a reserva {code} agora é nesta mesa.",
+      "nightOver": "A espera desse horário acabou: a vez foi encerrada.",
+      "otherTimes": "Ver horários",
+      "leaveHow": "Para sair da fila, use",
+      "out": "Você saiu da fila desse horário."
+    },
+    "err": {
+      "network": {
+        "title": "Sem conexão",
+        "text": "A internet caiu no meio do caminho. Confira a conexão e tente de novo. O que você escreveu continua aqui.",
+        "action": "Tentar de novo"
+      },
+      "timeout": {
+        "title": "A casa demorou a responder",
+        "text": "Pode ser a internet ou muita gente ao mesmo tempo. Tente de novo em instantes: nada fica repetido.",
+        "action": "Tentar de novo"
+      },
+      "offline": {
+        "title": "Você está sem internet",
+        "text": "Assim que a conexão voltar, a página continua de onde parou.",
+        "action": "Tentar de novo"
+      },
+      "server": {
+        "title": "Algo deu errado do nosso lado",
+        "text": "Não foi nada que você fez. Tente de novo em instantes ou chame a casa no WhatsApp.",
+        "action": "Tentar de novo"
+      },
+      "bad_response": {
+        "title": "A resposta chegou pela metade",
+        "text": "Tente de novo em instantes. Se continuar, chame a casa no WhatsApp.",
+        "action": "Tentar de novo"
+      },
+      "bad_request": {
+        "title": "Não deu para entender o pedido",
+        "text": "Recarregue a página e tente de novo. Se continuar, chame a casa no WhatsApp.",
+        "action": "Recarregar"
+      },
+      "unknown": {
+        "title": "Algo não saiu como esperado",
+        "text": "Tente de novo. Se continuar, chame a casa no WhatsApp.",
+        "action": "Tentar de novo"
+      },
+      "screen_error": {
+        "title": "Algo deu errado nesta tela",
+        "text": "Recarregue a página. O que já foi gravado continua guardado.",
+        "action": "Recarregar"
+      },
+      "static_mode": {
+        "title": "Por enquanto, a reserva é pelo WhatsApp",
+        "text": "A reserva por aqui ainda não está ligada. Chama a casa no WhatsApp que a gente separa sua mesa.",
+        "action": "Chamar no WhatsApp"
+      },
+      "no_script": {
+        "title": "Precisamos do JavaScript ligado",
+        "text": "Para reservar por aqui, o navegador precisa do JavaScript. Se preferir, chama a casa no WhatsApp.",
+        "action": "Chamar no WhatsApp"
+      },
+      "storage_blocked": {
+        "title": "Este navegador não está guardando nada",
+        "text": "Dá para reservar normalmente, só não vamos lembrar seus dados na próxima vez.",
+        "action": "Tentar de novo"
+      },
+      "cookies_blocked": {
+        "title": "O navegador está bloqueando cookies",
+        "text": "Sem eles, não dá para manter você conectado. Libere os cookies deste site e tente de novo, ou chame a casa no WhatsApp.",
+        "action": "Chamar no WhatsApp"
+      },
+      "turnstile_failed": {
+        "title": "Precisamos conferir de novo",
+        "text": "A checagem contra robôs não passou. Toque em tentar de novo; se repetir, recarregue a página ou chame a casa no WhatsApp.",
+        "action": "Tentar de novo"
+      },
+      "rate_limited": {
+        "title": "Muitas tentativas seguidas",
+        "text": "Para proteger a casa, demos uma pausa. Tente de novo em {minutes} min.",
+        "action": "Tentar de novo",
+        "otp": {
+          "title": "Já mandamos códigos demais",
+          "text": "Espere {minutes} min para pedir outro, ou entre com o Google. Com pressa, chame a casa no WhatsApp.",
+          "action": "Chamar no WhatsApp"
+        },
+        "otp_house": {
+          "title": "Hoje não conseguimos mandar mais códigos",
+          "text": "Chama a casa no WhatsApp que a gente faz sua reserva por lá.",
+          "action": "Chamar no WhatsApp"
+        }
+      },
+      "csrf_failed": {
+        "title": "Precisamos recarregar a página",
+        "text": "A página ficou aberta por muito tempo. Recarregue e faça de novo; o que já foi gravado continua.",
+        "action": "Recarregar"
+      },
+      "validation": {
+        "title": "Falta ajeitar alguns campos",
+        "text": "Confira os campos marcados e toque em continuar de novo.",
+        "action": "Tentar de novo",
+        "honeypot": {
+          "title": "Não deu para enviar",
+          "text": "Recarregue a página e tente de novo, ou chame a casa no WhatsApp.",
+          "action": "Chamar no WhatsApp"
+        },
+        "otp": {
+          "title": "Código não confere",
+          "text": "Confira os 6 números que chegaram no WhatsApp. Restam {left} tentativas.",
+          "action": "Tentar de novo"
+        },
+        "idempotency": {
+          "title": "Esse pedido já tinha sido enviado",
+          "text": "Recarregue a página e confira como ficou antes de mandar de novo.",
+          "action": "Recarregar"
+        }
+      },
+      "unauthorized": {
+        "title": "Entre para continuar",
+        "text": "Peça o código no WhatsApp ou entre com o Google.",
+        "action": "Entrar"
+      },
+      "session_expired": {
+        "title": "Você saiu da conta",
+        "text": "Faz tempo desde a última vez. Peça o código no WhatsApp ou entre com o Google.",
+        "action": "Entrar"
+      },
+      "session_expired_draft": {
+        "title": "Precisamos do código de novo",
+        "text": "Seus dados e o horário escolhido continuam aqui. Confirme o código que chega no WhatsApp e a reserva segue.",
+        "action": "Receber código"
+      },
+      "gone": {
+        "otp": {
+          "title": "O código venceu",
+          "text": "Ele vale 10 minutos e 5 tentativas. Peça um novo; o que você preencheu continua aqui.",
+          "action": "Mandar de novo"
+        },
+        "link": {
+          "title": "Esse link venceu",
+          "text": "Os links valem até 30 dias depois da reserva. Para algo novo, faça outra reserva ou chame a casa no WhatsApp.",
+          "action": "Fazer uma reserva"
+        }
+      },
+      "otp_resend_wait": {
+        "title": "Já já dá para pedir outro",
+        "text": "Mandar de novo em {seconds} s. Às vezes o WhatsApp demora um pouco.",
+        "action": "Tentar de novo"
+      },
+      "otp_not_arrived": {
+        "title": "O código não chegou?",
+        "text": "Confira se o número está certo e peça de novo. Também dá para entrar com o Google ou chamar a casa no WhatsApp.",
+        "action": "Chamar no WhatsApp"
+      },
+      "google_failed": {
+        "title": "Não deu para entrar com o Google",
+        "text": "Tente de novo ou peça o código no WhatsApp.",
+        "action": "Tentar de novo"
+      },
+      "google_needs_phone": {
+        "title": "Falta só o seu WhatsApp",
+        "text": "É por ele que a casa confirma e avisa da reserva. Confirme o número com o código.",
+        "action": "Receber código"
+      },
+      "google_in_app_browser": {
+        "title": "Para entrar com o Google, abra no navegador",
+        "text": "O Instagram não deixa entrar com o Google por aqui. Toque nos três pontos, escolha abrir no navegador, ou peça o código no WhatsApp.",
+        "action": "Receber código"
+      },
+      "phone_country_unsupported": {
+        "title": "Por aqui, só números do Brasil, Paraguai e Argentina",
+        "text": "Com número de outro país, chama a casa no WhatsApp que a gente faz sua reserva por lá. O que você preencheu continua aqui.",
+        "action": "Reservar pelo WhatsApp"
+      },
+      "customer_blocked": {
+        "title": "Vamos combinar pelo WhatsApp",
+        "text": "Para esse pedido, a casa prefere falar com você direto. Chama no WhatsApp que a gente resolve.",
+        "action": "Chamar no WhatsApp"
+      },
+      "slot_full": {
+        "title": "Esse horário acabou de lotar",
+        "text": "Alguém confirmou primeiro. Seus dados continuam aqui: escolha outro horário ou entre na lista de espera.",
+        "action": "Ver horários",
+        "cutoff": {
+          "title": "Esse horário já fechou para reserva online",
+          "text": "Ele ficou perto demais da hora de chegar. Seus dados continuam aqui: escolha outro horário ou chame a casa no WhatsApp.",
+          "action": "Ver horários"
+        },
+        "day_closed": {
+          "title": "A casa fechou esse dia",
+          "text": "{reason} Seus dados continuam aqui: escolha outro dia ou chame a casa no WhatsApp.",
+          "action": "Ver outros dias"
+        },
+        "event_mode": {
+          "title": "Esse dia virou noite de evento",
+          "text": "A casa publicou um evento nesse dia e a reserva agora segue o jeito dele. Seus dados continuam aqui: veja o dia de novo ou escolha outro.",
+          "action": "Ver o dia"
+        },
+        "waitlist_full": {
+          "title": "A lista de espera desse horário encheu",
+          "text": "Seus dados continuam aqui: escolha outro horário ou chame a casa no WhatsApp.",
+          "action": "Ver horários"
+        }
+      },
+      "day_full": {
+        "title": "Esse dia lotou",
+        "text": "Veja logo abaixo os próximos dias com mesa para o seu grupo.",
+        "action": "Ver próximos dias"
+      },
+      "window_full": {
+        "title": "Todos os dias abertos estão cheios",
+        "text": "Chama a casa no WhatsApp ou no Instagram: às vezes abre mesa de última hora.",
+        "action": "Chamar no WhatsApp"
+      },
+      "same_day_reservation": {
+        "title": "Você já tem uma reserva nesse dia, às {time}",
+        "text": "Quer mesmo fazer outra? Se for só para mudar o horário, é melhor remarcar a que já existe.",
+        "action": "Fazer outra mesmo assim"
+      },
+      "duplicate_reservation": {
+        "title": "Você já tem reserva nesse horário",
+        "text": "Ela está guardada em Minhas reservas. Para mudar pessoas ou horário, é por lá.",
+        "action": "Ver minha reserva"
+      },
+      "active_limit": {
+        "title": "Você já tem {max} reservas marcadas",
+        "text": "É o limite por número. Remarque ou cancele uma delas em Minhas reservas, ou chame a casa no WhatsApp.",
+        "action": "Minhas reservas"
+      },
+      "terms_outdated": {
+        "title": "Os combinados mudaram",
+        "text": "A casa atualizou as regras enquanto você preenchia. Leia de novo e marque \"Li e tá combinado\" para seguir. Seus dados continuam aqui.",
+        "action": "Ler os combinados"
+      },
+      "party_too_large": {
+        "title": "Grupo grande a casa monta com você",
+        "text": "Para mais de {max} pessoas, a casa junta as mesas com você pelo WhatsApp.",
+        "action": "Chamar no WhatsApp"
+      },
+      "invalid_transition": {
+        "title": "Essa reserva já mudou",
+        "text": "Ela não está mais ativa ou já foi atualizada. Veja como ela está agora; se precisar, chame a casa no WhatsApp.",
+        "action": "Ver a reserva",
+        "late": {
+          "title": "A mesa já não está guardada",
+          "text": "Passou do horário em que a mesa te esperava. Ainda dá para sentar se tiver lugar: chama a casa no WhatsApp.",
+          "action": "Chamar no WhatsApp"
+        },
+        "late_off": {
+          "title": "Para avisar atraso, fala com a casa",
+          "text": "Esse aviso não vale para essa reserva. Chama no WhatsApp que a gente combina.",
+          "action": "Chamar no WhatsApp"
+        }
+      },
+      "outside_cancel_window": {
+        "title": "Passou o prazo para cancelar por aqui",
+        "text": "Fala com a casa pelo WhatsApp que a gente resolve.",
+        "action": "Chamar no WhatsApp"
+      },
+      "conflict": {
+        "reschedule": {
+          "title": "Essa reserva não dá para mudar por aqui",
+          "text": "Passou o prazo ou a casa prefere combinar direto. Chama no WhatsApp.",
+          "action": "Chamar no WhatsApp"
+        },
+        "link_used": {
+          "title": "Isso já foi feito",
+          "text": "Esse botão já foi usado e a reserva está atualizada. Veja como ela ficou.",
+          "action": "Ver a reserva"
+        }
+      },
+      "not_found": {
+        "title": "Não achamos essa reserva",
+        "text": "Confira o link da mensagem ou faça uma nova.",
+        "action": "Fazer uma reserva",
+        "page": {
+          "title": "Essa página não existe",
+          "text": "Pode ter mudado de lugar. Volte para o início ou faça sua reserva.",
+          "action": "Voltar ao início"
+        },
+        "link": {
+          "title": "Esse link não abriu",
+          "text": "Pode ter sido cortado ao copiar. Abra de novo direto da mensagem do WhatsApp ou chame a casa por lá.",
+          "action": "Chamar no WhatsApp"
+        }
+      },
+      "receipt_render_failed": {
+        "title": "Sua reserva foi feita",
+        "text": "O comprovante não abriu aqui, mas a confirmação vai chegar no seu WhatsApp. Ela também está em Minhas reservas.",
+        "action": "Minhas reservas"
+      },
+      "read_only_link": {
+        "title": "Este link é só para ver",
+        "text": "Para mudar a reserva, use o botão da mensagem de confirmação ou entre em Minhas reservas.",
+        "action": "Minhas reservas"
+      },
+      "offer_expired": {
+        "title": "O tempo para aceitar passou",
+        "text": "Os {minutes} minutos acabaram e a mesa foi para a próxima pessoa. Você voltou para o fim da lista desse horário e recebe outro aviso se abrir mesa. Se preferir, escolha outro horário ou chame a casa no WhatsApp.",
+        "action": "Ver horários"
+      },
+      "phone_in_use": {
+        "title": "Esse número já está em outra conta",
+        "text": "Entre com ele pelo código no WhatsApp, ou chame a casa para juntar as duas contas.",
+        "action": "Chamar no WhatsApp"
+      },
+      "download_failed": {
+        "title": "O arquivo não baixou",
+        "text": "Tente de novo em instantes. Se continuar, peça pelo WhatsApp que a casa manda.",
+        "action": "Tentar de novo"
+      }
+    }
+  }
+}

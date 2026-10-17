@@ -1,0 +1,2174 @@
+{
+  "network": {
+    "audience": "both",
+    "display": "notice",
+    "action": "retry",
+    "log": false,
+    "pt": {
+      "title": "Sem conexão",
+      "text": "A internet caiu no meio do caminho. Confira a conexão e tente de novo. O que você escreveu continua aqui.",
+      "action": "Tentar de novo"
+    },
+    "es": {
+      "title": "Sin conexión",
+      "text": "Se cortó internet en el camino. Revisá la conexión e intentá de nuevo. Lo que escribiste sigue acá.",
+      "action": "Intentar de nuevo"
+    },
+    "en": {
+      "title": "No connection",
+      "text": "The internet dropped along the way. Check your connection and try again. What you typed is still here.",
+      "action": "Try again"
+    }
+  },
+  "timeout": {
+    "audience": "both",
+    "display": "notice",
+    "action": "retry",
+    "log": false,
+    "pt": {
+      "title": "A casa demorou a responder",
+      "text": "Pode ser a internet ou muita gente ao mesmo tempo. Tente de novo em instantes: nada fica repetido.",
+      "action": "Tentar de novo"
+    },
+    "es": {
+      "title": "La casa tardó en responder",
+      "text": "Puede ser internet o mucha gente al mismo tiempo. Probá de nuevo en un momento: no se repite nada.",
+      "action": "Intentar de nuevo"
+    },
+    "en": {
+      "title": "The house took too long to answer",
+      "text": "It may be the internet or a busy moment. Try again in a moment: nothing gets doubled.",
+      "action": "Try again"
+    }
+  },
+  "offline": {
+    "audience": "customer",
+    "display": "notice",
+    "action": "wait",
+    "log": false,
+    "pt": {
+      "title": "Você está sem internet",
+      "text": "Assim que a conexão voltar, a página continua de onde parou.",
+      "action": ""
+    },
+    "es": {
+      "title": "Estás sin internet",
+      "text": "Cuando vuelva la conexión, la página sigue desde donde quedó.",
+      "action": ""
+    },
+    "en": {
+      "title": "You're offline",
+      "text": "As soon as the connection is back, the page picks up where it left off.",
+      "action": ""
+    }
+  },
+  "server": {
+    "audience": "both",
+    "display": "notice",
+    "action": "retry",
+    "log": true,
+    "pt": {
+      "title": "Algo deu errado do nosso lado",
+      "text": "Não foi nada que você fez. Tente de novo em instantes ou chame a casa no WhatsApp.",
+      "action": "Tentar de novo"
+    },
+    "es": {
+      "title": "Algo salió mal de nuestro lado",
+      "text": "No fue nada que hiciste. Probá de nuevo en un momento o escribile a la casa por WhatsApp.",
+      "action": "Intentar de nuevo"
+    },
+    "en": {
+      "title": "Something went wrong on our side",
+      "text": "It wasn't anything you did. Try again in a moment or message the house on WhatsApp.",
+      "action": "Try again"
+    }
+  },
+  "bad_response": {
+    "audience": "both",
+    "display": "notice",
+    "action": "retry",
+    "log": true,
+    "pt": {
+      "title": "A resposta chegou pela metade",
+      "text": "Tente de novo em instantes. Se continuar, chame a casa no WhatsApp.",
+      "action": "Tentar de novo"
+    },
+    "es": {
+      "title": "La respuesta llegó por la mitad",
+      "text": "Probá de nuevo en un momento. Si sigue, escribile a la casa por WhatsApp.",
+      "action": "Intentar de nuevo"
+    },
+    "en": {
+      "title": "The answer came back incomplete",
+      "text": "Try again in a moment. If it keeps happening, message the house on WhatsApp.",
+      "action": "Try again"
+    }
+  },
+  "bad_request": {
+    "audience": "both",
+    "display": "notice",
+    "action": "reload",
+    "log": true,
+    "pt": {
+      "title": "Não deu para entender o pedido",
+      "text": "Recarregue a página e tente de novo. Se continuar, chame a casa no WhatsApp.",
+      "action": "Recarregar"
+    },
+    "es": {
+      "title": "No pudimos entender el pedido",
+      "text": "Recargá la página e intentá de nuevo. Si sigue, escribile a la casa por WhatsApp.",
+      "action": "Recargar"
+    },
+    "en": {
+      "title": "We couldn't read that request",
+      "text": "Reload the page and try again. If it keeps happening, message the house on WhatsApp.",
+      "action": "Reload"
+    }
+  },
+  "unknown": {
+    "audience": "both",
+    "display": "notice",
+    "action": "retry",
+    "log": true,
+    "pt": {
+      "title": "Algo não saiu como esperado",
+      "text": "Tente de novo. Se continuar, chame a casa no WhatsApp.",
+      "action": "Tentar de novo"
+    },
+    "es": {
+      "title": "Algo no salió como esperábamos",
+      "text": "Probá de nuevo. Si sigue, escribile a la casa por WhatsApp.",
+      "action": "Intentar de nuevo"
+    },
+    "en": {
+      "title": "Something didn't go as planned",
+      "text": "Try again. If it keeps happening, message the house on WhatsApp.",
+      "action": "Try again"
+    }
+  },
+  "screen_error": {
+    "audience": "both",
+    "display": "page",
+    "action": "reload",
+    "log": true,
+    "pt": {
+      "title": "Algo deu errado nesta tela",
+      "text": "Recarregue a página. O que já foi gravado continua guardado.",
+      "action": "Recarregar"
+    },
+    "es": {
+      "title": "Algo salió mal en esta pantalla",
+      "text": "Recargá la página. Lo que ya se guardó sigue guardado.",
+      "action": "Recargar"
+    },
+    "en": {
+      "title": "Something went wrong on this screen",
+      "text": "Reload the page. Anything already saved is still saved.",
+      "action": "Reload"
+    }
+  },
+  "static_mode": {
+    "audience": "customer",
+    "display": "notice",
+    "action": "whatsapp",
+    "log": false,
+    "pt": {
+      "title": "Por enquanto, a reserva é pelo WhatsApp",
+      "text": "A reserva por aqui ainda não está ligada. Chama a casa no WhatsApp que a gente separa sua mesa.",
+      "action": "Chamar no WhatsApp"
+    },
+    "es": {
+      "title": "Por ahora, la reserva es por WhatsApp",
+      "text": "La reserva por acá todavía no está activa. Escribile a la casa por WhatsApp y te guardamos la mesa.",
+      "action": "Escribir por WhatsApp"
+    },
+    "en": {
+      "title": "For now, bookings are on WhatsApp",
+      "text": "Booking here isn't switched on yet. Message the house on WhatsApp and we'll save you a table.",
+      "action": "Message us on WhatsApp"
+    }
+  },
+  "no_script": {
+    "audience": "customer",
+    "display": "page",
+    "action": "whatsapp",
+    "log": false,
+    "pt": {
+      "title": "Precisamos do JavaScript ligado",
+      "text": "Para reservar por aqui, o navegador precisa do JavaScript. Se preferir, chama a casa no WhatsApp.",
+      "action": "Chamar no WhatsApp"
+    },
+    "es": {
+      "title": "Necesitamos JavaScript activado",
+      "text": "Para reservar por acá, el navegador necesita JavaScript. Si preferís, escribile a la casa por WhatsApp.",
+      "action": "Escribir por WhatsApp"
+    },
+    "en": {
+      "title": "JavaScript needs to be on",
+      "text": "To book here, your browser needs JavaScript. Or message the house on WhatsApp.",
+      "action": "Message us on WhatsApp"
+    }
+  },
+  "storage_blocked": {
+    "audience": "both",
+    "display": "notice",
+    "action": "none",
+    "log": false,
+    "pt": {
+      "title": "Este navegador não está guardando nada",
+      "text": "Dá para reservar normalmente, só não vamos lembrar seus dados na próxima vez.",
+      "action": ""
+    },
+    "es": {
+      "title": "Este navegador no está guardando nada",
+      "text": "Podés reservar igual, solo que no vamos a recordar tus datos la próxima vez.",
+      "action": ""
+    },
+    "en": {
+      "title": "This browser isn't saving anything",
+      "text": "You can book as usual, we just won't remember your details next time.",
+      "action": ""
+    }
+  },
+  "cookies_blocked": {
+    "audience": "both",
+    "display": "notice",
+    "action": "whatsapp",
+    "log": false,
+    "pt": {
+      "title": "O navegador está bloqueando cookies",
+      "text": "Sem eles, não dá para manter você conectado. Libere os cookies deste site e tente de novo, ou chame a casa no WhatsApp.",
+      "action": "Chamar no WhatsApp"
+    },
+    "es": {
+      "title": "El navegador está bloqueando cookies",
+      "text": "Sin ellas no podemos mantenerte conectado. Habilitá las cookies de este sitio e intentá de nuevo, o escribile a la casa por WhatsApp.",
+      "action": "Escribir por WhatsApp"
+    },
+    "en": {
+      "title": "Your browser is blocking cookies",
+      "text": "Without them we can't keep you signed in. Allow cookies for this site and try again, or message the house on WhatsApp.",
+      "action": "Message us on WhatsApp"
+    }
+  },
+  "panel_update_available": {
+    "audience": "staff",
+    "display": "notice",
+    "action": "reload",
+    "log": false,
+    "pt": {
+      "title": "Tem versão nova do painel",
+      "text": "Toque em atualizar quando terminar o que está fazendo. Nada do que já foi gravado se perde.",
+      "action": "Atualizar"
+    }
+  },
+  "turnstile_failed": {
+    "audience": "both",
+    "display": "notice",
+    "action": "retry",
+    "log": false,
+    "pt": {
+      "title": "Precisamos conferir de novo",
+      "text": "A checagem contra robôs não passou. Toque em tentar de novo; se repetir, recarregue a página ou chame a casa no WhatsApp.",
+      "action": "Tentar de novo"
+    },
+    "es": {
+      "title": "Tenemos que revisar de nuevo",
+      "text": "La verificación contra robots no pasó. Tocá intentar de nuevo; si se repite, recargá la página o escribile a la casa por WhatsApp.",
+      "action": "Intentar de nuevo"
+    },
+    "en": {
+      "title": "We need to check again",
+      "text": "The robot check didn't go through. Tap try again; if it repeats, reload the page or message the house on WhatsApp.",
+      "action": "Try again"
+    }
+  },
+  "rate_limited": {
+    "audience": "both",
+    "display": "notice",
+    "action": "wait",
+    "log": false,
+    "pt": {
+      "title": "Muitas tentativas seguidas",
+      "text": "Para proteger a casa, demos uma pausa. Tente de novo em {minutes} min.",
+      "action": ""
+    },
+    "es": {
+      "title": "Muchos intentos seguidos",
+      "text": "Para cuidar la casa, hicimos una pausa. Probá de nuevo en {minutes} min.",
+      "action": ""
+    },
+    "en": {
+      "title": "Too many tries in a row",
+      "text": "To keep the house safe, we paused for a bit. Try again in {minutes} min.",
+      "action": ""
+    }
+  },
+  "rate_limited.otp": {
+    "audience": "customer",
+    "display": "field",
+    "action": "wait",
+    "log": false,
+    "pt": {
+      "title": "Já mandamos códigos demais",
+      "text": "Espere {minutes} min para pedir outro, ou entre com o Google. Com pressa, chame a casa no WhatsApp.",
+      "action": "Chamar no WhatsApp"
+    },
+    "es": {
+      "title": "Ya mandamos demasiados códigos",
+      "text": "Esperá {minutes} min para pedir otro, o entrá con Google. Si tenés apuro, escribile a la casa por WhatsApp.",
+      "action": "Escribir por WhatsApp"
+    },
+    "en": {
+      "title": "We've sent too many codes",
+      "text": "Wait {minutes} min to ask for another, or sign in with Google. In a hurry? Message the house on WhatsApp.",
+      "action": "Message us on WhatsApp"
+    }
+  },
+  "rate_limited.otp_house": {
+    "audience": "customer",
+    "display": "notice",
+    "action": "whatsapp",
+    "log": true,
+    "pt": {
+      "title": "Hoje não conseguimos mandar mais códigos",
+      "text": "Chama a casa no WhatsApp que a gente faz sua reserva por lá.",
+      "action": "Chamar no WhatsApp"
+    },
+    "es": {
+      "title": "Hoy no podemos mandar más códigos",
+      "text": "Escribile a la casa por WhatsApp y hacemos tu reserva por ahí.",
+      "action": "Escribir por WhatsApp"
+    },
+    "en": {
+      "title": "We can't send more codes today",
+      "text": "Message the house on WhatsApp and we'll book you in there.",
+      "action": "Message us on WhatsApp"
+    }
+  },
+  "rate_limited.login": {
+    "audience": "staff",
+    "display": "field",
+    "action": "wait",
+    "log": true,
+    "pt": {
+      "title": "Entrada pausada por segurança",
+      "text": "Foram muitas tentativas. Tente de novo em {minutes} min ou use \"Esqueci a senha\".",
+      "action": "Esqueci a senha"
+    }
+  },
+  "csrf_failed": {
+    "audience": "both",
+    "display": "notice",
+    "action": "reload",
+    "log": true,
+    "pt": {
+      "title": "Precisamos recarregar a página",
+      "text": "A página ficou aberta por muito tempo. Recarregue e faça de novo; o que já foi gravado continua.",
+      "action": "Recarregar"
+    },
+    "es": {
+      "title": "Tenemos que recargar la página",
+      "text": "La página quedó abierta mucho tiempo. Recargá y hacelo de nuevo; lo que ya se guardó sigue ahí.",
+      "action": "Recargar"
+    },
+    "en": {
+      "title": "We need to reload the page",
+      "text": "The page was open for a long time. Reload and do it again; anything already saved is still there.",
+      "action": "Reload"
+    }
+  },
+  "validation.honeypot": {
+    "audience": "customer",
+    "display": "notice",
+    "action": "whatsapp",
+    "log": false,
+    "pt": {
+      "title": "Não deu para enviar",
+      "text": "Recarregue a página e tente de novo, ou chame a casa no WhatsApp.",
+      "action": "Chamar no WhatsApp"
+    },
+    "es": {
+      "title": "No se pudo enviar",
+      "text": "Recargá la página e intentá de nuevo, o escribile a la casa por WhatsApp.",
+      "action": "Escribir por WhatsApp"
+    },
+    "en": {
+      "title": "That didn't go through",
+      "text": "Reload the page and try again, or message the house on WhatsApp.",
+      "action": "Message us on WhatsApp"
+    }
+  },
+  "unauthorized": {
+    "audience": "customer",
+    "display": "page",
+    "action": "sign_in",
+    "log": false,
+    "pt": {
+      "title": "Entre para continuar",
+      "text": "Peça o código no WhatsApp ou entre com o Google.",
+      "action": "Entrar"
+    },
+    "es": {
+      "title": "Entrá para seguir",
+      "text": "Pedí el código por WhatsApp o entrá con Google.",
+      "action": "Entrar"
+    },
+    "en": {
+      "title": "Sign in to continue",
+      "text": "Get a code on WhatsApp or sign in with Google.",
+      "action": "Sign in"
+    }
+  },
+  "session_expired": {
+    "audience": "customer",
+    "display": "page",
+    "action": "sign_in",
+    "log": false,
+    "pt": {
+      "title": "Você saiu da conta",
+      "text": "Faz tempo desde a última vez. Peça o código no WhatsApp ou entre com o Google.",
+      "action": "Entrar"
+    },
+    "es": {
+      "title": "Saliste de la cuenta",
+      "text": "Pasó un tiempo desde la última vez. Pedí el código por WhatsApp o entrá con Google.",
+      "action": "Entrar"
+    },
+    "en": {
+      "title": "You've been signed out",
+      "text": "It's been a while. Get a code on WhatsApp or sign in with Google.",
+      "action": "Sign in"
+    }
+  },
+  "session_expired_draft": {
+    "audience": "customer",
+    "display": "notice",
+    "action": "sign_in",
+    "log": false,
+    "pt": {
+      "title": "Precisamos do código de novo",
+      "text": "Seus dados e o horário escolhido continuam aqui. Confirme o código que chega no WhatsApp e a reserva segue.",
+      "action": "Receber código"
+    },
+    "es": {
+      "title": "Necesitamos el código de nuevo",
+      "text": "Tus datos y el horario elegido siguen acá. Confirmá el código que llega por WhatsApp y la reserva sigue.",
+      "action": "Recibir código"
+    },
+    "en": {
+      "title": "We need the code again",
+      "text": "Your details and chosen time are still here. Confirm the code we send on WhatsApp and the booking goes on.",
+      "action": "Get the code"
+    }
+  },
+  "validation.otp": {
+    "audience": "customer",
+    "display": "field",
+    "action": "retry",
+    "log": false,
+    "pt": {
+      "title": "Código não confere",
+      "text": "Confira os 6 números que chegaram no WhatsApp. Restam {left} tentativas.",
+      "action": ""
+    },
+    "es": {
+      "title": "El código no coincide",
+      "text": "Revisá los 6 números que llegaron por WhatsApp. Te quedan {left} intentos.",
+      "action": ""
+    },
+    "en": {
+      "title": "That code doesn't match",
+      "text": "Check the 6 digits we sent on WhatsApp. {left} tries left.",
+      "action": ""
+    }
+  },
+  "gone": {
+    "audience": "both",
+    "display": "page",
+    "action": "contact_house",
+    "log": false,
+    "pt": {
+      "title": "Esse link não vale mais",
+      "text": "Ele venceu ou já foi usado. Peça um novo a quem mandou, ou chame a casa no WhatsApp.",
+      "action": ""
+    },
+    "es": {
+      "title": "Este link ya no sirve",
+      "text": "Venció o ya se usó. Pedile uno nuevo a quien te lo mandó, o escribile a la casa por WhatsApp.",
+      "action": ""
+    },
+    "en": {
+      "title": "This link no longer works",
+      "text": "It expired or was already used. Ask whoever sent it for a new one, or message the house on WhatsApp.",
+      "action": ""
+    }
+  },
+  "gone.otp": {
+    "audience": "customer",
+    "display": "field",
+    "action": "retry",
+    "log": false,
+    "pt": {
+      "title": "O código venceu",
+      "text": "Ele vale 10 minutos e 5 tentativas. Peça um novo; o que você preencheu continua aqui.",
+      "action": "Mandar de novo"
+    },
+    "es": {
+      "title": "El código venció",
+      "text": "Vale 10 minutos y 5 intentos. Pedí uno nuevo; lo que completaste sigue acá.",
+      "action": "Mandar de nuevo"
+    },
+    "en": {
+      "title": "The code expired",
+      "text": "It lasts 10 minutes and 5 tries. Ask for a new one; what you filled in is still here.",
+      "action": "Send again"
+    }
+  },
+  "otp_resend_wait": {
+    "audience": "customer",
+    "display": "field",
+    "action": "wait",
+    "log": false,
+    "pt": {
+      "title": "Já já dá para pedir outro",
+      "text": "Mandar de novo em {seconds} s. Às vezes o WhatsApp demora um pouco.",
+      "action": ""
+    },
+    "es": {
+      "title": "En un ratito podés pedir otro",
+      "text": "Mandar de nuevo en {seconds} s. A veces WhatsApp tarda un poco.",
+      "action": ""
+    },
+    "en": {
+      "title": "You can ask again in a moment",
+      "text": "Send again in {seconds} s. WhatsApp sometimes takes a little while.",
+      "action": ""
+    }
+  },
+  "otp_not_arrived": {
+    "audience": "customer",
+    "display": "notice",
+    "action": "whatsapp",
+    "log": false,
+    "pt": {
+      "title": "O código não chegou?",
+      "text": "Confira se o número está certo e peça de novo. Também dá para entrar com o Google ou chamar a casa no WhatsApp.",
+      "action": "Chamar no WhatsApp"
+    },
+    "es": {
+      "title": "¿No llegó el código?",
+      "text": "Revisá que el número esté bien y pedilo de nuevo. También podés entrar con Google o escribirle a la casa por WhatsApp.",
+      "action": "Escribir por WhatsApp"
+    },
+    "en": {
+      "title": "Didn't get the code?",
+      "text": "Check the number and ask again. You can also sign in with Google or message the house on WhatsApp.",
+      "action": "Message us on WhatsApp"
+    }
+  },
+  "google_failed": {
+    "audience": "customer",
+    "display": "notice",
+    "action": "retry",
+    "log": false,
+    "pt": {
+      "title": "Não deu para entrar com o Google",
+      "text": "Tente de novo ou peça o código no WhatsApp.",
+      "action": "Tentar de novo"
+    },
+    "es": {
+      "title": "No pudimos entrar con Google",
+      "text": "Probá de nuevo o pedí el código por WhatsApp.",
+      "action": "Intentar de nuevo"
+    },
+    "en": {
+      "title": "Google sign-in didn't work",
+      "text": "Try again or get a code on WhatsApp.",
+      "action": "Try again"
+    }
+  },
+  "google_needs_phone": {
+    "audience": "customer",
+    "display": "notice",
+    "action": "sign_in",
+    "log": false,
+    "pt": {
+      "title": "Falta só o seu WhatsApp",
+      "text": "É por ele que a casa confirma e avisa da reserva. Confirme o número com o código.",
+      "action": "Receber código"
+    },
+    "es": {
+      "title": "Falta solo tu WhatsApp",
+      "text": "Por ahí la casa confirma y te avisa de la reserva. Confirmá el número con el código.",
+      "action": "Recibir código"
+    },
+    "en": {
+      "title": "We just need your WhatsApp",
+      "text": "That's how the house confirms and updates your booking. Confirm your number with the code.",
+      "action": "Get the code"
+    }
+  },
+  "google_in_app_browser": {
+    "audience": "customer",
+    "display": "notice",
+    "action": "sign_in",
+    "log": false,
+    "pt": {
+      "title": "Para entrar com o Google, abra no navegador",
+      "text": "O Instagram não deixa entrar com o Google por aqui. Toque nos três pontos, escolha abrir no navegador, ou peça o código no WhatsApp.",
+      "action": "Receber código"
+    },
+    "es": {
+      "title": "Para entrar con Google, abrí en el navegador",
+      "text": "Instagram no deja entrar con Google desde acá. Tocá los tres puntos y elegí abrir en el navegador, o pedí el código por WhatsApp.",
+      "action": "Recibir código"
+    },
+    "en": {
+      "title": "To sign in with Google, open this in your browser",
+      "text": "Instagram doesn't allow Google sign-in here. Tap the three dots and choose open in browser, or get the code on WhatsApp.",
+      "action": "Get code"
+    }
+  },
+  "phone_country_unsupported": {
+    "audience": "customer",
+    "display": "field",
+    "action": "whatsapp",
+    "log": false,
+    "pt": {
+      "title": "Por aqui, só números do Brasil, Paraguai e Argentina",
+      "text": "Com número de outro país, chama a casa no WhatsApp que a gente faz sua reserva por lá. O que você preencheu continua aqui.",
+      "action": "Reservar pelo WhatsApp"
+    },
+    "es": {
+      "title": "Por acá, solo números de Brasil, Paraguay y Argentina",
+      "text": "Si tu número es de otro país, escribile a la casa por WhatsApp y hacemos tu reserva por ahí. Lo que completaste sigue acá.",
+      "action": "Reservar por WhatsApp"
+    },
+    "en": {
+      "title": "Online booking takes numbers from Brazil, Paraguay and Argentina",
+      "text": "With a number from another country, message the house on WhatsApp and we'll book your table there. What you filled in is still here.",
+      "action": "Book on WhatsApp"
+    }
+  },
+  "customer_blocked": {
+    "audience": "customer",
+    "display": "notice",
+    "action": "whatsapp",
+    "log": false,
+    "pt": {
+      "title": "Vamos combinar pelo WhatsApp",
+      "text": "Para esse pedido, a casa prefere falar com você direto. Chama no WhatsApp que a gente resolve.",
+      "action": "Chamar no WhatsApp"
+    },
+    "es": {
+      "title": "Arreglemos por WhatsApp",
+      "text": "Para este pedido, la casa prefiere hablar con vos directamente. Escribinos por WhatsApp y lo resolvemos.",
+      "action": "Escribir por WhatsApp"
+    },
+    "en": {
+      "title": "Let's sort this out on WhatsApp",
+      "text": "For this request, the house would rather talk to you directly. Message us on WhatsApp and we'll sort it out.",
+      "action": "Message us on WhatsApp"
+    }
+  },
+  "validation": {
+    "audience": "both",
+    "display": "field",
+    "action": "none",
+    "log": false,
+    "pt": {
+      "title": "Falta ajeitar alguns campos",
+      "text": "Confira os campos marcados e toque em continuar de novo.",
+      "action": ""
+    },
+    "es": {
+      "title": "Faltan arreglar algunos campos",
+      "text": "Revisá los campos marcados y tocá continuar de nuevo.",
+      "action": ""
+    },
+    "en": {
+      "title": "A few fields need fixing",
+      "text": "Check the marked fields and tap continue again.",
+      "action": ""
+    }
+  },
+  "slot_full": {
+    "audience": "customer",
+    "display": "notice",
+    "action": "pick_other",
+    "log": false,
+    "pt": {
+      "title": "Esse horário acabou de lotar",
+      "text": "Alguém confirmou primeiro. Seus dados continuam aqui: escolha outro horário ou entre na lista de espera.",
+      "action": "Ver horários"
+    },
+    "es": {
+      "title": "Ese horario se acaba de llenar",
+      "text": "Alguien confirmó primero. Tus datos siguen acá: elegí otro horario o anotate en la lista de espera.",
+      "action": "Ver horarios"
+    },
+    "en": {
+      "title": "That time just filled up",
+      "text": "Someone confirmed first. Your details are still here: pick another time or join the waitlist.",
+      "action": "See times"
+    }
+  },
+  "slot_full.cutoff": {
+    "audience": "customer",
+    "display": "notice",
+    "action": "pick_other",
+    "log": false,
+    "pt": {
+      "title": "Esse horário já fechou para reserva online",
+      "text": "Ele ficou perto demais da hora de chegar. Seus dados continuam aqui: escolha outro horário ou chame a casa no WhatsApp.",
+      "action": "Ver horários"
+    },
+    "es": {
+      "title": "Ese horario ya cerró para reservar online",
+      "text": "Quedó muy cerca de la hora de llegada. Tus datos siguen acá: elegí otro horario o escribile a la casa por WhatsApp.",
+      "action": "Ver horarios"
+    },
+    "en": {
+      "title": "That time is closed for online booking",
+      "text": "It got too close to arrival time. Your details are still here: pick another time or message the house on WhatsApp.",
+      "action": "See times"
+    }
+  },
+  "slot_full.day_closed": {
+    "audience": "customer",
+    "display": "notice",
+    "action": "pick_other",
+    "log": false,
+    "pt": {
+      "title": "A casa fechou esse dia",
+      "text": "{reason} Seus dados continuam aqui: escolha outro dia ou chame a casa no WhatsApp.",
+      "action": "Ver outros dias"
+    },
+    "es": {
+      "title": "La casa cerró ese día",
+      "text": "{reason} Tus datos siguen acá: elegí otro día o escribile a la casa por WhatsApp.",
+      "action": "Ver otros días"
+    },
+    "en": {
+      "title": "The house closed that day",
+      "text": "{reason} Your details are still here: pick another day or message the house on WhatsApp.",
+      "action": "See other days"
+    }
+  },
+  "slot_full.event_mode": {
+    "audience": "customer",
+    "display": "notice",
+    "action": "pick_other",
+    "log": false,
+    "pt": {
+      "title": "Esse dia virou noite de evento",
+      "text": "A casa publicou um evento nesse dia e a reserva agora segue o jeito dele. Seus dados continuam aqui: veja o dia de novo ou escolha outro.",
+      "action": "Ver o dia"
+    },
+    "es": {
+      "title": "Ese día ahora es noche de evento",
+      "text": "La casa publicó un evento ese día y la reserva ahora sigue su forma. Tus datos siguen acá: mirá el día de nuevo o elegí otro.",
+      "action": "Ver el día"
+    },
+    "en": {
+      "title": "That day is now an event night",
+      "text": "The house published an event that day and booking now follows its way. Your details are still here: look at the day again or pick another.",
+      "action": "See the day"
+    }
+  },
+  "slot_full.waitlist_full": {
+    "audience": "customer",
+    "display": "notice",
+    "action": "pick_other",
+    "log": false,
+    "pt": {
+      "title": "A lista de espera desse horário encheu",
+      "text": "Seus dados continuam aqui: escolha outro horário ou chame a casa no WhatsApp.",
+      "action": "Ver horários"
+    },
+    "es": {
+      "title": "La lista de espera de ese horario se llenó",
+      "text": "Tus datos siguen acá: elegí otro horario o escribile a la casa por WhatsApp.",
+      "action": "Ver horarios"
+    },
+    "en": {
+      "title": "The waitlist for that time is full",
+      "text": "Your details are still here: pick another time or message the house on WhatsApp.",
+      "action": "See times"
+    }
+  },
+  "day_full": {
+    "audience": "customer",
+    "display": "notice",
+    "action": "pick_other",
+    "log": false,
+    "pt": {
+      "title": "Esse dia lotou",
+      "text": "Veja logo abaixo os próximos dias com mesa para o seu grupo.",
+      "action": "Ver próximos dias"
+    },
+    "es": {
+      "title": "Ese día está lleno",
+      "text": "Mirá abajo los próximos días con mesa para tu grupo.",
+      "action": "Ver próximos días"
+    },
+    "en": {
+      "title": "That day is full",
+      "text": "See the next days with a table for your group just below.",
+      "action": "See next days"
+    }
+  },
+  "window_full": {
+    "audience": "customer",
+    "display": "notice",
+    "action": "whatsapp",
+    "log": false,
+    "pt": {
+      "title": "Todos os dias abertos estão cheios",
+      "text": "Chama a casa no WhatsApp ou no Instagram: às vezes abre mesa de última hora.",
+      "action": "Chamar no WhatsApp"
+    },
+    "es": {
+      "title": "Todos los días abiertos están llenos",
+      "text": "Escribile a la casa por WhatsApp o Instagram: a veces se libera una mesa a último momento.",
+      "action": "Escribir por WhatsApp"
+    },
+    "en": {
+      "title": "Every open day is full",
+      "text": "Message the house on WhatsApp or Instagram: sometimes a table opens up last minute.",
+      "action": "Message us on WhatsApp"
+    }
+  },
+  "same_day_reservation": {
+    "audience": "customer",
+    "display": "dialog",
+    "action": "none",
+    "log": false,
+    "pt": {
+      "title": "Você já tem uma reserva nesse dia, às {time}",
+      "text": "Quer mesmo fazer outra? Se for só para mudar o horário, é melhor remarcar a que já existe.",
+      "action": "Fazer outra mesmo assim"
+    },
+    "es": {
+      "title": "Ya tenés una reserva ese día, a las {time}",
+      "text": "¿Seguro querés hacer otra? Si es para cambiar el horario, mejor reprogramá la que ya tenés.",
+      "action": "Hacer otra igual"
+    },
+    "en": {
+      "title": "You already have a booking that day, at {time}",
+      "text": "Want to make another one? If you just want a different time, it's better to change the one you have.",
+      "action": "Make another anyway"
+    }
+  },
+  "duplicate_reservation": {
+    "audience": "customer",
+    "display": "dialog",
+    "action": "none",
+    "log": false,
+    "pt": {
+      "title": "Você já tem reserva nesse horário",
+      "text": "Ela está guardada em Minhas reservas. Para mudar pessoas ou horário, é por lá.",
+      "action": "Ver minha reserva"
+    },
+    "es": {
+      "title": "Ya tenés una reserva en ese horario",
+      "text": "Está guardada en Mis reservas. Para cambiar personas u horario, es por ahí.",
+      "action": "Ver mi reserva"
+    },
+    "en": {
+      "title": "You already have a booking at that time",
+      "text": "It's saved in My bookings. To change people or time, do it there.",
+      "action": "See my booking"
+    }
+  },
+  "active_limit": {
+    "audience": "customer",
+    "display": "dialog",
+    "action": "none",
+    "log": false,
+    "pt": {
+      "title": "Você já tem {max} reservas marcadas",
+      "text": "É o limite por número. Remarque ou cancele uma delas em Minhas reservas, ou chame a casa no WhatsApp.",
+      "action": "Minhas reservas"
+    },
+    "es": {
+      "title": "Ya tenés {max} reservas hechas",
+      "text": "Es el límite por número. Reprogramá o cancelá una en Mis reservas, o escribile a la casa por WhatsApp.",
+      "action": "Mis reservas"
+    },
+    "en": {
+      "title": "You already have {max} bookings",
+      "text": "That's the limit per number. Change or cancel one in My bookings, or message the house on WhatsApp.",
+      "action": "My bookings"
+    }
+  },
+  "terms_outdated": {
+    "audience": "customer",
+    "display": "dialog",
+    "action": "none",
+    "log": false,
+    "pt": {
+      "title": "Os combinados mudaram",
+      "text": "A casa atualizou as regras enquanto você preenchia. Leia de novo e marque \"Li e tá combinado\" para seguir. Seus dados continuam aqui.",
+      "action": "Ler os combinados"
+    },
+    "es": {
+      "title": "Lo acordado cambió",
+      "text": "La casa actualizó las reglas mientras completabas. Leelas de nuevo y marcá \"Leí y está acordado\" para seguir. Tus datos siguen acá.",
+      "action": "Leer lo acordado"
+    },
+    "en": {
+      "title": "The house rules changed",
+      "text": "The house updated its rules while you were filling in. Read them again and tick \"Read and agreed\" to go on. Your details are still here.",
+      "action": "Read the rules"
+    }
+  },
+  "party_too_large": {
+    "audience": "customer",
+    "display": "notice",
+    "action": "whatsapp",
+    "log": false,
+    "pt": {
+      "title": "Grupo grande a casa monta com você",
+      "text": "Para mais de {max} pessoas, a casa junta as mesas com você pelo WhatsApp.",
+      "action": "Chamar no WhatsApp"
+    },
+    "es": {
+      "title": "Los grupos grandes los armamos con vos",
+      "text": "Para más de {max} personas, la casa junta las mesas con vos por WhatsApp.",
+      "action": "Escribir por WhatsApp"
+    },
+    "en": {
+      "title": "We set up big groups with you",
+      "text": "For more than {max} people, the house puts tables together with you on WhatsApp.",
+      "action": "Message us on WhatsApp"
+    }
+  },
+  "invalid_transition": {
+    "audience": "customer",
+    "display": "notice",
+    "action": "reload",
+    "log": false,
+    "pt": {
+      "title": "Essa reserva já mudou",
+      "text": "Ela não está mais ativa ou já foi atualizada. Veja como ela está agora; se precisar, chame a casa no WhatsApp.",
+      "action": "Ver a reserva"
+    },
+    "es": {
+      "title": "Esta reserva ya cambió",
+      "text": "Ya no está activa o se actualizó. Mirá cómo está ahora; si necesitás, escribile a la casa por WhatsApp.",
+      "action": "Ver la reserva"
+    },
+    "en": {
+      "title": "This booking has already changed",
+      "text": "It's no longer active or was updated. See how it stands now; if needed, message the house on WhatsApp.",
+      "action": "See the booking"
+    }
+  },
+  "invalid_transition.late": {
+    "audience": "customer",
+    "display": "notice",
+    "action": "whatsapp",
+    "log": false,
+    "pt": {
+      "title": "A mesa já não está guardada",
+      "text": "Passou do horário em que a mesa te esperava. Ainda dá para sentar se tiver lugar: chama a casa no WhatsApp.",
+      "action": "Chamar no WhatsApp"
+    },
+    "es": {
+      "title": "La mesa ya no está guardada",
+      "text": "Pasó la hora hasta la que te esperaba la mesa. Todavía podés sentarte si hay lugar: escribile a la casa por WhatsApp.",
+      "action": "Escribir por WhatsApp"
+    },
+    "en": {
+      "title": "The table is no longer held",
+      "text": "The time your table was held for you has passed. You can still sit if there's room: message the house on WhatsApp.",
+      "action": "Message us on WhatsApp"
+    }
+  },
+  "invalid_transition.late_off": {
+    "audience": "customer",
+    "display": "notice",
+    "action": "whatsapp",
+    "log": false,
+    "pt": {
+      "title": "Para avisar atraso, fala com a casa",
+      "text": "Esse aviso não vale para essa reserva. Chama no WhatsApp que a gente combina.",
+      "action": "Chamar no WhatsApp"
+    },
+    "es": {
+      "title": "Para avisar que llegás tarde, hablá con la casa",
+      "text": "Este aviso no aplica a esta reserva. Escribinos por WhatsApp y lo arreglamos.",
+      "action": "Escribir por WhatsApp"
+    },
+    "en": {
+      "title": "To say you're running late, talk to the house",
+      "text": "This notice doesn't apply to this booking. Message us on WhatsApp and we'll work it out.",
+      "action": "Message us on WhatsApp"
+    }
+  },
+  "outside_cancel_window": {
+    "audience": "customer",
+    "display": "notice",
+    "action": "whatsapp",
+    "log": false,
+    "pt": {
+      "title": "Passou o prazo para cancelar por aqui",
+      "text": "Fala com a casa pelo WhatsApp que a gente resolve.",
+      "action": "Chamar no WhatsApp"
+    },
+    "es": {
+      "title": "Pasó el plazo para cancelar por acá",
+      "text": "Escribile a la casa por WhatsApp y lo resolvemos.",
+      "action": "Escribir por WhatsApp"
+    },
+    "en": {
+      "title": "It's too late to cancel here",
+      "text": "Message the house on WhatsApp and we'll sort it out.",
+      "action": "Message us on WhatsApp"
+    }
+  },
+  "conflict.reschedule": {
+    "audience": "customer",
+    "display": "notice",
+    "action": "whatsapp",
+    "log": false,
+    "pt": {
+      "title": "Essa reserva não dá para mudar por aqui",
+      "text": "Passou o prazo ou a casa prefere combinar direto. Chama no WhatsApp.",
+      "action": "Chamar no WhatsApp"
+    },
+    "es": {
+      "title": "Esta reserva no se puede cambiar por acá",
+      "text": "Pasó el plazo o la casa prefiere arreglarlo directo. Escribinos por WhatsApp.",
+      "action": "Escribir por WhatsApp"
+    },
+    "en": {
+      "title": "This booking can't be changed here",
+      "text": "Either it's past the deadline or the house prefers to arrange it directly. Message us on WhatsApp.",
+      "action": "Message us on WhatsApp"
+    }
+  },
+  "not_found": {
+    "audience": "customer",
+    "display": "page",
+    "action": "pick_other",
+    "log": false,
+    "pt": {
+      "title": "Não achamos essa reserva",
+      "text": "Confira o link da mensagem ou faça uma nova.",
+      "action": "Fazer uma reserva"
+    },
+    "es": {
+      "title": "No encontramos esa reserva",
+      "text": "Revisá el link del mensaje o hacé una nueva.",
+      "action": "Hacer una reserva"
+    },
+    "en": {
+      "title": "We couldn't find that booking",
+      "text": "Check the link in the message or make a new one.",
+      "action": "Make a booking"
+    }
+  },
+  "not_found.page": {
+    "audience": "customer",
+    "display": "page",
+    "action": "none",
+    "log": false,
+    "pt": {
+      "title": "Essa página não existe",
+      "text": "Pode ter mudado de lugar. Volte para o início ou faça sua reserva.",
+      "action": "Voltar ao início"
+    },
+    "es": {
+      "title": "Esta página no existe",
+      "text": "Puede que se haya movido. Volvé al inicio o hacé tu reserva.",
+      "action": "Volver al inicio"
+    },
+    "en": {
+      "title": "This page doesn't exist",
+      "text": "It may have moved. Go back home or make a booking.",
+      "action": "Back home"
+    }
+  },
+  "receipt_render_failed": {
+    "audience": "customer",
+    "display": "notice",
+    "action": "none",
+    "log": true,
+    "pt": {
+      "title": "Sua reserva foi feita",
+      "text": "O comprovante não abriu aqui, mas a confirmação vai chegar no seu WhatsApp. Ela também está em Minhas reservas.",
+      "action": "Minhas reservas"
+    },
+    "es": {
+      "title": "Tu reserva está hecha",
+      "text": "El comprobante no se abrió acá, pero la confirmación te llega por WhatsApp. También está en Mis reservas.",
+      "action": "Mis reservas"
+    },
+    "en": {
+      "title": "Your booking is done",
+      "text": "The receipt didn't open here, but the confirmation is on its way to your WhatsApp. It's also in My bookings.",
+      "action": "My bookings"
+    }
+  },
+  "gone.link": {
+    "audience": "customer",
+    "display": "page",
+    "action": "pick_other",
+    "log": false,
+    "pt": {
+      "title": "Esse link venceu",
+      "text": "Os links valem até 30 dias depois da reserva. Para algo novo, faça outra reserva ou chame a casa no WhatsApp.",
+      "action": "Fazer uma reserva"
+    },
+    "es": {
+      "title": "Este link venció",
+      "text": "Los links valen hasta 30 días después de la reserva. Para algo nuevo, hacé otra reserva o escribile a la casa por WhatsApp.",
+      "action": "Hacer una reserva"
+    },
+    "en": {
+      "title": "This link has expired",
+      "text": "Links last up to 30 days after the booking. For something new, make another booking or message the house on WhatsApp.",
+      "action": "Make a booking"
+    }
+  },
+  "not_found.link": {
+    "audience": "customer",
+    "display": "page",
+    "action": "reopen_link",
+    "log": false,
+    "pt": {
+      "title": "Esse link não abriu",
+      "text": "Pode ter sido cortado ao copiar. Abra de novo direto da mensagem do WhatsApp ou chame a casa por lá.",
+      "action": "Chamar no WhatsApp"
+    },
+    "es": {
+      "title": "Este link no abrió",
+      "text": "Puede que se haya cortado al copiarlo. Abrilo de nuevo desde el mensaje de WhatsApp o escribile a la casa por ahí.",
+      "action": "Escribir por WhatsApp"
+    },
+    "en": {
+      "title": "This link didn't open",
+      "text": "It may have been cut off when copied. Open it again straight from the WhatsApp message, or message the house there.",
+      "action": "Message us on WhatsApp"
+    }
+  },
+  "read_only_link": {
+    "audience": "customer",
+    "display": "notice",
+    "action": "reopen_link",
+    "log": false,
+    "pt": {
+      "title": "Este link é só para ver",
+      "text": "Para mudar a reserva, use o botão da mensagem de confirmação ou entre em Minhas reservas.",
+      "action": "Minhas reservas"
+    },
+    "es": {
+      "title": "Este link es solo para ver",
+      "text": "Para cambiar la reserva, usá el botón del mensaje de confirmación o entrá en Mis reservas.",
+      "action": "Mis reservas"
+    },
+    "en": {
+      "title": "This link is view-only",
+      "text": "To change the booking, use the button in the confirmation message or go to My bookings.",
+      "action": "My bookings"
+    }
+  },
+  "offer_expired": {
+    "audience": "customer",
+    "display": "page",
+    "action": "pick_other",
+    "log": false,
+    "pt": {
+      "title": "O tempo para aceitar passou",
+      "text": "Os {minutes} minutos acabaram e a mesa foi para a próxima pessoa. Você voltou para o fim da lista desse horário e recebe outro aviso se abrir mesa. Se preferir, escolha outro horário ou chame a casa no WhatsApp.",
+      "action": "Ver horários"
+    },
+    "es": {
+      "title": "Se pasó el tiempo para aceptar",
+      "text": "Los {minutes} minutos terminaron y la mesa pasó a la siguiente persona. Volviste al final de la lista de ese horario y te avisamos de nuevo si se libera una mesa. Si preferís, elegí otro horario o escribile a la casa por WhatsApp.",
+      "action": "Ver horarios"
+    },
+    "en": {
+      "title": "The time to accept has passed",
+      "text": "The {minutes} minutes ran out and the table went to the next person. You're back at the end of the list for this time, and we'll let you know again if a table opens up. Or pick another time, or message the house on WhatsApp.",
+      "action": "See times"
+    }
+  },
+  "conflict.link_used": {
+    "audience": "customer",
+    "display": "notice",
+    "action": "reload",
+    "log": false,
+    "pt": {
+      "title": "Isso já foi feito",
+      "text": "Esse botão já foi usado e a reserva está atualizada. Veja como ela ficou.",
+      "action": "Ver a reserva"
+    },
+    "es": {
+      "title": "Esto ya se hizo",
+      "text": "Este botón ya se usó y la reserva está actualizada. Mirá cómo quedó.",
+      "action": "Ver la reserva"
+    },
+    "en": {
+      "title": "That's already done",
+      "text": "This button was already used and the booking is up to date. See how it looks now.",
+      "action": "See the booking"
+    }
+  },
+  "phone_in_use": {
+    "audience": "customer",
+    "display": "field",
+    "action": "whatsapp",
+    "log": false,
+    "pt": {
+      "title": "Esse número já está em outra conta",
+      "text": "Entre com ele pelo código no WhatsApp, ou chame a casa para juntar as duas contas.",
+      "action": "Chamar no WhatsApp"
+    },
+    "es": {
+      "title": "Ese número ya está en otra cuenta",
+      "text": "Entrá con él usando el código por WhatsApp, o escribile a la casa para unir las dos cuentas.",
+      "action": "Escribir por WhatsApp"
+    },
+    "en": {
+      "title": "That number belongs to another account",
+      "text": "Sign in with it using the WhatsApp code, or message the house to merge the two accounts.",
+      "action": "Message us on WhatsApp"
+    }
+  },
+  "download_failed": {
+    "audience": "customer",
+    "display": "notice",
+    "action": "retry",
+    "log": false,
+    "pt": {
+      "title": "O arquivo não baixou",
+      "text": "Tente de novo em instantes. Se continuar, peça pelo WhatsApp que a casa manda.",
+      "action": "Tentar de novo"
+    },
+    "es": {
+      "title": "El archivo no se descargó",
+      "text": "Probá de nuevo en un momento. Si sigue, pedilo por WhatsApp y la casa te lo manda.",
+      "action": "Intentar de nuevo"
+    },
+    "en": {
+      "title": "The file didn't download",
+      "text": "Try again in a moment. If it keeps happening, ask on WhatsApp and the house will send it.",
+      "action": "Try again"
+    }
+  },
+  "unauthorized.login": {
+    "audience": "staff",
+    "display": "field",
+    "action": "retry",
+    "log": false,
+    "pt": {
+      "title": "E-mail ou senha não conferem",
+      "text": "Confira e tente de novo. Se esqueceu, use \"Esqueci a senha\".",
+      "action": "Esqueci a senha"
+    }
+  },
+  "unauthorized.mfa": {
+    "audience": "staff",
+    "display": "field",
+    "action": "retry",
+    "log": false,
+    "pt": {
+      "title": "Código não confere",
+      "text": "Use o código que está agora no aplicativo de códigos, ou um dos códigos de recuperação.",
+      "action": ""
+    }
+  },
+  "session_expired.staff": {
+    "audience": "staff",
+    "display": "dialog",
+    "action": "sign_in",
+    "log": false,
+    "pt": {
+      "title": "Você saiu do painel",
+      "text": "Entre de novo para continuar. A tela continua onde estava.",
+      "action": "Entrar"
+    }
+  },
+  "account_disabled": {
+    "audience": "staff",
+    "display": "page",
+    "action": "contact_owner",
+    "log": true,
+    "pt": {
+      "title": "Essa conta está desativada",
+      "text": "Fale com o dono da casa para reativar.",
+      "action": ""
+    }
+  },
+  "gone.invite": {
+    "audience": "staff",
+    "display": "page",
+    "action": "contact_owner",
+    "log": false,
+    "pt": {
+      "title": "O convite venceu",
+      "text": "Convites valem 72 horas. Peça ao dono para mandar de novo.",
+      "action": ""
+    }
+  },
+  "gone.setup": {
+    "audience": "staff",
+    "display": "page",
+    "action": "contact_owner",
+    "log": true,
+    "pt": {
+      "title": "Esse link de primeiro acesso já foi usado",
+      "text": "Ele vale uma vez só. Peça um link novo a quem instalou o sistema.",
+      "action": ""
+    }
+  },
+  "gone.reset": {
+    "audience": "staff",
+    "display": "page",
+    "action": "retry",
+    "log": false,
+    "pt": {
+      "title": "O link de nova senha venceu",
+      "text": "Ele vale 30 minutos e uma vez só. Peça outro em \"Esqueci a senha\".",
+      "action": "Pedir outro link"
+    }
+  },
+  "validation.password": {
+    "audience": "staff",
+    "display": "field",
+    "action": "none",
+    "log": false,
+    "pt": {
+      "title": "Essa senha não serve",
+      "text": "Use 12 caracteres ou mais, e uma que não tenha vazado de outros sites. Uma frase curta é fácil de lembrar.",
+      "action": ""
+    }
+  },
+  "reauth_required": {
+    "audience": "staff",
+    "display": "dialog",
+    "action": "sign_in",
+    "log": false,
+    "pt": {
+      "title": "Confirme que é você",
+      "text": "Essa ação pede a senha e o código de novo. Vale por 5 minutos.",
+      "action": "Confirmar"
+    }
+  },
+  "forbidden": {
+    "audience": "staff",
+    "display": "page",
+    "action": "contact_owner",
+    "log": false,
+    "pt": {
+      "title": "Essa parte é de outro perfil da equipe",
+      "text": "Se precisar, peça ao dono ou ao gerente.",
+      "action": "Voltar ao Hoje"
+    }
+  },
+  "forbidden.login": {
+    "audience": "staff",
+    "display": "notice",
+    "action": "none",
+    "log": false,
+    "pt": {
+      "title": "A recepção entra pelo aparelho da casa",
+      "text": "Toque no seu nome no aparelho da recepção ou do salão e digite o PIN.",
+      "action": ""
+    }
+  },
+  "device_pending": {
+    "audience": "staff",
+    "display": "page",
+    "action": "contact_owner",
+    "log": false,
+    "pt": {
+      "title": "Esperando o dono aprovar",
+      "text": "Mostre o código {code} ao dono. Ele aprova em Configurações > Aparelhos e impressoras, no celular dele. Esta tela segue sozinha.",
+      "action": ""
+    }
+  },
+  "device_not_approved": {
+    "audience": "staff",
+    "display": "page",
+    "action": "contact_owner",
+    "log": true,
+    "pt": {
+      "title": "Este aparelho não está liberado",
+      "text": "Peça ao dono para aprovar este aparelho em Configurações > Aparelhos e impressoras. Se ele foi desligado, é preciso parear de novo.",
+      "action": "Parear de novo"
+    }
+  },
+  "device_signature_invalid": {
+    "audience": "staff",
+    "display": "page",
+    "action": "reload",
+    "log": true,
+    "pt": {
+      "title": "Este aparelho precisa se apresentar de novo",
+      "text": "Confira se a data e a hora do aparelho estão certas e recarregue. Se continuar, peça ao dono para parear de novo.",
+      "action": "Recarregar"
+    }
+  },
+  "device_clock_skew": {
+    "audience": "staff",
+    "display": "page",
+    "action": "retry",
+    "log": true,
+    "pt": {
+      "title": "O relógio deste aparelho está errado",
+      "text": "Ele está {minutes} min {direction}. Acerte a data e a hora do aparelho e toque em tentar de novo. Não precisa parear de novo.",
+      "action": "Tentar de novo"
+    }
+  },
+  "device_key_lost": {
+    "audience": "staff",
+    "display": "page",
+    "action": "contact_owner",
+    "log": true,
+    "pt": {
+      "title": "Este aparelho perdeu a chave da casa",
+      "text": "O navegador apagou os dados dele. Peça o pareamento de novo e mostre o código novo ao dono, que já vê o aviso no painel.",
+      "action": "Pedir pareamento de novo"
+    }
+  },
+  "webcrypto_unavailable": {
+    "audience": "staff",
+    "display": "page",
+    "action": "reload",
+    "log": false,
+    "pt": {
+      "title": "Este navegador não serve como aparelho da casa",
+      "text": "Abra o painel no Chrome ou no Edge atualizados, fora da janela anônima, e peça o pareamento de novo.",
+      "action": "Tentar de novo"
+    }
+  },
+  "conflict.device_decided": {
+    "audience": "staff",
+    "display": "dialog",
+    "action": "none",
+    "log": false,
+    "pt": {
+      "title": "Esse pedido já foi resolvido",
+      "text": "O código venceu ou alguém já decidiu. Peça para o aparelho gerar um código novo.",
+      "action": ""
+    }
+  },
+  "validation.device_code": {
+    "audience": "staff",
+    "display": "field",
+    "action": "retry",
+    "log": false,
+    "pt": {
+      "title": "Código não confere",
+      "text": "Confira os 8 caracteres que aparecem na tela do aparelho.",
+      "action": ""
+    }
+  },
+  "pin_invalid": {
+    "audience": "staff",
+    "display": "field",
+    "action": "retry",
+    "log": false,
+    "pt": {
+      "title": "PIN não confere",
+      "text": "São os 4 últimos números do seu telefone. Restam {left} tentativas.",
+      "action": ""
+    }
+  },
+  "pin_locked": {
+    "audience": "staff",
+    "display": "notice",
+    "action": "wait",
+    "log": true,
+    "pt": {
+      "title": "{name} está travado por {minutes} min",
+      "text": "Foram 5 tentativas erradas e o dono já vê o aviso no painel. Outra pessoa pode entrar com o próprio nome enquanto isso.",
+      "action": ""
+    }
+  },
+  "no_active_person": {
+    "audience": "staff",
+    "display": "dialog",
+    "action": "sign_in",
+    "log": false,
+    "pt": {
+      "title": "Quem está usando?",
+      "text": "Toque no seu nome e digite o PIN para continuar. A tela fica onde estava.",
+      "action": "Entrar com PIN"
+    }
+  },
+  "precondition_failed": {
+    "audience": "staff",
+    "display": "dialog",
+    "action": "reload",
+    "log": false,
+    "pt": {
+      "title": "{name} gravou antes de você",
+      "text": "Veja o que mudou e escolha: juntar com as suas mudanças ou descartar as suas.",
+      "action": "Ver o que mudou"
+    }
+  },
+  "conflict": {
+    "audience": "staff",
+    "display": "notice",
+    "action": "reload",
+    "log": false,
+    "pt": {
+      "title": "Isso mudou agora há pouco",
+      "text": "Outra pessoa mexeu aqui. A tela já mostra o que vale agora; confira e faça de novo se ainda precisar.",
+      "action": "Atualizar"
+    }
+  },
+  "plan_changed": {
+    "audience": "staff",
+    "display": "dialog",
+    "action": "retry",
+    "log": false,
+    "pt": {
+      "title": "O efeito mudou desde a prévia",
+      "text": "Entrou ou saiu reserva enquanto você olhava. Veja o efeito de novo antes de gravar.",
+      "action": "Ver o efeito de novo"
+    }
+  },
+  "preview_required": {
+    "audience": "staff",
+    "display": "dialog",
+    "action": "retry",
+    "log": false,
+    "pt": {
+      "title": "Veja o que muda antes de gravar",
+      "text": "Essa mudança mexe em reservas. Abra o \"O que muda\", confira o efeito e grave de novo. O que você mudou continua na tela.",
+      "action": "Ver o que muda"
+    }
+  },
+  "conflict.unassigned": {
+    "audience": "staff",
+    "display": "dialog",
+    "action": "none",
+    "log": false,
+    "pt": {
+      "title": "{count} reservas ficariam sem mesa",
+      "text": "Escolha para cada uma: remarcar, cancelar avisando ou manter com observação. Depois disso dá para gravar.",
+      "action": "Resolver"
+    }
+  },
+  "day_has_reservations": {
+    "audience": "staff",
+    "display": "dialog",
+    "action": "none",
+    "log": false,
+    "pt": {
+      "title": "Esse dia tem {count} reservas ativas",
+      "text": "Antes de fechar, remarque ou cancele cada uma. A lista está logo abaixo.",
+      "action": "Ver as reservas"
+    }
+  },
+  "conflict.layout_in_use": {
+    "audience": "staff",
+    "display": "dialog",
+    "action": "none",
+    "log": false,
+    "pt": {
+      "title": "Essa planta está em uso",
+      "text": "Ela é a planta de algum dia que vem aí. Troque a planta desses dias antes de arquivar.",
+      "action": "Ver os dias"
+    }
+  },
+  "settings_read_only": {
+    "audience": "staff",
+    "display": "notice",
+    "action": "contact_owner",
+    "log": false,
+    "pt": {
+      "title": "Aqui você só vê",
+      "text": "Quem muda as configurações é o dono. Se algo precisa mudar, fale com ele.",
+      "action": ""
+    }
+  },
+  "validation.settings": {
+    "audience": "staff",
+    "display": "field",
+    "action": "none",
+    "log": false,
+    "pt": {
+      "title": "Valor fora do limite",
+      "text": "Esse campo vai até {max}. Ajuste e grave de novo.",
+      "action": ""
+    }
+  },
+  "validation.idempotency": {
+    "audience": "both",
+    "display": "notice",
+    "action": "reload",
+    "log": true,
+    "pt": {
+      "title": "Esse pedido já tinha sido enviado",
+      "text": "Recarregue a página e confira como ficou antes de mandar de novo.",
+      "action": "Recarregar"
+    },
+    "es": {
+      "title": "Este pedido ya se había enviado",
+      "text": "Recargá la página y revisá cómo quedó antes de mandarlo de nuevo.",
+      "action": "Recargar"
+    },
+    "en": {
+      "title": "This was already sent",
+      "text": "Reload the page and check how it turned out before sending again.",
+      "action": "Reload"
+    }
+  },
+  "invalid_transition.staff": {
+    "audience": "staff",
+    "display": "notice",
+    "action": "reload",
+    "log": false,
+    "pt": {
+      "title": "Não dá para fazer isso agora",
+      "text": "A reserva mudou de estado. A tela foi atualizada; confira e escolha de novo.",
+      "action": "Atualizar"
+    }
+  },
+  "undo_window_closed": {
+    "audience": "staff",
+    "display": "notice",
+    "action": "contact_owner",
+    "log": false,
+    "pt": {
+      "title": "Passou o prazo de desfazer",
+      "text": "Isso só se desfaz em até {minutes} min. Se foi engano, avise o dono ou o gerente.",
+      "action": ""
+    }
+  },
+  "night_closed": {
+    "audience": "staff",
+    "display": "notice",
+    "action": "contact_owner",
+    "log": false,
+    "pt": {
+      "title": "A noite já fechou",
+      "text": "Depois do fechamento, a recepção não muda mais nada. O dono ou o gerente corrige com motivo, se precisar.",
+      "action": ""
+    }
+  },
+  "needs_whatsapp": {
+    "audience": "staff",
+    "display": "notice",
+    "action": "none",
+    "log": false,
+    "pt": {
+      "title": "Esse cliente não tem WhatsApp confirmado",
+      "text": "A mensagem não sai. Para avisar, o dono ou o gerente liga para ele.",
+      "action": ""
+    }
+  },
+  "conflict.table_taken": {
+    "audience": "staff",
+    "display": "notice",
+    "action": "pick_other",
+    "log": false,
+    "pt": {
+      "title": "Essa mesa acabou de ser ocupada",
+      "text": "Outra pessoa da equipe usou a mesa. A planta já está atualizada; escolha outra.",
+      "action": ""
+    }
+  },
+  "table_held_soon": {
+    "audience": "staff",
+    "display": "dialog",
+    "action": "none",
+    "log": false,
+    "pt": {
+      "title": "Mesa guardada para as {time}",
+      "text": "Dá para sentar aqui até {time}. Depois, a mesa é da reserva.",
+      "action": "Sentar mesmo assim"
+    }
+  },
+  "slot_full.staff": {
+    "audience": "staff",
+    "display": "dialog",
+    "action": "pick_other",
+    "log": false,
+    "pt": {
+      "title": "Esse horário está cheio",
+      "text": "Escolha outro horário. Dono e gerente podem passar do limite, com motivo.",
+      "action": "Ver horários"
+    }
+  },
+  "conflict.event_list_full": {
+    "audience": "staff",
+    "display": "notice",
+    "action": "none",
+    "log": false,
+    "pt": {
+      "title": "A lista do evento está cheia",
+      "text": "Chegou ao limite de pessoas. Ponha na espera ou aumente a capacidade no evento.",
+      "action": ""
+    }
+  },
+  "not_found.staff": {
+    "audience": "staff",
+    "display": "notice",
+    "action": "reload",
+    "log": false,
+    "pt": {
+      "title": "Isso não está mais aqui",
+      "text": "Pode ter sido arquivado ou apagado agora há pouco. A lista já foi atualizada.",
+      "action": "Atualizar"
+    }
+  },
+  "upload_too_large": {
+    "audience": "staff",
+    "display": "field",
+    "action": "none",
+    "log": false,
+    "pt": {
+      "title": "{name} passa de {max} MB",
+      "text": "Diminua a foto e envie de novo. As outras do lote seguem normalmente.",
+      "action": ""
+    }
+  },
+  "upload_type": {
+    "audience": "staff",
+    "display": "field",
+    "action": "none",
+    "log": false,
+    "pt": {
+      "title": "{name} não é uma foto aceita",
+      "text": "Envie em JPG, PNG ou WebP. As outras do lote seguem normalmente.",
+      "action": ""
+    }
+  },
+  "upload_failed": {
+    "audience": "staff",
+    "display": "field",
+    "action": "retry",
+    "log": false,
+    "pt": {
+      "title": "{name} não subiu",
+      "text": "A conexão caiu no meio. Tente de novo só essa foto.",
+      "action": "Tentar de novo"
+    }
+  },
+  "image_not_ready": {
+    "audience": "staff",
+    "display": "notice",
+    "action": "retry",
+    "log": false,
+    "pt": {
+      "title": "A foto ainda está sendo preparada",
+      "text": "Em instantes ela fica pronta para usar. Tente de novo daqui a pouco; o resto continua guardado.",
+      "action": "Tentar de novo"
+    }
+  },
+  "validation.alt_text": {
+    "audience": "staff",
+    "display": "field",
+    "action": "none",
+    "log": false,
+    "pt": {
+      "title": "Falta descrever a foto",
+      "text": "Escreva em poucas palavras o que aparece. Quem usa leitor de tela depende disso.",
+      "action": ""
+    }
+  },
+  "conflict.photo_in_use": {
+    "audience": "staff",
+    "display": "dialog",
+    "action": "none",
+    "log": false,
+    "pt": {
+      "title": "Essa foto está em uso",
+      "text": "Ela aparece em {count} lugares do site. Troque nesses lugares ou use \"Substituir\" para manter os usos.",
+      "action": "Ver onde aparece"
+    }
+  },
+  "site_build_failed": {
+    "audience": "staff",
+    "display": "notice",
+    "action": "retry",
+    "log": true,
+    "pt": {
+      "title": "O site não atualizou",
+      "text": "O que você publicou está guardado, mas o site ainda mostra a versão anterior. Tente publicar de novo; quem cuida do sistema já recebeu o aviso.",
+      "action": "Publicar de novo"
+    }
+  },
+  "realtime_lost": {
+    "audience": "staff",
+    "display": "notice",
+    "action": "none",
+    "log": false,
+    "pt": {
+      "title": "Atualização ao vivo pausada",
+      "text": "A tela segue se atualizando a cada 20 segundos até a conexão voltar.",
+      "action": ""
+    }
+  },
+  "offline.panel": {
+    "audience": "staff",
+    "display": "notice",
+    "action": "wait",
+    "log": false,
+    "pt": {
+      "title": "Sem conexão. Você vê a noite como estava às {time}",
+      "text": "Só leitura até a internet voltar. Anote no papel o que acontecer e lance depois, com a hora real.",
+      "action": "Imprimir a folha"
+    }
+  },
+  "offline.server": {
+    "audience": "staff",
+    "display": "notice",
+    "action": "wait",
+    "log": true,
+    "pt": {
+      "title": "O sistema da casa está fora. Você vê a noite como estava às {time}",
+      "text": "A internet está funcionando, mas o sistema não responde. Só leitura até ele voltar: anote no papel o que acontecer e lance depois, com a hora real.",
+      "action": "Imprimir a folha"
+    }
+  },
+  "offline_action": {
+    "audience": "staff",
+    "display": "dialog",
+    "action": "wait",
+    "log": false,
+    "pt": {
+      "title": "Sem conexão, não dá para gravar",
+      "text": "Anote na folha da noite e lance quando a internet voltar, com a hora real.",
+      "action": "Entendi"
+    }
+  },
+  "offline_no_snapshot": {
+    "audience": "staff",
+    "display": "page",
+    "action": "wait",
+    "log": false,
+    "pt": {
+      "title": "Sem conexão e sem cópia da noite aqui",
+      "text": "Use a folha da noite impressa. Assim que a internet voltar, o painel abre sozinho.",
+      "action": ""
+    }
+  },
+  "offline_backlog": {
+    "audience": "staff",
+    "display": "notice",
+    "action": "none",
+    "log": false,
+    "pt": {
+      "title": "A conexão voltou",
+      "text": "Lance agora o que foi anotado no papel, com a hora em que aconteceu.",
+      "action": "Lançar"
+    }
+  },
+  "message_failed": {
+    "audience": "staff",
+    "display": "notice",
+    "action": "retry",
+    "log": true,
+    "pt": {
+      "title": "A mensagem para {name} não chegou",
+      "text": "O WhatsApp não entregou. Toque em reenviar; se falhar de novo, o dono ou o gerente liga para o cliente.",
+      "action": "Reenviar"
+    }
+  },
+  "message_held": {
+    "audience": "staff",
+    "display": "notice",
+    "action": "contact_owner",
+    "log": true,
+    "pt": {
+      "title": "Mensagens seguradas: o limite do dia chegou",
+      "text": "Elas ficam na fila até o dono liberar ou até amanhã. O aviso já está na central do painel.",
+      "action": ""
+    }
+  },
+  "message_expired": {
+    "audience": "staff",
+    "display": "notice",
+    "action": "none",
+    "log": true,
+    "pt": {
+      "title": "A mensagem para {name} perdeu a hora",
+      "text": "Ela ficou parada na fila e não vale mais mandar. Se precisar, use outra mensagem pronta.",
+      "action": ""
+    }
+  },
+  "whatsapp_down": {
+    "audience": "staff",
+    "display": "notice",
+    "action": "contact_owner",
+    "log": true,
+    "pt": {
+      "title": "O WhatsApp da casa está fora",
+      "text": "As mensagens esperam na fila e saem quando ele voltar. Os clientes ainda veem tudo no comprovante e nos links. O aviso está no topo do painel para toda a equipe.",
+      "action": "Ver a fila"
+    }
+  },
+  "whatsapp_inbound_down": {
+    "audience": "staff",
+    "display": "notice",
+    "action": "none",
+    "log": true,
+    "pt": {
+      "title": "As respostas dos clientes pelo WhatsApp não estão chegando",
+      "text": "Antes de agir numa reserva, confira a conversa no WhatsApp da casa. O aviso está no painel do dono, e quem cuida do sistema já foi avisado.",
+      "action": ""
+    }
+  },
+  "server.staff": {
+    "audience": "staff",
+    "display": "notice",
+    "action": "retry",
+    "log": true,
+    "pt": {
+      "title": "Algo deu errado do nosso lado",
+      "text": "Tente de novo em instantes. O resto do painel continua funcionando.",
+      "action": "Tentar de novo"
+    }
+  },
+  "unknown.staff": {
+    "audience": "staff",
+    "display": "notice",
+    "action": "retry",
+    "log": true,
+    "pt": {
+      "title": "Algo não saiu como esperado",
+      "text": "Tente de novo. Se continuar, avise o dono da casa.",
+      "action": "Tentar de novo"
+    }
+  },
+  "bad_response.staff": {
+    "audience": "staff",
+    "display": "notice",
+    "action": "retry",
+    "log": true,
+    "pt": {
+      "title": "A resposta chegou pela metade",
+      "text": "Tente de novo em instantes. O que já foi gravado continua guardado.",
+      "action": "Tentar de novo"
+    }
+  },
+  "bad_request.staff": {
+    "audience": "staff",
+    "display": "notice",
+    "action": "reload",
+    "log": true,
+    "pt": {
+      "title": "Não deu para entender o pedido",
+      "text": "Recarregue a página e faça de novo. O que já foi gravado continua guardado.",
+      "action": "Recarregar"
+    }
+  },
+  "unauthorized.staff": {
+    "audience": "staff",
+    "display": "field",
+    "action": "fix",
+    "log": false,
+    "pt": {
+      "title": "Senha ou código não conferem",
+      "text": "Confira e tente de novo. O código muda a cada 30 segundos.",
+      "action": ""
+    }
+  },
+  "gone.staff": {
+    "audience": "staff",
+    "display": "notice",
+    "action": "reload",
+    "log": false,
+    "pt": {
+      "title": "Isso não vale mais",
+      "text": "O prazo passou ou alguém já resolveu. A tela foi atualizada; confira como ficou.",
+      "action": ""
+    }
+  },
+  "validation.staff": {
+    "audience": "staff",
+    "display": "field",
+    "action": "fix",
+    "log": false,
+    "pt": {
+      "title": "Falta ajeitar alguns campos",
+      "text": "Confira o que está marcado e grave de novo.",
+      "action": ""
+    }
+  },
+  "duplicate_reservation.staff": {
+    "audience": "staff",
+    "display": "notice",
+    "action": "fix",
+    "log": false,
+    "pt": {
+      "title": "Já tem reserva nesse horário",
+      "text": "Essa pessoa já tem uma reserva ativa nesse dia e horário. Abra a que existe para mudar.",
+      "action": ""
+    }
+  },
+  "active_limit.staff": {
+    "audience": "staff",
+    "display": "notice",
+    "action": "fix",
+    "log": false,
+    "pt": {
+      "title": "Essa pessoa já tem reservas demais",
+      "text": "Remarque ou cancele uma das reservas que ela já tem.",
+      "action": ""
+    }
+  },
+  "same_day_reservation.staff": {
+    "audience": "staff",
+    "display": "notice",
+    "action": "fix",
+    "log": false,
+    "pt": {
+      "title": "Essa pessoa já tem reserva nesse dia",
+      "text": "Confira com ela se é outra reserva mesmo ou se é para mudar o horário da que existe.",
+      "action": ""
+    }
+  },
+  "party_too_large.staff": {
+    "audience": "staff",
+    "display": "notice",
+    "action": "fix",
+    "log": false,
+    "pt": {
+      "title": "Grupo maior que o limite da reserva",
+      "text": "Dono e gerente podem passar do limite, com motivo. Para grupo grande, junte as mesas no Salão.",
+      "action": ""
+    }
+  },
+  "outside_cancel_window.staff": {
+    "audience": "staff",
+    "display": "notice",
+    "action": "fix",
+    "log": false,
+    "pt": {
+      "title": "Passou o prazo de cancelar",
+      "text": "O cliente não cancela mais sozinho. A equipe ainda pode cancelar, com motivo.",
+      "action": ""
+    }
+  },
+  "offer_expired.staff": {
+    "audience": "staff",
+    "display": "notice",
+    "action": "reload",
+    "log": false,
+    "pt": {
+      "title": "A oferta venceu",
+      "text": "O tempo para aceitar passou e a mesa seguiu para a próxima pessoa da lista.",
+      "action": ""
+    }
+  },
+  "customer_blocked.staff": {
+    "audience": "staff",
+    "display": "notice",
+    "action": "fix",
+    "log": false,
+    "pt": {
+      "title": "Esse cliente está marcado para falar com a casa",
+      "text": "A reserva por aqui está parada para ele. Veja a observação na ficha antes de seguir.",
+      "action": ""
+    }
+  },
+  "correction_reason_required": {
+    "audience": "staff",
+    "display": "field",
+    "action": "fix",
+    "log": false,
+    "pt": {
+      "title": "Falta o motivo da correção",
+      "text": "A noite já fechou. Toda correção depois do fechamento leva um motivo, que fica no registro.",
+      "action": ""
+    }
+  },
+  "invalid_transition.customer_canceled": {
+    "audience": "staff",
+    "display": "notice",
+    "action": "reload",
+    "log": false,
+    "pt": {
+      "title": "O cliente cancelou às {time}",
+      "text": "A reserva já não está ativa. A tela foi atualizada.",
+      "action": ""
+    }
+  },
+  "invalid_transition.already_arrived": {
+    "audience": "staff",
+    "display": "notice",
+    "action": "reload",
+    "log": false,
+    "pt": {
+      "title": "Chegada já marcada por {name} às {time}",
+      "text": "Outra pessoa da equipe marcou primeiro. A tela foi atualizada.",
+      "action": ""
+    }
+  },
+  "undo_window_closed.no_show": {
+    "audience": "staff",
+    "display": "notice",
+    "action": "fix",
+    "log": false,
+    "pt": {
+      "title": "Passou o prazo de desfazer",
+      "text": "O “Não veio” só se desfaz em até {hours} h. Para tirar a falta da conta, perdoe a falta na ficha do cliente.",
+      "action": ""
+    }
+  },
+  "unavailable": {
+    "audience": "both",
+    "display": "notice",
+    "action": "retry",
+    "log": true,
+    "pt": {
+      "title": "O sistema da casa está fora agora",
+      "text": "Nada se perdeu. Tente de novo em alguns minutos; se for urgente, chame a casa no WhatsApp.",
+      "action": "Tentar de novo"
+    },
+    "es": {
+      "title": "El sistema de la casa está caído ahora",
+      "text": "No se perdió nada. Probá de nuevo en unos minutos; si es urgente, escribile a la casa por WhatsApp.",
+      "action": "Intentar de nuevo"
+    },
+    "en": {
+      "title": "The house system is down right now",
+      "text": "Nothing was lost. Try again in a few minutes; if it is urgent, message the house on WhatsApp.",
+      "action": "Try again"
+    }
+  },
+  "not_connected": {
+    "audience": "staff",
+    "display": "notice",
+    "action": "fix",
+    "log": false,
+    "pt": {
+      "title": "A conta Google da casa não está ligada",
+      "text": "Ligue a conta em Configurações › Integrações para usar a Agenda e o Drive.",
+      "action": "Ligar a conta"
+    }
+  },
+  "google_scope_missing": {
+    "audience": "staff",
+    "display": "notice",
+    "action": "fix",
+    "log": false,
+    "pt": {
+      "title": "Falta uma permissão do Google",
+      "text": "O Google não deu acesso a tudo o que a casa pediu. Ligue de novo e marque a Agenda e o Drive.",
+      "action": "Ligar de novo"
+    }
+  },
+  "google_no_scopes": {
+    "audience": "staff",
+    "display": "notice",
+    "action": "fix",
+    "log": false,
+    "pt": {
+      "title": "O Google não deu nenhuma permissão",
+      "text": "Ligue de novo e deixe marcadas a Agenda e o Drive na tela do Google.",
+      "action": "Ligar de novo"
+    }
+  }
+}
