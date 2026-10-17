@@ -1,0 +1,632 @@
+/* Área Cardápio: o editor do rascunho, as chaves de "acabou" e as folhas de prévia. */
+@layer pages {
+  .cd-h2 {
+    margin: 0;
+    font-family: var(--f-letreiro);
+    font-size: var(--t-bloco);
+    font-weight: 900;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  .cd-h3 {
+    margin: 0;
+    font-family: var(--f-mono);
+    font-size: var(--t-rotulo);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--cor-texto-suave);
+  }
+
+  /* ---- "acabou": uma caixa de marcar de verdade com alvo de 44 px ---- */
+  .cd-acabou {
+    display: inline-flex;
+    gap: var(--e-2);
+    align-items: center;
+    min-height: var(--alvo-toque);
+    padding: 0 var(--e-3);
+    border: var(--fio) solid var(--cor-borda);
+    background: var(--cor-superficie);
+    font-family: var(--f-grotesca);
+    font-weight: 800;
+    text-transform: uppercase;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+
+  .cd-acabou input {
+    width: 22px;
+    height: 22px;
+    margin: 0;
+    accent-color: var(--cor-atencao);
+  }
+
+  .cd-acabou.is-on {
+    border-color: var(--cor-atencao);
+    background: var(--cor-atencao);
+    color: var(--cor-acao-texto);
+  }
+
+  .cd-acabou:focus-within {
+    outline: 3px solid var(--cor-foco);
+    outline-offset: 2px;
+  }
+
+  /* ---- a recepção ---- */
+  .cd-dica {
+    margin: var(--e-4) 0;
+  }
+
+  .cd-busca {
+    max-width: 420px;
+    margin-bottom: var(--e-3);
+  }
+
+  .cd-resumo {
+    margin: 0 0 var(--e-5);
+    font-weight: 650;
+  }
+
+  .cd-grupo + .cd-grupo {
+    margin-top: var(--e-5);
+  }
+
+  .cd-grupo__titulo {
+    margin: 0 0 var(--e-2);
+    padding-bottom: var(--e-2);
+    border-bottom: var(--fio) solid var(--cor-borda);
+    font-family: var(--f-grotesca);
+    font-size: 22px;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  .cd-lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+    gap: var(--e-2);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .cd-lista__item {
+    display: flex;
+    gap: var(--e-3);
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--e-2) var(--e-2) var(--e-2) var(--e-4);
+    border: 1px solid var(--cor-fio);
+    background: var(--cor-superficie);
+  }
+
+  .cd-lista__nome {
+    font-size: 17px;
+    font-weight: 650;
+  }
+
+  .is-acabou .cd-lista__nome,
+  tr.is-acabou .cd-tabela__prato b {
+    text-decoration: line-through;
+    color: var(--cor-texto-suave);
+  }
+
+  /* ---- dono e gerente ---- */
+  .cd-topo {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: var(--e-3) var(--e-5);
+    align-items: start;
+    margin-block: var(--e-4) var(--e-5);
+    padding: var(--e-4) var(--e-5);
+    border: var(--fio) solid var(--cor-borda);
+    background: var(--grao), var(--cor-superficie-2);
+  }
+
+  .cd-topo__texto {
+    display: flex;
+    flex-direction: column;
+    gap: var(--e-2);
+  }
+
+  .cd-topo__texto p {
+    margin: 0;
+  }
+
+  .cd-topo__pub {
+    grid-column: 1 / -1;
+  }
+
+  .cd-topo__pub:empty {
+    display: none;
+  }
+
+  .cd-mudancas summary {
+    min-height: var(--alvo-toque);
+    display: flex;
+    gap: var(--e-2);
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .cd-mudancas ul {
+    margin: 0;
+    padding-left: var(--e-5);
+    font-size: var(--t-pequeno);
+  }
+
+  .cd-corpo {
+    display: grid;
+    grid-template-columns: minmax(220px, 280px) minmax(0, 1fr);
+    gap: var(--e-5);
+    align-items: start;
+  }
+
+  .cd-categorias ol {
+    margin: 0 0 var(--e-3);
+    padding: 0;
+    list-style: none;
+    border-top: var(--fio) solid var(--cor-borda);
+  }
+
+  .cd-categoria {
+    display: flex;
+    align-items: stretch;
+    border-bottom: 1px solid var(--cor-fio);
+  }
+
+  .cd-categoria__nome {
+    display: flex;
+    flex: 1;
+    gap: var(--e-2);
+    align-items: center;
+    justify-content: space-between;
+    min-height: var(--alvo-toque);
+    padding: var(--e-2) var(--e-3);
+    border: 0;
+    background: transparent;
+    color: var(--cor-texto);
+    font-family: var(--f-grotesca);
+    font-size: 17px;
+    font-weight: 800;
+    text-align: left;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  .cd-categoria__nome small {
+    font-family: var(--f-mono);
+    font-size: 11px;
+    color: var(--cor-texto-suave);
+  }
+
+  .cd-categoria.is-aberta {
+    box-shadow: inset 5px 0 0 var(--cor-selecao);
+    background: var(--cor-superficie);
+  }
+
+  .cd-categoria.is-aberta .cd-categoria__nome {
+    padding-left: var(--e-4);
+  }
+
+  .cd-ordem {
+    display: inline-flex;
+  }
+
+  .cd-ordem__btn {
+    min-width: var(--alvo-toque);
+    min-height: var(--alvo-toque);
+    border: 0;
+    background: transparent;
+    color: var(--cor-texto);
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  .cd-ordem__btn:hover:not(:disabled) {
+    background: var(--cor-superficie-2);
+  }
+
+  .cd-ordem__btn:disabled {
+    color: var(--cor-texto-fraco);
+    cursor: default;
+    opacity: 0.5;
+  }
+
+  .cd-categorias__nova {
+    min-height: var(--alvo-toque);
+  }
+
+  .cd-categoria-aberta {
+    display: flex;
+    flex-direction: column;
+    gap: var(--e-4);
+    min-width: 0;
+  }
+
+  .cd-cat-topo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--e-3);
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .cd-cat-topo p {
+    margin: var(--e-1) 0 0;
+  }
+
+  .cd-cat-topo .btn {
+    min-height: var(--alvo-toque);
+  }
+
+  .cd-tabela__prato b {
+    display: block;
+    font-weight: 650;
+  }
+
+  .cd-tabela__grupo,
+  .cd-tabela__desc {
+    display: block;
+    max-width: 52ch;
+    color: var(--cor-texto-suave);
+    font-size: var(--t-pequeno);
+  }
+
+  .cd-tabela__grupo {
+    font-family: var(--f-mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .cd-tabela__acoes {
+    white-space: nowrap;
+  }
+
+  .cd-tabela__acoes .action {
+    min-height: var(--alvo-toque);
+  }
+
+  .cd-sem-preco {
+    color: var(--cor-texto-suave);
+    font-family: var(--f-corpo);
+    font-style: italic;
+  }
+
+  .cd-selo {
+    margin: 0 var(--e-1) var(--e-1) 0;
+  }
+
+  .cd-vazia {
+    padding: var(--e-5);
+    border: var(--fio) dashed var(--cor-atencao);
+  }
+
+  .cd-vazia p {
+    margin: 0;
+  }
+
+  .cd-arquivados summary {
+    display: flex;
+    align-items: center;
+    min-height: var(--alvo-toque);
+    color: var(--cor-texto-suave);
+    cursor: pointer;
+  }
+
+  .cd-arquivados ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .cd-arquivados li {
+    display: flex;
+    gap: var(--e-3);
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--e-2) 0;
+    border-bottom: 1px solid var(--cor-fio);
+  }
+
+  .cd-arquivados .action {
+    min-height: var(--alvo-toque);
+  }
+
+  /* ---- janelas ---- */
+  .cd-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--e-4);
+  }
+
+  .cd-form__linha {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: var(--e-3);
+  }
+
+  .cd-form__grupo {
+    display: flex;
+    flex-direction: column;
+    gap: var(--e-2);
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  .cd-form__checks {
+    display: flex;
+    flex-direction: column;
+    gap: var(--e-1);
+  }
+
+  .cd-check {
+    align-items: center;
+    min-height: var(--alvo-toque);
+  }
+
+  .cd-check input[type="radio"] {
+    width: 22px;
+    height: 22px;
+    margin: 0;
+    accent-color: var(--cor-acao);
+  }
+
+  .cd-form__foto {
+    display: block;
+    width: 160px;
+    height: 120px;
+    margin-top: var(--e-2);
+    object-fit: cover;
+    border: var(--fio) solid var(--cor-borda);
+  }
+
+  /* ---- a prévia: uma folha por categoria, como os cardápios impressos ---- */
+  .cd-avisos {
+    display: flex;
+    flex-direction: column;
+    gap: var(--e-2);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .cd-folhas {
+    display: grid;
+    gap: var(--e-5);
+  }
+
+  .cd-folha {
+    display: flex;
+    flex-direction: column;
+    gap: var(--e-1);
+    padding: clamp(20px, 3vw, 36px);
+    border: var(--barra) solid var(--cor-borda);
+  }
+
+  .cd-folha p,
+  .cd-folha h3,
+  .cd-folha h4 {
+    margin: 0;
+  }
+
+  .cd-folha__itens {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .cd-folha__titulo {
+    font-family: var(--f-letreiro);
+    font-size: clamp(34px, 4vw, 50px);
+    font-weight: 900;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  .cd-folha .cd-folha__sub {
+    margin-bottom: var(--e-2);
+    font-size: 14px;
+  }
+
+  .cd-folha__item {
+    padding-top: var(--e-3);
+  }
+
+  .cd-folha__linha b {
+    font-family: var(--f-grotesca);
+    font-size: clamp(20px, 2vw, 26px);
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  .cd-folha__preco {
+    margin-left: var(--e-2);
+    font-family: var(--f-grotesca);
+    font-size: clamp(20px, 2vw, 24px);
+    font-weight: 800;
+  }
+
+  .cd-folha__selo,
+  .cd-folha__acabou {
+    margin-left: var(--e-2);
+    font-family: var(--f-mono);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .cd-folha__acabou {
+    padding: 1px 6px;
+    border: 1.5px solid currentcolor;
+  }
+
+  .cd-folha__item.is-acabou .cd-folha__linha b {
+    text-decoration: line-through;
+  }
+
+  .cd-folha .cd-folha__desc {
+    margin-top: var(--e-1);
+  }
+
+  .cd-folha__desc {
+    max-width: 62ch;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .cd-folha .cd-folha__grupo {
+    margin-top: var(--e-4);
+    font-family: var(--f-mono);
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .cd-folha .cd-folha__mao {
+    margin-top: auto;
+    padding-top: var(--e-4);
+    font-family: var(--f-mao);
+    font-size: 26px;
+  }
+
+  /* comida: a folha preta (o cardápio impresso do ramen) */
+  .cd-folha--preta {
+    background: var(--cor-escuro);
+    color: var(--cor-escuro-texto);
+  }
+
+  .cd-folha--preta .cd-folha__sub,
+  .cd-folha--preta .cd-folha__desc {
+    color: var(--cor-escuro-texto-suave);
+  }
+
+  .cd-folha--preta .cd-folha__preco,
+  .cd-folha--preta .cd-folha__mao,
+  .cd-folha--preta .cd-folha__selo {
+    color: var(--cor-escuro-destaque);
+  }
+
+  .cd-folha--preta .cd-folha__mao {
+    border-top: 1px dashed var(--cor-escuro-borda);
+  }
+
+  /* a folha do ramen mantém o próprio letreiro */
+  .cd-folha--ramen .cd-folha__titulo,
+  .cd-folha--ramen .cd-folha__linha b,
+  .cd-folha--ramen .cd-folha__preco {
+    font-family: var(--f-ramen);
+    font-weight: 400;
+  }
+
+  .cd-folha--ramen .cd-folha__sub,
+  .cd-folha--ramen .cd-folha__desc {
+    font-family: var(--f-ramen-texto);
+    font-style: italic;
+    text-transform: uppercase;
+  }
+
+  /* bebidas: o cartão feito à mão, papel dentro de uma borda de azulejo */
+  .cd-folha--mao {
+    outline: 12px solid var(--cor-selecao);
+    outline-offset: -18px;
+    padding: calc(clamp(20px, 3vw, 36px) + 16px);
+    background: var(--grao), var(--cor-superficie);
+    color: var(--cor-atencao-texto);
+  }
+
+  .cd-folha--mao .cd-folha__linha b {
+    font-family: var(--f-mao);
+    font-size: 28px;
+    font-weight: 400;
+    text-transform: none;
+  }
+
+  .cd-folha--mao .cd-folha__sub,
+  .cd-folha--mao .cd-folha__desc {
+    color: var(--cor-texto-suave);
+  }
+
+  .cd-folha--clara {
+    background: var(--grao), var(--cor-superficie);
+    color: var(--cor-texto);
+  }
+
+  @media (max-width: 860px) {
+    .cd-topo {
+      grid-template-columns: minmax(0, 1fr);
+      padding: var(--e-4);
+    }
+
+    .cd-corpo {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+}
+
+/* ordenar arrastando (uma linha ou várias escolhidas), a checagem de palavras antes de publicar, a
+   recepção sem as chaves */
+@layer pages {
+  .cd-tabela__pegar {
+    white-space: nowrap;
+  }
+
+  .cd-pegador {
+    display: inline-block;
+    margin-right: var(--e-1);
+    color: var(--cor-texto-suave);
+    font-size: 18px;
+    cursor: grab;
+  }
+
+  .cd-escolher {
+    width: 22px;
+    height: 22px;
+    vertical-align: middle;
+    accent-color: var(--cor-acao);
+  }
+
+  tr.is-escolhido {
+    background: var(--cor-selecao);
+  }
+
+  tr.is-arrastando,
+  .cd-categoria.is-arrastando {
+    opacity: 0.5;
+  }
+
+  .cd-categoria[draggable="true"] {
+    cursor: grab;
+  }
+
+  .cd-tabela__foto {
+    display: block;
+    color: var(--cor-texto-suave);
+    font-family: var(--f-mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .cd-dica-ordem {
+    margin-top: var(--e-2);
+  }
+
+  .cd-palavras {
+    grid-column: 1 / -1;
+  }
+
+  .cd-palavras ul {
+    display: grid;
+    gap: var(--e-1);
+    margin: var(--e-2) 0 0;
+    padding-left: var(--e-4);
+  }
+
+  .cd-aviso {
+    max-width: 62ch;
+  }
+}

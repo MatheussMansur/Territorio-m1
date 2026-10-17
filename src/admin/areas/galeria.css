@@ -1,0 +1,380 @@
+/* Área Galeria: a grade de fotos, o envio em lote e a janela da foto com o ponto de foco. */
+@layer pages {
+  .gl-h3 {
+    margin: 0 0 var(--e-2);
+    font-family: var(--f-mono);
+    font-size: var(--t-rotulo);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--cor-texto-suave);
+  }
+
+  .gl-topo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--e-4);
+    align-items: center;
+    justify-content: space-between;
+    margin-block: var(--e-4);
+  }
+
+  .gl-envio-zona {
+    display: flex;
+    flex: 1 1 360px;
+    flex-wrap: wrap;
+    gap: var(--e-2) var(--e-4);
+    align-items: center;
+    padding: var(--e-3) var(--e-4);
+    border: var(--fio) dashed var(--cor-borda);
+  }
+
+  .gl-envio-zona p {
+    margin: 0;
+    color: var(--cor-texto-suave);
+    font-size: var(--t-pequeno);
+  }
+
+  .gl-envio-zona.is-arrastando {
+    border-style: solid;
+    border-color: var(--cor-selecao);
+    background: var(--cor-superficie-2);
+  }
+
+  .gl-envio-zona--vazia {
+    justify-content: center;
+    margin-top: var(--e-4);
+  }
+
+  .gl-filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--e-1);
+  }
+
+  .gl-filtro {
+    display: inline-flex;
+    gap: var(--e-2);
+    align-items: center;
+    min-height: var(--alvo-toque);
+    padding: 0 var(--e-3);
+    border: var(--fio) solid var(--cor-borda);
+    background: transparent;
+    color: var(--cor-texto);
+    font-family: var(--f-grotesca);
+    font-size: 15px;
+    font-weight: 800;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  .gl-filtro small {
+    font-family: var(--f-mono);
+    font-size: 11px;
+  }
+
+  .gl-filtro[aria-pressed="true"] {
+    background: var(--cor-acao);
+    color: var(--cor-acao-texto);
+  }
+
+  .gl-dica {
+    margin-bottom: var(--e-3);
+  }
+
+  /* ---- a grade ---- */
+  .gl-grade {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr));
+    gap: var(--barra);
+    margin: 0;
+    padding: var(--barra);
+    list-style: none;
+    background: var(--cor-borda);
+  }
+
+  .gl-foto {
+    display: flex;
+    flex-direction: column;
+    background: var(--grao), var(--cor-superficie);
+  }
+
+  .gl-foto__abrir {
+    display: block;
+    padding: 0;
+    border: 0;
+    background: var(--cor-superficie-2);
+    cursor: zoom-in;
+  }
+
+  .gl-foto__abrir img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+
+  /* uma foto ainda sendo preparada: a cor dela, a raiz girando e a palavra "preparando" */
+  .gl-foto__preparo {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+  }
+
+  .gl-foto__estado {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--e-1);
+    align-items: center;
+    margin: 0;
+    font-size: var(--t-pequeno);
+  }
+
+  .gl-foto__texto {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--e-1);
+    padding: var(--e-3) var(--e-3) 0;
+  }
+
+  .gl-foto__texto p {
+    margin: 0;
+  }
+
+  .gl-foto__alt {
+    font-size: var(--t-pequeno);
+    line-height: 1.4;
+  }
+
+  .gl-foto__falta {
+    color: var(--cor-atencao-texto);
+    font-size: var(--t-pequeno);
+    font-weight: 700;
+  }
+
+  .gl-foto__falta .losango {
+    margin-inline: 2px 8px;
+  }
+
+  .gl-foto.is-pendente {
+    box-shadow: inset 0 -5px 0 var(--cor-atencao);
+  }
+
+  .gl-foto__meta,
+  .gl-foto__usos {
+    color: var(--cor-texto-suave);
+    font-size: 12.5px;
+  }
+
+  .gl-foto__usos .badge {
+    margin-right: var(--e-1);
+  }
+
+  .gl-foto__acoes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--e-2) var(--e-3) var(--e-3);
+  }
+
+  .gl-foto__acoes .action {
+    min-height: var(--alvo-toque);
+  }
+
+  .gl-ordem {
+    display: inline-flex;
+  }
+
+  .gl-ordem__btn {
+    min-width: var(--alvo-toque);
+    min-height: var(--alvo-toque);
+    border: 0;
+    background: transparent;
+    color: var(--cor-texto);
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  .gl-ordem__btn:hover:not(:disabled) {
+    background: var(--cor-superficie-2);
+  }
+
+  .gl-ordem__btn:disabled {
+    color: var(--cor-texto-fraco);
+    opacity: 0.5;
+    cursor: default;
+  }
+
+  .gl-usos {
+    margin: 0;
+    padding-left: var(--e-5);
+  }
+
+  /* ---- envio em lote ---- */
+  .gl-envio {
+    display: flex;
+    flex-direction: column;
+    gap: var(--e-4);
+  }
+
+  .gl-envio__lista {
+    display: flex;
+    flex-direction: column;
+    gap: var(--e-3);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .gl-envio__item {
+    display: grid;
+    grid-template-columns: 96px minmax(0, 1fr);
+    gap: var(--e-3);
+    padding: var(--e-3);
+    border: var(--fio) solid var(--cor-fio);
+    background: var(--cor-superficie);
+  }
+
+  .gl-envio__item--refused,
+  .gl-envio__item--failed {
+    border-color: var(--cor-atencao);
+  }
+
+  .gl-envio__item--done {
+    border-color: var(--cor-borda);
+  }
+
+  .gl-envio__foto {
+    display: block;
+    width: 96px;
+    height: 96px;
+    object-fit: cover;
+    background: var(--cor-superficie-2);
+  }
+
+  .gl-envio__campos {
+    display: flex;
+    flex-direction: column;
+    gap: var(--e-3);
+    min-width: 0;
+  }
+
+  .gl-envio__nome {
+    margin: 0;
+    overflow-wrap: anywhere;
+    font-size: var(--t-pequeno);
+  }
+
+  .gl-envio__linha,
+  .gl-form__linha {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: var(--e-3);
+  }
+
+  .gl-envio__estado {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--e-2);
+    align-items: center;
+    font-size: var(--t-pequeno);
+  }
+
+  .gl-envio__estado p {
+    margin: 0;
+  }
+
+  .gl-envio__estado progress {
+    flex: 1 1 140px;
+    height: 10px;
+    accent-color: var(--cor-acao);
+  }
+
+  .gl-envio__estado--erro {
+    color: var(--cor-atencao-texto);
+  }
+
+  /* ---- a janela da foto ---- */
+  .gl-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--e-4);
+  }
+
+  .gl-foco {
+    display: flex;
+    flex-direction: column;
+    gap: var(--e-2);
+  }
+
+  .gl-foco__area {
+    position: relative;
+    cursor: crosshair;
+    line-height: 0;
+  }
+
+  .gl-foco__area:focus-visible {
+    outline: 3px solid var(--cor-foco);
+    outline-offset: 3px;
+  }
+
+  .gl-foco__area img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 46vh;
+    object-fit: contain;
+    background: var(--cor-escuro);
+  }
+
+  .gl-foco__ponto {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    border: 3px solid var(--cor-escuro-texto);
+    outline: 2px solid var(--cor-escuro);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+
+  .gl-foco__cortes {
+    display: flex;
+    gap: var(--e-2);
+    align-items: flex-end;
+  }
+
+  .gl-foco__corte {
+    display: block;
+    border: var(--fio) solid var(--cor-borda);
+    background-size: cover;
+  }
+
+  .gl-foco__corte--largo {
+    width: 160px;
+    height: 72px;
+  }
+
+  .gl-foco__corte--alto {
+    width: 60px;
+    height: 96px;
+  }
+
+  .gl-form__acoes {
+    align-items: center;
+  }
+
+  .gl-form__acoes .link-button {
+    min-height: var(--alvo-toque);
+  }
+
+  .gl-form__espaco {
+    flex: 1;
+  }
+
+  .gl-apagar {
+    color: var(--cor-erro);
+  }
+}

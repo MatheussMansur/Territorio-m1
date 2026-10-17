@@ -1,0 +1,206 @@
+/* Comum a Site, Cardápio e Galeria: subpáginas, abas de idioma, o losango de uma
+   tradução que falta, contadores, janelas e a situação da publicação. */
+@layer pages {
+  .cs-vazio__titulo {
+    color: var(--cor-texto);
+    font-family: var(--f-letreiro);
+    font-size: var(--t-bloco);
+    font-weight: 900;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  .cs-vazio p {
+    max-width: 46ch;
+  }
+
+  /* o losango pendente: um quadrado terracota girado 45°, sempre com palavras ao lado */
+  .losango {
+    display: inline-block;
+    flex: none;
+    width: 9px;
+    height: 9px;
+    margin-inline: 6px 2px;
+    background: var(--cor-atencao);
+    transform: rotate(45deg);
+    vertical-align: 0.1em;
+  }
+
+  .cs-pendente {
+    display: flex;
+    gap: var(--e-2);
+    align-items: baseline;
+    color: var(--cor-atencao-texto);
+    font-size: var(--t-pequeno);
+  }
+
+  .cs-pendente .losango {
+    margin-inline: 2px 0;
+  }
+
+  .cs-linguas {
+    margin-bottom: var(--e-3);
+  }
+
+  .cs-linguas .tab {
+    align-items: center;
+    min-height: var(--alvo-toque);
+    font-size: 16px;
+  }
+
+  @media (max-width: 520px) {
+    .cs-linguas {
+      flex-wrap: nowrap;
+    }
+
+    .cs-linguas .tab {
+      flex: 1 1 0;
+      justify-content: center;
+      gap: 0;
+      padding-inline: 6px;
+      font-size: 14px;
+    }
+  }
+
+  .field__count.is-over {
+    color: var(--cor-erro);
+    font-weight: 700;
+  }
+
+  /* janelas */
+  .cs-janela .dialog__body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--e-4);
+  }
+
+  .cs-janela--pequena .dialog__body {
+    gap: var(--e-3);
+  }
+
+  .cs-acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--e-2);
+    align-items: center;
+  }
+
+  .cs-acoes--fim {
+    justify-content: flex-end;
+    padding-top: var(--e-3);
+    border-top: var(--fio) solid var(--cor-fio);
+  }
+
+  .cs-acoes .btn {
+    min-height: var(--alvo-toque);
+  }
+
+  /* subpáginas de uma área */
+  .cs-subnav {
+    margin-block: var(--e-4) var(--e-5);
+    border-bottom: var(--fio) solid var(--cor-borda);
+  }
+
+  .cs-subnav ul {
+    display: flex;
+    gap: var(--e-1);
+    margin: 0;
+    padding: 0;
+    overflow-x: auto;
+    list-style: none;
+  }
+
+  .cs-subnav__item {
+    display: inline-flex;
+    gap: var(--e-2);
+    align-items: center;
+    min-height: var(--alvo-toque);
+    padding: 0 var(--e-4);
+    border-bottom: 4px solid transparent;
+    color: var(--cor-texto-suave);
+    font-family: var(--f-grotesca);
+    font-size: 17px;
+    font-weight: 800;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .cs-subnav__item:hover {
+    color: var(--cor-texto);
+  }
+
+  .cs-subnav__item[aria-current="page"] {
+    border-bottom-color: var(--cor-selecao);
+    color: var(--cor-texto);
+  }
+
+  .cs-subnav__item small {
+    font-family: var(--f-mono);
+    font-size: 11px;
+  }
+
+  /* situação da publicação */
+  .cs-pub {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--e-2) var(--e-3);
+    align-items: center;
+    margin: 0;
+    font-size: var(--t-pequeno);
+    color: var(--cor-texto-suave);
+  }
+
+  .cs-pub p {
+    margin: 0;
+  }
+
+  .cs-pub--andando .raiz {
+    width: 22px;
+    color: var(--cor-texto-fraco);
+  }
+
+  .cs-pub--falhou {
+    color: var(--cor-texto);
+  }
+
+  .cs-pub--falhou p {
+    flex: 1 1 280px;
+  }
+
+  /* o link de voltar no topo de uma subpágina */
+  .cs-voltar {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--alvo-toque);
+    color: var(--cor-texto-suave);
+    font-size: var(--t-pequeno);
+  }
+
+  .cs-dica {
+    margin: 0;
+    color: var(--cor-texto-suave);
+    font-size: var(--t-pequeno);
+  }
+
+  .cs-somente-leitura {
+    padding: var(--e-3) var(--e-4);
+    border: var(--fio) dashed var(--cor-fio);
+    color: var(--cor-texto-suave);
+    font-size: var(--t-pequeno);
+  }
+
+  .cs-somente-leitura p {
+    margin: 0;
+  }
+}
+
+@layer pages {
+  /* o que a outra pessoa mudou, na janela "juntar ou descartar" */
+  .cs-conflito {
+    display: grid;
+    gap: var(--e-1);
+    margin: 0 0 var(--e-3);
+    padding-left: var(--e-4);
+  }
+}
