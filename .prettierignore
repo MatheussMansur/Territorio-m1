@@ -1,0 +1,5 @@
+dist
+public
+docs/api/openapi.yaml
+package-lock.json
+src/styles/fonts.css

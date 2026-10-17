@@ -1,0 +1,3 @@
+#!/bin/sh
+# Barra um commit que leva algo parecido com chave, token ou senha.
+node scripts/check-secrets.mjs || exit 1

@@ -1,0 +1,34 @@
+{
+  "extends": ["stylelint-config-standard"],
+  "rules": {
+    "color-no-hex": true,
+    "color-named": "never",
+    "function-disallowed-list": ["rgb", "rgba", "hsl", "hsla"],
+    "selector-class-pattern": null,
+    "custom-property-pattern": null,
+    "keyframes-name-pattern": null,
+    "no-descending-specificity": null,
+    "declaration-block-no-redundant-longhand-properties": null,
+    "shorthand-property-no-redundant-values": null,
+    "value-keyword-case": null,
+    "font-family-name-quotes": null,
+    "number-max-precision": null,
+    "media-feature-range-notation": null,
+    "import-notation": null,
+    "comment-empty-line-before": null,
+    "rule-empty-line-before": null,
+    "declaration-empty-line-before": null,
+    "custom-property-empty-line-before": null,
+    "at-rule-empty-line-before": null,
+    "declaration-block-single-line-max-declarations": null,
+    "selector-not-notation": null,
+    "property-no-vendor-prefix": null,
+    "selector-attribute-quotes": null
+  },
+  "overrides": [
+    {
+      "files": ["src/styles/tokens.css", "src/styles/fonts.css"],
+      "rules": { "color-no-hex": null, "function-disallowed-list": null, "font-family-no-missing-generic-family-keyword": null }
+    }
+  ]
+}

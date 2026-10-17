@@ -1,0 +1,25 @@
+node_modules/
+dist/
+test-results/
+playwright-report/
+*.log
+
+# ajustes locais e qualquer segredo nunca vão para o git
+.env.local
+.env.*.local
+*.pem
+
+# sujeira do editor e do sistema operacional
+.vscode/*
+!.vscode/extensions.json
+.DS_Store
+Thumbs.db
+
+.court/
+
+# Oferta do Dia: arquivo original, fora do git até a autora liberar o uso na web
+scripts/fonts/originais/
+public/fonts/oferta-do-dia.ttf
+
+# cache do Python
+__pycache__/
