@@ -1,0 +1,311 @@
+/* Agenda: o mês como grade de dias de papel (uma lista de dias no celular), a semana em
+   colunas, e o plano de uma data. Dias fechados ficam hachurados e dizem "Fechado". */
+@layer pages {
+  /* ---- o mês ---- */
+  .ag-mes__semana,
+  .ag-mes__dias {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+  }
+
+  .ag-mes__semana span {
+    padding: var(--e-1) var(--e-2);
+    font-family: var(--f-mono);
+    font-size: var(--t-rotulo);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--cor-texto-fraco);
+  }
+
+  .ag-mes__dias {
+    gap: var(--fio);
+    margin: 0;
+    padding: var(--fio);
+    list-style: none;
+    background: var(--cor-borda);
+  }
+
+  .ag-mes__dias > li {
+    display: flex;
+    min-width: 0;
+    background: var(--cor-fundo);
+  }
+
+  .ag-dia {
+    position: relative;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+    min-height: 128px;
+    padding: var(--e-2);
+    border: 0;
+    background: var(--grao), var(--cor-superficie);
+    color: inherit;
+    font: inherit;
+    font-size: 12.5px;
+    text-align: left;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+  }
+
+  .ag-dia:hover {
+    box-shadow: inset 0 0 0 var(--fio) var(--cor-selecao);
+  }
+
+  .ag-dia:focus-visible {
+    outline: 3px solid var(--cor-foco);
+    outline-offset: -3px;
+  }
+
+  .ag-dia.is-fechado {
+    background:
+      repeating-linear-gradient(135deg, var(--cor-hachura) 0 1.5px, transparent 1.5px 9px),
+      var(--cor-fundo);
+  }
+
+  .ag-dia.is-passado {
+    color: var(--cor-texto-suave);
+  }
+
+  .ag-dia.is-hoje {
+    box-shadow: inset 0 0 0 3px var(--cor-borda);
+  }
+
+  .ag-dia.is-especial {
+    box-shadow: inset 5px 0 0 var(--cor-atencao);
+  }
+
+  .ag-dia.is-hoje.is-especial {
+    box-shadow:
+      inset 5px 0 0 var(--cor-atencao),
+      inset 0 0 0 3px var(--cor-borda);
+  }
+
+  .ag-dia[aria-pressed="true"] {
+    background: var(--cor-acao);
+    color: var(--cor-acao-texto);
+  }
+
+  .ag-dia:disabled {
+    cursor: not-allowed;
+  }
+
+  .ag-dia__topo {
+    display: flex;
+    align-items: baseline;
+    gap: var(--e-2);
+  }
+
+  .ag-dia__num {
+    font-family: var(--f-grotesca);
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 1;
+  }
+
+  .ag-dia__semana {
+    display: none;
+    font-family: var(--f-mono);
+    font-size: var(--t-rotulo);
+    text-transform: uppercase;
+  }
+
+  .ag-dia__hoje {
+    margin-left: auto;
+  }
+
+  .ag-dia__fechado b,
+  .ag-semana__fechado b {
+    font-family: var(--f-mono);
+    font-size: var(--t-rotulo);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .ag-dia__linha {
+    line-height: 1.3;
+  }
+
+  .ag-dia__evento {
+    padding: 1px var(--e-1);
+    border-left: 3px solid var(--cor-atencao);
+    font-weight: 650;
+    line-height: 1.3;
+  }
+
+  .ag-dia__marca {
+    align-self: flex-start;
+    margin-top: auto;
+  }
+
+  .ag-dia[aria-pressed="true"] .badge {
+    border-color: currentColor;
+    color: inherit;
+  }
+
+  .ag-ocupa {
+    display: flex;
+    align-items: center;
+    gap: var(--e-1);
+  }
+
+  .ag-ocupa__barra {
+    position: relative;
+    flex: 1;
+    height: 6px;
+    border: 1px solid var(--cor-borda);
+    background: linear-gradient(90deg, var(--cor-acao) var(--pct), transparent var(--pct));
+  }
+
+  .ag-ocupa__num {
+    font-family: var(--f-mono);
+    font-size: 11px;
+  }
+
+  .ag-dia[aria-pressed="true"] .ag-ocupa__barra {
+    border-color: currentColor;
+    background: linear-gradient(90deg, currentColor var(--pct), transparent var(--pct));
+  }
+
+  .ag-selecao {
+    position: sticky;
+    bottom: var(--e-3);
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--e-2) var(--e-3);
+    padding: var(--e-3);
+    border: var(--barra) solid var(--cor-borda);
+    background: var(--grao), var(--cor-superficie);
+    font-weight: 650;
+  }
+
+  .ag-selecao span {
+    margin-right: auto;
+  }
+
+  /* ---- a semana ---- */
+  .ag-semana {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: var(--fio);
+    margin: 0;
+    padding: var(--fio);
+    list-style: none;
+    background: var(--cor-borda);
+  }
+
+  .ag-semana__dia {
+    display: flex;
+    flex-direction: column;
+    gap: var(--e-2);
+    min-width: 0;
+    padding: var(--e-3);
+    background: var(--grao), var(--cor-superficie);
+    font-size: 13px;
+  }
+
+  .ag-semana__dia.is-fechado {
+    background:
+      repeating-linear-gradient(135deg, var(--cor-hachura) 0 1.5px, transparent 1.5px 9px),
+      var(--cor-fundo);
+  }
+
+  .ag-semana__dia.is-hoje {
+    box-shadow: inset 0 0 0 3px var(--cor-borda);
+  }
+
+  .ag-semana__dia .btn {
+    margin-top: auto;
+  }
+
+  .ag-semana__titulo {
+    font-family: var(--f-grotesca);
+    font-size: 17px;
+    font-weight: 900;
+    line-height: 1.1;
+    text-transform: uppercase;
+  }
+
+  .ag-semana__horarios {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .ag-semana__horarios li {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--e-2);
+    padding: 3px 0;
+    border-bottom: 1px solid var(--cor-fio);
+  }
+
+  @media (width < 1100px) {
+    .ag-semana {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+  }
+
+  /* ---- o celular: o mês vira uma lista de dias ---- */
+  @media (width < 768px) {
+    .ag-nav {
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    .ag-mes__semana,
+    .ag-mes__vago {
+      display: none;
+    }
+
+    .ag-mes__dias {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .ag-dia {
+      min-height: 0;
+      font-size: 14px;
+    }
+
+    .ag-dia__semana {
+      display: inline;
+    }
+
+    .ag-semana {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .ag-selecao {
+      bottom: calc(var(--barra-altura) + var(--e-2) + env(safe-area-inset-bottom));
+    }
+  }
+
+  /* ---- uma data ---- */
+  .ag-rapido,
+  .ag-plano {
+    padding: var(--e-4);
+    border: var(--fio) solid var(--cor-borda);
+    background: var(--grao), var(--cor-superficie);
+  }
+
+  .ag-rapido {
+    display: flex;
+    flex-direction: column;
+    gap: var(--e-3);
+  }
+
+  .ag-rapido__linha {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: var(--e-3);
+  }
+
+  .ag-rapido__linha .field {
+    flex: 1 1 220px;
+  }
+}

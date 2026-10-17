@@ -1,0 +1,239 @@
+/* Eventos: a lista, a folha do evento (texto em três idiomas, o modo de reserva em cartões)
+   e a lista da porta. */
+@layer pages {
+  .ev-nome {
+    font-weight: 700;
+    color: inherit;
+    text-underline-offset: 4px;
+  }
+
+  .ev-chegaram {
+    display: block;
+    font-size: var(--t-pequeno);
+    color: var(--cor-texto-suave);
+  }
+
+  .ev-cabeca {
+    align-items: baseline;
+  }
+
+  .ev-titulo {
+    font-family: var(--f-grotesca);
+    font-size: clamp(22px, 3vw, 30px);
+    font-weight: 900;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  .ev-bloco {
+    display: flex;
+    flex-direction: column;
+    gap: var(--e-3);
+    margin: 0;
+    padding: var(--e-4);
+    border: var(--fio) solid var(--cor-borda);
+    background: var(--grao), var(--cor-superficie);
+  }
+
+  .ev-bloco > legend {
+    float: left;
+    width: 100%;
+    margin-bottom: var(--e-3);
+  }
+
+  .ev-linguas .tab {
+    min-height: var(--alvo-toque);
+    font-size: 16px;
+  }
+
+  .ev-falta {
+    padding: 0 5px;
+    border: 1.5px dashed var(--cor-atencao);
+    color: var(--cor-atencao-texto);
+    font-family: var(--f-mono);
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .tab[aria-selected="true"] .ev-falta {
+    border-color: currentColor;
+    color: inherit;
+  }
+
+  .ev-modos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: var(--e-2);
+  }
+
+  .ev-modo {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--e-2);
+    min-height: var(--alvo-toque);
+    padding: var(--e-3);
+    border: var(--fio) solid var(--cor-borda);
+    background: var(--cor-fundo);
+    cursor: pointer;
+  }
+
+  .ev-modo input {
+    flex: none;
+    width: 18px;
+    height: 18px;
+    margin-top: 2px;
+    accent-color: var(--cor-acao);
+  }
+
+  .ev-modo span {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .ev-modo small {
+    font-size: var(--t-pequeno);
+    color: var(--cor-texto-suave);
+  }
+
+  .ev-modo.is-on {
+    background: var(--cor-acao);
+    border-color: var(--cor-acao);
+    color: var(--cor-acao-texto);
+  }
+
+  .ev-modo.is-on small {
+    color: inherit;
+  }
+
+  .ev-modo:has(input:focus-visible) {
+    outline: 3px solid var(--cor-foco);
+    outline-offset: 2px;
+  }
+
+  .ev-gravar {
+    position: sticky;
+    bottom: 0;
+    z-index: 3;
+    padding: var(--e-3) 0;
+    border-top: var(--fio) solid var(--cor-borda);
+    background: var(--grao), var(--cor-fundo);
+  }
+
+  .ev-lista {
+    display: flex;
+    flex-direction: column;
+    gap: var(--e-4);
+    padding-top: var(--e-3);
+  }
+
+  .ev-convidado {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: var(--e-3);
+    padding: var(--e-4);
+    border: var(--fio) solid var(--cor-borda);
+    background: var(--grao), var(--cor-superficie);
+  }
+
+  .ev-convidado .field {
+    flex: 1 1 220px;
+  }
+
+  .ev-convidado .ev-convidado__num {
+    flex: 0 1 120px;
+  }
+
+  .ev-busca {
+    max-width: 420px;
+  }
+
+  .ev-lista .action {
+    min-height: var(--alvo-toque);
+  }
+
+  .data-table tbody tr.ev-chegou {
+    box-shadow: inset 4px 0 0 var(--cor-acao);
+  }
+
+  @media (width < 768px) {
+    .ev-gravar {
+      bottom: calc(var(--barra-altura) + env(safe-area-inset-bottom));
+    }
+
+    .ev-convidado .btn {
+      flex: 1 1 100%;
+    }
+  }
+}
+
+@layer pages {
+  /* a foto do evento, escolhida na Galeria */
+  .ev-foto {
+    display: flex;
+    flex-direction: column;
+    gap: var(--e-2);
+  }
+
+  .ev-foto.is-erro {
+    padding-inline-start: var(--e-3);
+    box-shadow: inset 4px 0 0 var(--cor-erro);
+  }
+
+  .ev-foto__escolhida {
+    display: flex;
+    align-items: center;
+    gap: var(--e-3);
+  }
+
+  .ev-foto__escolhida img {
+    width: 96px;
+    height: 64px;
+    object-fit: cover;
+    border: var(--fio) solid var(--cor-borda);
+  }
+
+  .ev-galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: var(--e-3);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .ev-galeria__foto {
+    display: flex;
+    flex-direction: column;
+    gap: var(--e-1);
+    width: 100%;
+    min-height: var(--alvo-toque);
+    padding: var(--e-2);
+    border: var(--fio) solid var(--cor-borda);
+    background: var(--cor-superficie);
+    color: var(--cor-texto);
+    font: inherit;
+    font-size: var(--t-pequeno);
+    text-align: start;
+    cursor: pointer;
+  }
+
+  .ev-galeria__foto img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+  }
+
+  .ev-galeria__foto.is-on {
+    border-color: var(--cor-acao);
+    box-shadow: inset 0 0 0 2px var(--cor-acao);
+  }
+
+  .ev-galeria__foto:focus-visible {
+    outline: 3px solid var(--cor-foco);
+    outline-offset: 2px;
+  }
+}
