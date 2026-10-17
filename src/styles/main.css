@@ -1,0 +1,21 @@
+/* Entrada comum de toda página: fontes, tokens do tema, base, a moldura de ferro e os componentes.
+   Os estilos de página (public.css, admin.css) põem a sua própria camada por cima. */
+@layer tokens, base, layout, components, pages, utilities;
+
+@import url("./fonts.css");
+@import url("./tokens.css") layer(tokens);
+@import url("./base.css") layer(base);
+@import url("./layout.css") layer(layout);
+@import url("./components/button.css") layer(components);
+@import url("./components/field.css") layer(components);
+@import url("./components/choice.css") layer(components);
+@import url("./components/dialog.css") layer(components);
+@import url("./components/toast.css") layer(components);
+@import url("./components/badge.css") layer(components);
+@import url("./components/data-table.css") layer(components);
+@import url("./components/tabs.css") layer(components);
+@import url("./components/feedback.css") layer(components);
+@import url("./components/receipt.css") layer(components);
+@import url("./components/floor.css") layer(components);
+@import url("./components/stats.css") layer(components);
+@import url("./components/seal.css") layer(components);

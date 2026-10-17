@@ -1,0 +1,166 @@
+/* O comprovante da reserva: um canhoto de papel rasgado; o carimbo só cai quando a mesa é confirmada.
+   Também a lista de resumo e o progresso de três barras da janela de reserva. */
+.receipt {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px 16px 14px;
+  border: var(--fio) solid var(--cor-superficie);
+  outline: 2px dashed var(--cor-borda);
+  outline-offset: -8px;
+  background: var(--grao), var(--cor-superficie);
+  color: var(--cor-texto);
+}
+
+.receipt__logo {
+  width: 130px;
+  height: 36px;
+  background: var(--cor-borda);
+  mask: url("/img/logo.png") left center / contain no-repeat;
+}
+
+.receipt .mao {
+  font-size: 27px;
+  color: var(--cor-atencao-texto);
+}
+
+.receipt__code {
+  font-family: var(--f-letreiro);
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 0.9;
+  letter-spacing: 0.04em;
+}
+
+.receipt__line {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding-top: 8px;
+  border-top: 1px dashed var(--cor-borda);
+  font-size: 14px;
+}
+
+.receipt__line > :first-child {
+  flex: none;
+  white-space: nowrap;
+}
+
+.receipt__line > :last-child {
+  text-align: right;
+}
+
+.receipt .receipt__stamp {
+  position: absolute;
+  right: 14px;
+  top: 14px;
+  width: 64px;
+  height: 64px;
+  color: var(--cor-selecao);
+  transform: rotate(-14deg);
+  opacity: 0.9;
+}
+
+.receipt.is-new {
+  animation: receipt-up 0.42s var(--ease-out) both;
+}
+
+.receipt.is-new .receipt__stamp {
+  animation: stamp 0.5s var(--ease-out) 0.18s both;
+}
+
+@keyframes receipt-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes stamp {
+  from {
+    opacity: 0;
+    transform: scale(1.35) rotate(-40deg);
+  }
+
+  to {
+    opacity: 0.9;
+    transform: scale(1) rotate(-14deg);
+  }
+}
+
+/* pendente: ainda sem carimbo, um contorno pontilhado espera por ele */
+.receipt.receipt--pending .receipt__stamp {
+  border: 2px dotted var(--cor-atencao);
+  border-radius: 50%;
+  color: transparent;
+}
+
+.receipt--waitlist {
+  outline-style: dotted;
+}
+
+/* cancelada, recusada ou passada: sem carimbo, o papel desbota */
+.receipt--closed {
+  opacity: 0.72;
+}
+
+.receipt--closed .receipt__stamp {
+  display: none;
+}
+
+/* resumo no lado de ferro da janela de reserva */
+.summary {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.summary div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--cor-escuro-fio);
+}
+
+.summary dt {
+  font-family: var(--f-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cor-escuro-rotulo);
+}
+
+.summary dd {
+  margin: 0;
+  font-family: var(--f-grotesca);
+  font-weight: 800;
+  font-size: 21px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+/* três barras que enchem conforme a reserva avança */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(var(--steps, 3), 1fr);
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.steps li {
+  height: 6px;
+  background: var(--cor-escuro-fio);
+}
+
+.steps li.is-done {
+  background: var(--cor-escuro-texto);
+}

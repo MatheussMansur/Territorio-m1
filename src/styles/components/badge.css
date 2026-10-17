@@ -1,0 +1,94 @@
+/* Carimbos de status: texto mais um padrão, nunca só a cor. */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 7px;
+  border: 1.5px solid var(--cor-texto-fraco);
+  color: var(--cor-texto-suave);
+  font-family: var(--f-mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  line-height: 1.5;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.badge--confirmed {
+  background: var(--cor-acao);
+  border-color: var(--cor-acao);
+  color: var(--cor-acao-texto);
+}
+
+.badge--pending {
+  border-color: var(--cor-atencao);
+  color: var(--cor-atencao-texto);
+}
+
+.badge--waitlisted {
+  border-style: dashed;
+  border-color: var(--cor-atencao);
+  color: var(--cor-atencao-texto);
+}
+
+.badge--offered {
+  background: var(--cor-atencao);
+  border-color: var(--cor-atencao);
+  color: var(--cor-acao-texto);
+}
+
+.badge--declined,
+.badge--canceled {
+  border-style: dashed;
+  text-decoration: line-through;
+}
+
+.badge--expired {
+  border-color: var(--cor-fio);
+  color: var(--cor-texto-fraco);
+}
+
+.badge--completed {
+  background: var(--cor-superficie-2);
+  border-color: var(--cor-superficie-2);
+  color: var(--cor-texto);
+}
+
+.badge--no-show {
+  background: var(--cor-erro);
+  border-color: var(--cor-erro);
+  color: var(--cor-acao-texto);
+}
+
+/* a resposta do cliente ao lembrete do dia */
+.badge--said-yes {
+  border-color: var(--cor-acao);
+  color: var(--cor-texto);
+}
+
+.badge--said-yes::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  background: var(--cor-acao);
+}
+
+.badge--no-reply {
+  border-style: dotted;
+  border-color: var(--cor-atencao);
+  color: var(--cor-atencao-texto);
+}
+
+/* contador pequeno nos menus */
+.count {
+  display: inline-grid;
+  place-items: center;
+  min-width: 20px;
+  padding: 1px 5px;
+  background: var(--cor-atencao);
+  color: var(--cor-acao-texto);
+  font-family: var(--f-mono);
+  font-size: 10px;
+  letter-spacing: 0;
+}

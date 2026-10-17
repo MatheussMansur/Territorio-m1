@@ -1,0 +1,182 @@
+/* Botões: ferro por padrão, terracota ao passar o mouse, contorno tracejado quando desativados. */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 10px 20px;
+  border: var(--fio) solid var(--cor-acao);
+  background: var(--cor-acao);
+  color: var(--cor-acao-texto);
+  font-family: var(--f-grotesca);
+  font-weight: 800;
+  font-size: var(--t-botao);
+  letter-spacing: 0.06em;
+  line-height: 1.1;
+  text-transform: uppercase;
+  text-decoration: none;
+  touch-action: manipulation;
+  transition:
+    background-color var(--dur-rapida),
+    color var(--dur-rapida),
+    border-color var(--dur-rapida);
+}
+
+.btn:is(:hover, .is-hover):not(:disabled, [aria-busy="true"]) {
+  background: var(--cor-acao-hover);
+  border-color: var(--cor-acao-hover);
+}
+
+.btn.is-focus {
+  outline: 3px solid var(--cor-foco);
+  outline-offset: 2px;
+}
+
+.btn:disabled,
+.btn[aria-disabled="true"] {
+  background: transparent;
+  color: var(--cor-texto-fraco);
+  border-color: var(--cor-texto-fraco);
+  border-style: dashed;
+  cursor: not-allowed;
+}
+
+/* esperando a API: a semente gira, o clique fica bloqueado */
+.btn[aria-busy="true"] {
+  cursor: progress;
+}
+
+.btn[aria-busy="true"] .btn__spin {
+  display: inline-block;
+}
+
+.btn__spin {
+  display: none;
+  width: 20px;
+  height: 20px;
+  flex: none;
+  animation: btn-spin 1.2s linear infinite;
+}
+
+@keyframes btn-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.btn--outline {
+  background: transparent;
+  color: var(--cor-acao);
+}
+
+.btn--outline:is(:hover, .is-hover):not(:disabled) {
+  background: var(--cor-acao);
+  border-color: var(--cor-acao);
+  color: var(--cor-acao-texto);
+}
+
+.btn--inverse {
+  background: var(--cor-superficie);
+  color: var(--cor-acao);
+  border-color: var(--cor-superficie);
+}
+
+.btn--inverse:is(:hover, .is-hover):not(:disabled) {
+  color: var(--cor-acao-texto);
+}
+
+.btn--inverse:disabled {
+  color: var(--cor-escuro-rotulo);
+  border-color: var(--cor-escuro-borda);
+}
+
+.btn--ghost-dark {
+  background: transparent;
+  color: var(--cor-escuro-texto);
+  border-color: var(--cor-escuro-borda);
+}
+
+.btn--danger {
+  background: transparent;
+  color: var(--cor-erro);
+  border-color: var(--cor-erro);
+}
+
+.btn--danger:is(:hover, .is-hover):not(:disabled) {
+  background: var(--cor-erro);
+  border-color: var(--cor-erro);
+  color: var(--cor-acao-texto);
+}
+
+.btn--sm {
+  min-height: 38px;
+  padding: 6px 12px;
+  font-size: 15px;
+}
+
+.btn--lg {
+  min-height: 62px;
+  padding: 12px 36px;
+  font-size: 24px;
+}
+
+.btn--block {
+  width: 100%;
+}
+
+/* ação quadrada pequena usada nas tabelas e na planta do salão */
+.action {
+  min-height: 38px;
+  padding: 6px 10px;
+  border: var(--fio) solid var(--cor-acao);
+  background: transparent;
+  font-family: var(--f-grotesca);
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition:
+    background-color var(--dur-rapida),
+    color var(--dur-rapida),
+    border-color var(--dur-rapida);
+}
+
+.action--solid {
+  background: var(--cor-acao);
+  color: var(--cor-acao-texto);
+}
+
+.action--alert {
+  border-color: var(--cor-atencao);
+  color: var(--cor-atencao-texto);
+}
+
+.action:is(:hover, .is-hover):not(:disabled) {
+  background: var(--cor-acao-hover);
+  border-color: var(--cor-acao-hover);
+  color: var(--cor-acao-texto);
+}
+
+.action:disabled {
+  border-style: dashed;
+  color: var(--cor-texto-fraco);
+  border-color: var(--cor-texto-fraco);
+  cursor: not-allowed;
+}
+
+.link-button {
+  padding: 10px 6px;
+  border: 0;
+  background: none;
+  font-weight: 600;
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+@media (max-width: 860px) {
+  .btn--lg {
+    width: 100%;
+  }
+}

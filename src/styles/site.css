@@ -1,0 +1,1997 @@
+/* Páginas públicas, no desenho do site aprovado (o PDF): painéis de papel presos numa moldura de ferro,
+   a placa pintada, as plaquinhas penduradas na barra, o círculo de sementes. Cores e letras só
+   dos tokens (AD-31); cantos retos, sem sombras. */
+
+/* ---- marca: a placa pintada (como no PDF) e o círculo de sementes, pintados pelo tema ---- */
+.logo-letreiro {
+  display: block;
+  aspect-ratio: 899 / 249;
+  background: currentColor;
+  mask: url("/img/logo.png") left center / contain no-repeat;
+}
+
+.logo-letreiro--viga {
+  width: 112px;
+}
+
+.logo-letreiro--rodape {
+  width: 170px;
+  justify-self: end;
+  mask-position: right center;
+  color: var(--cor-escuro-texto);
+}
+
+.seal-mask {
+  display: inline-block;
+  aspect-ratio: 1;
+  background: currentColor;
+  mask: url("/img/selo-sementes.svg") center / contain no-repeat;
+}
+
+/* ---- a moldura de ferro: painéis de papel presos por barras pretas ---- */
+.esq {
+  display: grid;
+  gap: var(--barra);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: var(--cor-borda);
+  border: var(--barra) solid var(--cor-borda);
+}
+
+.esq-fina {
+  gap: var(--fio);
+  border-width: var(--fio);
+}
+
+.esq--2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.painel {
+  min-width: 0;
+  padding: clamp(16px, 2.2vw, 26px);
+  background: var(--grao), var(--cor-superficie);
+}
+
+.painel-foto {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: var(--cor-escuro);
+}
+
+/* a foto preenche o painel e acompanha a altura do texto ao lado, nunca o contrário */
+.painel-foto picture {
+  position: absolute;
+  inset: 0;
+}
+
+.painel-foto picture,
+.painel-foto img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.92) contrast(1.04);
+}
+
+@media (max-width: 860px) {
+  .esq--2 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* ---- as seções ficam penduradas na barra de ferro, com uma plaquinha ---- */
+.sec {
+  padding-block: 0 clamp(56px, 8vw, 96px);
+}
+
+/* Entre as seções, a raiz do manual da marca em vez de uma linha de ferro simples: a linha sai
+   das pontas da raiz dos dois lados, e a raiz gira um pouco quando a página passa por ela. */
+.sec-barra {
+  position: relative;
+  --raiz: clamp(72px, 9vw, 104px);
+}
+
+.sec-barra::before,
+.sec-barra::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.sec-barra::before {
+  inset: 0 0 auto;
+  height: var(--barra);
+  background: var(--cor-borda);
+  mask: linear-gradient(90deg, currentcolor calc(50% - var(--raiz) * 0.42), transparent calc(50% - var(--raiz) * 0.42), transparent calc(50% + var(--raiz) * 0.42), currentcolor calc(50% + var(--raiz) * 0.42));
+}
+
+.sec-barra::after {
+  top: calc(var(--barra) / 2);
+  left: 50%;
+  width: var(--raiz);
+  aspect-ratio: 1;
+  background: var(--cor-borda);
+  mask: url("/img/marca/raiz-mascara.webp") center / contain no-repeat;
+  translate: -50% -50%;
+}
+
+@supports (animation-timeline: view()) {
+  .sec-barra::after {
+    animation: raiz-gira linear both;
+    animation-timeline: view();
+  }
+}
+
+@keyframes raiz-gira {
+  0% {
+    rotate: -40deg;
+  }
+
+  100% {
+    rotate: 40deg;
+  }
+}
+
+/* seções de kraft: uma raiz grande cresce a partir de um canto, como nas páginas do manual */
+.sec-kraft {
+  background:
+    url("/img/marca/raiz-canto.webp") right -14vw top -12vw / clamp(380px, 46vw, 720px) no-repeat,
+    var(--grao),
+    var(--cor-superficie-2);
+}
+
+.sec[id] {
+  scroll-margin-top: 58px;
+}
+
+.placa {
+  display: inline-block;
+  margin-bottom: clamp(26px, 4vw, 42px);
+  padding: 8px 14px 9px;
+  background: var(--cor-escuro);
+  color: var(--cor-escuro-texto);
+  font-family: var(--f-mono);
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.sec-cabeca {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: clamp(18px, 4vw, 56px);
+  align-items: end;
+  margin-bottom: clamp(26px, 4vw, 40px);
+}
+
+.sec-cabeca h2,
+.sec-titulo {
+  font-size: clamp(44px, 6.6vw, 92px);
+}
+
+.sec-cabeca .prose {
+  padding-bottom: 6px;
+  font-size: 17.5px;
+  color: var(--cor-texto-suave);
+}
+
+@media (max-width: 860px) {
+  .sec-cabeca {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.link {
+  color: var(--cor-texto);
+  font-weight: 600;
+  text-underline-offset: 5px;
+}
+
+.link--claro {
+  padding: 10px 6px;
+  color: var(--cor-escuro-texto);
+}
+
+.btn-inverso {
+  background: var(--papel-claro);
+  color: var(--ferro);
+  border-color: var(--papel-claro);
+}
+
+.btn-inverso:hover {
+  background: var(--terracota);
+  color: var(--papel-claro);
+  border-color: var(--terracota);
+}
+
+/* ---- a barra de ferro no topo: transparente sobre a capa, ferro depois dela ---- */
+.viga {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-viga);
+  background: var(--cor-escuro);
+  color: var(--cor-escuro-texto);
+  transition: background-color 0.25s ease;
+}
+
+.viga--capa {
+  position: fixed;
+  inset: 0 0 auto;
+}
+
+.viga--capa.is-transparente {
+  background: transparent;
+}
+
+.viga__in {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  min-height: 58px;
+}
+
+.viga__marca {
+  flex: none;
+  color: var(--cor-escuro-texto);
+}
+
+.viga__nav {
+  display: flex;
+  flex: 1;
+  align-self: stretch;
+  justify-content: flex-end;
+}
+
+.viga__nav a {
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  border-left: 1px solid var(--cor-escuro-fio);
+  color: var(--cor-escuro-texto-suave);
+  font-family: var(--f-grotesca);
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.viga__nav a:hover {
+  color: var(--cor-escuro-texto);
+}
+
+.viga__tools {
+  display: flex;
+  align-items: center;
+  gap: var(--e-3);
+}
+
+.viga__reservar {
+  min-height: 38px;
+  padding: 6px 14px;
+  font-size: 16px;
+  border-color: var(--papel-claro);
+  background: var(--papel-claro);
+  color: var(--ferro);
+}
+
+.viga__reservar:hover {
+  background: var(--terracota);
+  border-color: var(--terracota);
+  color: var(--papel-claro);
+}
+
+.langs {
+  display: flex;
+  gap: 2px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: var(--f-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+}
+
+.langs a,
+.langs__current {
+  display: inline-grid;
+  place-items: center;
+  min-width: 32px;
+  min-height: 34px;
+  color: var(--cor-escuro-texto-suave);
+  text-decoration: none;
+}
+
+.langs__current {
+  color: var(--cor-escuro-texto);
+  box-shadow: inset 0 -2px 0 var(--cor-escuro-texto);
+}
+
+.theme-toggle {
+  display: inline-grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: var(--fio) solid var(--cor-escuro-borda);
+  background: transparent;
+  color: var(--cor-escuro-texto);
+}
+
+/* um círculo meio cheio: o estado está no rótulo, nunca só no desenho */
+.theme-toggle span {
+  width: 16px;
+  height: 16px;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  background: linear-gradient(90deg, currentColor 50%, transparent 50%);
+}
+
+@media (max-width: 860px) {
+  .viga__nav {
+    display: none;
+  }
+
+  .viga__in {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 420px) {
+  .viga__in {
+    gap: var(--e-2);
+  }
+
+  .viga__tools {
+    gap: var(--e-1);
+  }
+
+  .logo-letreiro--viga {
+    width: 92px;
+  }
+
+  .langs a,
+  .langs__current {
+    min-width: 28px;
+  }
+}
+
+/* ---- capa: a fachada acende, a placa se escreve sozinha ---- */
+.capa {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: clamp(600px, 92vh, 860px);
+  overflow: hidden;
+  background: var(--noite);
+  color: var(--papel-claro);
+}
+
+.capa__foto {
+  position: absolute;
+  inset: 0;
+}
+
+.capa__foto picture,
+.capa__foto img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 70% 30%;
+}
+
+.capa__escuro {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, var(--capa-92) 0%, var(--capa-62) 38%, var(--capa-8) 72%),
+    linear-gradient(0deg, var(--capa-85) 0%, var(--capa-0) 34%);
+}
+
+.capa__apagada {
+  position: absolute;
+  inset: 0;
+  background: var(--noite);
+  opacity: 0.2;
+  animation: acende 1.7s var(--ease-out) 0.15s both;
+}
+
+@keyframes acende {
+  from {
+    opacity: 0.9;
+  }
+
+  to {
+    opacity: 0.2;
+  }
+}
+
+.capa__in {
+  position: relative;
+  flex: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  align-items: center;
+  gap: 24px;
+  padding-block: 112px 40px;
+}
+
+.capa__texto {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 620px;
+}
+
+.capa__rotulo {
+  color: var(--papel-no-escuro);
+}
+
+.capa__logo {
+  width: min(100%, 540px);
+  color: var(--papel-claro);
+  animation: escreve 1.1s var(--ease-escreve) 1.05s both;
+}
+
+.capa__mao {
+  font-size: clamp(34px, 4vw, 48px);
+  color: var(--lampada);
+}
+
+.capa__lede {
+  max-width: 36ch;
+  font-size: clamp(18px, 1.7vw, 20px);
+  color: var(--papel-no-escuro-2);
+}
+
+.capa__acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.entra {
+  animation: entra 0.8s var(--ease-out) var(--atraso, 0s) both;
+}
+
+@keyframes entra {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes escreve {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.selo-palco {
+  position: relative;
+  justify-self: center;
+  display: grid;
+  place-items: center;
+  width: clamp(240px, 31vw, 420px);
+  aspect-ratio: 1;
+  --selo-inicio: 2.1s; /* a placa termina de se escrever por volta de 2,15 s */
+}
+
+/* O selo da capa. Nas telas grandes o selo 3D do site aprovado (src/components/seal-3d.js)
+   entra em cena depois do título; este desenho plano é a reserva dele e faz a mesma entrada:
+   as 24 sementes crescem uma depois da outra em volta do círculo depois que o título foi escrito (como
+   um traço desenhando o círculo), o miolo pousa com um pequeno quique, depois gira devagar. */
+.selo-palco__selo {
+  width: 72%;
+  color: var(--creme-selo);
+  filter: drop-shadow(0 14px 18px var(--capa-55));
+}
+
+/* o selo 3D está carregando ou rodando: o plano sai de cena */
+.selo-palco.is-3d .selo-palco__selo {
+  visibility: hidden;
+}
+
+.selo-palco__giro {
+  animation: gira 250s linear calc(var(--selo-inicio) + 2.2s) infinite;
+}
+
+.selo-vivo {
+  display: block;
+  width: 100%;
+  overflow: visible;
+}
+
+.selo-vivo .semente,
+.selo-vivo .miolo {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+}
+
+.selo-vivo .semente {
+  animation: semente 0.48s cubic-bezier(0.33, 1, 0.68, 1) calc(var(--selo-inicio) + var(--i) * 0.0536s) both;
+}
+
+.selo-vivo .miolo {
+  animation: miolo 0.48s cubic-bezier(0.34, 1.7, 0.64, 1) calc(var(--selo-inicio) + 1.72s) both;
+}
+
+@keyframes semente {
+  0% {
+    opacity: 0;
+    transform: translateY(5px) scale(0.001);
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes miolo {
+  from {
+    opacity: 0;
+    transform: scale(0.2);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes gira {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.capa__rodape {
+  position: relative;
+  border-top: 1px solid var(--capa-fio);
+}
+
+.capa__rodape .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 28px;
+  padding-block: 16px 18px;
+  font-family: var(--f-mono);
+  font-size: 12.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--papel-no-escuro);
+}
+
+.capa__rodape b {
+  color: var(--papel-claro);
+  font-weight: 600;
+}
+
+.capa__rodape .is-open b {
+  color: var(--lampada);
+}
+
+@media (max-width: 860px) {
+  .capa {
+    min-height: 0;
+  }
+
+  /* a foto vira uma faixa: tijolo, janelas de ferro e o varal de lâmpadas cabem todos */
+  .capa__foto {
+    position: relative;
+    inset: auto;
+    aspect-ratio: 1080 / 765;
+  }
+
+  .capa__escuro {
+    background: linear-gradient(180deg, var(--capa-55) 0, var(--capa-0) 22vw, var(--capa-0) 46vw, var(--noite) 70.8vw);
+  }
+
+  .capa__in {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 6px;
+    margin-top: -20px;
+    padding-block: 6px 30px;
+  }
+
+  .selo-palco {
+    display: none;
+  }
+
+  .capa__logo {
+    width: min(100%, 330px);
+  }
+
+  .capa__mao {
+    font-size: 32px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sec-barra::after {
+    animation: none;
+  }
+
+  .capa__apagada,
+  .capa__logo,
+  .entra,
+  .selo-palco__giro,
+  .selo-vivo .semente,
+  .selo-vivo .miolo {
+    animation: none;
+  }
+
+}
+
+/* ---- hoje na casa: a faixa terracota com as sementes ---- */
+.hoje {
+  background: var(--grao), var(--terracota);
+  color: var(--papel-claro);
+  border-bottom: var(--barra) solid var(--cor-borda);
+}
+
+.hoje__in {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  gap: 14px;
+  align-items: center;
+  padding-block: 16px;
+}
+
+.hoje__selo {
+  width: 64px;
+  color: var(--creme-selo);
+}
+
+.hoje__regra {
+  font-family: var(--f-letreiro);
+  font-weight: 800;
+  font-size: clamp(22px, 2.6vw, 30px);
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.hoje__dica {
+  font-size: 14px;
+  color: var(--texto-na-terra);
+}
+
+/* ---- o bloco do cardápio: abas e foto à esquerda, a folha à direita ---- */
+.cardapio {
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+}
+
+.cardapio__lado {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.cardapio__abas {
+  display: flex;
+  flex-direction: column;
+  border-top: var(--fio) solid var(--cor-borda);
+}
+
+.cardapio__aba {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+  padding: 12px 4px;
+  border-bottom: 1px solid var(--cor-fio);
+  color: var(--cor-texto);
+  font-family: var(--f-grotesca);
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition:
+    color 0.15s ease,
+    padding-left 0.2s var(--ease-out);
+}
+
+.cardapio__aba small {
+  font-family: var(--f-mono);
+  font-weight: 400;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--cor-texto-fraco);
+}
+
+.cardapio__aba:hover {
+  color: var(--cor-atencao-texto);
+}
+
+.cardapio__aba[aria-selected="true"] {
+  padding-left: 14px;
+  color: var(--cor-selecao);
+  box-shadow: inset 5px 0 0 var(--cor-selecao);
+}
+
+.cardapio__foto {
+  position: relative;
+  margin: 0;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--cor-escuro);
+}
+
+.cardapio__foto picture,
+.cardapio__foto img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cardapio__foto figcaption {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 6px 10px;
+  background: var(--cor-escuro);
+  color: var(--cor-escuro-texto);
+  font-family: var(--f-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.cardapio__foto--sem {
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 10px;
+  padding: 18px;
+  background: var(--grao), var(--terracota);
+  color: var(--papel-claro);
+  text-align: center;
+}
+
+.cardapio__foto--sem .seal-mask {
+  width: 72px;
+  color: var(--creme-selo);
+}
+
+.cardapio__foto--sem figcaption {
+  position: static;
+  padding: 0;
+  background: none;
+  color: var(--papel-claro);
+  font-family: var(--f-mao);
+  font-size: 30px;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+/* sem o script toda folha aparece, uma embaixo da outra; o script as transforma em abas */
+.cardapio__folhas {
+  display: grid;
+  gap: var(--barra);
+  background: var(--cor-borda);
+}
+
+.cardapio__folha {
+  min-height: 420px;
+}
+
+.cardapio__folha .sheet__body {
+  height: 100%;
+}
+
+[data-tabs].is-ligado [data-tab-panel]:not(.is-ativa),
+[data-tabs].is-ligado [data-tab-photo]:not(.is-ativa) {
+  display: none;
+}
+
+.cardapio__mais {
+  margin-top: var(--e-4);
+}
+
+@media (max-width: 860px) {
+  .cardapio {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .cardapio__folha {
+    min-height: 0;
+  }
+}
+
+/* ---- a faixa de reserva e os combinados da casa ---- */
+.reserva-faixa {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px 40px;
+  padding: clamp(22px, 3vw, 38px);
+  border: var(--barra) solid var(--cor-borda);
+  background: var(--grao), var(--cor-superficie);
+}
+
+.reserva-faixa h2 {
+  font-size: clamp(40px, 5.4vw, 76px);
+}
+
+.reserva-faixa .prose {
+  max-width: 52ch;
+  margin-top: 10px;
+  font-size: 17px;
+  color: var(--cor-texto-suave);
+}
+
+.combinados__titulo {
+  margin: clamp(32px, 5vw, 48px) 0 var(--e-3);
+  font-family: var(--f-mono);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--cor-texto-fraco);
+}
+
+.notas {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0 clamp(20px, 4vw, 56px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.notas li {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr);
+  gap: 14px;
+  padding: 16px 0;
+  border-top: var(--barra) solid var(--cor-borda);
+}
+
+.notas__num {
+  font-family: var(--f-letreiro);
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 0.85;
+  color: var(--cor-selecao);
+}
+
+.notas h4 {
+  font-family: var(--f-grotesca);
+  font-weight: 800;
+  font-size: 21px;
+  line-height: 1.05;
+  text-transform: uppercase;
+  color: var(--cor-selecao);
+}
+
+.notas p {
+  margin-top: 4px;
+  font-size: 14.5px;
+  color: var(--cor-texto-suave);
+}
+
+@media (max-width: 860px) {
+  .notas {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* ---- a casa e a semana ---- */
+.casa__foto {
+  min-height: 360px;
+}
+
+.casa__texto {
+  display: flex;
+  flex-direction: column;
+  gap: var(--e-3);
+}
+
+.casa__mao {
+  font-size: clamp(34px, 3.6vw, 44px);
+  color: var(--cor-selecao);
+}
+
+.casa__lede {
+  font-size: 19px;
+}
+
+.casa__semana-titulo {
+  margin-top: var(--e-4);
+}
+
+.semana {
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.semana li {
+  padding: 8px 2px 7px;
+  background: var(--cor-superficie);
+  text-align: center;
+  font-family: var(--f-mono);
+  font-size: 11px;
+  line-height: 1.3;
+  color: var(--cor-texto-suave);
+}
+
+.semana b {
+  display: block;
+  font-family: var(--f-grotesca);
+  font-weight: 900;
+  font-size: 18px;
+  color: var(--cor-texto);
+  text-transform: uppercase;
+}
+
+/* dias fechados cruzados com a grade de janela do site aprovado */
+.semana .fecha {
+  background: repeating-linear-gradient(135deg, var(--cor-superficie-2) 0 5px, var(--cor-superficie) 5px 10px);
+}
+
+.semana .fecha b {
+  color: var(--cor-texto-suave);
+}
+
+/* ---- onde fica ---- */
+.onde__texto {
+  display: flex;
+  flex-direction: column;
+  gap: var(--e-4);
+}
+
+.onde__endereco {
+  font-style: normal;
+  font-size: 20px;
+  line-height: 1.45;
+}
+
+.onde__acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--e-2);
+}
+
+.onde__foto {
+  min-height: 320px;
+}
+
+/* ---- eventos ---- */
+.eventos li {
+  display: grid;
+  gap: var(--e-1);
+}
+
+/* ---- rodapé ---- */
+.rodape {
+  padding-block: 40px 48px;
+  background: var(--cor-escuro);
+  color: var(--cor-escuro-texto-suave);
+  font-size: 14px;
+}
+
+.rodape__grade {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) auto;
+  gap: 32px;
+  align-items: start;
+}
+
+.rodape__grade p + p {
+  margin-top: var(--e-2);
+}
+
+.rodape__titulo {
+  margin-bottom: 10px;
+  font-family: var(--f-mono);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cor-escuro-rotulo);
+}
+
+.rodape__lista {
+  display: grid;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.rodape a,
+.rodape__cookies {
+  color: var(--cor-escuro-texto);
+  font: inherit;
+  text-underline-offset: 3px;
+}
+
+.rodape__cookies {
+  padding: 0;
+  border: 0;
+  background: none;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.rodape__creditos {
+  margin-top: var(--e-5);
+  font-size: var(--t-pequeno);
+}
+
+@media (max-width: 860px) {
+  .rodape__grade {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .logo-letreiro--rodape {
+    justify-self: start;
+    mask-position: left center;
+  }
+}
+
+/* ---- a página do cardápio: as folhas impressas da casa ---- */
+.menu-page__head {
+  padding-block: var(--e-7) var(--e-5);
+}
+
+.menu-page__title {
+  font-size: clamp(56px, 9vw, 112px);
+}
+
+.menu-page__lede {
+  margin-top: var(--e-3);
+  font-size: 18px;
+  color: var(--cor-texto-suave);
+}
+
+.menu-page__note {
+  margin-top: var(--e-2);
+  font-size: var(--t-pequeno);
+  color: var(--cor-texto-fraco);
+}
+
+.menu-jump {
+  margin-top: var(--e-5);
+}
+
+.menu-jump ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--alvo-toque);
+  padding: 0 var(--e-4);
+  border: var(--fio) solid var(--cor-borda);
+  background: var(--cor-superficie);
+  color: var(--cor-texto);
+  font-family: var(--f-grotesca);
+  font-weight: 800;
+  font-size: 17px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.chip:hover {
+  background: var(--cor-acao);
+  color: var(--cor-acao-texto);
+}
+
+.menu-page__sheets {
+  display: grid;
+  gap: var(--e-6);
+  padding-bottom: var(--e-7);
+}
+
+.sheet {
+  display: grid;
+  grid-template-columns: minmax(0, 320px) minmax(0, 1fr);
+  gap: var(--barra);
+  background: var(--cor-borda);
+  border: var(--barra) solid var(--cor-borda);
+  scroll-margin-top: 70px;
+}
+
+.sheet:not(:has(.sheet__coluna)) {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+/* a foto fica à vista ao lado de uma folha comprida em vez de esticar com ela */
+.sheet__photo {
+  position: sticky;
+  top: 70px;
+  align-self: start;
+}
+
+.sheet__photo,
+.sheet__photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
+
+.sheet__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--e-1);
+  padding: clamp(20px, 3vw, 36px);
+}
+
+.sheet__items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sheet__line {
+  margin: 0;
+}
+
+.sheet__hand {
+  margin-top: auto;
+  padding-top: var(--e-4);
+  font-size: 26px;
+}
+
+@media (max-width: 760px) {
+  .sheet {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .sheet__photo {
+    position: static;
+  }
+
+  .sheet__photo,
+  .sheet__photo img {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+/* comida: a folha preta de ramen (igual nos dois temas, é um objeto impresso) */
+.sheet--dark .sheet__body {
+  background: var(--folha-preta);
+  color: var(--folha-preta-texto);
+}
+
+.sheet--dark .sheet__title {
+  font-family: var(--f-ramen);
+  font-weight: 400;
+  font-size: clamp(34px, 4vw, 50px);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.sheet--dark .sheet__sub,
+.sheet--dark .sheet__desc,
+.sheet--dark .sheet__tag {
+  font-family: var(--f-ramen-texto);
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.sheet--dark .sheet__sub {
+  margin-bottom: var(--e-2);
+  font-size: 14px;
+  color: var(--folha-preta-suave);
+}
+
+.sheet--dark .sheet__item {
+  padding-top: var(--e-4);
+}
+
+.sheet--dark .sheet__line b {
+  font-family: var(--f-ramen);
+  font-weight: 400;
+  font-size: clamp(24px, 2.4vw, 32px);
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.sheet--dark .sheet__price {
+  margin-left: var(--e-2);
+  font-family: var(--f-ramen);
+  /* 24px ou mais é "texto grande" (3:1): o vermelho impresso fica e passa na folha preta */
+  font-size: clamp(24px, 2.2vw, 28px);
+  color: var(--vermelho-cardapio);
+}
+
+.sheet--dark .sheet__price::before {
+  content: "R$ ";
+}
+
+.sheet--dark .sheet__tag {
+  margin-left: var(--e-2);
+  font-size: 13px;
+  color: var(--verde-cardapio);
+}
+
+.sheet--dark .sheet__desc {
+  margin-top: 6px;
+  max-width: 62ch;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--folha-preta-texto);
+  opacity: 0.86;
+}
+
+.sheet--dark .sheet__hand {
+  border-top: 1px dashed var(--borda-no-escuro);
+  color: var(--vermelho-cardapio);
+}
+
+.sheet__out {
+  margin-left: var(--e-2);
+  font-family: var(--f-mono);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.sheet__item.is-out .sheet__line b {
+  text-decoration: line-through;
+}
+
+/* bebidas: o cartão feito à mão, papel dentro de uma borda de azulejo azul, preços em marsala */
+.sheet--handmade .sheet__body {
+  background: var(--grao), var(--folha-branca);
+  color: var(--marsala);
+  outline: clamp(10px, 1.6vw, 16px) solid var(--azulejo);
+  outline-offset: calc(clamp(10px, 1.6vw, 16px) * -1);
+  padding: calc(clamp(20px, 3vw, 36px) + 16px);
+}
+
+.sheet--handmade .sheet__title {
+  font-family: var(--f-letreiro);
+  font-weight: 900;
+  font-size: clamp(44px, 5vw, 62px);
+  line-height: 0.92;
+  text-transform: uppercase;
+}
+
+.sheet--handmade .sheet__sub {
+  color: var(--tinta-2);
+}
+
+.sheet__box {
+  margin-top: var(--e-5);
+  padding: var(--e-3) var(--e-4);
+  border: 1.5px solid var(--marsala);
+}
+
+.sheet__group {
+  margin: calc(var(--e-3) * -1 - 12px) 0 var(--e-2) calc(var(--e-1) * -1);
+  display: table;
+  padding: 0 var(--e-2);
+  background: var(--folha-branca);
+  font-family: var(--f-grotesca);
+  font-weight: 900;
+  font-size: 22px;
+  text-transform: uppercase;
+}
+
+.sheet--handmade .sheet__item {
+  padding-block: 5px;
+}
+
+.sheet--handmade .sheet__line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--e-2);
+}
+
+.sheet--handmade .sheet__line b {
+  font-family: var(--f-grotesca);
+  font-weight: 800;
+  font-size: 20px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.sheet--handmade .sheet__price {
+  margin-left: auto;
+  font-family: var(--f-grotesca);
+  font-weight: 800;
+  font-size: 19px;
+}
+
+.sheet--handmade .sheet__desc {
+  font-size: 12.5px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--tinta-2);
+  line-height: 1.35;
+}
+
+.sheet--handmade .sheet__hand {
+  border-top: 1.5px dashed var(--marsala);
+}
+
+.menu-page__book {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--e-3);
+  padding-bottom: var(--e-8);
+}
+
+.menu-page__book-title {
+  flex-basis: 100%;
+  font-size: clamp(32px, 4vw, 48px);
+}
+
+/* ---- privacidade e outras páginas de texto ---- */
+.legal {
+  padding-block: var(--e-7) var(--e-8);
+}
+
+.legal__title {
+  font-size: clamp(48px, 8vw, 96px);
+}
+
+.legal__lede {
+  margin-top: var(--e-3);
+  font-size: 19px;
+}
+
+.legal__updated {
+  margin-top: var(--e-2);
+  font-family: var(--f-mono);
+  font-size: 12.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cor-texto-fraco);
+}
+
+.legal__toc {
+  margin-block: var(--e-6);
+  padding: var(--e-4) var(--e-5);
+  border: var(--fio) solid var(--cor-borda);
+  background: var(--cor-superficie);
+}
+
+.legal__toc ol {
+  margin: 0;
+  padding-left: 1.2em;
+  display: grid;
+  gap: var(--e-1);
+}
+
+.legal__section {
+  display: grid;
+  gap: var(--e-3);
+  padding-top: var(--e-6);
+  scroll-margin-top: 70px;
+}
+
+.legal__heading {
+  font-family: var(--f-letreiro);
+  font-weight: 900;
+  font-size: clamp(28px, 3.4vw, 40px);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+/* ---- escolha de cookies: uma barra embaixo, nunca um muro na frente da página ---- */
+.cookies {
+  position: fixed;
+  inset: auto 0 0;
+  /* acima da barra de demonstração também: na demonstração para a casa as duas aparecem ao mesmo tempo */
+  z-index: calc(var(--z-demo) + 1);
+  padding: var(--e-3);
+  pointer-events: none;
+}
+
+.cookies__panel {
+  pointer-events: auto;
+  display: grid;
+  gap: var(--e-2);
+  max-width: 720px;
+  margin-inline: auto;
+  padding: var(--e-4) var(--e-5);
+  background: var(--grao), var(--cor-superficie);
+  color: var(--cor-texto);
+  border: var(--barra) solid var(--cor-borda);
+}
+
+.cookies__title {
+  font-family: var(--f-letreiro);
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.cookies__text {
+  font-size: var(--t-pequeno);
+}
+
+.cookies__choices {
+  display: grid;
+  gap: var(--e-2);
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.cookies__choice {
+  display: flex;
+  gap: var(--e-2);
+  align-items: start;
+  font-size: var(--t-pequeno);
+}
+
+.cookies__choice input {
+  width: 22px;
+  height: 22px;
+  margin-top: 1px;
+  accent-color: var(--cor-acao);
+}
+
+/* Aceitar e Recusar do mesmo tamanho, lado a lado (orientação da ANPD) */
+.cookies__actions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--e-2);
+}
+
+@media (max-width: 480px) {
+  .cookies__actions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cookies__actions > :last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+/* dentro do bloco do cardápio da página da casa a folha é um painel da moldura, não uma moldura */
+.cardapio__folha.sheet {
+  display: block;
+  border: 0;
+  background: none;
+}
+
+/* nomes compridos de pratos e seções (PRA COMPARTILHAR na letra de ramen) quebram a linha em vez de alargar a página */
+.cardapio__folhas > *,
+.cardapio > * {
+  min-width: 0;
+}
+
+.sheet__title,
+.sheet__line b {
+  overflow-wrap: anywhere;
+}
+
+/* a página do cardápio: a coluna da foto fica escura embaixo de uma foto mais curta que a folha */
+.sheet__coluna {
+  background: var(--cor-escuro);
+}
+
+@media (max-width: 760px) {
+  .sheet__coluna .sheet__photo {
+    position: static;
+  }
+}
+
+/* ---- reserva (/reservar/): os passos no papel, o resumo e os combinados no ferro ---- */
+.reserva-pagina {
+  padding-block: var(--e-7) var(--e-8);
+}
+
+.reserva-pagina h1 {
+  font-size: clamp(48px, 8vw, 96px);
+}
+
+.reserva {
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+  align-items: stretch;
+}
+
+.reserva__fluxo {
+  display: grid;
+  gap: clamp(22px, 3vw, 32px);
+  align-content: start;
+}
+
+.reserva__lado {
+  position: sticky;
+  top: 58px; /* embaixo da barra de ferro: o resumo fica à vista enquanto os detalhes são preenchidos */
+  align-self: start;
+  display: grid;
+  gap: 18px;
+  align-content: start;
+  background: var(--cor-escuro);
+  color: var(--cor-escuro-texto);
+}
+
+.reserva__lado .rotulo {
+  margin: 12px 0 0;
+  color: var(--cor-escuro-rotulo);
+}
+
+.reserva__combinados {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding-left: 1.2em;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.reserva__combinados li::marker {
+  font-family: var(--f-grotesca);
+  font-weight: 800;
+  color: var(--cor-escuro-destaque);
+}
+
+.reserva__combinados b {
+  display: block;
+  font-family: var(--f-grotesca);
+  font-size: 18px;
+  text-transform: uppercase;
+  color: var(--cor-escuro-destaque);
+}
+
+.reserva__passo,
+.reserva__flags {
+  display: grid;
+  gap: 14px;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.reserva__titulo {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  font-family: var(--f-letreiro);
+  font-weight: 800;
+  font-size: clamp(24px, 3vw, 32px);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.reserva__num {
+  color: var(--cor-selecao);
+}
+
+.reserva__dica {
+  margin: 0;
+  color: var(--cor-texto-suave);
+  font-size: 15px;
+}
+
+.reserva__form,
+.reserva__codigo,
+.reserva__pronto {
+  display: grid;
+  gap: 18px;
+}
+
+.reserva__flags {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 16px;
+}
+
+.reserva__flags legend {
+  grid-column: 1 / -1;
+  margin-bottom: 8px;
+}
+
+.reserva__acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.reserva__pronto .receipt {
+  max-width: 420px;
+}
+
+.reserva .notice:focus {
+  outline: none;
+}
+
+@media (max-width: 860px) {
+  .reserva {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .reserva__lado {
+    position: static;
+  }
+
+  .reserva__flags {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* ---- link do comprovante (/r/) ---- */
+.comprovante__titulo {
+  margin: 0 0 clamp(26px, 4vw, 40px);
+  font-size: clamp(48px, 8vw, 96px);
+}
+
+.comprovante {
+  max-width: 640px;
+}
+
+.comprovante__corpo {
+  display: grid;
+  gap: 18px;
+}
+
+/* a tabela de cookies da política de privacidade: rola para o lado no celular, nunca a página */
+.legal__tabela {
+  overflow-x: auto;
+  margin-block: 18px;
+  border: var(--fio) solid var(--cor-borda);
+}
+
+.legal__tabela table {
+  width: 100%;
+  min-width: 620px;
+  border-collapse: collapse;
+  font-size: 14.5px;
+  line-height: 1.45;
+}
+
+.legal__tabela caption {
+  padding: 10px 12px;
+  background: var(--cor-escuro);
+  color: var(--cor-escuro-texto);
+  font-family: var(--f-mono);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.legal__tabela th,
+.legal__tabela td {
+  padding: 10px 12px;
+  border-top: 1px solid var(--cor-borda);
+  text-align: left;
+  vertical-align: top;
+}
+
+.legal__tabela code {
+  font-family: var(--f-mono);
+  font-size: 12.5px;
+  white-space: nowrap;
+}
+
+/* ---- a casa: como é uma noite, as palavras da própria casa e o lugar em fotos ---- */
+.casa__lede + .casa__lede {
+  margin-top: 12px;
+}
+
+.casa__subtitulo {
+  margin: clamp(40px, 6vw, 64px) 0 clamp(14px, 2vw, 20px);
+  font-family: var(--f-letreiro);
+  font-weight: 400;
+  font-size: clamp(30px, 4vw, 44px);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.noite {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.verbetes {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.verbete {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 0;
+}
+
+.sec-kraft .verbete,
+.sec-kraft .casa__texto {
+  background: var(--grao), var(--cor-superficie);
+}
+
+.verbete__titulo {
+  font-family: var(--f-grotesca);
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.verbete blockquote {
+  position: relative;
+  margin: 0;
+  padding-left: 26px;
+  font-size: 15.5px;
+  color: var(--cor-texto-suave);
+}
+
+.verbete blockquote::before {
+  content: "“";
+  position: absolute;
+  top: -14px;
+  left: -2px;
+  font-family: var(--f-letreiro);
+  font-size: 58px;
+  line-height: 1;
+  color: var(--cor-selecao);
+}
+
+.verbete__fonte {
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: var(--fio) solid var(--cor-borda);
+  font-family: var(--f-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--cor-texto-fraco);
+}
+
+.sec-kraft .verbete-fecho,
+.verbete-fecho {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 14px;
+  background: var(--grao), var(--terracota);
+  color: var(--papel-claro);
+}
+
+.verbete-fecho .seal-mask {
+  width: 70px;
+  color: var(--creme-selo);
+}
+
+.verbete-fecho .mao {
+  font-size: 34px;
+  line-height: 1;
+}
+
+.verbete-fecho .rotulo {
+  color: var(--creme-selo);
+}
+
+/* o lugar: uma grade de fotos com a área embaixo de cada uma; abre grande (src/pages/site.js) */
+.galeria {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-auto-rows: clamp(170px, 21vw, 300px);
+  grid-auto-flow: dense;
+}
+
+.galeria__item {
+  position: relative;
+  min-width: 0;
+  background: var(--cor-escuro);
+}
+
+.galeria__item--largo {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.galeria__link {
+  position: absolute;
+  inset: 0;
+  display: block;
+  overflow: hidden;
+  color: var(--papel-claro);
+}
+
+.galeria__link picture,
+.galeria__link img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.galeria__link img {
+  transition: transform 0.6s var(--ease-out), filter 0.6s var(--ease-out);
+}
+
+.galeria__link:hover img,
+.galeria__link:focus-visible img {
+  transform: scale(1.04);
+  filter: brightness(1.08);
+}
+
+.galeria__link:focus-visible {
+  outline-offset: -6px;
+}
+
+.galeria__legenda {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 7px 12px 8px;
+  background: var(--ferro);
+  color: var(--papel-claro);
+  font-family: var(--f-mono);
+  font-size: 11.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* a foto aberta grande: moldura de ferro no escuro, setas e a contagem */
+.lampiao {
+  width: min(96vw, 1100px);
+  max-width: none;
+  max-height: 96vh;
+  padding: 0;
+  border: var(--barra) solid var(--ferro);
+  background: var(--noite);
+  color: var(--papel-claro);
+}
+
+.lampiao::backdrop {
+  background: var(--capa-55);
+  backdrop-filter: blur(3px);
+}
+
+.lampiao figure {
+  display: grid;
+  margin: 0;
+}
+
+.lampiao img {
+  width: 100%;
+  max-height: calc(96vh - 64px);
+  object-fit: contain;
+}
+
+.lampiao figcaption {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  font-family: var(--f-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.lampiao__acoes {
+  display: flex;
+  gap: 6px;
+}
+
+.lampiao__acoes button {
+  min-width: 44px;
+  min-height: 44px;
+  border: var(--fio) solid var(--papel-no-escuro);
+  background: transparent;
+  color: inherit;
+  font-family: var(--f-grotesca);
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.lampiao__acoes button:hover {
+  background: var(--papel-claro);
+  color: var(--ferro);
+}
+
+@media (max-width: 1100px) {
+  .verbetes {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .noite {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 860px) {
+  .noite,
+  .verbetes {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .galeria {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: 46vw;
+  }
+}
+
+/* a reserva vai andando: a última resposta fica, apagada, enquanto a próxima chega; cada parte
+   nova desliza para dentro embaixo da anterior */
+.days.is-carregando,
+.slots.is-carregando {
+  opacity: 0.55;
+  transition: opacity 0.2s var(--ease-out);
+  pointer-events: none;
+}
+
+.reserva__entra {
+  animation: reserva-entra 0.45s var(--ease-out) both;
+}
+
+@keyframes reserva-entra {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.reserva__fluxo [id],
+.reserva__dados,
+.reserva__horas,
+.reserva__codigo,
+.reserva__pronto {
+  scroll-margin-top: 76px;
+}
+
+.reserva__mais {
+  border-top: var(--fio) solid var(--cor-borda);
+  border-bottom: var(--fio) solid var(--cor-borda);
+}
+
+.reserva__mais summary {
+  padding: 12px 0;
+  font-family: var(--f-grotesca);
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.reserva__mais[open] {
+  display: grid;
+  gap: 16px;
+  padding-bottom: 16px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reserva__entra {
+    animation: none;
+  }
+}

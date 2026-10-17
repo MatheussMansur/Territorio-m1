@@ -1,0 +1,271 @@
+/* As escolhas da reserva: os quadrados de pessoas, a semana de dias e os horários
+   desenhados como vidros de papel na janela de ferro. */
+
+/* ---- pessoas ---- */
+.tiles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tile {
+  min-width: 48px;
+  min-height: 48px;
+  padding: 6px 12px;
+  border: var(--fio) solid var(--cor-borda);
+  background: var(--cor-superficie);
+  font-family: var(--f-grotesca);
+  font-weight: 900;
+  font-size: 22px;
+  touch-action: manipulation;
+  transition:
+    background-color 0.12s,
+    color 0.12s;
+}
+
+.tile:hover {
+  background: var(--cor-fundo);
+}
+
+.tile[aria-checked="true"] {
+  background: var(--cor-acao);
+  color: var(--cor-acao-texto);
+}
+
+/* ---- dias ---- */
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: var(--fio);
+  background: var(--cor-borda);
+  border: var(--fio) solid var(--cor-borda);
+}
+
+.day {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 74px;
+  padding: 6px 2px;
+  border: 0;
+  background: var(--cor-superficie);
+  touch-action: manipulation;
+}
+
+.day small {
+  font-family: var(--f-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cor-texto-fraco);
+}
+
+.day b {
+  font-family: var(--f-grotesca);
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 1;
+}
+
+.day span {
+  font-size: 11px;
+  line-height: 1.1;
+  text-align: center;
+  color: var(--cor-texto-suave);
+}
+
+.day:hover:not(:disabled, .is-closed) {
+  background: var(--cor-fundo);
+}
+
+.day[aria-checked="true"] {
+  background: var(--cor-acao);
+  color: var(--cor-acao-texto);
+}
+
+.day[aria-checked="true"] :is(small, span) {
+  color: var(--cor-escuro-texto-suave);
+}
+
+.day.is-today::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4px;
+  background: var(--cor-selecao);
+}
+
+/* dias fechados: uma hachura diagonal fina, como uma janela fechada vista pelo vidro. Discreta nos dois
+   temas (a hachura é uma mistura fraca da cor do texto, nunca a própria cor do texto), e as
+   palavras ficam direto em cima dela, um tom mais apagadas */
+.day.is-closed,
+.day:disabled {
+  cursor: not-allowed;
+  background: repeating-linear-gradient(135deg, var(--cor-hachura) 0 1.5px, transparent 1.5px 8px), var(--cor-fundo);
+}
+
+.day.is-closed :is(small, b, span),
+.day:disabled :is(small, b, span) {
+  color: var(--cor-texto-suave);
+}
+
+.day.is-closed b,
+.day:disabled b {
+  opacity: 0.7;
+}
+
+.day.is-full b {
+  text-decoration: line-through;
+  text-decoration-thickness: 3px;
+}
+
+/* ---- horários: a janela ---- */
+.slots {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--barra);
+  background: var(--cor-borda);
+  border: var(--barra) solid var(--cor-borda);
+}
+
+.slot {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  min-height: 92px;
+  padding: 10px 12px;
+  overflow: hidden;
+  border: 0;
+  background: var(--grao), var(--cor-superficie);
+  color: var(--cor-texto);
+  text-align: left;
+  touch-action: manipulation;
+  transition:
+    background-color 0.45s var(--ease-out),
+    color 0.45s var(--ease-out),
+    filter 0.45s var(--ease-out);
+}
+
+.slot b {
+  font-family: var(--f-grotesca);
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 0.9;
+  font-variant-numeric: tabular-nums;
+}
+
+.slot span {
+  font-size: 12.5px;
+  font-weight: 650;
+  line-height: 1.2;
+}
+
+.slot:hover {
+  background: var(--grao), var(--cor-fundo);
+}
+
+/* últimas mesas: uma fita terracota no canto */
+.slot.is-few::after {
+  content: "últimas";
+  position: absolute;
+  right: -26px;
+  top: 12px;
+  padding: 2px 30px;
+  transform: rotate(38deg);
+  background: var(--cor-selecao);
+  color: var(--cor-acao-texto);
+  font-family: var(--f-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* lotado: barras de ferro cruzando o vidro; ainda clicável para a lista de espera */
+.slot.is-full {
+  background: repeating-linear-gradient(135deg, var(--cor-hachura) 0 1.5px, transparent 1.5px 8px), var(--cor-fundo);
+  color: var(--cor-texto-suave);
+}
+
+.slot.is-full b {
+  text-decoration: line-through;
+  text-decoration-thickness: 3px;
+}
+
+.slot.is-past {
+  display: none;
+}
+
+/* escolhido: vidro terracota com a semente carimbada no canto */
+.slot[aria-checked="true"] {
+  background: var(--grao), var(--cor-selecao);
+  color: var(--cor-acao-texto);
+}
+
+.slot[aria-checked="true"] :is(b, span) {
+  background: transparent;
+}
+
+.slot[aria-checked="true"]::before {
+  content: "";
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  width: 34px;
+  height: 34px;
+  background: currentcolor;
+  mask: url("/img/selo-sementes.svg") center / contain no-repeat;
+  opacity: 0.9;
+}
+
+/* a janela escurece e acende vidro por vidro quando o dia ou as pessoas mudam */
+.slots.is-dimming .slot:not(.is-full) {
+  filter: brightness(0.3) saturate(0.5);
+}
+
+.slots.is-dimming .slot.is-lit:not(.is-full) {
+  filter: none;
+}
+
+/* legenda embaixo da janela */
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+  font-size: 13px;
+  color: var(--cor-texto-suave);
+}
+
+.legend i {
+  display: inline-block;
+  width: 18px;
+  height: 14px;
+  margin-right: 6px;
+  vertical-align: -2px;
+  border: var(--fio) solid var(--cor-borda);
+}
+
+@media (max-width: 480px) {
+  /* duas semanas no celular: quatro dias por linha, para as datas ficarem inteiras */
+  .days {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .slot {
+    min-height: 78px;
+    padding: 8px 9px;
+  }
+
+  .slot b {
+    font-size: 30px;
+  }
+
+  .day b {
+    font-size: 24px;
+  }
+}

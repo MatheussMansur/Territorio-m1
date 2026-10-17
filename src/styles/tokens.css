@@ -1,0 +1,191 @@
+/* Tema Território: papel preso numa moldura de ferro, na paleta "papel e ferro" dos
+   PDFs de proposta e de módulos que a casa recebeu (ferro, papel, kraft, terracota, tijolo, lâmpada).
+   A paleta do uniforme (marsala, off white, mescla, preto lavado) fica guardada abaixo para os
+   produtos. O Território Food Club tem a sua própria paleta, para os produtos dele: veja .paleta-food-club.
+   Os primitivos levam os nomes da própria casa; os componentes só usam os tokens --cor-*,
+   então outra casa troca este arquivo, não os componentes. */
+:root {
+  /* ---- a paleta do uniforme (produtos e roupas, não o site) ---- */
+  --marsala: #722A2A;
+  --off-white: #F5EAD6;
+  --mescla: #A7A7A7;
+  --preto-lavado: #2B2B2B;
+
+  /* ---- primitivos: papel e ferro, como nos PDFs mandados para a casa ---- */
+  --papel: #ECE3CF;
+  --papel-claro: #F6F0E3;
+  --kraft: #CDB892;
+  --kraft-escuro: #A8916A;
+  --ferro: #161311;
+  --ferro-2: #2A2420;
+  --tinta: var(--ferro);
+  --tinta-2: #463B33;
+  --tinta-3: #65584C;
+  --terracota: #A54829;
+  --terracota-escura: #7E2F17;
+  --noite: #0E0B09;
+  --lampada: #F0B060;
+  --creme-selo: #F3E6CC;
+
+  /* ---- Território Food Club: a sua própria paleta, para os produtos dele (tirada da arte das camisetas) ---- */
+  --fc-vermelho: #B1372A;
+  --fc-marinho: #07182A;
+  --fc-marinho-2: #2A3A50;
+  --fc-creme: #EAE5C8;
+  --fc-branco: #FFF;
+
+  /* texto e linhas nas superfícies escuras de ferro */
+  --papel-no-escuro: #CFC4AE;
+  --papel-no-escuro-2: #D8CDB7;
+  --rotulo-no-escuro: #A99D88;
+  --borda-no-escuro: #5A4F46;
+  --fio-no-escuro: #3A322C;
+
+  /* os cardápios impressos da casa: o cartão preto de ramen e o cartão de bebidas feito à mão
+     (papel dentro de uma borda de azulejo azul, o preço numa moeda amarela) */
+  --folha-preta: #141210;
+  --folha-preta-texto: #EFE3C6;
+  --folha-preta-suave: #BFB3A0;
+  --folha-branca: #FBFAF6;
+  --vermelho-cardapio: #E0412E;
+  --verde-cardapio: #6F9A5A;
+  --azulejo: #1F78A8;
+  --moeda: #F2B840;
+
+  /* camadas translúcidas */
+  --fio-suave: rgb(43 43 43 / 20%);
+  --fio-suave-forte: rgb(43 43 43 / 45%);
+  --fundo-janela: rgb(31 31 31 / 74%);
+  --noite-92: rgb(31 31 31 / 92%);
+  --noite-62: rgb(31 31 31 / 62%);
+  --noite-0: rgb(31 31 31 / 0%);
+  --terracota-10: rgb(114 42 42 / 13%);
+
+  /* o escurecimento da capa sobre a foto da fachada, e o texto na faixa terracota */
+  --capa-92: rgb(14 11 9 / 92%);
+  --capa-85: rgb(14 11 9 / 85%);
+  --capa-62: rgb(14 11 9 / 62%);
+  --capa-55: rgb(14 11 9 / 55%);
+  --capa-8: rgb(14 11 9 / 8%);
+  --capa-0: rgb(14 11 9 / 0%);
+  --capa-fio: rgb(247 241 229 / 18%);
+  --texto-na-terra: #F6E4D8;
+
+  /* grão de papel, desenhado uma vez como ruído em SVG */
+  --grao: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .32  0 0 0 0 .26  0 0 0 0 .2  0 0 0 .11 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+
+  /* ---- primitivos do tema escuro (tirados da paleta da casa; AD-31) ---- */
+  --terracota-clara: #E08A6A;
+  --ferro-3: #221C19;
+  --fio-no-escuro-suave: rgb(245 234 214 / 18%);
+
+  /* ---- papéis: o que os componentes usam ----
+     light-dark() escolhe o valor pelo color-scheme da página: ele segue o aparelho,
+     e [data-theme] (posto por /theme.js a partir da escolha do visitante) o fixa. */
+  --cor-fundo: light-dark(var(--papel), var(--noite));
+  /* hachura dos dias fechados e dos horários lotados: uma mistura fraca do texto, para ficar discreta no escuro */
+  --cor-hachura: light-dark(color-mix(in srgb, var(--tinta) 22%, transparent), color-mix(in srgb, var(--papel-claro) 14%, transparent));
+  --cor-superficie: light-dark(var(--papel-claro), var(--ferro-2));
+  --cor-superficie-2: light-dark(var(--kraft), var(--ferro-3));
+  --cor-texto: light-dark(var(--tinta), var(--papel-claro));
+  --cor-texto-suave: light-dark(var(--tinta-2), var(--papel-no-escuro));
+  --cor-texto-fraco: light-dark(var(--tinta-3), var(--rotulo-no-escuro));
+  --cor-borda: light-dark(var(--ferro), var(--rotulo-no-escuro));
+  --cor-fio: light-dark(var(--fio-suave), var(--fio-no-escuro-suave));
+  --cor-acao: light-dark(var(--ferro), var(--terracota-clara));
+  --cor-acao-texto: light-dark(var(--papel-claro), var(--noite));
+  --cor-acao-hover: light-dark(var(--terracota), var(--papel-claro));
+  --cor-selecao: light-dark(var(--terracota), var(--terracota-clara));
+  --cor-atencao: light-dark(var(--terracota), var(--terracota-clara));
+  --cor-atencao-texto: light-dark(var(--terracota-escura), var(--terracota-clara));
+  --cor-erro: light-dark(var(--terracota-escura), var(--terracota-clara));
+  --cor-foco: light-dark(var(--terracota), var(--terracota-clara));
+  --cor-escuro: light-dark(var(--ferro), var(--folha-preta));
+  --cor-escuro-2: light-dark(var(--ferro-2), var(--ferro-3));
+  --cor-escuro-texto: var(--papel);
+  --cor-escuro-texto-suave: var(--papel-no-escuro);
+  --cor-escuro-rotulo: var(--rotulo-no-escuro);
+  --cor-escuro-borda: var(--borda-no-escuro);
+  --cor-escuro-fio: var(--fio-no-escuro);
+  --cor-escuro-destaque: var(--terracota-clara);
+  --cor-noite: var(--noite);
+  --cor-selo: var(--creme-selo);
+
+  /* ---- tipografia ---- */
+  /* o manual da marca: Oferta do Dia para os títulos (pincel de cartaz de feira), uma grotesca para o resto
+     do texto de destaque (Familjen Grotesk, substituta gratuita da Breul Grotesk do manual) */
+  --f-letreiro: "Oferta do Dia", "Familjen Grotesk", "Arial Narrow", Impact, sans-serif;
+  --f-grotesca: "Familjen Grotesk", "Arial Narrow", "Roboto Condensed", sans-serif;
+  --f-corpo: "Archivo", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mao: "Nanum Pen Script", "Segoe Print", "Comic Sans MS", cursive;
+  --f-mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+  --f-ramen: "Shojumaru", var(--f-letreiro);
+  --f-ramen-texto: "Chakra Petch", var(--f-mono);
+
+  --t-display: clamp(46px, 7vw, 96px);
+  --t-secao: clamp(34px, 4.4vw, 56px);
+  --t-bloco: clamp(22px, 2.4vw, 30px);
+  --t-botao: 19px;
+  --t-corpo: 16.5px;
+  --t-corpo-painel: 15px;
+  --t-pequeno: 13.5px;
+  --t-rotulo: 11.5px;
+  --t-mao: clamp(26px, 3vw, 34px);
+  --largura-corpo: "wdth" 95;
+
+  /* ---- espaço: múltiplos de 4, a barra de ferro e o arame ---- */
+  --e-1: 4px;
+  --e-2: 8px;
+  --e-3: 12px;
+  --e-4: 16px;
+  --e-5: 24px;
+  --e-6: 32px;
+  --e-7: 48px;
+  --e-8: 64px;
+  --e-9: 96px;
+  --barra: 6px;
+  --fio: 2px;
+  --alvo-toque: 44px;
+  --largura-max: 1240px;
+
+  /* ---- movimento e camadas ---- */
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-escreve: cubic-bezier(0.77, 0, 0.175, 1);
+  --dur-rapida: 0.15s;
+  --dur: 0.24s;
+  --dur-lenta: 0.8s;
+  --z-viga: 40;
+  --z-aviso: 60;
+  --z-demo: 70;
+
+  color-scheme: light dark;
+}
+
+:root[data-theme="claro"] {
+  color-scheme: light;
+}
+
+:root[data-theme="escuro"] {
+  color-scheme: dark;
+}
+
+/* Os produtos do Território Food Club (camisetas, sacolas) usam a sua própria paleta, para as pessoas
+   distinguirem da casa: azul-marinho e vermelho sobre creme. */
+.paleta-food-club {
+  --cor-fundo: var(--fc-creme);
+  --cor-superficie: var(--fc-branco);
+  --cor-superficie-2: var(--fc-creme);
+  --cor-texto: var(--fc-marinho);
+  --cor-texto-suave: var(--fc-marinho-2);
+  --cor-texto-fraco: var(--fc-marinho-2);
+  --cor-borda: var(--fc-marinho);
+  --cor-acao: var(--fc-marinho);
+  --cor-acao-texto: var(--fc-branco);
+  --cor-acao-hover: var(--fc-vermelho);
+  --cor-selecao: var(--fc-vermelho);
+  --cor-atencao: var(--fc-vermelho);
+  --cor-atencao-texto: var(--fc-vermelho);
+  --cor-foco: var(--fc-vermelho);
+  --cor-escuro: var(--fc-marinho);
+  --cor-escuro-texto: var(--fc-creme);
+}

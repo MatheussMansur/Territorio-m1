@@ -1,0 +1,96 @@
+/* Abas, como no cardápio aprovado: uma lista de letreiros com uma borda terracota na aberta.
+   .tabs--row as põe lado a lado (celulares e filtros do painel). */
+.tabs {
+  display: flex;
+  flex-direction: column;
+  border-top: var(--fio) solid var(--cor-borda);
+}
+
+.tab {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+  padding: 12px 4px;
+  border: 0;
+  border-bottom: 1px solid var(--cor-fio);
+  background: transparent;
+  font-family: var(--f-grotesca);
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 1;
+  text-align: left;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transition:
+    color var(--dur-rapida) ease,
+    padding-left 0.2s var(--ease-out);
+}
+
+.tab small {
+  font-family: var(--f-mono);
+  font-weight: 400;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--cor-texto-fraco);
+}
+
+.tab:hover {
+  color: var(--cor-atencao-texto);
+}
+
+.tab[aria-selected="true"] {
+  padding-left: 14px;
+  color: var(--cor-selecao);
+  box-shadow: inset 5px 0 0 var(--cor-selecao);
+}
+
+.tabs--row {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 6px;
+  border-top: 0;
+}
+
+.tabs--row .tab {
+  padding: 9px 12px;
+  border: var(--fio) solid var(--cor-borda);
+  font-size: 18px;
+}
+
+.tabs--row .tab small {
+  display: none;
+}
+
+.tabs--row .tab[aria-selected="true"] {
+  padding-left: 12px;
+  box-shadow: none;
+  background: var(--cor-acao);
+  color: var(--cor-acao-texto);
+}
+
+@media (max-width: 860px) {
+  .tabs--collapse {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 6px;
+    border-top: 0;
+  }
+
+  .tabs--collapse .tab {
+    padding: 9px 12px;
+    border: var(--fio) solid var(--cor-borda);
+    font-size: 18px;
+  }
+
+  .tabs--collapse .tab small {
+    display: none;
+  }
+
+  .tabs--collapse .tab[aria-selected="true"] {
+    padding-left: 12px;
+    box-shadow: none;
+    background: var(--cor-acao);
+    color: var(--cor-acao-texto);
+  }
+}

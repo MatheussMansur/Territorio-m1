@@ -1,0 +1,123 @@
+/* A planta do salão: mesas como quadrados de papel (redondas no quintal), estados como borda e preenchimento. */
+.floor {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
+  gap: var(--barra);
+  background: var(--cor-borda);
+  border: var(--barra) solid var(--cor-borda);
+}
+
+.floor-area {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 10px;
+  padding: 34px 12px 14px;
+  background: var(--grao), var(--cor-fundo);
+}
+
+.floor-area__name {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 4px 10px 6px;
+  background: var(--cor-escuro);
+  color: var(--cor-escuro-texto);
+  font-family: var(--f-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.floor-area--wide {
+  grid-column: 1 / -1;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  background: var(--grao), var(--cor-superficie-2);
+}
+
+.table-node {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  width: 76px;
+  height: 76px;
+  padding: 4px;
+  border: var(--fio) solid var(--cor-borda);
+  background: var(--cor-superficie);
+  touch-action: manipulation;
+}
+
+.table-node b {
+  font-family: var(--f-grotesca);
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 1;
+}
+
+.table-node span {
+  font-size: 10.5px;
+  font-weight: 650;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.table-node--round {
+  border-radius: 50%;
+}
+
+.table-node--stool {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.table-node.is-reserved {
+  border-width: 3px;
+  border-color: var(--cor-atencao);
+  color: var(--cor-atencao-texto);
+}
+
+.table-node.is-seated {
+  background: var(--cor-acao);
+  border-color: var(--cor-acao);
+  color: var(--cor-acao-texto);
+}
+
+.table-node.is-late {
+  border: 3px dashed var(--cor-atencao);
+  background: var(--terracota-10);
+  color: var(--cor-atencao-texto);
+}
+
+.table-node.is-release {
+  background: var(--cor-atencao);
+  border-color: var(--cor-atencao);
+  color: var(--cor-acao-texto);
+}
+
+.table-node[aria-pressed="true"] {
+  outline: 3px solid var(--cor-borda);
+  outline-offset: 4px;
+}
+
+.table-node__joined {
+  position: absolute;
+  top: -9px;
+  right: -9px;
+  padding: 1px 5px;
+  background: var(--cor-atencao);
+  color: var(--cor-acao-texto);
+  font-family: var(--f-mono);
+  font-size: 10px;
+}
+
+@media (max-width: 860px) {
+  .floor {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

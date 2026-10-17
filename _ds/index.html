@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <!-- @include head.html -->
+  <meta name="robots" content="noindex, nofollow">
+  <title>Território · Design system</title>
+  <script type="module" src="/src/pages/ds.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="ds-bar">
+    <div class="wrap ds-bar__in">
+      <i class="ds-bar__logo" role="img" aria-label="Território"></i>
+      <b>Design system</b>
+      <span class="ds-bar__note">papel e ferro · catálogo de componentes</span>
+    </div>
+  </header>
+
+  <div class="wrap ds-layout">
+    <nav class="ds-nav" aria-label="Seções do catálogo">
+      <a href="#cores">Cores</a>
+      <a href="#tipos">Tipografia</a>
+      <a href="#esquadria">Esquadria</a>
+      <a href="#botoes">Botões</a>
+      <a href="#campos">Campos</a>
+      <a href="#escolhas">Escolhas da reserva</a>
+      <a href="#selos">Selos de status</a>
+      <a href="#abas">Abas</a>
+      <a href="#tabela">Tabela</a>
+      <a href="#janelas">Janelas</a>
+      <a href="#avisos">Avisos</a>
+      <a href="#comprovante">Comprovante</a>
+      <a href="#estados">Vazio, carregando e erro</a>
+      <a href="#noite">Números e feed</a>
+      <a href="#salao">Planta do salão</a>
+      <a href="#semente">Círculo de sementes</a>
+      <a href="#api">API simulada</a>
+    </nav>
+
+    <main id="conteudo" class="ds-main">
+      <section class="ds-intro">
+        <span class="rotulo">Fonte da verdade visual</span>
+        <h1 class="letreiro">Papel <em>e</em> ferro</h1>
+        <p class="prose">Todo componente do site e do painel, em todos os estados. Se um componente não está aqui, ele não existe. Os valores vêm do site aprovado.</p>
+      </section>
+
+      <!-- ============ cores ============ -->
+      <section class="ds-section" id="cores" aria-labelledby="h-cores">
+        <h2 class="ds-h" id="h-cores">Cores</h2>
+        <p class="ds-lead">A casa tem duas paletas, para diferenciar os produtos. A Território veste a casa e o site: marsala só onde há escolha ou atenção. A do Food Club veste os produtos dele. Status nunca só por cor.</p>
+        <h3 class="ds-h3">Paleta Território</h3>
+        <div class="ds-swatches" id="swatches"></div>
+        <h3 class="ds-h3">Paleta Território Food Club</h3>
+        <div class="ds-swatches" id="swatches-food-club"></div>
+        <h3 class="ds-h3">Cardápios impressos da casa</h3>
+        <div class="ds-swatches" id="swatches-cardapio"></div>
+      </section>
+
+      <!-- ============ tipografia ============ -->
+      <section class="ds-section" id="tipos" aria-labelledby="h-tipos">
+        <h2 class="ds-h" id="h-tipos">Tipografia</h2>
+        <div class="frame ds-type">
+          <div class="panel">
+            <span class="ds-label">Letreiro · Oferta do Dia (títulos, do manual da marca)</span>
+            <p class="letreiro ds-type__display">Reserve sua <em>mesa</em></p>
+            <p class="letreiro ds-type__h2">Rangos da casa</p>
+            <p class="letreiro ds-type__h3">Combinados da casa</p>
+          </div>
+          <div class="panel">
+            <span class="ds-label">Grotesca · Familjen Grotesk (botões, abas, números; no lugar da Breul do manual)</span>
+            <p class="ds-type__grotesca">Reservar mesa · 19:30 · Qua 14/10 · 4 pessoas</p>
+          </div>
+          <div class="panel">
+            <span class="ds-label">Corpo · Archivo, largura 95</span>
+            <p class="prose">Comida pra compartilhar, boa bebida e música um pouco mais alta, na casa do chef Marcus Norberto. Acentos: ação, pão, você, café, órgão, Iguaçu.</p>
+          </div>
+          <div class="panel">
+            <span class="ds-label">Rótulo e dado · IBM Plex Mono</span>
+            <p class="rotulo">Casa aberta · qua a sáb · 19h às 23h</p>
+            <p class="mono ds-type__mono">TR-4821 · 20:30 · (45) 9••••-4994</p>
+          </div>
+          <div class="panel">
+            <span class="ds-label">Mão · Nanum Pen Script, com acentos completados</span>
+            <p class="mao ds-type__hand">Pode entrar! A casa é sua!</p>
+            <p class="mao ds-type__hand">Coração, ação, você, Território, à mesa, pé</p>
+          </div>
+          <div class="panel ds-type__menu-dark">
+            <span class="ds-label">Cardápio · folha preta</span>
+            <p class="ds-type__ramen">Katsukarê <span>R$ 56</span></p>
+            <p class="ds-type__ramen-sub">Tonkotsu, karê, óleo aromático, massa artesanal</p>
+          </div>
+          <div class="panel ds-type__menu-drinks">
+            <span class="ds-label">Cardápio · carta de bebidas feita à mão</span>
+            <p class="ds-type__drinks">New York Sour <span class="ds-type__coin">R$30</span></p>
+            <p class="mao ds-type__drinks-hand">Bourbon · vinho tinto · limão-siciliano</p>
+          </div>
+          <div class="panel paleta-food-club ds-food-club">
+            <span class="ds-label">Produto Food Club · paleta própria</span>
+            <p class="letreiro ds-food-club__title">Camiseta Ramen</p>
+            <p class="ds-food-club__text">Território Food Club · azul-marinho, estampa em 2 cores</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ esquadria ============ -->
+      <section class="ds-section" id="esquadria" aria-labelledby="h-esquadria">
+        <h2 class="ds-h" id="h-esquadria">Esquadria e painéis</h2>
+        <p class="ds-lead">O vão entre os painéis é a barra de ferro (6 px). Sem sombra, sem canto arredondado.</p>
+        <div class="frame frame--4">
+          <div class="panel"><span class="ds-label">panel</span><p>Papel claro com grão.</p></div>
+          <div class="panel panel--kraft"><span class="ds-label">panel--kraft</span><p>Papel pardo.</p></div>
+          <div class="panel panel--iron"><span class="ds-label ds-label--dark">panel--iron</span><p>Ferro.</p></div>
+          <div class="panel panel--terra"><span class="ds-label ds-label--dark">panel--terra</span><p>Terracota, pouco.</p></div>
+        </div>
+      </section>
+
+      <!-- ============ botões ============ -->
+      <section class="ds-section" id="botoes" aria-labelledby="h-botoes">
+        <h2 class="ds-h" id="h-botoes">Botões</h2>
+        <p class="ds-lead">Um botão principal por tela. O resto é contorno ou link.</p>
+        <div class="ds-grid">
+          <div class="ds-cell"><span class="ds-label">principal</span><button class="btn" type="button">Reservar mesa</button></div>
+          <div class="ds-cell"><span class="ds-label">passar o mouse</span><button class="btn is-hover" type="button">Reservar mesa</button></div>
+          <div class="ds-cell"><span class="ds-label">foco</span><button class="btn is-focus" type="button">Reservar mesa</button></div>
+          <div class="ds-cell"><span class="ds-label">desativado</span><button class="btn" type="button" disabled>Continuar</button></div>
+          <div class="ds-cell"><span class="ds-label">carregando</span><button class="btn" type="button" aria-busy="true" data-spin>Reservando…</button></div>
+          <div class="ds-cell"><span class="ds-label">contorno</span><button class="btn btn--outline" type="button">Ver o cardápio</button></div>
+          <div class="ds-cell"><span class="ds-label">perigo</span><button class="btn btn--danger" type="button">Cancelar reserva</button></div>
+          <div class="ds-cell ds-cell--dark"><span class="ds-label ds-label--dark">inverso</span><button class="btn btn--inverse" type="button">Continuar</button></div>
+          <div class="ds-cell"><span class="ds-label">pequeno · grande</span><div class="cluster"><button class="btn btn--sm" type="button">Salvar</button><button class="btn btn--lg" type="button">Reservar</button></div></div>
+          <div class="ds-cell"><span class="ds-label">ações de linha</span><div class="cluster"><button class="action action--solid" type="button">Chegou</button><button class="action" type="button">Avisou +10</button><button class="action action--alert" type="button">Liberar mesa</button></div></div>
+        </div>
+      </section>
+
+      <!-- ============ campos ============ -->
+      <section class="ds-section" id="campos" aria-labelledby="h-campos">
+        <h2 class="ds-h" id="h-campos">Campos</h2>
+        <p class="ds-lead">Rótulo em cima, mensagem embaixo, erro ligado ao campo. O erro aparece ao sair do campo e ao enviar.</p>
+        <div class="ds-grid ds-grid--fields">
+          <div class="field"><label class="field__label" for="f1">Nome</label><input class="field__input" id="f1" name="f1" value="Ana" autocomplete="name"></div>
+          <div class="field"><label class="field__label" for="f2">Nome · foco</label><input class="field__input is-focus" id="f2" name="f2" value="Ana"></div>
+          <div class="field field--invalid"><label class="field__label" for="f3">Nome · com erro</label><input class="field__input" id="f3" name="f3" value="A" aria-invalid="true" aria-describedby="f3-erro"><p class="field__error" id="f3-erro">Escreva pelo menos 2 letras.</p></div>
+          <div class="field"><label class="field__label" for="f4">Nome · desativado</label><input class="field__input" id="f4" name="f4" value="Ana" disabled></div>
+          <div class="field" id="phone-demo">
+            <label class="field__label" for="f5">WhatsApp</label>
+            <div class="phone">
+              <select class="field__input" aria-label="País" id="f5-pais"><option value="BR">BR +55</option><option value="PY">PY +595</option><option value="AR">AR +54</option></select>
+              <input class="field__input" id="f5" name="phone" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="(45) 99999-0000">
+            </div>
+            <p class="field__help">Digite e saia do campo: o número é conferido.</p>
+          </div>
+          <div class="field">
+            <label class="field__label" for="f6">Observações <small>opcional</small></label>
+            <textarea class="field__input" id="f6" name="f6" maxlength="280" data-count>1 vegetariano</textarea>
+            <span class="field__count" data-count-for="f6">13/280</span>
+          </div>
+          <div class="field"><label class="field__label" for="f7">Área preferida</label><select class="field__input" id="f7"><option>Sem preferência</option><option>Salão</option><option>Quintal</option></select></div>
+          <div class="field"><span class="field__label">Aceite</span><label class="agree"><input type="checkbox" checked> Li e tá combinado</label></div>
+        </div>
+        <div class="frame ds-dark-fields">
+          <div class="panel panel--iron stack">
+            <span class="ds-label ds-label--dark">no ferro · lado escuro da janela de reserva</span>
+            <div class="field field--dark"><label class="field__label" for="f8">Nome</label><input class="field__input" id="f8" value="Ana"></div>
+            <div class="field field--dark field--invalid"><label class="field__label" for="f9">WhatsApp</label><input class="field__input" id="f9" value="(45) 1234" aria-invalid="true"><p class="field__error">Confira o número: tem que ser um celular com WhatsApp.</p></div>
+            <div class="field field--dark">
+              <label class="field__label" for="otp-demo-input">Código que chegou no WhatsApp</label>
+              <div class="otp" id="otp-demo">
+                <input class="otp__input" id="otp-demo-input" inputmode="numeric" autocomplete="one-time-code" aria-describedby="otp-help">
+                <div class="otp__boxes" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+              </div>
+              <p class="field__help" id="otp-help">Digite 6 números.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ escolhas ============ -->
+      <section class="ds-section" id="escolhas" aria-labelledby="h-escolhas">
+        <h2 class="ds-h" id="h-escolhas">Escolhas da reserva</h2>
+        <p class="ds-lead">Pessoas, dias e horários como grupos de opção: um Tab, setas para andar, espaço para escolher.</p>
+        <div class="stack">
+          <span class="ds-label" id="lbl-pessoas">Pessoas</span>
+          <div class="tiles" role="radiogroup" aria-labelledby="lbl-pessoas" id="demo-tiles"></div>
+          <span class="ds-label" id="lbl-dias">Dias · hoje, poucas mesas, lotado, fechado com motivo</span>
+          <div class="days" role="radiogroup" aria-labelledby="lbl-dias" id="demo-days"></div>
+          <span class="ds-label" id="lbl-horas">Horários · tem mesa, últimas, lotado (vira lista de espera), escolhido</span>
+          <div class="slots" role="radiogroup" aria-labelledby="lbl-horas" id="demo-slots"></div>
+          <div class="legend">
+            <span><i></i>tem mesa</span>
+            <span><i class="ds-legend-few"></i>últimas mesas</span>
+            <span><i class="ds-legend-full"></i>lotado · lista de espera</span>
+            <span><i class="ds-legend-chosen"></i>escolhido</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ selos ============ -->
+      <section class="ds-section" id="selos" aria-labelledby="h-selos">
+        <h2 class="ds-h" id="h-selos">Selos de status</h2>
+        <p class="ds-lead">Texto e padrão juntos: dá para ler em preto e branco.</p>
+        <div class="cluster" id="badges"></div>
+        <div class="cluster ds-mt">
+          <span class="badge badge--said-yes">confirmou</span>
+          <span class="badge badge--no-reply">sem resposta</span>
+          <span>Pendentes <span class="count">2</span></span>
+        </div>
+      </section>
+
+      <!-- ============ abas ============ -->
+      <section class="ds-section" id="abas" aria-labelledby="h-abas">
+        <h2 class="ds-h" id="h-abas">Abas</h2>
+        <div class="frame frame--2">
+          <div class="panel">
+            <span class="ds-label">em coluna (cardápio no computador)</span>
+            <div class="tabs" role="tablist" aria-label="Partes do cardápio" id="tabs-col">
+              <button class="tab" role="tab" aria-selected="true" aria-controls="tp1" id="tb1" type="button">Pra compartilhar <small>6</small></button>
+              <button class="tab" role="tab" aria-selected="false" aria-controls="tp2" id="tb2" type="button">Ramen <small>4</small></button>
+              <button class="tab" role="tab" aria-selected="false" aria-controls="tp3" id="tb3" type="button">Bebidas <small>16</small></button>
+            </div>
+            <div role="tabpanel" id="tp1" aria-labelledby="tb1" class="ds-tabpanel">Karage, gyoza, tonkatsu…</div>
+            <div role="tabpanel" id="tp2" aria-labelledby="tb2" class="ds-tabpanel" hidden>Missô, shoyu, tori, katsukarê.</div>
+            <div role="tabpanel" id="tp3" aria-labelledby="tb3" class="ds-tabpanel" hidden>Soft drinks, cervejas, licores.</div>
+          </div>
+          <div class="panel">
+            <span class="ds-label">em linha (celular e filtros do painel)</span>
+            <div class="tabs tabs--row" role="tablist" aria-label="Filtro" id="tabs-row">
+              <button class="tab" role="tab" aria-selected="true" aria-controls="tr1" type="button">Hoje</button>
+              <button class="tab" role="tab" aria-selected="false" aria-controls="tr2" type="button">Amanhã</button>
+              <button class="tab" role="tab" aria-selected="false" aria-controls="tr3" type="button">Semana</button>
+            </div>
+            <div role="tabpanel" id="tr1" class="ds-tabpanel">As reservas de hoje.</div>
+            <div role="tabpanel" id="tr2" class="ds-tabpanel" hidden>As reservas de amanhã.</div>
+            <div role="tabpanel" id="tr3" class="ds-tabpanel" hidden>A semana inteira.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ tabela ============ -->
+      <section class="ds-section" id="tabela" aria-labelledby="h-tabela">
+        <h2 class="ds-h" id="h-tabela">Tabela</h2>
+        <p class="ds-lead">No celular, cada linha vira uma ficha. Carregando, vazio e erro ocupam o corpo da tabela.</p>
+        <div class="tabs tabs--row ds-mb" role="tablist" aria-label="Estado da tabela" id="table-state">
+          <button class="tab" role="tab" aria-selected="true" data-state="dados" type="button">Com dados</button>
+          <button class="tab" role="tab" aria-selected="false" data-state="carregando" type="button">Carregando</button>
+          <button class="tab" role="tab" aria-selected="false" data-state="vazio" type="button">Vazio</button>
+          <button class="tab" role="tab" aria-selected="false" data-state="erro" type="button">Erro</button>
+        </div>
+        <div class="table-wrap"><table class="data-table data-table--stack" id="demo-table"></table></div>
+      </section>
+
+      <!-- ============ janelas ============ -->
+      <section class="ds-section" id="janelas" aria-labelledby="h-janelas">
+        <h2 class="ds-h" id="h-janelas">Janelas</h2>
+        <p class="ds-lead">A janela de reserva ocupa a tela no celular. Com algo digitado, fechar pergunta antes.</p>
+        <div class="cluster">
+          <button class="btn" type="button" id="open-dialog">Abrir janela</button>
+          <button class="btn btn--outline" type="button" id="open-drawer">Abrir gaveta do painel</button>
+          <button class="btn btn--danger" type="button" id="open-confirm">Confirmar ação destrutiva</button>
+        </div>
+        <dialog class="dialog" id="demo-dialog" aria-labelledby="demo-dialog-title">
+          <div class="dialog__bar"><i class="dialog__logo" aria-hidden="true"></i><b class="dialog__title" id="demo-dialog-title">Reservar mesa</b><button class="dialog__close" type="button" data-close aria-label="Fechar">×</button></div>
+          <div class="dialog__body stack">
+            <p class="prose">Escreva algo no campo e tente fechar: a janela pergunta antes de descartar.</p>
+            <div class="field"><label class="field__label" for="dlg-name">Nome</label><input class="field__input" id="dlg-name"></div>
+          </div>
+        </dialog>
+        <dialog class="dialog dialog--drawer" id="demo-drawer" aria-labelledby="demo-drawer-title">
+          <div class="dialog__bar"><b class="dialog__title" id="demo-drawer-title">TR-4821</b><button class="dialog__close" type="button" data-close aria-label="Fechar">×</button></div>
+          <div class="dialog__body stack">
+            <span class="badge badge--confirmed">Confirmada</span>
+            <p><b>Ana</b> · 2 pessoas · qua 30/09 às 20:30 · mesa S2</p>
+            <p class="rotulo">Linha do tempo</p>
+            <ul class="feed">
+              <li class="feed-item feed-item--new"><span class="feed-item__kind">nova reserva</span><span class="feed-item__when">17:43</span><strong>Pelo site</strong></li>
+              <li class="feed-item feed-item--confirmed"><span class="feed-item__kind">confirmou</span><span class="feed-item__when">16:04</span><strong>Respondeu SIM ao lembrete</strong></li>
+            </ul>
+          </div>
+        </dialog>
+      </section>
+
+      <!-- ============ avisos ============ -->
+      <section class="ds-section" id="avisos" aria-labelledby="h-avisos">
+        <h2 class="ds-h" id="h-avisos">Avisos</h2>
+        <p class="ds-lead">Sucesso some em 4 segundos. Erro fica até fechar. Ação que volta atrás oferece Desfazer.</p>
+        <div class="cluster">
+          <button class="btn btn--outline" type="button" id="toast-ok">Aviso de sucesso</button>
+          <button class="btn btn--outline" type="button" id="toast-undo">Com desfazer</button>
+          <button class="btn btn--outline" type="button" id="toast-error">Aviso de erro</button>
+        </div>
+      </section>
+
+      <!-- ============ comprovante ============ -->
+      <section class="ds-section" id="comprovante" aria-labelledby="h-comprovante">
+        <h2 class="ds-h" id="h-comprovante">Comprovante</h2>
+        <p class="ds-lead">O carimbo só aparece quando a mesa está garantida.</p>
+        <div class="frame frame--3">
+          <div class="panel panel--iron stack">
+            <span class="ds-label ds-label--dark">confirmada</span>
+            <div class="receipt is-new">
+              <span class="receipt__stamp seal" aria-hidden="true"></span>
+              <span class="receipt__logo" role="img" aria-label="Território"></span>
+              <span class="mao">Pode entrar, Ana! A casa é sua.</span>
+              <span class="receipt__code">TR-4821</span>
+              <div class="receipt__line"><span>qua 30/09</span><b>20:30</b></div>
+              <div class="receipt__line"><span>2 pessoas</span><span>tolerância até 20:45</span></div>
+            </div>
+          </div>
+          <div class="panel panel--iron stack">
+            <span class="ds-label ds-label--dark">pendente (aguardando a casa)</span>
+            <div class="receipt receipt--pending">
+              <span class="receipt__stamp" aria-hidden="true"></span>
+              <span class="receipt__logo" role="img" aria-label="Território"></span>
+              <span class="mao">Recebemos seu pedido, Gustavo.</span>
+              <span class="receipt__code">TR-5307</span>
+              <div class="receipt__line"><span>qui 01/10</span><b>20:30</b></div>
+              <div class="receipt__line"><span>10 pessoas</span><span>a casa confirma até 18:30</span></div>
+            </div>
+          </div>
+          <div class="panel panel--iron stack">
+            <span class="ds-label ds-label--dark">resumo e progresso</span>
+            <ol class="steps" aria-label="Passo 2 de 3"><li class="is-done"></li><li class="is-done"></li><li></li></ol>
+            <dl class="summary">
+              <div><dt>Pessoas</dt><dd>2</dd></div>
+              <div><dt>Dia</dt><dd>qua 30/09</dd></div>
+              <div><dt>Horário</dt><dd>20:30</dd></div>
+              <div><dt>Tolerância</dt><dd>15 min</dd></div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ estados ============ -->
+      <section class="ds-section" id="estados" aria-labelledby="h-estados">
+        <h2 class="ds-h" id="h-estados">Vazio, carregando e erro</h2>
+        <div class="frame frame--3">
+          <div class="panel"><div class="empty"><span class="seal seal--ink"></span><b>Nada por aqui</b><p>Nenhuma reserva para hoje ainda.</p><button class="btn btn--sm btn--outline" type="button">Nova reserva</button></div></div>
+          <div class="panel stack" aria-busy="true"><span class="skeleton skeleton--title"></span><span class="skeleton skeleton--text"></span><span class="skeleton skeleton--text"></span><span class="skeleton skeleton--block"></span></div>
+          <div class="panel"><div class="empty error-state" role="alert"><span class="seal"></span><b>Não carregou</b><p>A casa demorou a responder. Tente de novo em instantes.</p><button class="btn btn--sm" type="button">Tentar de novo</button></div></div>
+        </div>
+        <div class="offline ds-mt" role="status">Sem internet · as ações voltam quando a conexão voltar</div>
+        <div class="notice notice--alert ds-mt">Esse horário acabou de lotar. Tem mesa às 21:00 e às 21:30, ou você entra na lista de espera.</div>
+      </section>
+
+      <!-- ============ noite ============ -->
+      <section class="ds-section" id="noite" aria-labelledby="h-noite">
+        <h2 class="ds-h" id="h-noite">Números e feed</h2>
+        <div class="stats">
+          <div class="stat"><b>13</b><small>reservas hoje</small></div>
+          <div class="stat is-changed"><b>48</b><small>pessoas esperadas</small></div>
+          <div class="stat"><b>5</b><small>confirmaram pelo WhatsApp</small></div>
+          <div class="stat stat--kraft"><b>1</b><small>na lista de espera</small></div>
+        </div>
+        <div class="frame frame--2 ds-mt">
+          <div class="panel">
+            <ul class="feed">
+              <li class="feed-item feed-item--new is-arriving"><span class="feed-item__kind">nova reserva</span><span class="feed-item__when">17:48</span><strong>Pedro + 3 · 21:00</strong><small>4 pessoas · Q2 · pelo site</small></li>
+              <li class="feed-item feed-item--confirmed"><span class="feed-item__kind">confirmou</span><span class="feed-item__when">17:45</span><strong>Juliana + 5 confirmou</strong><small>19:30 · Q3 · respondeu SIM</small></li>
+              <li class="feed-item feed-item--canceled"><span class="feed-item__kind">cancelou</span><span class="feed-item__when">17:40</span><strong>Rafael cancelou</strong><small>19:00 · mesa Q7 livre</small></li>
+              <li class="feed-item feed-item--waitlisted"><span class="feed-item__kind">lista de espera</span><span class="feed-item__when">17:36</span><strong>Camila + 1 · 20:00</strong><small>horário lotado · entrou na lista</small></li>
+            </ul>
+          </div>
+          <div class="panel stack">
+            <div class="ticket"><span class="ticket__table">S1</span><strong>Carla + 3</strong><small>4 pessoas</small><span class="ticket__note">aniversário</span></div>
+            <div class="ticket is-new"><span class="ticket__table">S2</span><strong>Ana + 1</strong><small>2 pessoas · TR-4821</small></div>
+            <div class="ticket is-canceled"><span class="ticket__table">Q7</span><strong>Rafael</strong><small>2 pessoas</small><span class="ticket__note">cancelou · mesa livre</span></div>
+            <div class="ticket is-waitlist"><strong>Camila + 1</strong><small>2 pessoas · lista de espera</small></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ salão ============ -->
+      <section class="ds-section" id="salao" aria-labelledby="h-salao">
+        <h2 class="ds-h" id="h-salao">Planta do salão</h2>
+        <p class="ds-lead">Livre, reservada, sentada, atrasada e liberar. Mesas redondas no quintal, bancos no balcão.</p>
+        <div class="floor">
+          <div class="floor-area"><span class="floor-area__name">Salão · dentro</span>
+            <button class="table-node is-seated" type="button"><b>S1</b><span>19:00</span></button>
+            <button class="table-node is-reserved" type="button"><b>S2</b><span>20:30</span></button>
+            <button class="table-node is-late" type="button"><span class="table-node__joined">+S4</span><b>S3</b><span>+8 min</span></button>
+            <button class="table-node is-release" type="button"><b>S5</b><span>liberar</span></button>
+            <button class="table-node" type="button" aria-pressed="true"><b>S6</b><span>2 lug.</span></button>
+          </div>
+          <div class="floor-area"><span class="floor-area__name">Quintal</span>
+            <button class="table-node table-node--round is-seated" type="button"><b>Q1</b><span>20:00</span></button>
+            <button class="table-node table-node--round" type="button"><b>Q2</b><span>4 lug.</span></button>
+            <button class="table-node is-reserved" type="button"><b>Q3</b><span>19:30</span></button>
+            <button class="table-node table-node--round" type="button"><b>Q7</b><span>2 lug.</span></button>
+          </div>
+          <div class="floor-area floor-area--wide"><span class="floor-area__name">Balcão</span>
+            <button class="table-node table-node--stool is-seated" type="button"><b>B1</b></button>
+            <button class="table-node table-node--stool" type="button"><b>B2</b></button>
+            <button class="table-node table-node--stool" type="button"><b>B3</b></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ semente ============ -->
+      <section class="ds-section" id="semente" aria-labelledby="h-semente">
+        <h2 class="ds-h" id="h-semente">Círculo de sementes</h2>
+        <p class="ds-lead">24 grãos e o miolo de 12 lados, uma cor só. Gira devagar quando algo está carregando.</p>
+        <div class="cluster ds-seeds">
+          <span class="seal seal--ink ds-seed-lg"></span>
+          <span class="seal seal--terra"></span>
+          <span class="ds-seed-dark"><span class="seal"></span></span>
+          <span class="seal seal--ink is-turning" role="img" aria-label="Carregando"></span>
+        </div>
+      </section>
+
+      <!-- ============ api ============ -->
+      <section class="ds-section" id="api" aria-labelledby="h-api">
+        <h2 class="ds-h" id="h-api">API simulada</h2>
+        <p class="ds-lead">Chamada de verdade ao contrato da API, respondida pelo mock. Use a barra de demonstração para ver os estados lento, com erro e vazio.</p>
+        <div class="frame frame--2">
+          <div class="panel stack" id="api-house"></div>
+          <div class="panel stack">
+            <span class="ds-label" id="lbl-api-days">Próximos dias para 2 pessoas</span>
+            <div id="api-days"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

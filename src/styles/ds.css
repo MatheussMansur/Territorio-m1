@@ -1,0 +1,393 @@
+/* Estilos só da página do catálogo do design system. */
+@layer pages {
+  .ds-bar {
+    position: sticky;
+    top: 0;
+    z-index: var(--z-viga);
+    background: var(--cor-escuro);
+    color: var(--cor-escuro-texto);
+  }
+
+  .ds-bar__in {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    min-height: 56px;
+  }
+
+  .ds-bar__logo {
+    width: 104px;
+    height: 29px;
+    background: var(--cor-escuro-texto);
+    mask: url("/img/logo.png") left center / contain no-repeat;
+  }
+
+  .ds-bar b {
+    padding-left: 18px;
+    border-left: 1px solid var(--cor-escuro-fio);
+    font-family: var(--f-letreiro);
+    font-weight: 800;
+    font-size: 16px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--cor-escuro-texto-suave);
+  }
+
+  .ds-bar__note {
+    margin-left: auto;
+    font-family: var(--f-mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--cor-escuro-rotulo);
+  }
+
+  .ds-layout {
+    display: grid;
+    grid-template-columns: 200px minmax(0, 1fr);
+    gap: clamp(20px, 3vw, 44px);
+    padding-block: 32px 96px;
+  }
+
+  .ds-nav {
+    position: sticky;
+    top: 76px;
+    align-self: start;
+    display: flex;
+    flex-direction: column;
+    border-top: var(--fio) solid var(--cor-borda);
+  }
+
+  .ds-nav a {
+    padding: 7px 2px;
+    border-bottom: 1px solid var(--cor-fio);
+    color: var(--cor-texto);
+    font-family: var(--f-letreiro);
+    font-weight: 800;
+    font-size: 16px;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .ds-nav a:hover {
+    color: var(--cor-atencao-texto);
+  }
+
+  .ds-main {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(40px, 6vw, 72px);
+    min-width: 0;
+  }
+
+  .ds-intro h1 {
+    margin: 8px 0 12px;
+    font-size: var(--t-display);
+  }
+
+  .ds-intro p {
+    font-size: 17.5px;
+    color: var(--cor-texto-suave);
+  }
+
+  .ds-section {
+    scroll-margin-top: 76px;
+    padding-top: 14px;
+    border-top: var(--barra) solid var(--cor-borda);
+  }
+
+  .ds-h {
+    margin-bottom: 6px;
+    font-family: var(--f-letreiro);
+    font-weight: 900;
+    font-size: var(--t-secao);
+    line-height: 0.95;
+    text-transform: uppercase;
+  }
+
+  .ds-lead {
+    max-width: 70ch;
+    margin-bottom: 18px;
+    color: var(--cor-texto-suave);
+  }
+
+  .ds-label {
+    display: block;
+    margin-bottom: 8px;
+    font-family: var(--f-mono);
+    font-size: 10.5px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--cor-texto-fraco);
+  }
+
+  .ds-label--dark {
+    color: var(--cor-escuro-rotulo);
+  }
+
+  .ds-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 18px;
+  }
+
+  .ds-grid--fields {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    margin-bottom: 18px;
+  }
+
+  .ds-cell {
+    padding: 14px;
+    border: 1px dashed var(--cor-fio);
+  }
+
+  .ds-cell--dark {
+    background: var(--cor-escuro);
+  }
+
+  .ds-dark-fields {
+    max-width: 520px;
+  }
+
+  .ds-mt {
+    margin-top: 16px;
+  }
+
+  .ds-mb {
+    margin-bottom: 12px;
+  }
+
+  .ds-swatches {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    gap: var(--barra);
+    padding: var(--barra);
+    background: var(--cor-borda);
+  }
+
+  .ds-swatch {
+    display: flex;
+    flex-direction: column;
+    background: var(--cor-superficie);
+  }
+
+  .ds-swatch i {
+    display: block;
+    height: 70px;
+  }
+
+  .ds-swatch figcaption {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 9px 12px 11px;
+    font-size: 12.5px;
+    line-height: 1.35;
+  }
+
+  .ds-swatch b {
+    font-family: var(--f-letreiro);
+    font-weight: 800;
+    font-size: 17px;
+    text-transform: uppercase;
+  }
+
+  .ds-swatch .mono {
+    font-size: 11px;
+    color: var(--cor-texto-fraco);
+  }
+
+  .ds-type__display {
+    font-size: var(--t-display);
+  }
+
+  .ds-type__h2 {
+    font-size: var(--t-secao);
+  }
+
+  .ds-type__h3 {
+    font-size: var(--t-bloco);
+  }
+
+  .ds-type__mono {
+    font-size: 15px;
+  }
+
+  .ds-type__hand {
+    font-size: 36px;
+    color: var(--cor-atencao-texto);
+  }
+
+  .ds-type__menu-dark {
+    background: var(--folha-preta);
+    color: var(--folha-preta-texto);
+  }
+
+  .ds-type__menu-dark .ds-label {
+    color: var(--folha-preta-suave);
+  }
+
+  .ds-type__ramen {
+    font-family: var(--f-ramen);
+    font-size: 32px;
+    text-transform: uppercase;
+  }
+
+  .ds-type__ramen span {
+    color: var(--vermelho-cardapio);
+  }
+
+  .ds-type__ramen-sub {
+    font-family: var(--f-ramen-texto);
+    font-style: italic;
+    font-size: 13.5px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--papel-no-escuro-2);
+  }
+
+  /* o cartão de bebidas feito à mão: papel dentro de uma borda de azulejo azul */
+  .ds-type__menu-drinks {
+    border: 14px solid transparent;
+    background:
+      linear-gradient(var(--off-white), var(--off-white)) padding-box,
+      repeating-linear-gradient(135deg, var(--azulejo) 0 6px, transparent 6px 14px) border-box;
+    color: var(--marsala);
+  }
+
+  .ds-type__drinks {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--f-letreiro);
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 0.95;
+    text-transform: uppercase;
+  }
+
+  .ds-type__coin {
+    display: inline-grid;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: var(--moeda);
+    font-size: 17px;
+  }
+
+  .ds-type__drinks-hand {
+    font-size: 26px;
+    color: var(--marsala);
+  }
+
+  .ds-food-club {
+    background: var(--cor-fundo);
+    color: var(--cor-texto);
+    border-top: 8px solid var(--cor-atencao);
+  }
+
+  .ds-food-club__title {
+    font-size: 34px;
+    color: var(--cor-texto);
+  }
+
+  .ds-food-club__text {
+    color: var(--cor-texto-suave);
+  }
+
+  .ds-h3 {
+    margin: 22px 0 10px;
+    font-family: var(--f-letreiro);
+    font-weight: 900;
+    font-size: 22px;
+    text-transform: uppercase;
+  }
+
+  .ds-type {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ds-tabpanel {
+    padding-top: 12px;
+    color: var(--cor-texto-suave);
+  }
+
+  .ds-legend-few {
+    background: var(--cor-selecao);
+  }
+
+  .ds-legend-full {
+    background: repeating-linear-gradient(135deg, var(--cor-hachura) 0 1.5px, transparent 1.5px 6px), var(--cor-fundo);
+  }
+
+  .ds-legend-chosen {
+    background: var(--cor-selecao);
+    border-color: var(--cor-selecao) !important;
+  }
+
+  .ds-seeds {
+    gap: 28px;
+  }
+
+  .ds-seed-lg {
+    width: 120px;
+    height: 120px;
+  }
+
+  .ds-seed-dark {
+    display: grid;
+    place-items: center;
+    width: 96px;
+    height: 96px;
+    background: var(--cor-noite);
+  }
+
+  .ds-api-name {
+    font-size: 44px;
+  }
+
+  #api-days .days {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+  }
+
+  #api-days .day.skeleton {
+    min-height: 74px;
+  }
+
+  @media (max-width: 900px) {
+    .ds-layout {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .ds-nav {
+      position: static;
+      flex-flow: row nowrap;
+      overflow-x: auto;
+      gap: 14px;
+      border-top: 0;
+      scrollbar-width: none;
+    }
+
+    .ds-nav a {
+      flex: none;
+      border-bottom: 0;
+    }
+
+    .ds-type {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .ds-bar__note {
+      display: none;
+    }
+  }
+}
+
+.ds-type__grotesca {
+  font-family: var(--f-grotesca);
+  font-weight: 700;
+  font-size: 28px;
+  text-transform: uppercase;
+}

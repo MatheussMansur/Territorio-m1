@@ -1,0 +1,33 @@
+/* O círculo de 24 sementes, desenhado no próprio HTML para pegar a cor do texto. */
+.seal {
+  display: inline-block;
+  flex: none;
+  width: 48px;
+  height: 48px;
+  color: var(--cor-selo);
+}
+
+.seal svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.seal--ink {
+  color: var(--cor-texto);
+}
+
+.seal--terra {
+  color: var(--cor-selecao);
+}
+
+/* carregando: o selo gira devagar */
+.seal.is-turning svg {
+  animation: seal-turn 3s linear infinite;
+}
+
+@keyframes seal-turn {
+  to {
+    transform: rotate(360deg);
+  }
+}
