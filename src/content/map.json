@@ -1,0 +1,14 @@
+{
+  "note": "Feito por scripts/site/mapa-osm.mjs a partir do OpenStreetMap. Se a casa mudar de lugar, rode com --baixar.",
+  "width": 768,
+  "height": 480,
+  "widths": [
+    480,
+    768
+  ],
+  "placeholder": "#f2efe9",
+  "lat": -25.4878224,
+  "lng": -54.5669192,
+  "zoom": 16,
+  "credit_url": "https://www.openstreetmap.org/copyright"
+}

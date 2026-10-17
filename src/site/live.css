@@ -1,0 +1,373 @@
+/* As partes das páginas públicas acrescentadas no Épico 4: a hora de Foz, os créditos da galeria, a
+   barra de idioma, a janela de reserva, o mapa desenhado, os eventos e o 404. Mesmas regras do
+   site.css: cores e letras dos tokens, cantos retos, sem sombras, estado nunca só pela cor. */
+
+/* o plano B dos títulos (história 4.9, UX-DR-12): a Londrina Solid é gerada com as outras fontes e
+   nunca baixada até --f-letreiro (tokens.css) apontar para cá: var(--f-letreiro-b) */
+:root {
+  --f-letreiro-b: "Londrina Solid", "Familjen Grotesk", "Arial Narrow", impact, sans-serif;
+}
+
+/* ---- a raiz, a marca da casa nos estados vazios e o 404 ---- */
+.raiz-marca {
+  display: inline-block;
+  width: 72px;
+  aspect-ratio: 1;
+  background: currentColor;
+  mask: url("/img/marca/raiz-mascara.webp") center / contain no-repeat;
+}
+
+/* ---- "Aberto agora": a hora de Foz quando o aparelho está em outro lugar ---- */
+.capa__fuso {
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--papel-no-escuro);
+}
+
+.capa__fuso::before {
+  content: "· ";
+}
+
+/* ---- a galeria: o crédito de cada foto embaixo dela ---- */
+.galeria__item {
+  display: grid;
+}
+
+.galeria__credito {
+  padding: 4px 12px 6px;
+  background: var(--ferro);
+  color: var(--papel-no-escuro);
+  font-family: var(--f-mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+}
+
+/* ---- o cardápio: "consulte" no lugar do preço ---- */
+.sheet__price--consulte {
+  font-family: var(--f-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: lowercase;
+}
+
+/* ---- a sugestão de idioma: uma barra no pé, de no máximo 56 px, acima da barra de cookies ---- */
+.lingua {
+  position: fixed;
+  inset: auto 0 0;
+  z-index: calc(var(--z-demo) + 2);
+  display: flex;
+  gap: var(--e-2);
+  align-items: center;
+  max-height: 56px;
+  padding: 6px max(16px, calc((100vw - var(--largura-max)) / 2));
+  background: var(--cor-escuro);
+  color: var(--cor-escuro-texto);
+  border-top: var(--fio) solid var(--cor-escuro-borda);
+}
+
+.lingua__texto {
+  flex: 1;
+  min-width: 0;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.lingua__ir {
+  flex: none;
+  white-space: nowrap;
+}
+
+.lingua__ficar {
+  flex: none;
+  width: var(--alvo-toque);
+  height: var(--alvo-toque);
+  border: var(--fio) solid var(--cor-escuro-borda);
+  background: transparent;
+  color: var(--cor-escuro-texto);
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.lingua__ficar:hover {
+  background: var(--cor-escuro-2);
+}
+
+@media (max-width: 480px) {
+  .lingua__texto {
+    font-size: 13px;
+  }
+}
+
+/* ---- a janela de reserva: a página de reserva sobre o site, tela inteira nos celulares ---- */
+.reserva-janela {
+  width: min(1100px, calc(100vw - 48px));
+  height: min(860px, calc(100dvh - 48px));
+  max-width: none;
+  max-height: none;
+  margin: auto;
+  padding: 0;
+  border: var(--barra) solid var(--cor-borda);
+  background: var(--cor-fundo);
+  color: var(--cor-texto);
+  overflow: hidden;
+}
+
+.reserva-janela[open] {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+}
+
+.reserva-janela::backdrop {
+  background: var(--noite-92);
+}
+
+.reserva-janela__barra {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--e-3);
+  padding: 6px 6px 6px var(--e-4);
+  background: var(--cor-escuro);
+  color: var(--cor-escuro-texto);
+}
+
+.reserva-janela__titulo {
+  font-family: var(--f-letreiro);
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.reserva-janela__fechar {
+  width: var(--alvo-toque);
+  height: var(--alvo-toque);
+  border: var(--fio) solid var(--cor-escuro-borda);
+  background: transparent;
+  color: var(--cor-escuro-texto);
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.reserva-janela__fechar:hover {
+  background: var(--cor-escuro-2);
+}
+
+.reserva-janela__quadro {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: var(--cor-fundo);
+}
+
+.reserva-janela__pergunta {
+  position: absolute;
+  inset: auto 0 0;
+  display: grid;
+  gap: var(--e-2);
+  padding: var(--e-4) var(--e-5);
+  background: var(--grao), var(--cor-superficie);
+  border-top: var(--barra) solid var(--cor-borda);
+}
+
+.reserva-janela__pergunta[hidden] {
+  display: none;
+}
+
+.reserva-janela__pergunta-titulo {
+  font-family: var(--f-letreiro);
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.reserva-janela__pergunta-acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--e-2);
+}
+
+@media (max-width: 860px) {
+  .reserva-janela {
+    width: 100vw;
+    height: 100dvh;
+    border: 0;
+  }
+}
+
+/* ---- "Onde fica": a imagem fixa do mapa do OpenStreetMap, servida pelo site ---- */
+.onde__mapa {
+  display: grid;
+  gap: var(--e-2);
+  align-content: start;
+  margin: 0;
+}
+
+.onde__imagem {
+  display: block;
+  overflow: hidden;
+  border: 2px solid var(--cor-borda);
+}
+
+.mapa {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 768 / 480;
+}
+
+/* no tema escuro, o mapa claro fica mais baixo para não ofuscar */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="claro"]) .mapa {
+    filter: brightness(0.8) contrast(1.05) saturate(0.85);
+  }
+}
+
+:root[data-theme="escuro"] .mapa {
+  filter: brightness(0.8) contrast(1.05) saturate(0.85);
+}
+
+.onde__credito {
+  font-size: var(--t-pequeno);
+  color: var(--cor-texto-suave);
+}
+
+.onde__credito a {
+  color: inherit;
+}
+
+/* ---- eventos: a agenda, os cartões e a página do evento ---- */
+.eventos {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+}
+
+.evento {
+  display: grid;
+  gap: var(--e-3);
+  align-content: start;
+}
+
+.evento__foto {
+  position: relative;
+  margin: 0;
+}
+
+.evento__foto img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+.evento__credito {
+  padding: 4px 0 0;
+  font-family: var(--f-mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--cor-texto-suave);
+}
+
+.evento__texto {
+  display: grid;
+  gap: var(--e-2);
+  align-content: start;
+}
+
+.evento__titulo {
+  font-family: var(--f-letreiro);
+  font-weight: 900;
+  font-size: clamp(24px, 2.6vw, 32px);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.evento__titulo a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.evento__titulo a:hover {
+  text-decoration: underline;
+}
+
+.evento__hoje {
+  color: var(--terracota);
+}
+
+.evento__reserva {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--e-2);
+  align-items: center;
+}
+
+.evento__modo {
+  font-size: var(--t-pequeno);
+  color: var(--cor-texto-suave);
+}
+
+.evento__reserva--sem b {
+  font-family: var(--f-mono);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.eventos__mais {
+  margin-top: var(--e-4);
+}
+
+.eventos-pagina,
+.evento-pagina,
+.nao-achou-pagina {
+  display: grid;
+  gap: var(--e-5);
+  padding-block: var(--e-7) var(--e-8);
+}
+
+.evento--pagina {
+  gap: var(--barra);
+}
+
+.evento--pagina .evento__foto {
+  background: var(--cor-superficie);
+}
+
+.evento--pagina .evento__titulo {
+  font-size: clamp(34px, 5vw, 56px);
+}
+
+.eventos__vazio,
+.nao-achou {
+  display: grid;
+  gap: var(--e-3);
+  justify-items: start;
+  max-width: 720px;
+}
+
+.eventos__raiz,
+.nao-achou__raiz {
+  color: var(--cor-borda);
+}
+
+.nao-achou__titulo {
+  font-size: clamp(34px, 6vw, 64px);
+  line-height: 1;
+}
+
+.nao-achou__acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--e-2);
+}
+
+@media (max-width: 860px) {
+  .evento--pagina.esq--2 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

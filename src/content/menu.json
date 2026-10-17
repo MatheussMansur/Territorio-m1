@@ -1,0 +1,480 @@
+{
+  "currency": "BRL",
+  "price_missing": "omit",
+  "categories": [
+    {
+      "id": "pra-compartilhar",
+      "name": {
+        "pt": "Pra compartilhar",
+        "es": "Para compartir",
+        "en": "To share"
+      },
+      "subtitle": {
+        "pt": "Quentes, pra dividir no meio da mesa.",
+        "es": "Calientes, para compartir en el medio de la mesa.",
+        "en": "Hot, to share in the middle of the table."
+      },
+      "style": "dark",
+      "hand": "Vem pro Território!",
+      "photo": "mesa",
+      "items": [
+        {
+          "name": "Karage",
+          "description": null,
+          "price_cents": 3200,
+          "badges": [],
+          "group": null,
+          "available": true
+        },
+        {
+          "name": "Gyoza",
+          "description": null,
+          "price_cents": 3200,
+          "badges": [],
+          "group": null,
+          "available": true
+        },
+        {
+          "name": "Tonkatsu",
+          "description": null,
+          "price_cents": 4000,
+          "badges": [],
+          "group": null,
+          "available": true
+        },
+        {
+          "name": "Ebi Furai",
+          "description": null,
+          "price_cents": 5200,
+          "badges": [],
+          "group": null,
+          "available": true
+        },
+        {
+          "name": "Ebi Tempurá",
+          "description": {
+            "pt": "Camarão Maruí numa massa fininha e crocante, com maionese da casa e um toque de pimenta togarashi."
+          },
+          "price_cents": null,
+          "badges": [],
+          "group": null,
+          "available": true
+        },
+        {
+          "name": "Nassu no missô",
+          "description": {
+            "pt": "Berinjela com caramelo de missô e melado de Capanema."
+          },
+          "price_cents": null,
+          "badges": [],
+          "group": null,
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "crus",
+      "name": {
+        "pt": "Crus",
+        "es": "Crudos",
+        "en": "Raw"
+      },
+      "subtitle": {
+        "pt": "Peixe escolhido a dedo, com técnica de omakase.",
+        "es": "Pescado elegido a mano, con técnica de omakase.",
+        "en": "Hand-picked fish, with omakase technique."
+      },
+      "style": "dark",
+      "hand": "Toda quinta é dia de peixe fresco!",
+      "photo": null,
+      "items": [
+        {
+          "name": "Régua de niguiris",
+          "description": null,
+          "price_cents": 4600,
+          "badges": [],
+          "group": null,
+          "available": true
+        },
+        {
+          "name": "Sashimi",
+          "description": null,
+          "price_cents": 3200,
+          "badges": [],
+          "group": null,
+          "available": true
+        },
+        {
+          "name": "Hossomaki",
+          "description": null,
+          "price_cents": 3000,
+          "badges": [],
+          "group": null,
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "ramen",
+      "name": {
+        "pt": "Ramen",
+        "es": "Ramen",
+        "en": "Ramen"
+      },
+      "subtitle": {
+        "pt": "Massa artesanal e caldo concentrado. Aparece em dias específicos.",
+        "es": "Fideos artesanales y caldo concentrado. Aparece en días específicos.",
+        "en": "Handmade noodles and a rich broth. Served on certain days."
+      },
+      "style": "dark",
+      "hand": "Vem pra aquecer e reconfortar.",
+      "photo": "ramen",
+      "items": [
+        {
+          "name": "Missô",
+          "description": {
+            "pt": "Dashi, missô, óleo aromático, massa artesanal, ajitamago, tofu, nori, cebolinha. Topo: cogumelo ao estilo teriyaki."
+          },
+          "price_cents": 5000,
+          "badges": [
+            "vegetarian"
+          ],
+          "group": null,
+          "available": true
+        },
+        {
+          "name": "Shoyu",
+          "description": {
+            "pt": "Dashi, tarê, óleo aromático, massa artesanal, ajitamago, narutomaki, nori, cebolinha. Topo: chashu, barriga de porco."
+          },
+          "price_cents": 5000,
+          "badges": [],
+          "group": null,
+          "available": true
+        },
+        {
+          "name": "Tori",
+          "description": {
+            "pt": "Tori paitan, caldo concentrado de frango, óleo aromático, massa artesanal, ajitamago, nori, milho, cebolinha. Topo: peito de frango."
+          },
+          "price_cents": 5200,
+          "badges": [],
+          "group": null,
+          "available": true
+        },
+        {
+          "name": "Katsukarê",
+          "description": {
+            "pt": "Tonkotsu, karê, óleo aromático, massa artesanal, ajitamago, narutomaki, nori, cebolinha. Topo: tonkatsu, lombo de porco empanado e frito."
+          },
+          "price_cents": 5600,
+          "badges": [],
+          "group": null,
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "oniguiri-e-beliscos",
+      "name": {
+        "pt": "Oniguiri e beliscos",
+        "es": "Onigiri y picoteo",
+        "en": "Onigiri and nibbles"
+      },
+      "subtitle": {
+        "pt": "Pra beliscar enquanto o resto sai.",
+        "es": "Para picar mientras sale lo demás.",
+        "en": "To nibble while the rest comes out."
+      },
+      "style": "dark",
+      "hand": "Aqui é tudo feito na hora.",
+      "photo": "oniguiri",
+      "items": [
+        {
+          "name": "Oniguiri",
+          "description": {
+            "pt": "O “fast food” asiático, grelhado na chapa."
+          },
+          "price_cents": null,
+          "badges": [],
+          "group": null,
+          "available": true
+        },
+        {
+          "name": "Edamame",
+          "description": null,
+          "price_cents": null,
+          "badges": [],
+          "group": null,
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "bebidas",
+      "name": {
+        "pt": "Bebidas",
+        "es": "Bebidas",
+        "en": "Drinks"
+      },
+      "subtitle": {
+        "pt": "Coquetéis, soft drinks, cervejas, vinho em taça e os licores da casa.",
+        "es": "Cócteles, bebidas sin alcohol, cervezas, vino por copa y los licores de la casa.",
+        "en": "Cocktails, soft drinks, beers, wine by the glass and the house liqueurs."
+      },
+      "style": "handmade",
+      "hand": "Boa comida, boa bebida e bom serviço.",
+      "photo": "balcao",
+      "items": [
+        {
+          "name": "New York Sour",
+          "description": {
+            "pt": "Bourbon · vinho tinto · limão-siciliano · clara de ovo · xarope simples"
+          },
+          "price_cents": 3000,
+          "badges": [],
+          "group": {
+            "pt": "Coquetéis",
+            "es": "Cócteles",
+            "en": "Cocktails"
+          },
+          "available": true
+        },
+        {
+          "name": "Margarita",
+          "description": {
+            "pt": "Tequila · triple sec · limão-taiti"
+          },
+          "price_cents": 3000,
+          "badges": [],
+          "group": {
+            "pt": "Coquetéis",
+            "es": "Cócteles",
+            "en": "Cocktails"
+          },
+          "available": true
+        },
+        {
+          "name": "Daiquiri",
+          "description": {
+            "pt": "Rum · limão-taiti · açúcar"
+          },
+          "price_cents": 2000,
+          "badges": [],
+          "group": {
+            "pt": "Coquetéis",
+            "es": "Cócteles",
+            "en": "Cocktails"
+          },
+          "available": true
+        },
+        {
+          "name": "Água",
+          "description": {
+            "pt": "Com ou sem gás."
+          },
+          "price_cents": 600,
+          "badges": [],
+          "group": {
+            "pt": "Soft drink",
+            "es": "Sin alcohol",
+            "en": "Soft drinks"
+          },
+          "available": true
+        },
+        {
+          "name": "Água tônica",
+          "description": null,
+          "price_cents": 800,
+          "badges": [],
+          "group": {
+            "pt": "Soft drink",
+            "es": "Sin alcohol",
+            "en": "Soft drinks"
+          },
+          "available": true
+        },
+        {
+          "name": "Refrigerante",
+          "description": null,
+          "price_cents": 800,
+          "badges": [],
+          "group": {
+            "pt": "Soft drink",
+            "es": "Sin alcohol",
+            "en": "Soft drinks"
+          },
+          "available": true
+        },
+        {
+          "name": "Chá gelado da casa",
+          "description": null,
+          "price_cents": 1200,
+          "badges": [],
+          "group": {
+            "pt": "Soft drink",
+            "es": "Sin alcohol",
+            "en": "Soft drinks"
+          },
+          "available": true
+        },
+        {
+          "name": "Chá quente",
+          "description": {
+            "pt": "Twinings."
+          },
+          "price_cents": 600,
+          "badges": [],
+          "group": {
+            "pt": "Soft drink",
+            "es": "Sin alcohol",
+            "en": "Soft drinks"
+          },
+          "available": true
+        },
+        {
+          "name": "Café expresso",
+          "description": {
+            "pt": "Orfeu."
+          },
+          "price_cents": 800,
+          "badges": [],
+          "group": {
+            "pt": "Soft drink",
+            "es": "Sin alcohol",
+            "en": "Soft drinks"
+          },
+          "available": true
+        },
+        {
+          "name": "Baden Pilsen",
+          "description": null,
+          "price_cents": 1200,
+          "badges": [],
+          "group": {
+            "pt": "Cervejas",
+            "es": "Cervezas",
+            "en": "Beers"
+          },
+          "available": true
+        },
+        {
+          "name": "Baden Amber",
+          "description": null,
+          "price_cents": 1200,
+          "badges": [],
+          "group": {
+            "pt": "Cervejas",
+            "es": "Cervezas",
+            "en": "Beers"
+          },
+          "available": true
+        },
+        {
+          "name": "Lagunitas IPA",
+          "description": null,
+          "price_cents": 1500,
+          "badges": [],
+          "group": {
+            "pt": "Cervejas",
+            "es": "Cervezas",
+            "en": "Beers"
+          },
+          "available": true
+        },
+        {
+          "name": "Stella Artois zero glúten",
+          "description": null,
+          "price_cents": 1200,
+          "badges": [],
+          "group": {
+            "pt": "Cervejas",
+            "es": "Cervezas",
+            "en": "Beers"
+          },
+          "available": true
+        },
+        {
+          "name": "Sol zero glúten",
+          "description": null,
+          "price_cents": 1200,
+          "badges": [],
+          "group": {
+            "pt": "Cervejas",
+            "es": "Cervezas",
+            "en": "Beers"
+          },
+          "available": true
+        },
+        {
+          "name": "Heineken zero álcool",
+          "description": null,
+          "price_cents": 1200,
+          "badges": [],
+          "group": {
+            "pt": "Cervejas",
+            "es": "Cervezas",
+            "en": "Beers"
+          },
+          "available": true
+        },
+        {
+          "name": "Vinho tinto",
+          "description": {
+            "pt": "Taça de 150 ml. Julia Florista, Portugal."
+          },
+          "price_cents": 1500,
+          "badges": [],
+          "group": {
+            "pt": "Vinhos, licores e cachaça",
+            "es": "Vinos, licores y cachaza",
+            "en": "Wine, liqueurs and cachaça"
+          },
+          "available": true
+        },
+        {
+          "name": "Vinho branco",
+          "description": {
+            "pt": "Taça de 150 ml. Julia Florista, Portugal."
+          },
+          "price_cents": 1500,
+          "badges": [],
+          "group": {
+            "pt": "Vinhos, licores e cachaça",
+            "es": "Vinos, licores y cachaza",
+            "en": "Wine, liqueurs and cachaça"
+          },
+          "available": true
+        },
+        {
+          "name": "Licor da casa",
+          "description": {
+            "pt": "Dose de 50 ml. Araçá, mel e limão-rosa · canela · maracujá e limão-rosa · cardamomo · capim-limão e erva-mate · jambu e especiarias · frutas vermelhas."
+          },
+          "price_cents": 1000,
+          "badges": [],
+          "group": {
+            "pt": "Vinhos, licores e cachaça",
+            "es": "Vinos, licores y cachaza",
+            "en": "Wine, liqueurs and cachaça"
+          },
+          "available": true
+        },
+        {
+          "name": "Cachaça",
+          "description": {
+            "pt": "Dose de 50 ml."
+          },
+          "price_cents": 1000,
+          "badges": [],
+          "group": {
+            "pt": "Vinhos, licores e cachaça",
+            "es": "Vinos, licores y cachaza",
+            "en": "Wine, liqueurs and cachaça"
+          },
+          "available": true
+        }
+      ]
+    }
+  ]
+}

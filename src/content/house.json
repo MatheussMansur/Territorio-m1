@@ -1,0 +1,111 @@
+{
+  "name": "Território",
+  "tagline": "Izakaya com sotaque da fronteira",
+  "description": {
+    "pt": "Boteco japonês em Foz do Iguaçu. Pratos para dividir e bebida gelada. Reserve pelo site ou pelo WhatsApp.",
+    "es": "Bar japonés en Foz do Iguaçu (Foz de Iguazú), Brasil. Platos para compartir y bebidas. Reservá por la web o por WhatsApp.",
+    "en": "Japanese izakaya in Foz do Iguaçu (Iguassu), Brazil. Small plates to share and drinks. Book online or on WhatsApp."
+  },
+  "address": {
+    "street": "Rua Sérgio Roncato",
+    "number": "703",
+    "district": "Ipê",
+    "city": "Foz do Iguaçu",
+    "state": "PR",
+    "zip": "85869-090",
+    "country": "BR",
+    "lat": -25.4878224,
+    "lng": -54.5669192,
+    "geo_source": "pino da ficha verificada do Google (14/10/2026)",
+    "coords_confirmed": true
+  },
+  "whatsapp": "+5545998304994",
+  "instagram": "_territorio_",
+  "timezone": "America/Sao_Paulo",
+  "cuisine": {
+    "pt": [
+      "Japonesa",
+      "Izakaya"
+    ],
+    "es": [
+      "Japonesa",
+      "Izakaya"
+    ],
+    "en": [
+      "Japanese",
+      "Izakaya"
+    ]
+  },
+  "hours_confirmed": true,
+  "hours": [
+    {
+      "weekday": 0,
+      "open": false,
+      "reason": "closed"
+    },
+    {
+      "weekday": 1,
+      "open": false,
+      "reason": "production"
+    },
+    {
+      "weekday": 2,
+      "open": false,
+      "reason": "production"
+    },
+    {
+      "weekday": 3,
+      "open": true,
+      "opens_at": "19:00",
+      "closes_at": "23:30"
+    },
+    {
+      "weekday": 4,
+      "open": true,
+      "opens_at": "19:00",
+      "closes_at": "23:30"
+    },
+    {
+      "weekday": 5,
+      "open": true,
+      "opens_at": "19:00",
+      "closes_at": "23:30"
+    },
+    {
+      "weekday": 6,
+      "open": true,
+      "opens_at": "19:00",
+      "closes_at": "23:30"
+    }
+  ],
+  "images": {
+    "share": null,
+    "logo": "/favicon.svg"
+  },
+  "price_range": "R$ 40–120",
+  "data_source": "ficha verificada do Google em 14/10/2026, adotada como padrão pelo Matheus; o mesmo vale para o Instagram e o Linktree",
+  "links": {
+    "instagram": "_territorio_",
+    "shop": "lojinhadoterritorio"
+  },
+  "photo_credits": [
+    "@cassiagarzella",
+    "@plongeefotografia"
+  ],
+  "legal": {
+    "name": null,
+    "cnpj": null,
+    "privacy_contact": null,
+    "pending": "razão social, CNPJ e contato para assuntos de dados: o Marcus informa (docs/06-pendencias.md)"
+  },
+  "booking_rules": {
+    "note": "Cópia de build das configurações da reserva (Configurações > Reservas, Aprovação e faltas). Em produção os números vêm da API (/house).",
+    "tolerance_min": 20,
+    "extra_tolerance_min": 10,
+    "after_tolerance": "lose_priority",
+    "late_notice_enabled": true,
+    "cancel_until_hours": 2,
+    "customer_can_cancel_late": true,
+    "no_shows_for_confirmation": 1
+  }
+}

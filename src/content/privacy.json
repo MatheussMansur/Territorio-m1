@@ -1,0 +1,162 @@
+{
+  "version": "2026-10-14",
+  "reviewed": false,
+  "sections": [
+    {
+      "id": "quem",
+      "title": {
+        "pt": "Quem cuida dos seus dados",
+        "es": "Quién cuida tus datos",
+        "en": "Who looks after your data"
+      },
+      "body": {
+        "pt": [
+          "O Território, izakaya em Foz do Iguaçu, é o controlador dos dados que você deixa no site e na reserva. Os dados da empresa e o contato para assuntos de dados estão no fim desta página."
+        ],
+        "es": [
+          "Território, izakaya en Foz do Iguaçu, es el responsable de los datos que dejás en el sitio y en la reserva. Los datos de la empresa y el contacto para temas de datos están al final de esta página."
+        ],
+        "en": [
+          "Território, an izakaya in Foz do Iguaçu, is the controller of the data you leave on the site and in your booking. The company details and the contact for data matters are at the end of this page."
+        ]
+      }
+    },
+    {
+      "id": "o-que",
+      "title": {
+        "pt": "O que guardamos e por quê",
+        "es": "Qué guardamos y por qué",
+        "en": "What we keep and why"
+      },
+      "body": {
+        "pt": [
+          "Para a reserva: seu nome e o número de WhatsApp, para confirmar a mesa, mandar o lembrete e avisar se algo mudar. É o necessário para cumprir a reserva que você pediu.",
+          "Se você quiser: e-mail, para receber cópia do comprovante, e as novidades da casa, só com a caixa marcada por você.",
+          "Observações e marcadores da reserva (aniversário, cadeirinha, acessibilidade). Restrição alimentar é um dado de saúde: só guardamos se você escrever, só quem atende a sua mesa vê, e apagamos 30 dias depois da visita.",
+          "Faltas e cancelamentos em cima da hora, para organizar as noites. Depois de uma falta, as próximas reservas podem passar pela confirmação da casa.",
+          "Se você entrar com o Google: o identificador da conta e o e-mail que o Google informa. Nunca a senha."
+        ],
+        "es": [
+          "Para la reserva: tu nombre y tu número de WhatsApp, para confirmar la mesa, mandar el recordatorio y avisar si algo cambia. Es lo necesario para cumplir la reserva que pediste.",
+          "Si querés: e-mail, para recibir copia del comprobante, y las novedades de la casa, solo con la casilla marcada por vos.",
+          "Observaciones y marcas de la reserva (cumpleaños, silla para niños, accesibilidad). La restricción alimentaria es un dato de salud: solo lo guardamos si lo escribís, solo lo ve quien atiende tu mesa, y lo borramos 30 días después de la visita.",
+          "Ausencias y cancelaciones de último momento, para organizar las noches. Después de una ausencia, las próximas reservas pueden pasar por la confirmación de la casa.",
+          "Si entrás con Google: el identificador de la cuenta y el e-mail que informa Google. Nunca la contraseña."
+        ],
+        "en": [
+          "For the booking: your name and WhatsApp number, to confirm the table, send the reminder and let you know if anything changes. This is what we need to fulfil the booking you asked for.",
+          "If you choose: an e-mail, to get a copy of the receipt, and the house's news, only with the box ticked by you.",
+          "Booking notes and tags (birthday, high chair, accessibility). A dietary restriction is health data: we keep it only if you write it, only the staff serving your table see it, and we delete it 30 days after the visit.",
+          "No-shows and last-minute cancellations, to plan the nights. After a no-show, your next bookings may need the house's confirmation.",
+          "If you sign in with Google: the account identifier and the e-mail Google shares. Never the password."
+        ]
+      }
+    },
+    {
+      "id": "quem-mais",
+      "title": {
+        "pt": "Quem mais vê",
+        "es": "Quién más los ve",
+        "en": "Who else sees it"
+      },
+      "body": {
+        "pt": [
+          "Só a equipe da casa, cada um com o acesso do seu papel. Na tela da recepção o telefone aparece mascarado.",
+          "Serviços que trabalham para a casa e só usam os dados para isso: o banco de dados e a hospedagem, em São Paulo; o WhatsApp (Meta), que entrega as mensagens; o Cloudflare Turnstile, que barra robôs na reserva; o Google, se você entrar com ele. A Meta e o Google podem tratar dados fora do Brasil, com as garantias da LGPD.",
+          "Não vendemos nem emprestamos seus dados para ninguém."
+        ],
+        "es": [
+          "Solo el equipo de la casa, cada uno con el acceso de su rol. En la pantalla de recepción el teléfono aparece enmascarado.",
+          "Servicios que trabajan para la casa y solo usan los datos para eso: la base de datos y el hosting, en São Paulo; WhatsApp (Meta), que entrega los mensajes; Cloudflare Turnstile, que frena robots en la reserva; Google, si entrás con él. Meta y Google pueden tratar datos fuera de Brasil, con las garantías de la LGPD.",
+          "No vendemos ni prestamos tus datos a nadie."
+        ],
+        "en": [
+          "Only the house's staff, each with the access of their role. On the reception screen the phone number is masked.",
+          "Services that work for the house and use the data only for that: the database and hosting, in São Paulo; WhatsApp (Meta), which delivers the messages; Cloudflare Turnstile, which stops bots on the booking form; Google, if you sign in with it. Meta and Google may process data outside Brazil, under the LGPD safeguards.",
+          "We never sell or lend your data to anyone."
+        ]
+      }
+    },
+    {
+      "id": "quanto-tempo",
+      "title": {
+        "pt": "Por quanto tempo",
+        "es": "Por cuánto tiempo",
+        "en": "For how long"
+      },
+      "body": {
+        "pt": [
+          "Dados da reserva e da sua ficha: até 24 meses depois da última visita; depois disso, ficam anônimos.",
+          "Restrição alimentar: 30 dias depois da visita.",
+          "Medição: os registros por visita ficam 12 meses; depois disso, só os totais.",
+          "Cópias de segurança: até 30 dias depois de um dado ser apagado."
+        ],
+        "es": [
+          "Datos de la reserva y de tu ficha: hasta 24 meses después de la última visita; después quedan anónimos.",
+          "Restricción alimentaria: 30 días después de la visita.",
+          "Medición: los registros por visita quedan 12 meses; después, solo los totales.",
+          "Copias de seguridad: hasta 30 días después de que un dato se borre."
+        ],
+        "en": [
+          "Booking and guest record data: up to 24 months after your last visit; after that it becomes anonymous.",
+          "Dietary restriction: 30 days after the visit.",
+          "Measurement: per-visit records are kept for 12 months; after that, only the totals.",
+          "Backups: up to 30 days after a piece of data is deleted."
+        ]
+      }
+    },
+    {
+      "id": "direitos",
+      "title": {
+        "pt": "Seus direitos",
+        "es": "Tus derechos",
+        "en": "Your rights"
+      },
+      "body": {
+        "pt": [
+          "Você pode ver, corrigir, baixar ou apagar os seus dados em Minhas reservas, com o código que chega no WhatsApp. Apagar cancela as reservas futuras, com aviso.",
+          "Também pode pedir pelo contato abaixo. Respondemos em até 15 dias.",
+          "Se achar que algo não foi resolvido, você pode falar com a ANPD, a autoridade nacional de proteção de dados."
+        ],
+        "es": [
+          "Podés ver, corregir, descargar o borrar tus datos en Mis reservas, con el código que llega por WhatsApp. Borrar cancela las reservas futuras, con aviso.",
+          "También podés pedirlo por el contacto de abajo. Respondemos en hasta 15 días.",
+          "Si creés que algo no se resolvió, podés acudir a la ANPD, la autoridad nacional de protección de datos de Brasil."
+        ],
+        "en": [
+          "You can see, correct, download or delete your data in My bookings, with the code sent to your WhatsApp. Deleting cancels your future bookings, with notice.",
+          "You can also ask through the contact below. We answer within 15 days.",
+          "If you feel something was not solved, you can contact the ANPD, Brazil's national data protection authority."
+        ]
+      }
+    },
+    {
+      "id": "cookies",
+      "title": {
+        "pt": "Cookies e medição",
+        "es": "Cookies y medición",
+        "en": "Cookies and measurement"
+      },
+      "body": {
+        "pt": [
+          "Necessários: o tema que você escolheu, a sua escolha sobre cookies e a sessão depois do código do WhatsApp. Sem eles o site não funciona, por isso estão sempre ligados.",
+          "Lembrar de mim: seu nome, seu WhatsApp e quantas pessoas costumam vir ficam guardados neste aparelho, para a próxima reserva já vir preenchida. Nada disso sai do aparelho por causa desse cookie. Só liga se você aceitar.",
+          "Medição: contamos páginas visitadas, de onde você chegou, os passos da reserva e os dias e horários mais procurados, com números aleatórios no lugar de quem você é. Fica num serviço da própria casa, com dados no Brasil. Só liga se você aceitar.",
+          "Você muda de ideia quando quiser em Cookies, no rodapé. Desligar uma categoria apaga na hora o que ela tinha guardado neste aparelho."
+        ],
+        "es": [
+          "Necesarios: el tema que elegiste, tu elección sobre cookies y la sesión después del código de WhatsApp. Sin ellos el sitio no funciona, por eso están siempre activos.",
+          "Recordarme: tu nombre, tu WhatsApp y cuántas personas suelen venir quedan guardados en este dispositivo, para que la próxima reserva ya venga completa. Nada de eso sale del dispositivo por esta cookie. Solo se activa si aceptás.",
+          "Medición: contamos páginas visitadas, de dónde llegaste, los pasos de la reserva y los días y horarios más buscados, con números al azar en lugar de quién sos. Queda en un servicio de la propia casa, con datos en Brasil. Solo se activa si aceptás.",
+          "Cambiás de idea cuando quieras en Cookies, al pie de la página. Desactivar una categoría borra en el momento lo que había guardado en este dispositivo."
+        ],
+        "en": [
+          "Necessary: the theme you picked, your cookie choice and the session after the WhatsApp code. The site doesn't work without them, so they are always on.",
+          "Remember me: your name, your WhatsApp and how many people usually come are kept on this device, so the next booking is already filled in. None of it leaves the device because of this. Only on if you accept.",
+          "Measurement: we count pages visited, where you came from, the booking steps and the most wanted days and times, with random numbers instead of who you are. It stays with a service of the house itself, with data in Brazil. Only on if you accept.",
+          "Change your mind any time under Cookies, at the bottom of the page. Turning a category off erases at once what it had kept on this device."
+        ]
+      }
+    }
+  ]
+}

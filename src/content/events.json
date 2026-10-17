@@ -1,0 +1,68 @@
+{
+  "note": "Retrato dos eventos publicados no painel (Eventos), para o site abrir sem a API. Em produção, o build de publicação (site_render) escreve este arquivo a partir do banco. Os eventos abaixo são de exemplo para a demonstração: trocar pelos de verdade antes de ir ao ar.",
+  "example": true,
+  "agenda": "only_with_event",
+  "events": [
+    {
+      "slug": "noite-do-peixe",
+      "title": { "pt": "Noite do peixe", "es": "Noche del pescado", "en": "Fish night" },
+      "date": "2026-10-22",
+      "starts_at": "19:30",
+      "ends_at": "23:30",
+      "description": {
+        "pt": "Peixe fresco da fronteira na grelha, para dividir na mesa. Mesas no salão e lista por pessoa no quintal.",
+        "es": "Pescado fresco de la frontera a la parrilla, para compartir en la mesa. Mesas en el salón y lista por persona en el patio.",
+        "en": "Fresh fish from the border, grilled to share at the table. Tables inside and a list per person in the yard."
+      },
+      "booking_mode": "mixed",
+      "photo": "fogo",
+      "photo_alt": {
+        "pt": "Fogo alto na cozinha, com a panela no fogareiro",
+        "es": "Fuego alto en la cocina, con la olla sobre el fogón",
+        "en": "A high flame in the kitchen, with the pot on the burner"
+      },
+      "credit": "Acervo da casa"
+    },
+    {
+      "slug": "festa-fechada-31-10",
+      "title": { "pt": "Festa fechada", "es": "Fiesta privada", "en": "Private party" },
+      "date": "2026-10-31",
+      "starts_at": "20:00",
+      "ends_at": "01:00",
+      "description": {
+        "pt": "Nessa noite a casa recebe uma festa só para convidados.",
+        "es": "Esa noche la casa recibe una fiesta solo para invitados.",
+        "en": "That night the house hosts a party for invited guests only."
+      },
+      "booking_mode": "private",
+      "no_booking_label": { "pt": "Evento fechado", "es": "Evento privado", "en": "Private event" },
+      "photo": "quintal",
+      "photo_alt": {
+        "pt": "O quintal à noite, com as mesas e o varal de lâmpadas acesas",
+        "es": "El patio de noche, con las mesas y la guirnalda de luces encendida",
+        "en": "The yard at night, with the tables and the string lights on"
+      },
+      "credit": "Acervo da casa"
+    },
+    {
+      "slug": "roda-de-samba-no-quintal",
+      "title": { "pt": "Roda de samba no quintal", "es": "Ronda de samba en el patio", "en": "Samba circle in the yard" },
+      "date": "2026-11-13",
+      "starts_at": "20:00",
+      "ends_at": "23:00",
+      "description": {
+        "pt": "Roda de samba com o grupo Pé na Fronteira. Lista por pessoa no quintal.",
+        "es": "Ronda de samba con el grupo Pé na Fronteira. Lista por persona en el patio.",
+        "en": "A samba circle with the Pé na Fronteira group. A list per person in the yard."
+      },
+      "booking_mode": "list",
+      "photo": "bandeirinhas",
+      "photo_alt": {
+        "pt": "Bandeirinhas coloridas penduradas sobre o quintal",
+        "es": "Banderines de colores colgados sobre el patio",
+        "en": "Colourful bunting hanging over the yard"
+      },
+      "credit": "Acervo da casa"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "note": "Lint de conteúdo (NFR-34, UX-DR-125): o que nunca vai ao ar nos textos públicos do site e do cardápio. A publicação no painel e o build barram e dizem o campo.",
+  "forbidden": [
+    { "match": "experiência", "why": "a casa não fala “experiência”" },
+    { "match": "experiencia", "why": "a casa não fala “experiência”" },
+    { "match": "experience", "why": "a casa não fala “experiência”" },
+    { "match": "brasa", "why": "a casa não usa “brasa” para descrever a comida" },
+    { "match": "biritá", "why": "o nome de outra casa não vai ao site" },
+    { "match": "birita", "why": "o nome de outra casa não vai ao site" },
+    { "match": "a confirmar", "why": "isso nunca vai ao ar; deixe em branco ou escreva o que vale" },
+    { "match": "prezado cliente", "why": "a casa fala com a pessoa pelo nome, sem “prezado cliente”" },
+    { "match": "informamos que", "why": "frase de repartição, fora da voz da casa" },
+    { "match": "aproveite", "why": "fora da voz da casa" }
+  ]
+}

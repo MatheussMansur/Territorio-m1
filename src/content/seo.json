@@ -1,0 +1,204 @@
+{
+  "locales": [
+    "pt",
+    "es",
+    "en"
+  ],
+  "default_locale": "pt",
+  "pages": [
+    {
+      "route": "/",
+      "index": true,
+      "localized": true,
+      "kind": "home",
+      "title": {
+        "pt": "Território · Izakaya em Foz do Iguaçu",
+        "es": "Território · Izakaya en Foz do Iguaçu",
+        "en": "Território · Japanese izakaya in Foz do Iguaçu"
+      },
+      "description": {
+        "pt": "Boteco japonês em Foz do Iguaçu. Pratos para dividir e bebida gelada. Reserve pelo site ou pelo WhatsApp.",
+        "es": "Bar japonés en Foz do Iguaçu (Foz de Iguazú), Brasil. Platos para compartir y bebidas. Reservá por la web o por WhatsApp.",
+        "en": "Japanese izakaya in Foz do Iguaçu (Iguassu), Brazil. Small plates to share and drinks. Book online or on WhatsApp."
+      },
+      "note": "Página da casa (passo 1)."
+    },
+    {
+      "route": "/cardapio/",
+      "index": true,
+      "localized": true,
+      "kind": "menu",
+      "title": {
+        "pt": "Cardápio · Território, izakaya em Foz do Iguaçu",
+        "es": "Menú · Território, izakaya en Foz do Iguaçu",
+        "en": "Menu · Território, Japanese izakaya in Foz do Iguaçu"
+      },
+      "description": {
+        "pt": "Cardápio do Território: petiscos japoneses e pratos quentes para dividir, com preços. Rua Sérgio Roncato, 703, Foz do Iguaçu.",
+        "es": "Menú del Território: platos japoneses para compartir, con precios. Rua Sérgio Roncato, 703, Foz do Iguaçu (Foz de Iguazú).",
+        "en": "Território's menu: Japanese small plates to share, with prices. Rua Sérgio Roncato, 703, Foz do Iguaçu, Brazil."
+      },
+      "note": "Cardápio (passo 1), destino do QR das mesas."
+    },
+    {
+      "route": "/reservar/",
+      "index": true,
+      "localized": true,
+      "kind": "book",
+      "title": {
+        "pt": "Reservar mesa · Território, Foz do Iguaçu",
+        "es": "Reservar mesa · Território, Foz do Iguaçu",
+        "en": "Book a table · Território, Foz do Iguaçu"
+      },
+      "description": {
+        "pt": "Reserve sua mesa no Território: escolha o dia e o horário, a confirmação chega no seu WhatsApp. De quarta a sábado, a partir das 19h.",
+        "es": "Reservá tu mesa en el Território: elegí el día y la hora, la confirmación te llega por WhatsApp. De miércoles a sábado, desde las 19 h.",
+        "en": "Book your table at Território: pick the day and time, the confirmation comes on WhatsApp. Wednesday to Saturday, from 7 pm."
+      },
+      "note": "Reserva do cliente (passo 2), na API da casa."
+    },
+    {
+      "route": "/eventos/",
+      "index": true,
+      "localized": true,
+      "kind": "events",
+      "title": {
+        "pt": "Eventos · Território, izakaya em Foz do Iguaçu",
+        "es": "Eventos · Território, izakaya en Foz do Iguaçu",
+        "en": "Events · Território, Japanese izakaya in Foz do Iguaçu"
+      },
+      "description": {
+        "pt": "As noites especiais do Território em Foz do Iguaçu: datas, horários e como reservar.",
+        "es": "Las noches especiales del Território en Foz do Iguaçu: fechas, horarios y cómo reservar.",
+        "en": "Special nights at Território in Foz do Iguaçu: dates, times and how to book."
+      },
+      "note": "Agenda de eventos (história 4.10). Cada evento tem a sua página em /eventos/{slug}/, com JSON-LD Event."
+    },
+    {
+      "route": "/r/",
+      "index": false,
+      "localized": true,
+      "kind": "receipt",
+      "title": {
+        "pt": "Sua reserva · Território",
+        "es": "Tu reserva · Território",
+        "en": "Your booking · Território"
+      },
+      "description": {
+        "pt": "Comprovante da reserva no Território.",
+        "es": "Comprobante de la reserva en el Território.",
+        "en": "Território booking receipt."
+      },
+      "note": "Link do comprovante (mensagem do WhatsApp); nunca indexado."
+    },
+    {
+      "route": "/privacidade/",
+      "index": false,
+      "localized": true,
+      "kind": "privacy",
+      "title": {
+        "pt": "Privacidade · Território",
+        "es": "Privacidad · Território",
+        "en": "Privacy · Território"
+      },
+      "description": {
+        "pt": "Como o Território cuida dos dados de quem reserva e visita o site.",
+        "es": "Cómo Território cuida los datos de quien reserva y visita el sitio.",
+        "en": "How Território looks after the data of people who book and visit the site."
+      },
+      "note": "Fica fora do Google até a revisão jurídica (PRD §12, item 20) e os dados da empresa."
+    },
+    {
+      "route": "/_ds/",
+      "index": false,
+      "localized": false,
+      "kind": "internal",
+      "title": {
+        "pt": "Território · design system"
+      },
+      "description": {
+        "pt": "Catálogo interno de componentes."
+      }
+    },
+    {
+      "route": "/entrar/",
+      "index": false,
+      "localized": true,
+      "kind": "account",
+      "title": {
+        "pt": "Entrar · Território",
+        "es": "Entrar · Território",
+        "en": "Sign in · Território"
+      },
+      "description": {
+        "pt": "Entrar em Minhas reservas pelo código do WhatsApp ou pelo Google.",
+        "es": "Entrar a Mis reservas con el código de WhatsApp o con Google.",
+        "en": "Sign in to My bookings with the WhatsApp code or Google."
+      },
+      "note": "Entrada do cliente (7.8, 7.9); nunca indexada."
+    },
+    {
+      "route": "/minhas-reservas/",
+      "index": false,
+      "localized": true,
+      "kind": "account",
+      "title": {
+        "pt": "Minhas reservas · Território",
+        "es": "Mis reservas · Território",
+        "en": "My bookings · Território"
+      },
+      "description": {
+        "pt": "Suas reservas e seus dados no Território.",
+        "es": "Tus reservas y tus datos en el Território.",
+        "en": "Your bookings and data at Território."
+      },
+      "note": "Conta do cliente (7.10 a 7.13); nunca indexada."
+    },
+    {
+      "route": "/confirmar/",
+      "index": false,
+      "localized": true,
+      "kind": "account",
+      "title": {
+        "pt": "Sua reserva · Território",
+        "es": "Tu reserva · Território",
+        "en": "Your booking · Território"
+      },
+      "description": {
+        "pt": "Responder ao lembrete da reserva.",
+        "es": "Responder al recordatorio de la reserva.",
+        "en": "Answer the booking reminder."
+      },
+      "note": "Link de ação da mensagem (7.14); nunca indexado."
+    },
+    {
+      "route": "/espera/",
+      "index": false,
+      "localized": true,
+      "kind": "account",
+      "title": {
+        "pt": "Lista de espera · Território",
+        "es": "Lista de espera · Território",
+        "en": "Waitlist · Território"
+      },
+      "description": {
+        "pt": "Sua vez na lista de espera do Território.",
+        "es": "Tu turno en la lista de espera del Território.",
+        "en": "Your place on Território waitlist."
+      },
+      "note": "Link da espera (7.15, 7.16); nunca indexado."
+    }
+  ],
+  "private_prefixes": [
+    "/admin/",
+    "/api/",
+    "/_ds/"
+  ],
+  "noindex_prefixes": [
+    "/r/",
+    "/confirmar/",
+    "/espera/",
+    "/minhas-reservas/",
+    "/entrar/"
+  ]
+}

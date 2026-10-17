@@ -1,0 +1,176 @@
+{
+  "balcao": {
+    "width": 900,
+    "height": 1194,
+    "placeholder": "#181818",
+    "widths": [
+      480,
+      900
+    ]
+  },
+  "bandeirinhas": {
+    "width": 900,
+    "height": 1200,
+    "placeholder": "#080808",
+    "widths": [
+      480,
+      900
+    ]
+  },
+  "capa-cel": {
+    "width": 1080,
+    "height": 765,
+    "placeholder": "#080808",
+    "widths": [
+      480,
+      960,
+      1080
+    ]
+  },
+  "capa-m": {
+    "width": 720,
+    "height": 900,
+    "placeholder": "#080808",
+    "widths": [
+      480,
+      720
+    ]
+  },
+  "capa": {
+    "width": 1440,
+    "height": 960,
+    "placeholder": "#080808",
+    "widths": [
+      480,
+      960,
+      1440
+    ]
+  },
+  "cozinha": {
+    "width": 900,
+    "height": 1200,
+    "placeholder": "#281808",
+    "widths": [
+      480,
+      900
+    ]
+  },
+  "equipe": {
+    "width": 900,
+    "height": 1200,
+    "placeholder": "#080808",
+    "widths": [
+      480,
+      900
+    ]
+  },
+  "faz01": {
+    "width": 900,
+    "height": 1200,
+    "placeholder": "#080808",
+    "widths": [
+      480,
+      900
+    ]
+  },
+  "fogo": {
+    "width": 900,
+    "height": 1200,
+    "placeholder": "#080808",
+    "widths": [
+      480,
+      900
+    ]
+  },
+  "janela": {
+    "width": 675,
+    "height": 1200,
+    "placeholder": "#180808",
+    "widths": [
+      480,
+      675
+    ]
+  },
+  "menu-ramen": {
+    "width": 490,
+    "height": 710,
+    "placeholder": "#282828",
+    "widths": [
+      480,
+      490
+    ]
+  },
+  "mesa": {
+    "width": 900,
+    "height": 1200,
+    "placeholder": "#080808",
+    "widths": [
+      480,
+      900
+    ]
+  },
+  "oniguiri": {
+    "width": 900,
+    "height": 1200,
+    "placeholder": "#080808",
+    "widths": [
+      480,
+      900
+    ]
+  },
+  "placa": {
+    "width": 900,
+    "height": 1200,
+    "placeholder": "#080808",
+    "widths": [
+      480,
+      900
+    ]
+  },
+  "poster-ramen": {
+    "width": 490,
+    "height": 710,
+    "placeholder": "#e8d8c8",
+    "widths": [
+      480,
+      490
+    ]
+  },
+  "prato": {
+    "width": 1440,
+    "height": 1057,
+    "placeholder": "#181818",
+    "widths": [
+      480,
+      960,
+      1440
+    ]
+  },
+  "quintal": {
+    "width": 900,
+    "height": 1200,
+    "placeholder": "#080808",
+    "widths": [
+      480,
+      900
+    ]
+  },
+  "ramen": {
+    "width": 900,
+    "height": 1200,
+    "placeholder": "#382818",
+    "widths": [
+      480,
+      900
+    ]
+  },
+  "salao": {
+    "width": 900,
+    "height": 787,
+    "placeholder": "#282828",
+    "widths": [
+      480,
+      900
+    ]
+  }
+}

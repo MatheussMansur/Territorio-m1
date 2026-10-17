@@ -1,0 +1,424 @@
+{
+  "cover": {
+    "kicker": {
+      "pt": "Izakaya com sotaque da fronteira",
+      "es": "Izakaya con acento de frontera",
+      "en": "An izakaya with a border accent"
+    },
+    "hand": "Pode entrar! A casa é sua!",
+    "lede": {
+      "pt": "Comida pra compartilhar, boa bebida e música um pouco mais alta, na casa do chef Marcus Norberto.",
+      "es": "Comida para compartir, buena bebida y música un poco más alta, en la casa del chef Marcus Norberto.",
+      "en": "Food to share, good drinks and music a little louder, at chef Marcus Norberto's place."
+    },
+    "photo": "capa",
+    "photo_mobile": "capa-cel",
+    "photo_alt": {
+      "pt": "A casa do Território à noite: tijolo, janelas de ferro acesas e varal de lâmpadas",
+      "es": "La casa del Território de noche: ladrillo, ventanas de hierro encendidas y guirnalda de luces",
+      "en": "Território at night: brick walls, lit iron windows and a string of bulbs"
+    }
+  },
+  "today": {
+    "rules": [
+      {
+        "weekday": 4,
+        "text": {
+          "pt": "Toda quinta é dia de peixe fresco!",
+          "es": "¡Todos los jueves hay pescado fresco!",
+          "en": "Every Thursday is fresh fish day!"
+        }
+      }
+    ],
+    "default": {
+      "pt": "Casa aberta de quarta a sábado, a partir das 19h.",
+      "es": "Casa abierta de miércoles a sábado, desde las 19 h.",
+      "en": "Open Wednesday to Saturday, from 7:00 pm."
+    },
+    "notices": []
+  },
+  "about": {
+    "text": {
+      "pt": "Aqui é tudo feito na hora, sem mistério e sem segredo… é tudo de verdade!",
+      "es": "Acá todo se hace en el momento, sin misterio y sin secreto… ¡todo es de verdad!",
+      "en": "Everything here is made to order, no mystery and no secrets… it's all for real!"
+    },
+    "hand": "Se aprochegue!",
+    "photo": "salao",
+    "photo_alt": {
+      "pt": "O salão do Território com as mesas postas",
+      "es": "El salón del Território con las mesas puestas",
+      "en": "Território's dining room with the tables set"
+    },
+    "story": [
+      {
+        "pt": "Pra quem não sabe, o Território é a casa do Marcus Norberto: onde ele mora, faz os planos, as refeições e os testes, onde dorme, sonha e acorda. Abrir a porta é convidar pra dentro.",
+        "es": "Para quien no sabe, el Território es la casa de Marcus Norberto: donde vive, hace sus planes, sus comidas y sus pruebas, donde duerme, sueña y despierta. Abrir la puerta es invitar a pasar.",
+        "en": "In case you didn't know, Território is Marcus Norberto's home: where he lives, makes plans, cooks his meals and tries things out, where he sleeps, dreams and wakes up. Opening the door means inviting you in."
+      },
+      {
+        "pt": "O cardápio vem dos izakayas japoneses, a música lembra os pubs irlandeses e a cara é de boteco brasileiro. É um izakaya com sotaque da fronteira, em Foz do Iguaçu.",
+        "es": "El menú viene de los izakayas japoneses, la música recuerda a los pubs irlandeses y la cara es de bodegón brasileño. Es un izakaya con acento de frontera, en Foz do Iguaçu.",
+        "en": "The menu comes from Japanese izakayas, the music recalls Irish pubs and the look is a Brazilian corner bar. It's an izakaya with a border accent, in Foz do Iguaçu."
+      }
+    ],
+    "night_title": {
+      "pt": "Como é uma noite",
+      "es": "Cómo es una noche",
+      "en": "What a night is like"
+    },
+    "night": [
+      {
+        "title": {
+          "pt": "Chega a partir das 19h",
+          "es": "Llegá desde las 19 h",
+          "en": "Come from 7 pm"
+        },
+        "text": {
+          "pt": "De quarta a sábado. Com reserva, a mesa te espera 20 minutos depois do horário.",
+          "es": "De miércoles a sábado. Con reserva, la mesa te espera 20 minutos después de la hora.",
+          "en": "Wednesday to Saturday. With a booking, the table waits 20 minutes past your time."
+        }
+      },
+      {
+        "title": {
+          "pt": "Pede pra dividir",
+          "es": "Pedí para compartir",
+          "en": "Order to share"
+        },
+        "text": {
+          "pt": "Como num izakaya, os pratos vão pro meio da mesa e todo mundo prova de tudo.",
+          "es": "Como en un izakaya, los platos van al centro de la mesa y todos prueban de todo.",
+          "en": "Like in an izakaya, plates go to the middle of the table and everyone tries everything."
+        }
+      },
+      {
+        "title": {
+          "pt": "Bebe da casa",
+          "es": "Tomá de la casa",
+          "en": "Drink the house's"
+        },
+        "text": {
+          "pt": "Cerveja gelada, vinho em taça e os licores feitos aqui.",
+          "es": "Cerveza helada, vino por copa y los licores hechos acá.",
+          "en": "Cold beer, wine by the glass and the liqueurs made here."
+        }
+      },
+      {
+        "title": {
+          "pt": "Fica à vontade",
+          "es": "Ponete cómodo",
+          "en": "Make yourself at home"
+        },
+        "text": {
+          "pt": "Música um pouco mais alta, varal de lâmpadas no quintal e toda quinta é dia de peixe fresco.",
+          "es": "Música un poco más fuerte, guirnalda de luces en el patio y todos los jueves hay pescado fresco.",
+          "en": "Music a little louder, string lights over the yard, and every Thursday is fresh fish day."
+        }
+      }
+    ],
+    "quotes_title": {
+      "pt": "O que a casa conta",
+      "es": "Lo que cuenta la casa",
+      "en": "What the house says"
+    },
+    "quotes": [
+      {
+        "title": {
+          "pt": "A casa é sua",
+          "es": "La casa es tuya",
+          "en": "Make yourself at home"
+        },
+        "text": {
+          "pt": "Pra quem não sabe, o Território é a minha casa! É onde eu moro, é onde eu faço meus planos, minhas refeições, meus testes, onde durmo, sonho e acordo…",
+          "es": "Para quien no sabe, ¡el Território es mi casa! Es donde vivo, donde hago mis planes, mis comidas, mis pruebas, donde duermo, sueño y despierto…",
+          "en": "For those who don't know, Território is my home! It's where I live, make my plans, my meals, my experiments, where I sleep, dream and wake up…"
+        }
+      },
+      {
+        "title": {
+          "pt": "Simples e de verdade",
+          "es": "Simple y de verdad",
+          "en": "Simple and real"
+        },
+        "text": {
+          "pt": "Não vendemos experiências comerciais nem “fast food”. Aqui é tudo feito na hora, sem mistério e sem segredo… é tudo de verdade!",
+          "es": "No vendemos experiencias comerciales ni “fast food”. Acá todo se hace en el momento, sin misterio y sin secreto… ¡todo es de verdad!",
+          "en": "We don't sell commercial experiences or “fast food”. Everything here is made to order, no mystery and no secrets… it's all for real!"
+        }
+      },
+      {
+        "title": {
+          "pt": "O fogo transforma",
+          "es": "El fuego transforma",
+          "en": "Fire transforms"
+        },
+        "text": {
+          "pt": "É o fogo que aquece, que sela, que carameliza, que doura, que ferve e que queima de vez em quando…",
+          "es": "Es el fuego el que calienta, sella, carameliza, dora, hierve y quema de vez en cuando…",
+          "en": "It's fire that warms, sears, caramelizes, browns, boils and burns now and then…"
+        }
+      },
+      {
+        "title": {
+          "pt": "Omotenashi",
+          "es": "Omotenashi",
+          "en": "Omotenashi"
+        },
+        "text": {
+          "pt": "Como nos izakayas, queremos que cada pessoa que passe pelo Território se sinta bem recebida, praticando, à nossa maneira, o espírito do omotenashi.",
+          "es": "Como en los izakayas, queremos que cada persona que pase por el Território se sienta bien recibida, practicando, a nuestra manera, el espíritu del omotenashi.",
+          "en": "As in izakayas, we want everyone who comes through Território to feel welcome, practicing omotenashi, the Japanese spirit of hospitality, our own way."
+        }
+      }
+    ],
+    "closing": {
+      "hand": "…ao pé da letra, restaurante é isso!",
+      "by": "Marcus Norberto"
+    }
+  },
+  "highlights": [
+    {
+      "photo": "ramen",
+      "name": "Ramen Shoyu",
+      "price_cents": 5000,
+      "text": {
+        "pt": "Chashu e massa artesanal",
+        "es": "Chashu y fideos artesanales",
+        "en": "Chashu and handmade noodles"
+      },
+      "alt": {
+        "pt": "Tigela de ramen shoyu",
+        "es": "Tazón de ramen shoyu",
+        "en": "A bowl of shoyu ramen"
+      }
+    },
+    {
+      "photo": "oniguiri",
+      "name": "Oniguiri",
+      "price_cents": null,
+      "text": {
+        "pt": "O “fast food” asiático, grelhado na chapa",
+        "es": "El “fast food” asiático, a la plancha",
+        "en": "Asia's “fast food”, grilled on the plate"
+      },
+      "alt": {
+        "pt": "Oniguiri grelhado",
+        "es": "Onigiri a la plancha",
+        "en": "Grilled onigiri"
+      }
+    },
+    {
+      "photo": "prato",
+      "name": "Nassu no missô",
+      "price_cents": null,
+      "text": {
+        "pt": "Berinjela, caramelo de missô e melado de Capanema",
+        "es": "Berenjena, caramelo de miso y melaza de Capanema",
+        "en": "Eggplant, miso caramel and Capanema molasses"
+      },
+      "alt": {
+        "pt": "Berinjela caramelizada com bonito por cima",
+        "es": "Berenjena caramelizada con bonito encima",
+        "en": "Caramelized eggplant topped with bonito flakes"
+      }
+    },
+    {
+      "photo": "mesa",
+      "name": {
+        "pt": "Pra compartilhar",
+        "es": "Para compartir",
+        "en": "To share"
+      },
+      "price_cents": null,
+      "text": {
+        "pt": "Karage, gyoza e ebi furai",
+        "es": "Karaage, gyoza y ebi furai",
+        "en": "Karaage, gyoza and ebi furai"
+      },
+      "alt": {
+        "pt": "Mesa com pratos para compartilhar",
+        "es": "Mesa con platos para compartir",
+        "en": "A table with plates to share"
+      }
+    }
+  ],
+  "events": [],
+  "terms": [
+    {
+      "title": {
+        "pt": "Tolerância de {tolerancia} minutos",
+        "es": "Tolerancia de {tolerancia} minutos",
+        "en": "{tolerancia} minutes' grace"
+      },
+      "text": {
+        "pt": "A mesa espera {tolerancia} minutos depois do horário; se você avisar que vai atrasar, mais {extra}. Depois disso, ela deixa de ser prioridade sua e pode ir para quem está esperando.",
+        "es": "La mesa espera {tolerancia} minutos después de la hora; si avisás que llegás tarde, {extra} más. Después, deja de ser prioridad tuya y puede pasar a quien está esperando.",
+        "en": "The table waits {tolerancia} minutes past your time; {extra} more if you let us know you're running late. After that it's no longer held for you and may go to someone waiting."
+      }
+    },
+    {
+      "title": {
+        "pt": "Avise com antecedência",
+        "es": "Avisá con anticipación",
+        "en": "Let us know in advance"
+      },
+      "text": {
+        "pt": "Cancelar ou mudar, até {prazo} h antes. Depois disso ainda dá, mas fica registrado como em cima da hora.",
+        "es": "Cancelar o cambiar, hasta {prazo} h antes. Después todavía se puede, pero queda registrado como a último momento.",
+        "en": "Cancel or change up to {prazo} hours before. After that you still can, but it's recorded as last-minute."
+      }
+    },
+    {
+      "title": {
+        "pt": "Não comparecimento",
+        "es": "Ausencia",
+        "en": "No-shows"
+      },
+      "text": {
+        "pt": "Depois de {faltas} falta sem aviso, as próximas reservas passam pela confirmação da casa.",
+        "es": "Después de {faltas} ausencia sin aviso, las próximas reservas pasan por la confirmación de la casa.",
+        "en": "After {faltas} no-show without notice, future bookings need the house's confirmation."
+      }
+    }
+  ],
+  "gallery_title": {
+    "pt": "Ambiente",
+    "es": "Ambiente",
+    "en": "The place"
+  },
+  "gallery": [
+    {
+      "photo": "quintal",
+      "area": {
+        "pt": "Quintal",
+        "es": "Patio",
+        "en": "Yard"
+      },
+      "alt": {
+        "pt": "O quintal à noite: gente nas mesas, janelas de ferro acesas e varal de lâmpadas",
+        "es": "El patio de noche: gente en las mesas, ventanas de hierro encendidas y guirnalda de luces",
+        "en": "The yard at night: people at tables, lit iron windows and string lights"
+      },
+      "wide": true
+    },
+    {
+      "photo": "salao",
+      "area": {
+        "pt": "Salão",
+        "es": "Salón",
+        "en": "Dining room"
+      },
+      "alt": {
+        "pt": "O salão com toalhas xadrez e cadeiras vermelhas, tijolo aparente",
+        "es": "El salón con manteles a cuadros y sillas rojas, ladrillo a la vista",
+        "en": "The dining room with checked tablecloths, red chairs and bare brick"
+      }
+    },
+    {
+      "photo": "mesa",
+      "area": {
+        "pt": "Na mesa",
+        "es": "En la mesa",
+        "en": "At the table"
+      },
+      "alt": {
+        "pt": "Mesa com pratos pra dividir, tempurá e drinques",
+        "es": "Mesa con platos para compartir, tempura y tragos",
+        "en": "A table with plates to share, tempura and drinks"
+      }
+    },
+    {
+      "photo": "cozinha",
+      "area": {
+        "pt": "Cozinha aberta",
+        "es": "Cocina abierta",
+        "en": "Open kitchen"
+      },
+      "alt": {
+        "pt": "A cozinha aberta vista do balcão, com dois cozinheiros",
+        "es": "La cocina abierta vista desde la barra, con dos cocineros",
+        "en": "The open kitchen seen from the counter, with two cooks"
+      }
+    },
+    {
+      "photo": "fogo",
+      "area": {
+        "pt": "O fogo",
+        "es": "El fuego",
+        "en": "The fire"
+      },
+      "alt": {
+        "pt": "Chamas altas saindo da panela",
+        "es": "Llamas altas saliendo de la sartén",
+        "en": "Tall flames rising from the pan"
+      }
+    },
+    {
+      "photo": "equipe",
+      "area": {
+        "pt": "Quem faz",
+        "es": "Quien cocina",
+        "en": "Who cooks"
+      },
+      "alt": {
+        "pt": "Cozinheiro de camiseta preta com o círculo de sementes no peito, montando pratos",
+        "es": "Cocinero de remera negra con el círculo de semillas en el pecho, armando platos",
+        "en": "A cook in a black tee with the seed circle on the chest, plating up"
+      }
+    },
+    {
+      "photo": "balcao",
+      "area": {
+        "pt": "Balcão",
+        "es": "Barra",
+        "en": "Counter"
+      },
+      "alt": {
+        "pt": "Dois homens se abraçando no balcão, rindo",
+        "es": "Dos hombres abrazados en la barra, riendo",
+        "en": "Two men hugging at the counter, laughing"
+      },
+      "wide": true
+    },
+    {
+      "photo": "janela",
+      "area": {
+        "pt": "Janelas de ferro",
+        "es": "Ventanas de hierro",
+        "en": "Iron windows"
+      },
+      "alt": {
+        "pt": "Janelas de ferro e tijolo, com lâmpadas acesas",
+        "es": "Ventanas de hierro y ladrillo, con lamparitas encendidas",
+        "en": "Iron and brick windows with lamps lit"
+      }
+    },
+    {
+      "photo": "bandeirinhas",
+      "area": {
+        "pt": "Noite de festa",
+        "es": "Noche de fiesta",
+        "en": "Party night"
+      },
+      "alt": {
+        "pt": "Gente no quintal à noite, sob bandeirinhas e lâmpadas",
+        "es": "Gente en el patio de noche, bajo banderines y luces",
+        "en": "People in the yard at night under bunting and lights"
+      }
+    },
+    {
+      "photo": "placa",
+      "area": {
+        "pt": "A entrada",
+        "es": "La entrada",
+        "en": "The way in"
+      },
+      "alt": {
+        "pt": "Plaquinha de madeira com o nome Território pendurada no tijolo",
+        "es": "Cartelito de madera con el nombre Território colgado en el ladrillo",
+        "en": "A small wooden sign reading Território hanging on the brick"
+      }
+    }
+  ]
+}
