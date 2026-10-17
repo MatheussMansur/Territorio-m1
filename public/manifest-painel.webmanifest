@@ -1,0 +1,17 @@
+{
+  "name": "Território · Painel",
+  "short_name": "Território",
+  "description": "O painel da casa: a noite, as reservas e o salão.",
+  "lang": "pt-BR",
+  "start_url": "/admin/",
+  "scope": "/admin/",
+  "display": "standalone",
+  "background_color": "#f4ede1",
+  "theme_color": "#1f1a16",
+  "icons": [
+    {"src": "/img/marca/icone.svg", "sizes": "any", "type": "image/svg+xml"},
+    {"src": "/img/marca/icone-192.png", "sizes": "192x192", "type": "image/png"},
+    {"src": "/img/marca/icone-512.png", "sizes": "512x512", "type": "image/png"},
+    {"src": "/img/marca/icone-mascaravel-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  ]
+}

@@ -1,0 +1,489 @@
+/* A entrada: a placa sobre ferro com grão, uma caixa de papel por tela (entrada, links, o
+   autenticador, o aparelho da casa), a tela de bloqueio com os nomes e o teclado do PIN, e
+   "Minhas sessões". Só os papéis --cor-* e as medidas de tokens.css, cantos retos. */
+@layer pages {
+  .entrada {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--e-5);
+    min-height: 100dvh;
+    padding: var(--e-6) var(--e-4) var(--e-8);
+    background: var(--grao), var(--cor-escuro);
+    color: var(--cor-escuro-texto);
+  }
+
+  .entrada__marca .raiz {
+    width: var(--e-6);
+  }
+
+  .entrada__marca .marca__logo {
+    width: 150px;
+  }
+
+  .entrada__tela {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .entrada__caixa {
+    display: flex;
+    flex-direction: column;
+    gap: var(--e-4);
+    width: min(100%, 440px);
+    padding: var(--e-5);
+    border: var(--fio) solid var(--cor-escuro-borda);
+    background: var(--cor-superficie);
+    color: var(--cor-texto);
+  }
+
+  .entrada__caixa--largo {
+    width: min(100%, 580px);
+  }
+
+  .entrada__caixa--estado {
+    align-items: flex-start;
+  }
+
+  .entrada__caixa--estado > .raiz {
+    width: var(--e-7);
+    color: var(--cor-atencao);
+  }
+
+  /* dentro da janela de "Você saiu do painel": sem caixa própria */
+  .entrada__caixa--janela {
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background: none;
+  }
+
+  .entrada__titulo {
+    font-family: var(--f-letreiro);
+    font-size: var(--t-bloco);
+    font-weight: 900;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  .entrada__titulo:focus {
+    outline: none;
+  }
+
+  .entrada__subtitulo {
+    font-family: var(--f-grotesca);
+    font-size: var(--t-botao);
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  .entrada__subtitulo:focus {
+    outline: none;
+  }
+
+  .entrada__texto {
+    color: var(--cor-texto-suave);
+  }
+
+  .entrada__form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--e-4);
+  }
+
+  .entrada__manter small {
+    display: block;
+    color: var(--cor-texto-suave);
+    font-size: var(--t-pequeno);
+  }
+
+  .entrada__checagem {
+    min-height: 65px;
+  }
+
+  .entrada__enviar {
+    width: 100%;
+  }
+
+  .entrada__links,
+  .entrada__acoes {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--e-2) var(--e-4);
+  }
+
+  .entrada__links .link-button {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--alvo-toque);
+    padding-inline: 0;
+    color: var(--cor-texto);
+    font-size: var(--t-pequeno);
+  }
+
+  .entrada__demo {
+    padding: var(--e-2) var(--e-3);
+    border-left: var(--e-1) solid var(--cor-selecao);
+    background: var(--cor-fundo);
+    color: var(--cor-texto-suave);
+    font-size: var(--t-pequeno);
+  }
+
+  .entrada__demo a {
+    color: var(--cor-texto);
+  }
+
+  .entrada__carregando,
+  .entrada__espera,
+  .trava__carregando {
+    display: flex;
+    align-items: center;
+    gap: var(--e-3);
+    color: var(--cor-texto-suave);
+  }
+
+  .entrada__carregando .raiz,
+  .entrada__espera .raiz,
+  .trava__carregando .raiz {
+    width: var(--e-5);
+  }
+
+  /* um campo com um botão dentro da mesma linha ("Mostrar") */
+  .campo-linha {
+    display: flex;
+    gap: var(--e-2);
+  }
+
+  .campo-linha .field__input {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .campo-linha__botao {
+    flex: none;
+    min-width: var(--alvo-toque);
+    min-height: 46px;
+    padding: 0 var(--e-3);
+    border: var(--fio) solid var(--cor-borda);
+    background: none;
+    color: var(--cor-texto);
+    font-family: var(--f-mono);
+    font-size: var(--t-rotulo);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  .campo-linha__botao:focus-visible {
+    outline: 3px solid var(--cor-foco);
+    outline-offset: 2px;
+  }
+
+  /* um aviso no lugar: a borda e a marca dizem, não só a cor */
+  .aviso {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--e-2);
+    padding: var(--e-3) var(--e-4);
+    border: var(--fio) solid var(--cor-borda);
+    background: var(--cor-superficie);
+    color: var(--cor-texto);
+    font-size: var(--t-pequeno);
+  }
+
+  .aviso--alerta {
+    border-color: var(--cor-atencao);
+    box-shadow: inset var(--e-1) 0 0 var(--cor-atencao);
+  }
+
+  /* ---- o autenticador ---- */
+  .totp__passos {
+    display: grid;
+    gap: var(--e-1);
+    padding-left: var(--e-5);
+    color: var(--cor-texto-suave);
+  }
+
+  .totp__leitura {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--e-4);
+  }
+
+  .totp__qr {
+    width: 200px;
+    max-width: 100%;
+    height: auto;
+    border: var(--fio) solid var(--cor-borda);
+  }
+
+  /* um código se lê escuro sobre claro, nos dois temas */
+  .totp__qr-fundo {
+    fill: var(--papel-claro);
+  }
+
+  .totp__qr-modulos {
+    fill: var(--ferro);
+  }
+
+  .totp__chave {
+    flex: 1 1 180px;
+    color: var(--cor-texto-suave);
+    font-size: var(--t-pequeno);
+  }
+
+  .totp__chave code,
+  .totp__codigos code {
+    color: var(--cor-texto);
+    font-family: var(--f-mono);
+    font-size: var(--t-corpo);
+    letter-spacing: 0.08em;
+    overflow-wrap: anywhere;
+  }
+
+  .totp__codigos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: var(--e-2);
+    padding: var(--e-3);
+    border: var(--fio) dashed var(--cor-borda);
+    list-style: none;
+  }
+
+  /* ---- o aparelho da casa ---- */
+  .aparelho-codigo {
+    padding: var(--e-3) var(--e-4);
+    border: var(--fio) solid var(--cor-borda);
+    background: var(--cor-fundo);
+    font-family: var(--f-mono);
+    font-size: clamp(30px, 8vw, 44px);
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    white-space: nowrap;
+  }
+
+  /* ---- a tela de bloqueio: nomes e PIN ---- */
+  .trava {
+    display: flex;
+    flex-direction: column;
+    gap: var(--e-4);
+    width: min(100%, 640px);
+    padding: var(--e-5);
+    border: var(--fio) solid var(--cor-escuro-borda);
+    background: var(--cor-superficie);
+    color: var(--cor-texto);
+  }
+
+  .trava__aparelho {
+    color: var(--cor-texto-suave);
+    font-family: var(--f-mono);
+    font-size: var(--t-rotulo);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .trava__titulo {
+    font-family: var(--f-letreiro);
+    font-size: var(--t-secao);
+    font-weight: 900;
+    line-height: 0.95;
+    text-transform: uppercase;
+  }
+
+  .trava__titulo:focus {
+    outline: none;
+  }
+
+  .trava__texto,
+  .trava__vazio {
+    color: var(--cor-texto-suave);
+  }
+
+  .trava__nomes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    gap: var(--e-2);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .trava__nome {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2px;
+    width: 100%;
+    min-height: 64px;
+    padding: var(--e-2) var(--e-4);
+    border: var(--fio) solid var(--cor-borda);
+    background: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: var(--f-grotesca);
+    font-size: var(--t-botao);
+    font-weight: 800;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .trava__nome:hover {
+    border-color: var(--cor-selecao);
+  }
+
+  .trava__nome small {
+    color: var(--cor-atencao-texto);
+    font-family: var(--f-corpo);
+    font-size: var(--t-pequeno);
+    font-weight: 600;
+  }
+
+  .trava__nome:focus-visible,
+  .trava__tecla:focus-visible {
+    outline: 3px solid var(--cor-foco);
+    outline-offset: 2px;
+  }
+
+  .trava__pin {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--e-4);
+  }
+
+  .trava__pin .field {
+    width: min(100%, 320px);
+  }
+
+  .trava__entrada {
+    font-family: var(--f-mono);
+    font-size: 28px;
+    letter-spacing: 0.5em;
+    text-align: center;
+  }
+
+  .trava__teclado {
+    display: grid;
+    grid-template-columns: repeat(3, 72px);
+    gap: var(--e-2);
+  }
+
+  .trava__tecla {
+    min-height: 56px;
+    border: var(--fio) solid var(--cor-borda);
+    background: var(--cor-superficie);
+    color: var(--cor-texto);
+    font-family: var(--f-grotesca);
+    font-size: 24px;
+    font-weight: 800;
+    cursor: pointer;
+  }
+
+  .trava__tecla--entrar {
+    background: var(--cor-acao);
+    color: var(--cor-acao-texto);
+    font-size: var(--t-pequeno);
+    text-transform: uppercase;
+  }
+
+  .trava__tecla:disabled {
+    border-style: dashed;
+    color: var(--cor-texto-fraco);
+    background: transparent;
+    cursor: not-allowed;
+  }
+
+  /* sobre o painel: a tela fica embaixo, fora de alcance até alguém entrar */
+  .trava-janela {
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    max-height: none;
+    margin: 0;
+    padding: var(--e-6) var(--e-4);
+    border: 0;
+    background: var(--grao), var(--cor-escuro);
+  }
+
+  .trava-janela[open] {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y: auto;
+  }
+
+  .trava-janela::backdrop {
+    background: var(--cor-noite);
+  }
+
+  /* ---- "Você saiu do painel" sobre a tela ---- */
+  .entrar-de-novo .entrada__checagem {
+    min-height: 0;
+  }
+
+  .identidade__dica {
+    color: var(--cor-texto-suave);
+    font-size: var(--t-pequeno);
+  }
+
+  /* ---- minhas sessões ---- */
+  .sessoes {
+    display: grid;
+    gap: var(--e-2);
+    max-width: 760px;
+    margin: var(--e-4) 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .sessoes__intro,
+  .sessoes__nota {
+    max-width: 70ch;
+    margin-top: var(--e-4);
+    color: var(--cor-texto-suave);
+  }
+
+  .sessoes__item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--e-3);
+    padding: var(--e-3) var(--e-4);
+    border: var(--fio) solid var(--cor-fio);
+    background: var(--cor-superficie);
+  }
+
+  .sessoes__info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--e-1) var(--e-3);
+  }
+
+  .sessoes__info > span:last-child {
+    flex-basis: 100%;
+    color: var(--cor-texto-suave);
+    font-size: var(--t-pequeno);
+  }
+
+  @media (width < 768px) {
+    .entrada {
+      padding-top: var(--e-5);
+    }
+
+    .entrada__caixa,
+    .trava {
+      padding: var(--e-4);
+    }
+
+    .trava__teclado {
+      grid-template-columns: repeat(3, minmax(64px, 1fr));
+      width: 100%;
+    }
+  }
+}

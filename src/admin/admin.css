@@ -1,0 +1,450 @@
+/* O painel da equipe: o trilho de ferro no computador, a barra de baixo e "Mais" no celular,
+   a área e as telas de estado. Só os papéis --cor-* e as medidas de tokens.css. */
+@layer pages {
+  .admin {
+    --trilho: 200px;
+    --barra-altura: calc(var(--alvo-toque) + var(--e-3));
+
+    font-size: var(--t-corpo-painel);
+  }
+
+  /* ---- marca: a raiz ao lado da placa ---- */
+  .marca {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--e-2);
+  }
+
+  .marca__logo {
+    display: block;
+    width: 112px;
+    aspect-ratio: 899 / 249;
+    background: currentColor;
+    mask: url("/img/logo.png") left center / contain no-repeat;
+  }
+
+  .raiz {
+    display: inline-block;
+    flex: none;
+    width: 28px;
+    aspect-ratio: 1;
+    background: currentColor;
+    mask: url("/img/marca/raiz-mascara.webp") center / contain no-repeat;
+  }
+
+  /* o carregamento do painel: a raiz gira devagar, uma volta a cada 2 s (UX-DR-63) */
+  .raiz--gira {
+    animation: painel-raiz-gira 2s linear infinite;
+  }
+
+  .raiz--atencao {
+    color: var(--cor-atencao);
+  }
+
+  @keyframes painel-raiz-gira {
+    to {
+      rotate: 1turn;
+    }
+  }
+
+  /* ---- a moldura ---- */
+  .painel {
+    display: grid;
+    grid-template-columns: var(--trilho) minmax(0, 1fr);
+    min-height: 100dvh;
+  }
+
+  .trilho {
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--e-3);
+    height: 100dvh;
+    padding-block: var(--e-4);
+    overflow-y: auto;
+    background: var(--grao), var(--cor-escuro);
+    color: var(--cor-escuro-texto);
+  }
+
+  .trilho__marca {
+    display: flex;
+    align-items: center;
+    min-height: var(--alvo-toque);
+    padding-inline: var(--e-4);
+    color: inherit;
+  }
+
+  .trilho__grupo,
+  .barra__lista,
+  .mais__lista,
+  .trilho__pessoa-acoes,
+  .mais__pessoa-acoes {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .trilho__grupo + .trilho__grupo {
+    padding-top: var(--e-3);
+    border-top: 1px solid var(--cor-escuro-fio);
+  }
+
+  .trilho__item,
+  .mais__item {
+    display: flex;
+    align-items: center;
+    min-height: var(--alvo-toque);
+    padding-inline: calc(var(--e-4) - var(--e-1)) var(--e-4);
+    border-left: var(--e-1) solid transparent;
+    color: var(--cor-escuro-texto-suave);
+    font-family: var(--f-grotesca);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .trilho__item:hover,
+  .mais__item:hover {
+    background: var(--cor-escuro-2);
+    color: var(--cor-escuro-texto);
+  }
+
+  .trilho__item[aria-current="page"],
+  .mais__item[aria-current="page"] {
+    border-left-color: var(--cor-selecao);
+    background: var(--cor-escuro-texto);
+    color: var(--cor-escuro);
+  }
+
+  .trilho :focus-visible,
+  .barra :focus-visible,
+  .mais :focus-visible,
+  .topo :focus-visible,
+  .estado--entrada :focus-visible {
+    outline-color: var(--cor-escuro-destaque);
+    outline-offset: -3px;
+  }
+
+  /* ---- quem está dentro: nome, perfil, "Minhas sessões" e "Sair" ---- */
+  .trilho__pessoa {
+    margin-top: auto;
+    padding: var(--e-3) 0 0;
+    border-top: 1px solid var(--cor-escuro-fio);
+  }
+
+  .trilho__pessoa-quem,
+  .mais__pessoa-quem {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 0 var(--e-4) var(--e-2);
+    color: var(--cor-escuro-texto);
+    overflow-wrap: anywhere;
+  }
+
+  .trilho__pessoa-quem span,
+  .mais__pessoa-quem span {
+    color: var(--cor-escuro-texto-suave);
+    font-size: var(--t-pequeno);
+  }
+
+  .trilho__pessoa-item,
+  .mais__pessoa-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: var(--alvo-toque);
+    padding: 0 var(--e-4);
+    border: 0;
+    background: none;
+    color: var(--cor-escuro-texto-suave);
+    font: inherit;
+    font-size: var(--t-pequeno);
+    text-align: left;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    cursor: pointer;
+  }
+
+  .trilho__pessoa-item:hover,
+  .mais__pessoa-item:hover,
+  .trilho__pessoa-item[aria-current="page"],
+  .mais__pessoa-item[aria-current="page"] {
+    background: var(--cor-escuro-2);
+    color: var(--cor-escuro-texto);
+  }
+
+  .mais__pessoa {
+    margin-top: var(--e-2);
+    padding-top: var(--e-3);
+    border-top: 1px solid var(--cor-escuro-fio);
+  }
+
+  /* o relógio do aparelho da casa, antes de parar de entrar */
+  .painel__aviso {
+    margin-bottom: var(--e-4);
+  }
+
+  .topo {
+    display: none;
+  }
+
+  .barra {
+    display: none;
+  }
+
+  /* ---- a área ---- */
+  .area {
+    min-width: 0;
+    padding: var(--e-6) var(--e-7);
+  }
+
+  .area__cabeca {
+    padding-bottom: var(--e-4);
+    border-bottom: var(--barra) solid var(--cor-borda);
+  }
+
+  .area__titulo {
+    font-family: var(--f-letreiro);
+    font-size: var(--t-secao);
+    font-weight: 900;
+    line-height: 0.95;
+    text-transform: uppercase;
+  }
+
+  .area__titulo:focus {
+    outline: none;
+  }
+
+  /* o módulo da área desenha dentro dela; a caixa em si não acrescenta nada ao layout */
+  .area__modulo {
+    display: contents;
+  }
+
+  .area__vazio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--e-3);
+    padding: var(--e-8) var(--e-4);
+    color: var(--cor-texto-suave);
+    text-align: center;
+  }
+
+  .area__vazio .raiz {
+    width: var(--e-8);
+    color: var(--cor-texto-fraco);
+  }
+
+  .area__vazio--proibido .area__titulo {
+    max-width: 22ch;
+    color: var(--cor-texto);
+    font-size: var(--t-bloco);
+  }
+
+  .area__vazio--proibido .raiz {
+    color: var(--cor-atencao);
+  }
+
+  /* ---- carregamento, entrada e erro ---- */
+  .estado {
+    display: grid;
+    place-items: center;
+    min-height: 100dvh;
+    padding: var(--e-5) var(--e-4);
+  }
+
+  .estado__caixa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--e-4);
+    max-width: 44ch;
+    color: var(--cor-texto-suave);
+    text-align: center;
+  }
+
+  .estado__caixa > .raiz {
+    width: var(--e-8);
+    color: var(--cor-texto-fraco);
+  }
+
+  .estado__caixa > .raiz--atencao {
+    color: var(--cor-atencao);
+  }
+
+  .estado__titulo {
+    color: var(--cor-texto);
+    font-family: var(--f-letreiro);
+    font-size: var(--t-bloco);
+    font-weight: 900;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  .estado--entrada {
+    background: var(--grao), var(--cor-escuro);
+  }
+
+  .estado--entrada .estado__caixa {
+    color: var(--cor-escuro-texto-suave);
+  }
+
+  .estado__marca {
+    color: var(--cor-escuro-texto);
+  }
+
+  .estado__marca .raiz {
+    width: var(--e-7);
+  }
+
+  .estado__marca .marca__logo {
+    width: 180px;
+  }
+
+  /* ---- "Mais": o resto das áreas do papel, vindo de baixo ---- */
+  .mais {
+    width: 100%;
+    max-width: none;
+    max-height: 80dvh;
+    margin: auto 0 0;
+    padding: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    border: 0;
+    background: var(--grao), var(--cor-escuro);
+    color: var(--cor-escuro-texto);
+  }
+
+  .mais::backdrop {
+    background: color-mix(in srgb, var(--cor-noite) 74%, transparent);
+  }
+
+  .mais__caixa {
+    padding-bottom: calc(var(--e-3) + env(safe-area-inset-bottom));
+  }
+
+  .mais__topo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--e-2) var(--e-2) var(--e-2) var(--e-4);
+    border-bottom: 1px solid var(--cor-escuro-fio);
+  }
+
+  .mais__titulo {
+    font-family: var(--f-grotesca);
+    font-size: var(--t-pequeno);
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--cor-escuro-rotulo);
+  }
+
+  .mais__fechar {
+    width: var(--alvo-toque);
+    height: var(--alvo-toque);
+    border: 1px solid var(--cor-escuro-borda);
+    background: none;
+    color: var(--cor-escuro-texto);
+    font-size: var(--t-bloco);
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  /* ---- o celular: cabeçalho em cima, barra embaixo ---- */
+  @media (width < 768px) {
+    .painel {
+      grid-template-columns: minmax(0, 1fr);
+      grid-template-rows: auto 1fr;
+    }
+
+    .trilho {
+      display: none;
+    }
+
+    .topo {
+      display: flex;
+      align-items: center;
+      min-height: var(--alvo-toque);
+      padding: var(--e-2) var(--e-4);
+      background: var(--grao), var(--cor-escuro);
+      color: var(--cor-escuro-texto);
+    }
+
+    .area {
+      padding: var(--e-5) var(--e-4) calc(var(--barra-altura) + var(--e-5) + env(safe-area-inset-bottom));
+    }
+
+    .area__titulo {
+      font-size: var(--t-bloco);
+    }
+
+    .barra {
+      position: fixed;
+      inset: auto 0 0;
+      z-index: var(--z-viga);
+      display: block;
+      padding-bottom: env(safe-area-inset-bottom);
+      background: var(--grao), var(--cor-escuro);
+      color: var(--cor-escuro-texto);
+    }
+
+    .barra__lista {
+      display: grid;
+      grid-auto-columns: minmax(0, 1fr);
+      grid-auto-flow: column;
+    }
+
+    .barra__item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: var(--barra-altura);
+      padding: 0 var(--e-1);
+      border: 0;
+      border-top: var(--e-1) solid transparent;
+      background: none;
+      color: var(--cor-escuro-texto-suave);
+      font-family: var(--f-grotesca);
+      font-size: var(--t-pequeno);
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    .barra__item[aria-current="page"],
+    .barra__item.is-dentro {
+      border-top-color: var(--cor-selecao);
+      background: var(--cor-escuro-texto);
+      color: var(--cor-escuro);
+    }
+  }
+
+  /* "menos movimento": nada se mexe, nem a raiz do carregamento */
+  @media (prefers-reduced-motion: reduce) {
+    .raiz--gira {
+      animation: none;
+    }
+  }
+}
+
+/* A barra da demonstração (desenvolvimento e a demonstração para o cliente) fica fora das camadas, então esta regra também:
+   no celular ela fica acima da barra de baixo em vez de cobrir "Hoje". */
+@media (width < 768px) {
+  .admin .demo-bar {
+    bottom: calc(var(--barra-altura) + var(--e-3) + env(safe-area-inset-bottom));
+  }
+}
+
+/* No computador a barra da demonstração fica ao lado do trilho, então nunca cobre "Sair". */
+@media (width >= 768px) {
+  .admin .demo-bar {
+    left: calc(200px + 12px);
+  }
+}
