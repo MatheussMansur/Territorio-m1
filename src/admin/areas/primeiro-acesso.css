@@ -1,0 +1,155 @@
+/* Primeiro acesso: os cinco passos no topo, cada um com "feito" ou "falta" escrito, a tela do
+   passo embaixo e o caminho para o próximo no pé. */
+@layer pages {
+  .pa {
+    display: grid;
+    gap: var(--e-5);
+    padding-top: var(--e-5);
+  }
+
+  .pa-intro {
+    max-width: 70ch;
+    margin: 0;
+    color: var(--cor-texto-suave);
+  }
+
+  .pa-sair {
+    display: flex;
+    margin-top: var(--e-3);
+  }
+
+  .pa-passos {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: var(--e-2);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .pa-passo__link {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 0 var(--e-2);
+    align-items: center;
+    min-height: var(--alvo-toque);
+    padding: var(--e-2) var(--e-3);
+    border: var(--fio) solid var(--cor-borda);
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .pa-passo__num {
+    grid-row: span 2;
+    font-family: var(--f-grotesca);
+    font-size: var(--t-bloco);
+    font-weight: 900;
+    line-height: 1;
+  }
+
+  .pa-passo__nome {
+    font-weight: 750;
+  }
+
+  .pa-passo__estado {
+    color: var(--cor-texto-suave);
+    font-size: var(--t-pequeno);
+  }
+
+  .pa-passo.is-feito .pa-passo__estado {
+    color: var(--cor-texto);
+    font-weight: 700;
+  }
+
+  .pa-passo.is-atual .pa-passo__link {
+    border-color: currentcolor;
+    box-shadow: inset 0 calc(var(--e-1) * -1) 0 var(--cor-acao);
+  }
+
+  .pa-passo-atual {
+    display: grid;
+    gap: var(--e-3);
+  }
+
+  .pa-titulo {
+    margin: 0;
+    font-family: var(--f-letreiro);
+    font-size: var(--t-bloco);
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  .pa-titulo__estado {
+    margin-left: var(--e-2);
+    font-family: var(--f-grotesca);
+    font-size: var(--t-pequeno);
+    font-weight: 600;
+    text-transform: none;
+  }
+
+  .pa-nota {
+    max-width: 70ch;
+    margin: 0;
+  }
+
+  .pa-partes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--e-2);
+  }
+
+  .pa-parte {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--alvo-toque);
+    padding-inline: var(--e-3);
+    border: var(--fio) solid var(--cor-borda);
+    color: inherit;
+    font-weight: 650;
+    text-decoration: none;
+  }
+
+  .pa-parte[aria-current="page"] {
+    border-color: currentcolor;
+    background: var(--cor-texto);
+    color: var(--cor-fundo);
+  }
+
+  .pa-celular {
+    display: grid;
+    gap: var(--e-3);
+    padding: var(--e-4);
+    border: var(--fio) solid var(--cor-borda);
+  }
+
+  .pa-celular p {
+    margin: 0;
+  }
+
+  .pa-acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--e-2);
+  }
+
+  .pa-rodape {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--e-3);
+    align-items: center;
+    justify-content: space-between;
+    padding-block: var(--e-4);
+    border-top: var(--fio) solid var(--cor-borda);
+  }
+
+  @media (width < 768px) {
+    .pa-passos {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .pa-acoes,
+    .pa-acoes .btn {
+      flex: 1 1 auto;
+    }
+  }
+}
