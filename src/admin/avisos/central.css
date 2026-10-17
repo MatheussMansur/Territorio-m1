@@ -1,0 +1,329 @@
+/* A central de avisos: o sino, a gaveta e a faixa dos críticos. Só os papéis --cor-* e as
+   medidas de tokens.css; o nível nunca é só cor (sempre vem escrito). */
+@layer pages {
+  /* ---- o sino ---- */
+  .sino {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--e-2);
+    min-width: var(--alvo-toque);
+    min-height: var(--alvo-toque);
+    padding: 0 var(--e-3);
+    border: 1px solid var(--cor-escuro-borda);
+    background: none;
+    color: var(--cor-escuro-texto);
+    font-family: var(--f-grotesca);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  .sino:hover {
+    background: var(--cor-escuro-2);
+  }
+
+  .sino--trilho {
+    margin-inline: var(--e-4);
+  }
+
+  .sino--topo {
+    margin-left: auto;
+    padding: 0 var(--e-2);
+  }
+
+  .sino--topo .sino__rotulo {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  .sino__icone {
+    flex: none;
+  }
+
+  .sino__conta {
+    min-width: 22px;
+    padding: 1px 5px;
+    background: var(--cor-escuro-texto);
+    color: var(--cor-escuro);
+    font-family: var(--f-mono);
+    font-size: var(--t-pequeno);
+    font-weight: 700;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  .sino.is-critico {
+    border-color: var(--cor-escuro-destaque);
+    box-shadow: inset 0 -3px 0 var(--cor-escuro-destaque);
+  }
+
+  .sino :focus-visible,
+  .sino:focus-visible {
+    outline: 3px solid var(--cor-escuro-destaque);
+    outline-offset: 2px;
+  }
+
+  /* ---- a faixa dos críticos, no topo de toda tela ---- */
+  .avisos-faixa {
+    margin: 0 0 var(--e-4);
+    border: var(--fio) solid var(--cor-atencao);
+    box-shadow: inset 6px 0 0 var(--cor-atencao);
+    background: var(--grao), var(--cor-superficie);
+  }
+
+  .avisos-faixa__lista {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .avisos-faixa__item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--e-1) var(--e-3);
+    padding: var(--e-2) var(--e-3) var(--e-2) var(--e-4);
+  }
+
+  .avisos-faixa__item + .avisos-faixa__item {
+    border-top: 1px solid var(--cor-fio);
+  }
+
+  .avisos-faixa__nivel,
+  .avisos-item__nivel {
+    font-family: var(--f-mono);
+    font-size: var(--t-pequeno);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .avisos-faixa__nivel {
+    padding: 1px 6px;
+    background: var(--cor-atencao);
+    color: var(--cor-acao-texto);
+  }
+
+  .avisos-faixa__hora {
+    color: var(--cor-texto-suave);
+    font-size: var(--t-pequeno);
+  }
+
+  .avisos-faixa__acoes {
+    margin-left: auto;
+  }
+
+  .avisos-faixa__acao {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--alvo-toque);
+    padding: 0 var(--e-3);
+    border: var(--fio) solid var(--cor-borda);
+    background: var(--cor-acao);
+    color: var(--cor-acao-texto);
+    font: inherit;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  /* ---- a gaveta ---- */
+  .avisos__corpo {
+    display: flex;
+    flex-direction: column;
+    gap: var(--e-3);
+    padding: var(--e-4);
+  }
+
+  .avisos__silencio {
+    margin: 0;
+    padding: var(--e-2) var(--e-3);
+    border: 1px solid var(--cor-borda);
+    background: var(--cor-superficie-2);
+    font-size: var(--t-pequeno);
+  }
+
+  .avisos__abas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--e-1);
+  }
+
+  .avisos__aba {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--e-2);
+    min-height: var(--alvo-toque);
+    padding: 0 var(--e-3);
+    border: var(--fio) solid var(--cor-borda);
+    background: none;
+    color: var(--cor-texto);
+    font-family: var(--f-grotesca);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  .avisos__aba[aria-selected="true"] {
+    background: var(--cor-acao);
+    color: var(--cor-acao-texto);
+  }
+
+  .avisos__aba-conta {
+    font-family: var(--f-mono);
+    font-size: var(--t-pequeno);
+  }
+
+  .avisos__painel:focus-visible {
+    outline: 3px solid var(--cor-foco);
+    outline-offset: 2px;
+  }
+
+  .avisos__lista {
+    display: flex;
+    flex-direction: column;
+    gap: var(--e-2);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .avisos-item {
+    padding: var(--e-3);
+    border: 1px solid var(--cor-borda);
+    background: var(--cor-superficie);
+  }
+
+  .avisos-item--critical {
+    border-color: var(--cor-atencao);
+    box-shadow: inset 6px 0 0 var(--cor-atencao);
+  }
+
+  .avisos-item--important {
+    box-shadow: inset 3px 0 0 var(--cor-texto);
+  }
+
+  .avisos-item.is-novo {
+    background: var(--cor-superficie-2);
+  }
+
+  .avisos-item__cabeca {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--e-2);
+    margin: 0;
+    color: var(--cor-texto-suave);
+    font-size: var(--t-pequeno);
+  }
+
+  .avisos-item--critical .avisos-item__nivel {
+    color: var(--cor-atencao-texto);
+  }
+
+  .avisos-item__novo {
+    padding: 0 6px;
+    border: 1px solid var(--cor-texto);
+    color: var(--cor-texto);
+    font-family: var(--f-mono);
+    text-transform: uppercase;
+  }
+
+  .avisos-item__titulo {
+    margin: var(--e-1) 0 0;
+    font-family: var(--f-grotesca);
+    font-size: var(--t-corpo-painel);
+    font-weight: 700;
+  }
+
+  .avisos-item__texto,
+  .avisos-item__nota {
+    margin: var(--e-1) 0 0;
+  }
+
+  .avisos-item__nota {
+    color: var(--cor-texto-suave);
+    font-size: var(--t-pequeno);
+  }
+
+  .avisos-item__acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--e-2);
+    margin-top: var(--e-2);
+  }
+
+  .avisos__vazio {
+    margin: 0;
+    color: var(--cor-texto-suave);
+  }
+
+  .avisos__pe {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--e-2);
+    padding-top: var(--e-3);
+    border-top: 1px solid var(--cor-fio);
+  }
+
+  .avisos__prefs {
+    color: var(--cor-texto);
+    text-underline-offset: 4px;
+  }
+
+  /* "Meus avisos" */
+  .meus-avisos__grupo {
+    margin: 0 0 var(--e-5);
+    padding: 0;
+    border: 0;
+  }
+
+  .meus-avisos__grupo legend {
+    margin-bottom: var(--e-2);
+    font-family: var(--f-grotesca);
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .meus-avisos__linha {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--e-3);
+    min-height: var(--alvo-toque);
+    padding: var(--e-2) 0;
+    border-bottom: 1px solid var(--cor-fio);
+  }
+
+  .meus-avisos__linha input {
+    flex: none;
+    width: 22px;
+    height: 22px;
+    margin-top: 2px;
+  }
+
+  .meus-avisos__linha small {
+    display: block;
+    color: var(--cor-texto-suave);
+  }
+
+  .meus-avisos__acoes {
+    display: flex;
+    gap: var(--e-3);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .avisos[open] {
+    animation: none;
+  }
+}
