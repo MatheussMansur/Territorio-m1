@@ -1,0 +1,162 @@
+/* Peças comuns a Clientes, Equipe, Registro e Sistema: o submenu de uma área, os
+   títulos de seção, as linhas de ferramentas, o estado vazio e a confirmação de identidade. */
+@layer pages {
+  .subnav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--e-2);
+    margin: var(--e-4) 0 var(--e-5);
+  }
+
+  .subnav__item {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--e-2);
+    min-height: var(--alvo-toque);
+    padding: var(--e-2) var(--e-3);
+    border: var(--fio) solid var(--cor-borda);
+    color: var(--cor-texto);
+    font-family: var(--f-grotesca);
+    font-weight: 800;
+    font-size: 17px;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .subnav__item:hover {
+    color: var(--cor-atencao-texto);
+  }
+
+  .subnav__item[aria-current="page"] {
+    background: var(--cor-acao);
+    color: var(--cor-acao-texto);
+  }
+
+  .subnav__item:focus-visible {
+    outline: 3px solid var(--cor-foco);
+    outline-offset: 2px;
+  }
+
+  /* um bloco de uma área: um título em letreiro sobre um fio */
+  .bloco {
+    display: flex;
+    flex-direction: column;
+    gap: var(--e-3);
+    margin-top: var(--e-6);
+  }
+
+  .bloco__titulo {
+    padding-bottom: var(--e-2);
+    border-bottom: var(--fio) solid var(--cor-borda);
+    font-family: var(--f-grotesca);
+    font-weight: 900;
+    font-size: 22px;
+    line-height: 1.05;
+    text-transform: uppercase;
+  }
+
+  .bloco__nota {
+    color: var(--cor-texto-suave);
+    font-size: var(--t-pequeno);
+  }
+
+  /* busca, filtros e ações numa linha que quebra no celular */
+  .ferramentas {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: var(--e-3);
+    margin-bottom: var(--e-4);
+  }
+
+  .ferramentas .field {
+    flex: 1 1 180px;
+  }
+
+  .ferramentas__fim {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--e-2);
+    margin-left: auto;
+  }
+
+  .ferramentas .btn {
+    min-height: 46px;
+  }
+
+  .contagem {
+    margin-bottom: var(--e-2);
+    color: var(--cor-texto-fraco);
+    font-family: var(--f-mono);
+    font-size: var(--t-rotulo);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .vazio__titulo {
+    color: var(--cor-texto);
+    font-family: var(--f-grotesca);
+    font-weight: 900;
+    font-size: 22px;
+    line-height: 1.1;
+    text-transform: uppercase;
+  }
+
+  .vazio p:not(.vazio__titulo) {
+    max-width: 46ch;
+  }
+
+  .data-table .acoes-celula {
+    white-space: nowrap;
+  }
+
+  .data-table .link-linha {
+    min-height: var(--alvo-toque);
+    padding: 0;
+    border: 0;
+    background: none;
+    color: var(--cor-texto);
+    font: inherit;
+    font-weight: 650;
+    text-align: left;
+    text-decoration: underline;
+    text-decoration-color: var(--cor-fio);
+    text-underline-offset: 4px;
+  }
+
+  .data-table .link-linha:hover {
+    color: var(--cor-atencao-texto);
+    text-decoration-color: currentColor;
+  }
+
+  .fraco {
+    color: var(--cor-texto-fraco);
+  }
+
+  .mono {
+    font-family: var(--f-mono);
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* confirmação de identidade: senha e as seis caixas do código */
+  .identidade .dialog__body {
+    gap: var(--e-4);
+  }
+
+  .identidade__dica {
+    color: var(--cor-texto-fraco);
+    font-size: var(--t-pequeno);
+  }
+
+  @media (max-width: 720px) {
+    .ferramentas__fim {
+      width: 100%;
+      margin-left: 0;
+    }
+
+    .ferramentas__fim .btn {
+      flex: 1 1 auto;
+    }
+  }
+}

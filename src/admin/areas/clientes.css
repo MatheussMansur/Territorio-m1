@@ -1,0 +1,282 @@
+/* Clientes: a lista, a ficha do cliente e os pedidos de privacidade. */
+@layer pages {
+  .nome-cliente {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--alvo-toque);
+    color: var(--cor-texto);
+    font-weight: 650;
+    text-decoration: underline;
+    text-decoration-color: var(--cor-fio);
+    text-underline-offset: 4px;
+  }
+
+  .nome-cliente:hover {
+    color: var(--cor-atencao-texto);
+    text-decoration-color: currentColor;
+  }
+
+  .tabela-clientes td {
+    vertical-align: middle;
+  }
+
+  .anonimo {
+    color: var(--cor-texto-fraco);
+    font-style: italic;
+  }
+
+  .faltas {
+    color: var(--cor-atencao-texto);
+  }
+
+  .marcadores {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: var(--e-1);
+  }
+
+  /* etiquetas: uma palavra e um padrão, nunca só cor */
+  .marcador--regular {
+    border-color: var(--cor-acao);
+    color: var(--cor-texto);
+  }
+
+  .marcador--regular::before {
+    content: "★";
+    font-size: 9px;
+  }
+
+  .marcador--attention {
+    border-color: var(--cor-atencao);
+    color: var(--cor-atencao-texto);
+  }
+
+  .marcador--attention::before {
+    content: "!";
+    font-weight: 800;
+  }
+
+  .marcador--bloqueado {
+    border-style: dashed;
+    border-color: var(--cor-erro);
+    color: var(--cor-atencao-texto);
+  }
+
+  .marcador--bloqueado::before {
+    content: "⊘";
+  }
+
+  /* a ficha */
+  .voltar {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--e-2);
+    min-height: var(--alvo-toque);
+    margin-top: var(--e-3);
+    color: var(--cor-texto-suave);
+    font-family: var(--f-mono);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .voltar:hover {
+    color: var(--cor-atencao-texto);
+  }
+
+  .ficha__cabeca {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--e-2) var(--e-4);
+    margin: var(--e-2) 0 var(--e-5);
+  }
+
+  .ficha__nome {
+    flex-basis: 100%;
+    font-family: var(--f-letreiro);
+    font-weight: 900;
+    font-size: var(--t-bloco);
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  .telefone {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--e-3);
+    font-size: 16px;
+  }
+
+  .telefone .action {
+    min-height: var(--alvo-toque);
+  }
+
+  .telefone__completo {
+    color: var(--cor-texto);
+    font-weight: 600;
+  }
+
+  .stat .stat__data {
+    font-size: 30px;
+  }
+
+  .bloqueio {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--e-2);
+    margin-top: var(--e-4);
+  }
+
+  .ficha__grade {
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    gap: 0 var(--e-6);
+  }
+
+  .notas {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--e-3);
+  }
+
+  .notas .field {
+    width: 100%;
+  }
+
+  .bloco .check {
+    min-height: var(--alvo-toque);
+    align-items: center;
+  }
+
+  .bloquear {
+    align-self: flex-start;
+  }
+
+  .dados {
+    display: grid;
+    gap: var(--e-2);
+    margin: 0;
+  }
+
+  .dados div {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+    gap: var(--e-3);
+    padding-bottom: var(--e-2);
+    border-bottom: 1px solid var(--cor-fio);
+  }
+
+  .dados dt {
+    color: var(--cor-texto-fraco);
+    font-family: var(--f-mono);
+    font-size: var(--t-rotulo);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .dados dd {
+    margin: 0;
+  }
+
+  .lgpd__acoes,
+  .exportado {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--e-2);
+  }
+
+  .exportado {
+    padding: var(--e-3);
+    border: var(--fio) dashed var(--cor-borda);
+  }
+
+  .exportado p {
+    flex-basis: 100%;
+  }
+
+  /* pedidos de privacidade */
+  .filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--e-2);
+  }
+
+  .filtro {
+    min-height: var(--alvo-toque);
+    padding: var(--e-2) var(--e-3);
+    border: var(--fio) solid var(--cor-borda);
+    background: transparent;
+    font-family: var(--f-grotesca);
+    font-weight: 800;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+
+  .filtro[aria-pressed="true"] {
+    background: var(--cor-acao);
+    color: var(--cor-acao-texto);
+  }
+
+  .filtro:focus-visible {
+    outline: 3px solid var(--cor-foco);
+    outline-offset: 2px;
+  }
+
+  .prazo-nota {
+    margin-bottom: var(--e-3);
+  }
+
+  .prazo--perto::before {
+    content: "!";
+    font-weight: 800;
+  }
+
+  .acoes-pedido {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: var(--e-2);
+  }
+
+  .acoes-pedido .action {
+    min-height: var(--alvo-toque);
+  }
+
+  .tabela-pedidos .nome-cliente {
+    min-height: 0;
+  }
+
+  @media (max-width: 980px) {
+    .ficha__grade {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+
+  /* ---- juntar ou descartar depois que outra pessoa gravou a ficha ---- */
+  .juntar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--e-3);
+  }
+
+  .juntar__texto {
+    margin: 0;
+    padding: var(--e-2) var(--e-3);
+    border: var(--fio) solid var(--cor-borda);
+    white-space: pre-line;
+  }
+
+  .juntar__opcoes {
+    display: flex;
+    flex-direction: column;
+    gap: var(--e-2);
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+}
